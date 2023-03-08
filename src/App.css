@@ -1,0 +1,85 @@
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #212327;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #0F9D58; 
+}
+
+.curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.curve svg {
+    position: relative;
+    display: block;
+    width: calc(186% + 1.3px);
+    height: 416px;
+    transform: rotateY(180deg);
+}
+
+.curve .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .curve svg {
+        width: calc(223% + 1.3px);
+        height: 317px;
+    }
+}
+
+@media (max-width: 765px) {
+    .curve svg {
+        width: calc(137% + 1.3px);
+        height: 118px;
+    }
+}
+
+
+
+
+
+.curvetwo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.curvetwo svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 175px;
+}
+
+.curvetwo .shape-fill {
+    fill: #FFFFFF;
+}
