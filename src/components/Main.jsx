@@ -20,7 +20,7 @@ export const Main = () => {
 
   return (
     <section className='relative flex-col justify-center items-center bg-[#FFFFFF] min-h-[250px] capitalize'>
-      <h1 data-aos="fade-right" className='text-[#000000] text-center font-bold my-8 px-1 text-[24px]'>you can get them all for free now! <span id='target'></span> </h1>
+      <h1 data-aos="fade-right" className='text-[#000000] text-center font-bold my-8 px-1 text-[24px]'>you can get them all for free now!</h1>
       <div className="container mx-auto md:w-[70%]">
         <div className="flex flex-col md:flex-row justify-evenly card mx-auto">
           <Card title='comfortably' icon={<MdChair />} animation='fade-up'></Card>
