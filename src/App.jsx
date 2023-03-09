@@ -2,7 +2,8 @@ import './App.css';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Main } from './components/Main';
-import { SecondMain } from './components/SecondMain';
+import { SecondSection } from './components/SecondSection';
+import { ThirdSection } from './components/ThirdSection';
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
       <Header></Header>
       <Hero></Hero>
       <Main></Main>
-      <SecondMain ></SecondMain>
+      <SecondSection ></SecondSection>
+      <ThirdSection></ThirdSection>
     </div>
   )
 }

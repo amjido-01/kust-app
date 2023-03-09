@@ -1,18 +1,33 @@
 import React from 'react';
-import SecondHeroImg from '../assets/main.png'
-import comfetti from '../assets/conright.svg'
+import SecondHeroImg from '../assets/main.png';
+import comfetti from '../assets/conright.svg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import Typed from 'typed.js';
+import { useEffect } from 'react';
 
-export const SecondMain = () => {
+export const SecondSection = () => {
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: 'ease-out',
+      delay: 100,
+    });
+  }, [])
+
+  
+
   return (
-    <section className='bg-[#212327] relative min-h-[400px] py-16 md:py-2 px-8 md:px-4 md:pt-32'>
+    <section className='bg-[#212327] border-b relative min-h-[400px] py-16 md:py-2 px-8 md:px-4 md:pt-32'>
       <div className='container md:w-[65%] mx-auto flex flex-col md:flex-row items-center justify-center capitalize'>
-        <img src={comfetti} className='absolute w-[15%] md:w-[5%] right-10 md:right-32' alt="" srcset="" />
+        <img src={comfetti} className='absolute w-[15%] md:w-[7%] top-20 md:top-40 right-10 md:right-32' alt="section_svg"/>
 
-        <div className='text-white md:w-1/2 mt-10 md:mt-5 mb-5 ml-10 pl-4'>
-          <img src={SecondHeroImg} className='object-cover w-1/2 md:w-[60%]' alt="" srcset="" />
+        <div data-aos="fade-right" className='text-white md:w-1/2 mt-10 md:mt-5 mb-5 md:ml-10 pl-4'>
+          <img src={SecondHeroImg} className='object-cover w-1/2 md:w-[85%]' alt="section_img" />
         </div>
 
-        <div className='text-[#D9D9D9] md:w-1/2 text-start w-[95%]'>
+        <div data-aos="fade-left" className='text-[#D9D9D9] md:w-1/2 text-start w-[95%]'>
           <h1 className='font-bold text-[18px] leading-[10px] py-4'>our struggle</h1>
           <p>
             Our aim is to alleviate the challenges that students encounter when searching for reliable handouts or past question papers for their relevant courses. For this reason, we have developed this platform for your convenience.

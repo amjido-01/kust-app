@@ -41,8 +41,8 @@ export const Hero = () => {
                 </div>
 
                 <div className='z-10 flex justify-center w-[70%] md:w-[54%] mb-4 bg-transparent'>
-                    <img src={Testing} className='absolute bottom-5' alt="hero_icon"/>
-                    <img src={Rec} className='absolute bottom-5 right-4 w-[20px]' alt="hero_image"/>
+                    {/* <img src={Testing} className='absolute bottom-5' alt="hero_icon"/> */}
+                    {/* <img src={Rec} className='absolute bottom-5 right-4 w-[20px]' alt="hero_image"/> */}
                     <img src={heroImg} className='' alt="hero_icon"/>
                 </div>
 
