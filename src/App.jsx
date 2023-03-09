@@ -4,7 +4,7 @@ import { Hero } from './components/Hero';
 import { Main } from './components/Main';
 import { SecondSection } from './components/SecondSection';
 import { ThirdSection } from './components/ThirdSection';
-import { FourthSection } from './components/FourthSection';
+import { Testimonial } from './components/Testimonial';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
       <Main></Main>
       <SecondSection ></SecondSection>
       <ThirdSection></ThirdSection>
-      <FourthSection></FourthSection>
+      <Testimonial></Testimonial>
     </div>
   )
 }
