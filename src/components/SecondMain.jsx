@@ -4,16 +4,16 @@ import comfetti from '../assets/conright.svg'
 
 export const SecondMain = () => {
   return (
-    <section className='bg-[#212327] relative min-h-[400px] py-16 px-8 md:px-4 md:pt-32'>
-      <div className='container mx-auto border-2 border-red-600 flex flex-col md:flex-row capitalize'>
+    <section className='bg-[#212327] relative min-h-[400px] py-16 md:py-2 px-8 md:px-4 md:pt-32'>
+      <div className='container md:w-[65%] mx-auto flex flex-col md:flex-row items-center justify-center capitalize'>
+        <img src={comfetti} className='absolute w-[15%] md:w-[5%] right-10 md:right-32' alt="" srcset="" />
 
-        <div className='text-white md:w-1/2 border-2 '>
-          <img src={SecondHeroImg} className='object-cover' alt="" srcset="" />
-          {/* <img src={comfetti} alt="" srcset="" /> */}
+        <div className='text-white md:w-1/2 mt-10 md:mt-5 mb-5 ml-10 pl-4'>
+          <img src={SecondHeroImg} className='object-cover w-1/2 md:w-[60%]' alt="" srcset="" />
         </div>
 
-        <div className='text-white md:w-1/2 border-2'>
-          <h1>our struggle</h1>
+        <div className='text-[#D9D9D9] md:w-1/2 text-start w-[95%]'>
+          <h1 className='font-bold text-[18px] leading-[10px] py-4'>our struggle</h1>
           <p>
             Our aim is to alleviate the challenges that students encounter when searching for reliable handouts or past question papers for their relevant courses. For this reason, we have developed this platform for your convenience.
           </p>
