@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Testimony = ({ name, dept, img }) => {
     return (
-        <div className=' inline-block align-top max-w-[20rem] border-2 py-4 px-4 bg-[#D9D9D9] shadow-lg rounded-lg'>
+        <div className=' inline-block max-w-[20rem] border-2 py-4 px-4 bg-[#D9D9D9] rounded-md'>
             <div>
                 <p className='mt-2 text-[13px] text-[#000000]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</p>
             </div>

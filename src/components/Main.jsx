@@ -3,6 +3,7 @@ import { Card } from './Card';
 import { MdChair } from 'react-icons/md';
 import { MdSwapHorizontalCircle } from 'react-icons/md';
 import { MdFactCheck } from 'react-icons/md';
+import { FaHandHoldingHeart } from 'react-icons/fa'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Typed from 'typed.js';
@@ -29,7 +30,7 @@ export const Main = () => {
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-evenly card mx-auto">
           <Card title='comfortably' icon={<MdChair />} animation='fade-up'></Card>
           <Card title='easily' icon={< MdSwapHorizontalCircle /> } animation='fade-left'></Card>
-          <Card title='reliable' icon={<MdFactCheck/>} animation='fade-right'></Card>
+          <Card title='reliable' icon={<FaHandHoldingHeart/>} animation='fade-right'></Card>
           <img src={sqleft} className='block md:hidden absolute w-[15%] top-[48%] -left-1' alt="svg_icon"/>
           <img src={conleft} className='absolute  top-[30%] right-0 w-[30%] md:hidden' alt="svg_icon"/>
         </div>
