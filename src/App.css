@@ -5,6 +5,13 @@ body {
     /* box-sizing: border-box; */
 }
 
+.swiper-scrollbar-drag {
+    display: none;
+}
+
+/* .swiper-scrollbar {display: none;} */
+.swiper-scrollbar-horizontal {display: none;}
+  
 
 ::-webkit-scrollbar {
     width: 7px;
