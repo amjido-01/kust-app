@@ -17,7 +17,7 @@ export const SecondSection = () => {
   }, [])
 
   return (
-    <section className='bg-[#212327] md:border-b-[1.5px] border-gray-700 relative min-h-[400px] py-16 md:py-2 px-8 md:px-4 md:pt-32'>
+    <section className='bg-[#212327] md:border-b-[1.5px] border-gray-700 relative min-h-[400px] py-16 md:py-2 px-8 md:px-4 md:pt-24'>
       <div className='container md:w-[65%] mx-auto flex flex-col md:flex-row items-center justify-center capitalize'>
         <img src={ comfetti } className='absolute w-[15%] md:w-[7%] top-20 md:top-40 right-10 md:right-32' alt="section_svg"/>
 

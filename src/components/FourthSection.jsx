@@ -1,18 +1,24 @@
 import React from 'react'
-
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Testimony } from './Testimony';
 import computer from '../assets/computer.jpg';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 export const FourthSection = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: 'ease-out',
+      delay: 100,
+    });
+  }, [])
 
   const data = [
     {
@@ -38,14 +44,15 @@ export const FourthSection = () => {
   ]
 
   return (
-    <section className='md:w-[70%] relative overflow-hidden mx-auto min-h-[200px] py-5 px-4 my-10'>
+      <section className='md:w-[70%] relative overflow-hidden mx-auto min-h-[200px] py-5 px-7 my-10'>
+        <h1 data-aos="fade-down-right" className='my-4 capitalize text-[#000000] font-bold px-1 text-[24px]'>what students a saying about this site</h1>
       <Swiper className='container mx-auto'
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         autoplay={{
-          delay: 4000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
-        slidesPerView={3}
+        // slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
