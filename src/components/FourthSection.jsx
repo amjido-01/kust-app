@@ -21,7 +21,7 @@ export const FourthSection = () => {
       imgURI: computer
     },
     {
-      name: "Abubakar muhd ala",
+      name: "Abubakar ala",
       dept: "level 200 computer science.",
       imgURI: computer
     },
@@ -49,32 +49,32 @@ export const FourthSection = () => {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
         breakpoints={{
           // >=200
           200: {
-              slidesPerView: 1.5,
-              spaceBetween: 10
+            slidesPerView: 1.5,
+            spaceBetween: 10
           },
           // >= 40px
           400: {
-              slidesPerView: 1.5,
-              spaceBetween: 10
+            slidesPerView: 1.5,
+            spaceBetween: 10
           },
           // >= 640px
           640: {
-              slidesPerView: 2,
+            slidesPerView: 2,
           },
           // >= 1024px
           1024: {
-              slidesPerView: 3,
-              spaceBetween: 20
+            slidesPerView: 3,
+            spaceBetween: 20
           },
           // >= 1583px
           1583: {
-              slidesPerView: 3,
-              spaceBetween: 30
+            slidesPerView: 3,
+            spaceBetween: 30
           },
         }}
         >
