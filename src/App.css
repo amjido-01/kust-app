@@ -11,7 +11,18 @@ body {
 
 /* .swiper-scrollbar {display: none;} */
 .swiper-scrollbar-horizontal {display: none;}
-  
+
+.swiper-pagination-bullet {
+    /* padding-top: 10px; */
+    margin-top: 20px;
+    border: 2px solid green;
+}
+.swiper-pagination {
+    /* border: 1px solid red; */
+    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+}
 
 ::-webkit-scrollbar {
     width: 7px;
