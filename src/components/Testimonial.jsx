@@ -46,6 +46,7 @@ export const Testimonial = () => {
                     disableOnInteraction: false,
                 }}
                 slidesPerView={3}
+                // navigation
                 navigation={{
                     prevEl: '.prev-button',
                     nextEl: '.next-button',
@@ -82,13 +83,14 @@ export const Testimonial = () => {
                 }}
                 >
 
-                {/* <div className='next-button absolute top-20 z-10 -right-2'>
-                    <img src={left} alt='Next'/>
+                <div className='next-button absolute top-[4rem] z-10 right-0 w-4 h-4'>
+                    <img className='' src={left} alt='Next'/>
+                </div>
+                <div className='next-button absolute top-[4rem] z-10 left-0 w-4 h-4'>
+                    <img src={right} alt='Next'/>
                 </div>
                 
-                <div className='next-button'>
-                    <img src={right} alt='Next'/>
-                </div> */}
+                
                 <SwiperSlide className='flex items-center justify-center'>
                     <Testimony name={data[3].name} dept={data[3].dept} img={computer}/>
                 </SwiperSlide>

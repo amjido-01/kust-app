@@ -17,6 +17,17 @@ body {
     margin-top: 20px;
     border: 2px solid green;
 }
+
+/* .swiper-button-prev {
+    position: absolute;
+    z-index: 10;
+    margin-bottom: 20px;
+    background-color: red;
+} */
+.swiper-button-next {
+    font-size: 20px;
+}
+
 .swiper-pagination {
     /* border: 1px solid red; */
     margin-top: 30px;
