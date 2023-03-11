@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './Button';
 import heroImg from '../assets/bro.png';
 import Rec from '../assets/Rectangle.png';
+import mobilehero from '../assets/mobilehero.png';
 import Testing from '../assets/Ellipse.svg';
 import Typed from 'typed.js';
 import { useEffect } from 'react';
@@ -11,7 +12,7 @@ export const Hero = () => {
 
     useEffect(() => {
         const options = {
-          strings: ['It has been solved !'],
+          strings: ['It has been solved !', 'It has been made easier !'],
           typeSpeed: 80,
           loop: true,
         };
@@ -25,13 +26,13 @@ export const Hero = () => {
     return (
         <section className='bg-[#212327] relative min-h-[540px] py-16 md:py-20 px-8 md:px-4'>
             <div className='container flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2 md:border-red-700'>
-
+                <img className='absolute md:hidden top-20 right-4 mobile' src={mobilehero} alt='mobilehero'/>
                 <div className='md:w-[65%] text-[#FFFFFF] mt-1 capitalize'>
                     <span id='target' className='italic text-[#0F9D58] Poppins text-[18px] font-normal md:font-semibold'></span>
 
-                    <div className='mt-2'>
-                        <p className='font-bold text-3xl md:text-4xl'>all your handout and past question are now in one place.</p>
-                        <p className='mt-2 font-medium text-xl md:text-xl'>a free website for KUST students to download their favorites handout and past question papers.</p>
+                    <div className='mt-2 w-[70%] md:w-full'>
+                        <p className='font-bold text-2xl sm:text-3xl md:text-4xl'>all your handout and past question are now in one place.</p>
+                        <p className='mt-2 font-medium text-[18px] sm:text-xl md:text-xl'>a free website for KUST students to download their favorites handout and past question papers.</p>
                     </div>
 
                     <div className='mt-8'>
@@ -40,9 +41,7 @@ export const Hero = () => {
 
                 </div>
 
-                <div className='z-10 flex justify-center w-[70%] md:w-[54%] mb-4 bg-transparent'>
-                    {/* <img src={Testing} className='absolute bottom-5' alt="hero_icon"/> */}
-                    {/* <img src={Rec} className='absolute bottom-5 right-4 w-[20px]' alt="hero_image"/> */}
+                <div className='hidden z-10 md:flex justify-center w-[70%] md:w-[54%] mb-4 bg-transparent'>
                     <img src={heroImg} className='' alt="hero_icon"/>
                 </div>
 

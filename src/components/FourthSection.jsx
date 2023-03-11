@@ -16,49 +16,75 @@ export const FourthSection = () => {
 
   const data = [
     {
-        name: "muhammmd ni’imatullahi",
-        dept: "level 200 computer science",
-        imgURI: computer
+      name: "muhd ni’imatullahi",
+      dept: "level 200 computer science",
+      imgURI: computer
     },
     {
-        name: "Abubakar muhammad ala",
-        dept: "level 200 computer sci GDSC core team.",
-        imgURI: computer
+      name: "Abubakar muhd ala",
+      dept: "level 200 computer science.",
+      imgURI: computer
     },
     {
-        name: "Bukhari auwal",
-        dept: "level 300 computer science ex-GDSC lead.",
-        imgURI: computer
+      name: "Bukhari auwal",
+      dept: "level 300 computer science.",
+      imgURI: computer
     },
     {
-        name: "Sulaiman isah",
-        dept: "level 200 computer science",
-        imgURI: computer
+      name: "Sulaiman isah",
+      dept: "level 200 computer science",
+      imgURI: computer
     }
-]
+  ]
 
   return (
     <section className='md:w-[70%] relative overflow-hidden mx-auto min-h-[200px] py-5 px-4 my-10'>
-    <Swiper className='container mx-auto border-2'
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction: false,
-      }}
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      <SwiperSlide><Testimony name={data[3].name} dept={data[3].dept} img={computer}></Testimony></SwiperSlide>
-      <SwiperSlide><Testimony name={data[2].name} dept={data[2].dept} img={computer}></Testimony></SwiperSlide>
-      <SwiperSlide><Testimony name={data[1].name} dept={data[1].dept} img={computer}></Testimony></SwiperSlide>
-      <SwiperSlide><Testimony name={data[0].name} dept={data[0].dept} img={computer}></Testimony></SwiperSlide>
-    </Swiper>
+      <Swiper className='container mx-auto'
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        slidesPerView={3}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+        breakpoints={{
+          // >=200
+          200: {
+              slidesPerView: 1.5,
+              spaceBetween: 10
+          },
+          // >= 40px
+          400: {
+              slidesPerView: 1.5,
+              spaceBetween: 10
+          },
+          // >= 640px
+          640: {
+              slidesPerView: 2,
+          },
+          // >= 1024px
+          1024: {
+              slidesPerView: 3,
+              spaceBetween: 20
+          },
+          // >= 1583px
+          1583: {
+              slidesPerView: 3,
+              spaceBetween: 30
+          },
+        }}
+        >
+        <SwiperSlide className='flex items-center justify-center'><Testimony name={data[3].name} dept={data[3].dept} img={computer}></Testimony></SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center'><Testimony name={data[2].name} dept={data[2].dept} img={computer}></Testimony></SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center'><Testimony name={data[1].name} dept={data[1].dept} img={computer}></Testimony></SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center'><Testimony name={data[0].name} dept={data[0].dept} img={computer}></Testimony></SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center'><Testimony name={data[2].name} dept={data[2].dept} img={computer}></Testimony></SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center'><Testimony name={data[1].name} dept={data[1].dept} img={computer}></Testimony></SwiperSlide>
+      </Swiper>
     </section>
   );
 };

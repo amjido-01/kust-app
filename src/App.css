@@ -5,6 +5,10 @@ body {
     /* box-sizing: border-box; */
 }
 
+.mobile {
+    width: 50%;
+}
+
 .swiper-scrollbar-drag {
     display: none;
 }
@@ -85,11 +89,26 @@ body {
 
 @media (max-width: 765px) {
     .curve svg {
-        width: calc(137% + 1.3px);
-        height: 118px;
+        width: calc(160% + 1.3px);
+        height: 80px;
+    }
+    .curvetwo svg {
+        /* position: relative;
+        display: block; */
+        width: calc(183% + 1.3px);
+        height: 134px;
     }
 }
 
+
+@media screen and (min-width: 1000px) {
+    .curvetwo svg {
+        position: relative;
+        display: block;
+        width: calc(133% + 1.3px);
+        height: 162px;
+    }
+}
 
 
 
@@ -103,12 +122,12 @@ body {
     line-height: 0;
 }
 
-.curvetwo svg {
+/* .curvetwo svg {
     position: relative;
     display: block;
     width: calc(135% + 1.3px);
     height: 175px;
-}
+} */
 
 .curvetwo .shape-fill {
     fill: #FFFFFF;
