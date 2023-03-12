@@ -3,24 +3,33 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import support from '../assets/support.png';
+import mobilesupport from '../assets/mobilesupport.png';
+import { Button } from './Button';
 
 export const Sixth = () => {
   return (
-    <section className='linear relative min-h-[400px] py-16 md:py-20 px-8 md:px-4'>
-        <div className='container md:w-[65%] mx-auto text-[#000000] flex flex-col md:flex-row items-center justify-center capitalize'>
+    <section className='linear relative min-h-[200px] border border-red-600 py-16 md:py-20 px-8 md:px-4'>
+        <div className='container border border-red-600 flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2 md:border-red-700'>
+                <img className='absolute md:hidden top-20 right-4 mobile' src={mobilesupport} alt='mobilehero'/>
+                <div className='md:w-[65%] text-[#000000] mt-1 capitalize'>
 
-        <div data-aos="fade-left" className='md:w-1/2 text-start w-[95%]'>
-            <p>
-                We have devoted a lot of time and effort to collect and organize these materials for you, in order to spare you some hassle, expense and time. If you appreciate our work, please give us a thumbs up and 
-            </p>
-        </div>
-        
-        <div data-aos="fade-right" className='md:w-1/2 mt-10 md:mt-5 mb-5 md:ml-10 pl-4'>
-          <img src={ support } className='object-cover w-1/2 md:w-[85%]' alt="section_img" />
-        </div>
+                    <div className='mt-2 w-[70%] md:w-full'>
+                        <p className=''> 
+                            We have devoted a lot of time and effort to collect and organize these materials for you, in order to spare you some hassle, expense and time. If you appreciate our work, please give us a thumbs up and 
+                        </p>
+                    </div>
 
+                    <div className='mt-8'>
+                        <Button value='get started' color='#4285F4'border='none' ></Button>
+                    </div>
 
-      </div>
+                </div>
+
+                <div className='hidden z-10 md:flex justify-center w-[70%] md:w-[54%] mb-4 bg-transparent'>
+                    <img src={support} className='' alt="hero_icon"/>
+                </div>
+
+            </div>
 
         <div className="custom-shape-divider-top-1678566261">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

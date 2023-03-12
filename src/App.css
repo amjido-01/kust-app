@@ -223,7 +223,6 @@ body {
 
 
 .linear {
-    height: 200px;
     background-color: #A7F9BE; /* For browsers that do not support gradients */
     /* background-image: linear-gradient(red, yellow); */
     background: linear-gradient(180deg, #A7F9BE 11.77%, rgba(234, 234, 234, 0.5) 57.11%);

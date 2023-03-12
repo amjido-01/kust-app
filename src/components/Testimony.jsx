@@ -6,7 +6,7 @@ export const Testimony = ({ name, dept, img }) => {
             <div>
                 <p className='mt-2 text-[13px] text-[#000000]'>“Lorem ipsum dolor sit amet consectetur. Dictum nunc mattis nisl eget sit in habitasse est amet. Eleifend et diam magna posuere lacus viverra tortor. ”</p>
             </div>
-            <div className='flex items-center border mt-4'>
+            <div className='flex items-center mt-4'>
                 <img className='w-10 h-10 object-cover rounded-full border border-[#0F9D58]' src={img} />
                 <div className='pl-2'>
                     <a href='#' className="text-[12px] md:text-[14px] capitalize font-medium text-[#000000]">{name}</a>
