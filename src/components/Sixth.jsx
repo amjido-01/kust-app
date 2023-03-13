@@ -7,16 +7,24 @@ import mobilesupport from "../assets/mobilesupport.png";
 import { Button } from "./Button";
 
 export const Sixth = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-out",
+      delay: 100,
+    });
+  }, []);
   return (
-    <section className="linear relative min-h-[100px] border border-red-600  px-8 md:px-4">
-      <div className="container border-4 border-blue-600 flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2">
+    <section className="linear relative min-h-[100px] px-8 md:px-4">
+      <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2">
+        {/* border-2 border-blue-500 */}
         <img
-          className="absolute md:hidden top-20 right-4 mobile"
+          className="absolute md:hidden right-1 md:right-4 mobile-two"
           src={mobilesupport}
           alt="mobilehero"
         />
-        <div className="md:w-[65%] text-[#000000] md:mt-[20%] capitalize">
-          <div className="mt-2 w-[70%] md:w-full">
+        <div className="md:w-[50%] md:mr-20 md:mt-20 text-[#000000] capitalize">
+          <div className="mt-20 md:mt-2 w-[65%] md:w-full font-medium">
             <p className="">
               We have devoted a lot of time and effort to collect and organize
               these materials for you, in order to spare you some hassle,
@@ -25,12 +33,15 @@ export const Sixth = () => {
             </p>
           </div>
 
-          <div className="mt-8">
-            <Button value="get started" color="#4285F4" border="none"></Button>
+          <div className="mt-4">
+            <Button value="Support us" color="#0F9D58" border="none"></Button>
           </div>
         </div>
 
-        <div className="hidden z-10 md:flex justify-center w-[70%] md:w-[54%]">
+        <div
+          data-aos="fade-up"
+          className="hidden md:mt-20 z-10 md:flex justify-center w-[70%] md:w-[40%]"
+        >
           <img src={support} className="" alt="hero_icon" />
         </div>
       </div>

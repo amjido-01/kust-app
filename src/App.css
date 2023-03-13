@@ -4,8 +4,31 @@ body {
     padding: 0;
 }
 
-.mobile {
+.mobile, .mobile-two {
     width: 50%;
+}
+
+.mobile-two {
+    top: 10rem;
+}
+
+@media screen and (min-width: 500px) {
+    .mobile-two {
+        position: absolute;
+        top: 11rem;
+    }
+}
+@media screen and (min-width: 570px) {
+    .mobile-two {
+        position: absolute;
+        top: 9rem;
+    }
+}
+@media screen and (min-width: 700px) {
+    .mobile-two {
+        position: absolute;
+        top: 5rem;
+    }
 }
 
 .swiper-scrollbar-drag {
