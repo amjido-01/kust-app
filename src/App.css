@@ -250,3 +250,9 @@ body {
     /* background-image: linear-gradient(red, yellow); */
     background: linear-gradient(180deg, #A7F9BE 11.77%, rgba(234, 234, 234, 0.5) 57.11%);
   }
+
+
+
+  .feedback {
+    min-height: 200px;
+  }
