@@ -7,6 +7,7 @@ import { ThirdSection } from './components/ThirdSection';
 import { FourthSection } from './components/FourthSection';
 import { Fifth } from './components/Fifth';
 import { Sixth } from './components/Sixth';
+import { Feedback } from './components/Feedback';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <FourthSection />
       <Fifth />
       <Sixth />
+      <Feedback />
     </div>
   )
 }
