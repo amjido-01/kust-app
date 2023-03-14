@@ -2,30 +2,76 @@ import React from "react";
 import { Button } from "./Button";
 import { RiSendPlane2Line } from "react-icons/ri";
 import { useRef } from "react";
-// import {emailjs} from "@emailjs/browser";
-// import emailjs from '@emailjs/browser';
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import { useState } from "react";
+
+// emailjs
+// .sendForm(
+//   "service_kttmpjc",
+//   "template_zxe8mqe",
+//   form.current,
+//   "j4--gLKWdVb75ZcSm"
+// )
+// .then(
+//   (result) => {
+//     console.log(result.text);
+//   },
+//   (error) => {
+//     console.log(error.text);
+//   }
+// );
 
 export const Feedback = () => {
+
   const form = useRef();
-  const sendEmail = (e) => {
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+  // const showToastMessage = () => {
+  //   toast.success("Success Notification !", {
+  //     position: toast.POSITION.TOP_RIGHT,
+  //   });
+  // };
+
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
+
+    try {
+      await emailjs.sendForm(
         "service_kttmpjc",
         "template_zxe8mqe",
         form.current,
         "j4--gLKWdVb75ZcSm"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
       );
+      toast.success("message sent", {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 3000, // close after 3 secon
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("failed", {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 3000, // close after 3 seconds
+      });
+    }
+    // e.target.reset();
   };
+  
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+    });
+  }
   return (
     <section className="bg-[#FFFFFF] feedback text-gray-600 body-font relative px-8 md:px-4 ">
       <div className="container md:w-[70%] mx-auto">
@@ -46,6 +92,8 @@ export const Feedback = () => {
               Name
             </label>
             <input
+              onChange={handleChange}
+              value={formData.user_name}
               type="text"
               id="name"
               name="user_name"
@@ -61,6 +109,8 @@ export const Feedback = () => {
               Email
             </label>
             <input
+              onChange={handleChange}
+              value={formData.user_email}
               type="email"
               id="email"
               name="user_email"
@@ -69,12 +119,36 @@ export const Feedback = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="message" className="leading-7 text-sm text-[#000000] font-normal">Message</label>
-            <textarea name="message" />
-            <input type="submit" id value="Send" />
+            <label
+              htmlFor="message"
+              className="leading-7 text-sm text-[#000000] font-normal"
+            >
+              Message
+            </label>
+            <textarea
+              onChange={handleChange}
+              value={formData.message}
+              name="message"
+              id="message"
+              placeholder="Your Message"
+              className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-indigo-500 focus:ring-[1.5px] focus:ring-indigo-400 outline-none transition-colors duration-200 ease-in-out h-32"
+            />
+          </div>
+
+          <div>
+            <Button
+              // onSubmit={notify}
+              color="#0F9D58"
+              value="Send"
+              icon={<RiSendPlane2Line />}
+              border="none"
+            ></Button>
           </div>
         </form>
       </div>
+      <button  className="border-red-500 border-2">
+        test
+      </button>
     </section>
   );
 };
