@@ -5,6 +5,8 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
  
 
 export const Feedback = () => {
@@ -12,9 +14,14 @@ export const Feedback = () => {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [ error, setError ] = useState('');
 
   const sendEmail = async (e) => {
     e.preventDefault();
+
+    if (userName.trim() === '' || userEmail.trim() === '') {
+      return false
+    }
 
     try {
       await emailjs.sendForm(
@@ -27,8 +34,10 @@ export const Feedback = () => {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 3000,
       });
-      setUserName('')
-      console.log("sent");
+      setUserName('');
+      setMessage('');
+      setUserEmail('');
+      
     } catch (error) {
       toast.error("failed", {
         position: toast.POSITION.TOP_CENTER,
@@ -56,10 +65,9 @@ export const Feedback = () => {
           onSubmit={sendEmail}
           className="w-full md:w-[45%] flex flex-col md:ml-aut md:py-8 mt-8 md:mt-0"
         >
-          <h2 className="text-[#000000] capitalize font-bold text-lg mb-1 title-font">
+          <h2 data-aos="fade-down" className="text-[#000000] capitalize font-bold text-lg mb-1 title-font">
             want to say something
           </h2>
-
           <div className="mb-4">
             <label
               htmlFor="name"
@@ -73,6 +81,7 @@ export const Feedback = () => {
               value={userName}
               onChange={handleName}
               id="name"
+              placeholder="Joe Doe"
               required
               className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-indigo-500 focus:ring-[1.5px] focus:ring-indigo-400 outline-none transition-colors duration-200 ease-in-out"
             />
@@ -91,6 +100,7 @@ export const Feedback = () => {
               value={userEmail}
               onChange={handleEmail}
               id="email"
+              placeholder="example@gmail.com"
               required
               className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-indigo-500 focus:ring-[1.5px] focus:ring-indigo-400 outline-none transition-colors duration-200 ease-in-out"
             />

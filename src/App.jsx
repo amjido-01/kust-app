@@ -10,6 +10,7 @@ import { Sixth } from './components/Sixth';
 import { Feedback } from './components/Feedback';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { Footer } from './components/Footer';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <Fifth />
       <Sixth />
       <Feedback />
+      <Footer />
       <ToastContainer />
     </div>
   )
