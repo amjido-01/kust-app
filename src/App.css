@@ -252,7 +252,13 @@ body {
   }
 
 
-
   .feedback {
     min-height: 200px;
+  }
+
+  @media screen and (max-width:600px) {
+    .foot {
+        display: flex;
+        flex-wrap: wrap;
+    }
   }
