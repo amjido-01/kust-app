@@ -17,7 +17,6 @@ export const Sixth = () => {
   return (
     <section className="linear relative min-h-[100px] px-8 md:px-4">
       <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2">
-        {/* border-2 border-blue-500 */}
         <img
           className="absolute md:hidden right-1 md:right-4 mobile-two"
           src={mobilesupport}

@@ -262,3 +262,27 @@ body {
         flex-wrap: wrap;
     }
   }
+
+
+
+
+
+  .foot-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.foot-svg svg {
+    position: relative;
+    display: block;
+    width: calc(162% + 1.3px);
+    height: 103px;
+}
+
+.foot-svg .shape-fill {
+    fill: #FFFFFF;
+}
