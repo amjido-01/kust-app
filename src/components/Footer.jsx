@@ -3,10 +3,10 @@ import { CiLinkedin } from "react-icons/ci";
 
 export const Footer = () => {
   return (
-    <section className="relative border-2 border-red-500 ">
-      <footer className="bg-white dark:bg-gray-900">
-        <div className="mx-auto w-full  border-2 border-white container p-4 sm:p-6">
-          <div className="md:flex md:justify-between border-2 border-green-500 mt-20">
+    <section className="relative">
+      <footer className="bg-[#263238]">
+        <div className="mx-auto w-full container p-4 sm:p-6">
+          <div className="md:flex md:justify-between mt-20">
             <div className="flex foot mx-auto justify-between w-full md:w-[80%]">
               <div>
                 <h2 className="mb-2 text-sm text-[#FFFFFF]  font-semibold">
@@ -31,18 +31,12 @@ export const Footer = () => {
                 </h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                   <li className="">
-                    <a
-                      href="https://github.com/themesberg/flowbite"
-                      className="hover:underline "
-                    >
+                    <a href="#" className="hover:underline ">
                       Handouts
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="https://discord.gg/4eeurUVvTy"
-                      className="hover:underline"
-                    >
+                    <a href="#" className="hover:underline">
                       past question
                     </a>
                   </li>

@@ -4,6 +4,8 @@ import { RiSendPlane2Line } from "react-icons/ri";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import { useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -134,6 +136,7 @@ export const Feedback = () => {
             ></Button>
           </div>
         </form>
+        <ToastContainer />
       </div>
     </section>
   );
