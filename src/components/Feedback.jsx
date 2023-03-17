@@ -58,7 +58,7 @@ export const Feedback = () => {
 
   return (
     <div className="">
-      <section className="bg-[#FFFFFF] feedback text-gray-600 body-font border-2 border-green-500 px-8 md:px-4 ">
+      <section className="bg-[#FFFFFF] feedback text-gray-600 body-font px-8 md:px-4 ">
         <div className="container md:w-[70%] mx-auto">
           <form
             ref={form}
