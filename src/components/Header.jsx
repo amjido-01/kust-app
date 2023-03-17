@@ -4,15 +4,18 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
-  // const [active, setActive] = useState(false);
+  const navigate = useNavigate();
 
+  // active page indicator
   const navLinkStyle = ({ isActive }) => {
     return {
       textDecoration: isActive ? "underline" : "none",
       textDecorationColor: isActive ? "#0F9D58" : "none",
       textDecorationThickness: isActive ? "2px" : "0px",
+      textUnderlineOffset: isActive ? "0.3em" : "none",
     };
   };
   return (
@@ -30,26 +33,32 @@ export const Header = () => {
         <div className="hidden md:block items-center justify-between w-full md:w-auto">
           <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li
-              className="block py-2 pl-3 pr-4 text-white rounded capitalize md:bg-transparent md:p-0 font-medium"
+              className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:bg-transparent md:p-0 font-medium"
               aria-current="page"
             >
               <NavLink style={navLinkStyle} to="/">
                 Home
               </NavLink>
             </li>
-            <li className="block py-2 pl-3 pr-4 text-white rounded capitalize md:p-0 font-medium">
+            <li className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:p-0 font-medium">
               <NavLink style={navLinkStyle} to="/documents">
                 Documents
               </NavLink>
             </li>
-            <li className="block py-2 pl-3 pr-4 text-white rounded capitalize md:p-0 font-medium">
-              <NavLink style={navLinkStyle} to="/about">about us</NavLink>
+            <li className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:p-0 font-medium">
+              <NavLink style={navLinkStyle} to="/about">
+                about us
+              </NavLink>
             </li>
           </ul>
         </div>
 
         <div className="flex">
-          <Button value="support us" border="1px solid"></Button>
+          <Button
+            onSmash={() => navigate("/support-us")}
+            value="support us"
+            border="1px solid"
+          ></Button>
         </div>
       </div>
     </nav>

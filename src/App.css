@@ -4,6 +4,30 @@ body {
     padding: 0;
 }
 
+.under {
+    display: inline-block;
+    position: relative;
+    color: #0F9D58;
+  }
+  
+  .under::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0F9D58;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .under:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
 .mobile, .mobile-two {
     width: 50%;
 }

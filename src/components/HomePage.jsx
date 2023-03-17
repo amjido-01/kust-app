@@ -12,7 +12,7 @@ import { Footer } from "./Footer";
 
 export const HomePage = () => {
   return (
-    <div>
+    <div className="relative min-h-[100vh]">
       <Header />
       <Hero />
       <Main />
@@ -22,7 +22,7 @@ export const HomePage = () => {
       <Fifth />
       <Sixth />
       <Feedback />
-      <Footer />
+      <Footer className="relative" />
     </div>
   );
 };

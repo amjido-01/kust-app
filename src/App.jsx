@@ -2,8 +2,10 @@ import "./App.css";
 import { HomePage } from "./components/HomePage";
 import { About } from "./components/About";
 import { Documents } from "./components/Documents";
+import { Support } from "./components/Support";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
+import { PageNotFound } from "./components/PageNotFound";
 
 function App() {
   return (
@@ -15,6 +17,10 @@ function App() {
       <Route path="documents" element={<Documents />}>
         {" "}
       </Route>
+      <Route path="support-us" element={<Support />}>
+        {" "}
+      </Route>
+      <Route path="*" element={<PageNotFound />}></Route>
     </Routes>
   );
 }
