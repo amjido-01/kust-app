@@ -29,31 +29,11 @@ body {
     transform-origin: bottom left;
   }
 
-.mobile, .mobile-two {
+.mobile {
     width: 50%;
 }
-
 .mobile-two {
-    top: 10rem;
-}
-
-@media screen and (min-width: 500px) {
-    .mobile-two {
-        position: absolute;
-        top: 11rem;
-    }
-}
-@media screen and (min-width: 570px) {
-    .mobile-two {
-        position: absolute;
-        top: 9rem;
-    }
-}
-@media screen and (min-width: 700px) {
-    .mobile-two {
-        position: absolute;
-        top: 5rem;
-    }
+    width: 40%;
 }
 
 .swiper-scrollbar-drag {
@@ -118,37 +98,6 @@ body {
     fill: #FFFFFF;
 }
 
-/** For tablet devices **/
-@media (min-width: 768px) and (max-width: 1023px) {
-    .curve svg {
-        width: calc(223% + 1.3px);
-        height: 317px;
-    }
-}
-
-@media (max-width: 765px) {
-    .curve svg {
-        width: calc(160% + 1.3px);
-        height: 80px;
-    }
-    .curvetwo svg {
-        /* position: relative;
-        display: block; */
-        width: calc(155% + 1.3px);
-        height: 90px;
-    }
-}
-
-
-@media screen and (min-width: 1000px) {
-    .curvetwo svg {
-        position: relative;
-        display: block;
-        width: calc(133% + 1.3px);
-        height: 162px;
-    }
-}
-
 
 .curvetwo {
     position: absolute;
@@ -180,6 +129,56 @@ body {
     width: calc(140% + 1.3px);
     height: 80px;
 }
+
+
+@media screen and (min-width: 700px) {
+    .mobile-two {
+        position: absolute;
+        top: 2rem;
+    }
+}
+@media screen and (min-width: 500px) {
+    .mobile-two {
+        top: 2rem;
+        width: 40%;
+    }
+}
+@media screen and (min-width: 400px) {
+    .mobile-two {
+        top: 5rem;
+        width: 30%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .curve svg {
+        width: calc(223% + 1.3px);
+        height: 317px;
+    }
+}
+
+@media (max-width: 765px) {
+    .curve svg {
+        width: calc(160% + 1.3px);
+        height: 80px;
+    }
+    .curvetwo svg {
+        width: calc(155% + 1.3px);
+        height: 90px;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .curvetwo svg {
+        position: relative;
+        display: block;
+        width: calc(133% + 1.3px);
+        height: 162px;
+    }
+}
+
 
 @media screen and (min-width: 120px) {
     .custom-shape-divider-bottom-1678378618 svg {

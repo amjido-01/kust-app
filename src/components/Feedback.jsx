@@ -129,7 +129,6 @@ export const Feedback = () => {
 
             <div>
               <Button
-                // onSubmit={notify}
                 color="#0F9D58"
                 value="Send"
                 icon={<RiSendPlane2Line className="ml-1" />}

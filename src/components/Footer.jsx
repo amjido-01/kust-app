@@ -1,7 +1,9 @@
 import React from "react";
 import { CiLinkedin } from "react-icons/ci";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const Footer = ({ className }) => {
+  const navigate = useNavigate();
   return (
     <section className={className}>
       <footer className="bg-[#263238] text-[#F5F5F5]">
@@ -14,14 +16,14 @@ export const Footer = ({ className }) => {
                 </h2>
                 <ul className="flex flex-col gap-2 font-medium text-[12px] uppercase">
                   <li className="">
-                    <a href="/" className="hover:underline">
+                    <NavLink to="/" className="hover:underline">
                       Home
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <NavLink to="/about" className="hover:underline">
                       About Us
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
