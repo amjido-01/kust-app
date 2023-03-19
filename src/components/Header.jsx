@@ -16,6 +16,7 @@ export const Header = () => {
       textDecorationColor: isActive ? "#0F9D58" : "none",
       textDecorationThickness: isActive ? "2px" : "0px",
       textUnderlineOffset: isActive ? "0.3em" : "none",
+      color: isActive ? '#0F9D58': '',
     };
   };
   return (
