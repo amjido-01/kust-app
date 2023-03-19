@@ -31,7 +31,7 @@ export const Feedback = () => {
         form.current,
         import.meta.env.VITE_YOUR_PUBLIC_ID
       );
-      toast.success("message sent", {
+      toast.success("message sent, \n will get back to you!", {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 3000,
       });

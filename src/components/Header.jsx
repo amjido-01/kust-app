@@ -54,7 +54,7 @@ export const Header = () => {
           </ul>
         </div>
 
-        <div className="flex">
+        <div className="flex cursor-pointer">
           <Button
             onSmash={() => navigate("/support-us")}
             value="support us"
