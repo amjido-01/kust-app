@@ -12,7 +12,9 @@ export const Footer = ({ className }) => {
             <div className="flex foot mx-auto justify-between w-full md:w-[80%]">
               <div>
                 <h2 className="mb-2 text-sm font-semibold">
-                  KUST<span className="text-[#0F9D58]">Booklets</span>
+                  <NavLink to="/">
+                    KUST<span className="text-[#0F9D58]">Booklets</span>
+                  </NavLink>
                 </h2>
                 <ul className="flex flex-col gap-2 font-medium text-[12px] uppercase">
                   <li className="">

@@ -6,6 +6,6 @@ export const Support = () => {
   return <section>
     <Header />
 
-    <Footer />
+    <Footer className='absolute w-full bottom-0'/>
   </section>;
 };

@@ -4,9 +4,9 @@ import { Footer } from "./Footer";
 
 export const About = () => {
   return (
-    <section>
+    <section className="">
       <Header />
-      <div className="container md:w-[65%] mx-auto border-2 mt-32 flex items-center justify-center">
+      <div className="container md:w-[65%] mx-auto border-2 mt-20 flex items-center justify-center">
         <div className="text-center w-1/2  border-2">
           <h2 className="text-[#1F1F1F] font-bold text-[18px] leading-8">
             We are a team of two programmers and designers{" "}
@@ -19,8 +19,11 @@ export const About = () => {
         </div>
       </div>
 
-      <div></div>
-      <Footer className="absolute w-full bottom-0" />
+      <div className="border-2 border-700-green">
+        
+      </div>
+
+      <Footer className="absolute w-full bottom-0 mt-20" />
     </section>
   );
 };
