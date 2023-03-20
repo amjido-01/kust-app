@@ -84,7 +84,7 @@ export const Feedback = () => {
                 value={userName}
                 onChange={handleName}
                 id="name"
-                placeholder="Joe Doe"
+                placeholder="Tanimu Bala"
                 required
                 className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-indigo-500 focus:ring-[1.5px] focus:ring-indigo-400 outline-none transition-colors duration-200 ease-in-out"
               />

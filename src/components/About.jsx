@@ -15,7 +15,7 @@ export const About = () => {
       level: "computer science level 200, kUST wudil.",
       role: "frontend developer, UI/UX designer. ",
       alt: "designer",
-      qouteColor: "#D9D9D9",
+      qouteColor: "#D9D9D9"
     },
     {
       imgURI: auto,
@@ -25,6 +25,7 @@ export const About = () => {
       level: "computer science level 200, kUST wudil.",
       role: "fullstack engineer, software engineer.",
       alt: "developer",
+      qouteColor: ''
     },
   ];
   return (

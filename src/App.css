@@ -4,6 +4,13 @@ body {
     padding: 0;
 }
 
+.down-triangle { 
+    width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 30px solid #D9D9D9;
+ }
 
 .under {
     display: inline-block;
