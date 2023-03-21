@@ -15,7 +15,8 @@ export const About = () => {
       level: "computer science level 200, kUST wudil.",
       role: "frontend developer, UI/UX designer. ",
       alt: "designer",
-      qouteColor: "#D9D9D9"
+      qouteColor: "#D9D9D9",
+      // triangleColor: "#D9D9D9" 
     },
     {
       imgURI: auto,
@@ -23,9 +24,10 @@ export const About = () => {
         "if you love the experience here is the soul that made it possible.",
       name: "abubakar muhammad ala",
       level: "computer science level 200, kUST wudil.",
-      role: "fullstack engineer, software engineer.",
+      role: "frontend software engineer.",
       alt: "developer",
-      qouteColor: ''
+      qouteColor: "rgba(252, 158, 28, 0.5)",
+      // triangleColor: "rgba(252, 158, 28, 0.5)"
     },
   ];
   return (
@@ -45,7 +47,7 @@ export const About = () => {
       </div>
 
       <div className="container w-[70%] mx-auto border-2 border-700-green my-10">
-        <div className="container flex border-2 border-red-500">
+        <div className="container flex flex-col md:flex-row border-2 border-red-500">
           <Autor
             src={person[0].imgURI}
             quote={person[0].qoute}
@@ -54,6 +56,7 @@ export const About = () => {
             role={person[0].role}
             alt={person[0].alt}
             quoteColor={person[0].qouteColor}
+            triangleColor={person[0].qouteColor}
           ></Autor>
 
           <Autor
@@ -63,6 +66,8 @@ export const About = () => {
             level={person[1].level}
             role={person[1].role}
             alt={person[1].alt}
+            quoteColor={person[1].qouteColor}
+            triangleColor={person[1].qouteColor}
           ></Autor>
         </div>
       </div>

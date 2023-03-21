@@ -34,14 +34,20 @@ export const Feedback = () => {
       toast.success("message sent, \n will get back to you!", {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 3000,
+        style: {
+          fontSize: "14px",
+        },
       });
       setUserName("");
       setMessage("");
       setUserEmail("");
     } catch (error) {
-      toast.error("failed", {
+      toast.error("something went wrong, try again!", {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 3000,
+        style: {
+          fontSize: "14px",
+        },
       });
     }
   };
