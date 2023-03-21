@@ -58,7 +58,7 @@ export const About = () => {
       />
       <img
         src={two}
-        className="absolute md:-bottom-[12%] top-[30%] left-10 md:left-[30%] w-[25px] md:w-[60px]"
+        className="absolute -bottom-[12%] left-10 md:left-[30%] w-[25px] md:w-[60px]"
         alt=""
         srcset=""
       />
@@ -82,13 +82,13 @@ export const About = () => {
       />
       <img
         src={six}
-        className="absolute right-0 top-[70%] w-[40px]"
+        className="absolute right-0 top-[70%] w-[30px] md:w-[40px]"
         alt=""
         srcset=""
       />
       <img
         src={seven}
-        className="absolute left-[45%] top-[40%] w-[35px]"
+        className="absolute right-0  md:left-[45%] top-[40%] w-[25px] md:w-[35px]"
         alt=""
         srcset=""
       />
