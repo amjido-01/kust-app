@@ -16,7 +16,6 @@ export const About = () => {
       role: "frontend developer, UI/UX designer. ",
       alt: "designer",
       qouteColor: "#D9D9D9",
-      // triangleColor: "#D9D9D9" 
     },
     {
       imgURI: auto,
@@ -27,7 +26,6 @@ export const About = () => {
       role: "frontend software engineer.",
       alt: "developer",
       qouteColor: "rgba(252, 158, 28, 0.5)",
-      // triangleColor: "rgba(252, 158, 28, 0.5)"
     },
   ];
   return (

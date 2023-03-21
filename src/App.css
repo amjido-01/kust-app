@@ -7,9 +7,14 @@ body {
 .down-triangle { 
     width: 0;
 	height: 0;
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
+ }
+ .border-style {
 	border-top: 30px solid #D9D9D9;
+
+ }
+ .border-style-two {
+	border-top: 30px solid #FC9E1C;
+
  }
 
 .under {
