@@ -4,13 +4,13 @@ import { Footer } from "./Footer";
 import auto from "../assets/auto.svg";
 import auto2 from "../assets/auto2.svg";
 import { Autor } from "./Autor";
-import one from '../assets/one.svg';
-import two from '../assets/two.svg';
-import three from '../assets/three.svg';
-import four from '../assets/four.svg';
-import five from '../assets/five.svg';
-import six from '../assets/six.svg';
-import seven from '../assets/seven.svg';
+import one from "../assets/one.svg";
+import two from "../assets/two.svg";
+import three from "../assets/three.svg";
+import four from "../assets/four.svg";
+import five from "../assets/five.svg";
+import six from "../assets/six.svg";
+import seven from "../assets/seven.svg";
 
 export const About = () => {
   const person = [
@@ -50,13 +50,48 @@ export const About = () => {
           </p>
         </div>
       </div>
-      <img src={one} className="absolute top-[45%] md:top-16 w-[23px] md:w-[30px]" alt="" srcset="" />
-      <img src={two} className="absolute -bottom-[12%] left-[30%] w-[60px]" alt="" srcset="" />
-      <img src={three} className="absolute top-[60%] w-[30px]" alt="" srcset="" />
-      <img src={four} className="absolute right-0 top-0 w-[20px]" alt="" srcset="" />
-      <img src={five} className="absolute right-[25%] top-[10%] w-[40px]" alt="" srcset="" />
-      <img src={six} className="absolute right-0 top-[70%] w-[40px]" alt="" srcset="" />
-      <img src={seven} className="absolute left-[45%] top-[40%] w-[35px]" alt="" srcset="" />
+      <img
+        src={one}
+        className="absolute top-[45%] md:top-16 w-[23px] md:w-[30px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={two}
+        className="absolute md:-bottom-[12%] top-[30%] left-10 md:left-[30%] w-[25px] md:w-[60px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={three}
+        className="absolute top-[60%] w-[30px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={four}
+        className="absolute right-0 w-[20px] md:right-0 md:top-0 md:w-[20px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={five}
+        className="absolute right-[25%] md:top-[10%] top-[15%] w-[24px] md:w-[40px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={six}
+        className="absolute right-0 top-[70%] w-[40px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={seven}
+        className="absolute left-[45%] top-[40%] w-[35px]"
+        alt=""
+        srcset=""
+      />
       <div className="container w-[90%] md:w-[70%] mx-auto my-10">
         <div className="container flex flex-col md:flex-row">
           <Autor
