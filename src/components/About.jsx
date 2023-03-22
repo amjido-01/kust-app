@@ -88,7 +88,7 @@ export const About = () => {
       />
       <img
         src={seven}
-        className="absolute right-0  md:left-[45%] top-[40%] w-[25px] md:w-[35px]"
+        className="absolute right-0 md:left-[45%] top-[40%] w-[25px] md:w-[35px]"
         alt=""
         srcset=""
       />
