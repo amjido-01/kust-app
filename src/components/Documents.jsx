@@ -2,9 +2,7 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-
 export const Documents = () => {
- 
   return (
     <section className="relative">
       <Header />
@@ -20,13 +18,16 @@ export const Documents = () => {
           </p>
         </div>
       </div>
-   
-      <div className="container w-[90%] md:w-[70%] mx-auto my-10">
+
+      <div className="container w-[90%] md:w-[70%] border border-red-500 mx-auto my-10">
         <div className="container">
-       
+          
         </div>
       </div>
-      <Footer className="absolute w-full"/>
+
+      <div className="relative bottom-0">
+        <Footer className="absolute w-full" />
+      </div>
     </section>
   );
 };
