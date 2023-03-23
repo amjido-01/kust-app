@@ -117,7 +117,6 @@ export const About = () => {
           ></Autor>
         </div>
       </div>
-
       <Footer className="absolute w-full" />
     </section>
   );
