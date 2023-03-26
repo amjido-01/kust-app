@@ -13,7 +13,7 @@ export const Documents = () => {
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
-    console.log(searchQuery)
+    console.log(searchQuery);
 
     const filtered = Data.filter((item) =>
       item.first_name.toLowerCase().includes(query.toLowerCase())
@@ -24,30 +24,56 @@ export const Documents = () => {
   return (
     <section className="relative min-h-screen flex flex-col">
       <Header />
-      <div className="container w-[90%] md:w-[50%] mx-auto mt-[7rem] flex-1">
-       <h1>welcome to the document page </h1>
-      </div>
 
-    
-      <div className="container w-[90%] md:w-[70%] border border-red-500 mx-auto my-10">
-        <div className="container">
-          <h1 className="text-center uppercase">FACULTIES</h1>
-          <input
-            type="text"
-            className="border-2 border-green-500"
-            value={searchQuery}
-            onChange={handleSearch}
-            placeholder="search"
-          />
+      <div className="container w-[90%] md:w-[66%] mx-auto mt-[7rem] flex-1 border-2 border-red-600 mb-[50px]">
+        <div className="text-[#000000] my-7">
+          <h1 className="uppercase font-semibold text-[22px]">
+            welcome to the document page{" "}
+          </h1>
+          <p className="capitalize font-normal">
+            choose your faculty and click/tap to proceed.
+          </p>
+        </div>
 
-          <ul className=" list-disc">
-            {filteredItems.map((item) => (
-              <a key={item.id} href="#"><li>{item.first_name}</li></a>
-            ))}
-          </ul>
+        <div className="container bg-[#B0F2B4] border border-red-500 mx-auto">
+          <div className="container">
+            <h1 className="text-center uppercase">FACULTIES</h1>
+            <input
+              type="text"
+              className="border-2 border-green-500"
+              value={searchQuery}
+              onChange={handleSearch}
+              placeholder="search"
+            />
+
+            <div className="border-2 border-yellow-400 flex items-center justify-center">
+              <div>
+                <ul className=" list-disc">
+                  {filteredItems.map((item) => (
+                    <a className="" key={item.id} href="#">
+                      <li className="p-0.5 text-[14px] font-normal ">
+                        {item.first_name}
+                      </li>
+                    </a>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <ul className=" list-disc">
+                  {filteredItems.map((item) => (
+                    <a className="" key={item.id} href="#">
+                      <li className="p-0.5 text-[14px] font-normal ">
+                        {item.first_name}
+                      </li>
+                    </a>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
       <div className="relative bottom-0">
         <Footer className="w-full" />
       </div>
