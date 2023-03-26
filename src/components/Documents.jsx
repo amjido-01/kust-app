@@ -2,23 +2,21 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { useState } from "react";
+import { Data } from "../Data";
 
-const items = [
-  { id: 1, name: "Apple" },
-  { id: 2, name: "Banana" },
-  { id: 3, name: "Cherry" },
-];
+
+console.log(Data)
 
 export const Documents = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredItems, setFilteredItems] = useState(items);
+  const [filteredItems, setFilteredItems] = useState(Data);
 
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query)
 
-    const filtered = items.filter((item) => 
-      item.name.toLowerCase().includes(query.toLowerCase())
+    const filtered = Data.filter((item) => 
+      item.first_name.toLowerCase().includes(query.toLowerCase())
     )
     setFilteredItems(filtered)
   }
@@ -45,7 +43,7 @@ export const Documents = () => {
           <input type="text" value={searchQuery} onChange={handleSearch} placeholder="search"/>
 
           {filteredItems.map((item) => 
-          <li key={item.id}>{item.name}</li>
+          <li key={item.id}>{item.first_name}</li>
           ) }
         </div>
       </div>
