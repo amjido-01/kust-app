@@ -46,8 +46,8 @@ export const Documents = () => {
               placeholder="search"
             />
 
-            <div className="border-2 border-yellow-400 flex items-center justify-center">
-              <div>
+            <div className="border-2 border-yellow-400 flex flex-col md:flex-row md:items-center md:justify-center">
+              <div className="w-[100%] flex justify-center items-center  mx-auto md:w-[45%]">
                 <ul className=" list-disc">
                   {filteredItems.map((item) => (
                     <a className="" key={item.id} href="#">
@@ -59,7 +59,7 @@ export const Documents = () => {
                 </ul>
               </div>
 
-              <div>
+              <div className="w-[45%]">
                 <ul className=" list-disc">
                   {filteredItems.map((item) => (
                     <a className="" key={item.id} href="#">
