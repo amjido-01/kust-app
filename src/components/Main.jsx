@@ -15,7 +15,7 @@ export const Main = () => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
-      easing: "ease-out",
+      easing: "ease-in ease-out",
       delay: 100,
     });
   }, []);
@@ -24,9 +24,10 @@ export const Main = () => {
     <section className="relative flex-col justify-center items-center bg-[#FFFFFF] min-h-[250px] capitalize">
       <h1
         data-aos="fade-right"
-        className="text-[#000000] text-center font-bold my-8 px-1 text-[24px]"
+        className="text-[#000000] text-center font-bold my-2 px-1 text-[32px] unbounded"
+
       >
-        you can get them all for free now!
+        You can get them all for free now!
       </h1>
       <img
         src={sqleft}
@@ -40,16 +41,20 @@ export const Main = () => {
             title="comfortably"
             icon={<MdChair />}
             animation="fade-up"
+            text='at any location and any moment without anticipating a colleague to transmit it to you.'
           ></Card>
           <Card
             title="easily"
             icon={<MdSwapHorizontalCircle />}
             animation="fade-left"
+            text='with a few simple taps and swift downloads, you can access it instantly. Isn’t that remarkable?'
           ></Card>
           <Card
             title="reliable"
             icon={<FaHandHoldingHeart />}
             animation="fade-right"
+            text="ones that you can rely no doubting its authenticity.
+            Isn't that cool !"
           ></Card>
           <img
             src={sqleft}

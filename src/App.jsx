@@ -6,6 +6,7 @@ import { Support } from "./components/Support";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { PageNotFound } from "./components/PageNotFound";
+import { Sample } from "./components/Sample";
 
 function App() {
   return (
@@ -20,8 +21,12 @@ function App() {
       <Route path="support-us" element={<Support />}>
         {" "}
       </Route>
+      <Route path="sample" element={<Sample />}>
+        {" "}
+      </Route>
       <Route path="*" element={<PageNotFound />}></Route>
     </Routes>
+    
   );
 }
 

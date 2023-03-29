@@ -17,7 +17,7 @@ export const About = () => {
     {
       imgURI: auto2,
       qoute:
-        "if you love the design and everything you can see here is the dude behind it.",
+        "if you love the design and everything you can see, Here is the dude behind it.",
       name: "muhammad Ni’imatullahi aliyu",
       level: "computer science level 200, kUST wudil.",
       role: "frontend developer, UI/UX designer. ",
@@ -27,7 +27,7 @@ export const About = () => {
     {
       imgURI: auto,
       qoute:
-        "if you love the experience here is the soul that made it possible.",
+        "if you love the experience, Here is the soul that made it possible.",
       name: "abubakar muhammad ala",
       level: "computer science level 200, kUST wudil.",
       role: "frontend software engineer.",

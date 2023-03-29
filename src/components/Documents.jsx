@@ -50,7 +50,7 @@ export const Documents = () => {
               <div className="w-[100%] flex justify-center items-center  mx-auto md:w-[45%]">
                 <ul className=" list-disc">
                   {filteredItems.map((item) => (
-                    <a className="" key={item.id} href="#">
+                    <a key={item.id} href="#">
                       <li className="p-0.5 text-[14px] font-normal ">
                         {item.first_name}
                       </li>
@@ -62,7 +62,7 @@ export const Documents = () => {
               <div className="w-[45%]">
                 <ul className=" list-disc">
                   {filteredItems.map((item) => (
-                    <a className="" key={item.id} href="#">
+                    <a key={item.id} href="#">
                       <li className="p-0.5 text-[14px] font-normal ">
                         {item.first_name}
                       </li>

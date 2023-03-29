@@ -10,8 +10,8 @@ import { useEffect } from "react";
 export const Hero = () => {
   useEffect(() => {
     const options = {
-      strings: ["It has been solved !", "It has been made easier !"],
-      typeSpeed: 80,
+      strings: ["It has been solved!", "It made easier!"],
+      typeSpeed: 100,
       loop: true,
     };
     const typed = new Typed("#target", options);
@@ -35,10 +35,10 @@ export const Hero = () => {
           ></span>
 
           <div className="mt-2 w-[70%] md:w-full">
-            <p className="font-bold text-2xl sm:text-3xl md:text-4xl">
+            <p className="font-bold text-2xl sm:text-3xl md:text-[48px]" style={{lineHeight: '55px'}}>
               all your handout and past question are now in one place.
             </p>
-            <p className="mt-2 font-medium text-[18px] sm:text-xl md:text-xl">
+            <p className="mt-2 font-medium text-[24px] sm:text-xl md:text-xl">
               a free website for KUST students to download their favorites
               handout and past question papers.
             </p>

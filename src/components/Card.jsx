@@ -20,11 +20,10 @@ export const Card = (props) => {
         <div className="">
           <div className="flex items-center justify-center">
             {props.icon}
-            <h1 className="font-bold text-[18px] px-4">{props.title}</h1>
+            <h1 className="font-bold text-[24px] px-4">{props.title}</h1>
           </div>
-          <p className=" font-normal">
-            Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit.
-            adipisicing elit. Qui, perspiciatis?
+          <p className=" font-normal text-[18px]">
+            {props.text}
           </p>
         </div>
       </div>

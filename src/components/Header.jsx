@@ -24,7 +24,7 @@ export const Header = () => {
       <div className="container flex flex-wrap items-center justify-between md:justify-evenly mx-auto">
         <div>
           <a href="/" className="flex items-center">
-            <span className="self-center text-lg whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl whitespace-nowrap dark:text-white">
               KUST<span className="text-[#0F9D58]">Booklets</span>
             </span>
           </a>
@@ -32,7 +32,7 @@ export const Header = () => {
 
         {/* desktop */}
         <div className="hidden md:block items-center justify-between w-full md:w-auto">
-          <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-[18px] md:font-medium ">
             <li
               className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:bg-transparent md:p-0 font-medium"
               aria-current="page"

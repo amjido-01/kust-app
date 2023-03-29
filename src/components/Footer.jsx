@@ -4,6 +4,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 export const Footer = ({ className }) => {
   const navigate = useNavigate();
+  const presentYear = new Date();
+  const test = presentYear.getFullYear()
   return (
     <section className={className}>
       <footer className="bg-[#263238] text-[#F5F5F5]">
@@ -40,9 +42,9 @@ export const Footer = ({ className }) => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
-                      past question
-                    </a>
+                  <NavLink to="/sample" className="hover:underline">
+                      Sample
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -130,7 +132,7 @@ export const Footer = ({ className }) => {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="text-center">
             <span className="text-sm sm:text-center">
-              copyright © 2023{" "}
+              Copyright © 2023 - {test}{" "}
               <a href="/" className="hover:underline lowercase">
                 MR PROFESSOR & AMJIDO_01™
               </a>

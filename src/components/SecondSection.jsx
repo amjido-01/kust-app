@@ -37,7 +37,7 @@ export const SecondSection = () => {
 
         <div
           data-aos="fade-left"
-          className="text-[#D9D9D9] md:w-1/2 text-start w-[95%]"
+          className="text-[#D9D9D9] md:w-1/2 text-start w-[95%] ml-6"
         >
           <h1 className="font-bold text-[18px] leading-[10px] py-4">
             our struggle
