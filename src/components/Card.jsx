@@ -20,9 +20,9 @@ export const Card = (props) => {
         <div className="">
           <div className="flex items-center justify-center">
             {props.icon}
-            <h1 className="font-bold text-[24px] px-4">{props.title}</h1>
+            <h1 className="font-bold text-[22px] px-4">{props.title}</h1>
           </div>
-          <p className=" font-normal text-[18px]">
+          <p className=" font-normal text-[16px] pr-5">
             {props.text}
           </p>
         </div>

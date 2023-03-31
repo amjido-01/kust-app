@@ -53,8 +53,7 @@ export const Main = () => {
             title="reliable"
             icon={<FaHandHoldingHeart />}
             animation="fade-right"
-            text="ones that you can rely no doubting its authenticity.
-            Isn't that cool !"
+            text="ones that you can rely no doubting its authenticity. Isn't that cool !"
           ></Card>
           <img
             src={sqleft}

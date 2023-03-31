@@ -22,7 +22,7 @@ export const Hero = () => {
 
   return (
     <section className="bg-[#212327] relative min-h-[540px] py-16 md:py-20 px-8 md:px-4">
-      <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2 md:border-red-700">
+      <div className="container flex items-center justify-center flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <img
           className="absolute md:hidden top-20 right-4 mobile"
           src={mobilehero}
@@ -35,11 +35,11 @@ export const Hero = () => {
           ></span>
 
           <div className="mt-2 w-[70%] md:w-full">
-            <p className="font-bold text-2xl sm:text-3xl md:text-[48px]" style={{lineHeight: '55px'}}>
+            <p className="font-bold text-2xl sm:text-3xl md:text-[48px] " style={{lineHeight: '58px'}}>
               all your handout and past question are now in one place.
             </p>
-            <p className="mt-2 font-medium text-[24px] sm:text-xl md:text-xl">
-              a free website for KUST students to download their favorites
+            <p className="mt-2 font-medium text-[22px] sm:text-xl md:text-xl">
+              free website for KUST students to download their favorites
               handout and past question papers.
             </p>
           </div>
@@ -49,7 +49,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden z-10 md:flex justify-center w-[70%] md:w-[54%] mb-4 bg-transparent">
+        <div className="hidden z-10 ml-20 md:flex justify-center w-[70%] md:w-[65%] mb-4 bg-transparent">
           <img src={heroImg} className="" alt="hero_icon" />
         </div>
       </div>

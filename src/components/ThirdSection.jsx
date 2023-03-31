@@ -25,7 +25,7 @@ export const ThirdSection = () => {
             </div>
 
             <div data-aos="fade-up-right" className='text-[#D9D9D9] md:w-1/2 text-start md:text-end pt-20'>
-                <h1 className='font-bold text-[18px] leading-[10px] py-4'>Technology advancement</h1>
+                <h1 className='font-bold text-[18px] leading-[32px] Unbounded py-4'>Technology advancement</h1>
                 <p>
                     Every day, technology progresses and simplifies things for us in various ways. We aspire to keep up with the changes and innovations that it brings to our lives.
                 </p>

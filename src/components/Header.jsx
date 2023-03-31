@@ -9,6 +9,13 @@ import { useNavigate } from "react-router-dom";
 export const Header = () => {
   const navigate = useNavigate();
 
+  const mouseOver = (e) => {
+    e.target.style.background = "#0F9D58";
+  };
+  const mouseDown = (e) => {
+    e.target.style.background = "#212327";
+  };
+
   // active page indicator
   const navLinkStyle = ({ isActive }) => {
     return {
@@ -16,12 +23,12 @@ export const Header = () => {
       textDecorationColor: isActive ? "#0F9D58" : "none",
       textDecorationThickness: isActive ? "2px" : "0px",
       textUnderlineOffset: isActive ? "0.3em" : "none",
-      color: isActive ? '#0F9D58': '',
+      color: isActive ? "#0F9D58" : "",
     };
   };
   return (
-    <nav className="bg-[#212327] font-bold px-2 sm:px-4 py-2 fixed w-full z-20 top-0 left-0">
-      <div className="container flex flex-wrap items-center justify-between md:justify-evenly mx-auto">
+    <nav className="bg-[#212327] font-bold justify px-2 sm:px-4 py-2 fixed w-full z-20 top-0 left-0">
+      <div className="container w-[75%] flex flex-wrap items-center justify-between mx-auto">
         <div>
           <a href="/" className="flex items-center">
             <span className="self-center text-2xl whitespace-nowrap dark:text-white">
@@ -31,7 +38,7 @@ export const Header = () => {
         </div>
 
         {/* desktop */}
-        <div className="hidden md:block items-center justify-between w-full md:w-auto">
+        <div className="hidden md:block items-center justify-between  md:w-auto">
           <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-[18px] md:font-medium ">
             <li
               className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:bg-transparent md:p-0 font-medium"
@@ -57,6 +64,8 @@ export const Header = () => {
         <div className="flex cursor-pointer">
           <Button
             onSmash={() => navigate("/support-us")}
+            mouseOver={mouseOver}
+            mouseDown={mouseDown}
             value="support us"
             border="1px solid"
           ></Button>
