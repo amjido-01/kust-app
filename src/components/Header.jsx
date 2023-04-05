@@ -1,21 +1,12 @@
 import React from "react";
 import { Button } from "./Button";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navigate = useNavigate();
 
-  const mouseOver = (e) => {
-    e.target.style.background = "#0F9D58";
-  };
-  const mouseDown = (e) => {
-    e.target.style.background = "#212327";
-  };
-
+  
   // active page indicator
   const navLinkStyle = ({ isActive }) => {
     return {
@@ -64,8 +55,6 @@ export const Header = () => {
         <div className="flex cursor-pointer">
           <Button
             onSmash={() => navigate("/support-us")}
-            mouseOver={mouseOver}
-            mouseDown={mouseDown}
             value="support us"
             border="1px solid"
           ></Button>
