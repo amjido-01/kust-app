@@ -2,9 +2,11 @@ import React from "react";
 import { Button } from "./Button";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const Header = () => {
   const navigate = useNavigate();
+  const [isHovered, setIsHovered] = useState(false);
 
   
   // active page indicator
@@ -55,6 +57,9 @@ export const Header = () => {
         <div className="flex cursor-pointer">
           <Button
             onSmash={() => navigate("/support-us")}
+            isHovered={isHovered}
+            onHover={() => setIsHovered(true)}
+            onLeave={() => setIsHovered(false)}
             value="support us"
             border="1px solid"
           ></Button>
