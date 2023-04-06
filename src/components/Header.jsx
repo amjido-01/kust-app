@@ -6,9 +6,7 @@ import { useState } from "react";
 
 export const Header = () => {
   const navigate = useNavigate();
-  const [isHovered, setIsHovered] = useState(false);
 
-  
   // active page indicator
   const navLinkStyle = ({ isActive }) => {
     return {
@@ -57,9 +55,10 @@ export const Header = () => {
         <div className="flex cursor-pointer">
           <Button
             onSmash={() => navigate("/support-us")}
-            isHovered={isHovered}
-            onHover={() => setIsHovered(true)}
+            onHover={() => setIsHovered(true)
+            }
             onLeave={() => setIsHovered(false)}
+            hoverColor="#0F9D58"
             value="support us"
             border="1px solid"
           ></Button>
