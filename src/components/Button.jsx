@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 
-export const Button = ({ value, color, border, icon, onSmash, onHover, onLeave, hoverColor }) => {
+export const Button = ({ value, color, border, icon, onSmash, hoverColor = "gray" }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
     setIsHovered(true);
-    console.log('hello')
-    onHover && onHover();
   };
 
   const handleLeave = () => {
     setIsHovered(false);
-    onLeave && onLeave();
   };
   return (
     <div>

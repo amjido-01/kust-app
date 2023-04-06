@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "./Button";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -55,10 +54,7 @@ export const Header = () => {
         <div className="flex cursor-pointer">
           <Button
             onSmash={() => navigate("/support-us")}
-            onHover={() => setIsHovered(true)
-            }
-            onLeave={() => setIsHovered(false)}
-            hoverColor="#0F9D58"
+            hoverColor="green"
             value="support us"
             border="1px solid"
           ></Button>
