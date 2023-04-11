@@ -4,7 +4,6 @@ import { Footer } from "./Footer";
 import { useState } from "react";
 import { Data } from "../Data";
 
-console.log(Data);
 
 export const Documents = () => {
   const [searchQuery, setSearchQuery] = useState("");

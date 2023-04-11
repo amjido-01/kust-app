@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const Button = ({ value, color, border, icon, onSmash, hoverColor = "gray" }) => {
+export const Button = ({ value, color, border, icon, onSmash, cls_name }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -16,9 +16,7 @@ export const Button = ({ value, color, border, icon, onSmash, hoverColor = "gray
         onClick={onSmash}
         type="submit"
         style={{ backgroundColor: color, border: border }}
-        className={`text-white flex items-center font-medium text-sm px-5 py-2 text-center capitalize ${
-          isHovered ? `bg-${hoverColor}` : ""
-        }`}
+        className={cls_name}
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
       >

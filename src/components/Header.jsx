@@ -28,8 +28,8 @@ export const Header = () => {
         </div>
 
         {/* desktop */}
-        <div className="hidden md:block items-center justify-between  md:w-auto">
-          <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-[18px] md:font-medium ">
+        <div className="hidden md:block items-center justify-between md:w-auto">
+          <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 font-[14px] md:text-[18px] md:font-medium ">
             <li
               className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:bg-transparent md:p-0 font-medium"
               aria-current="page"
@@ -57,6 +57,7 @@ export const Header = () => {
             hoverColor="green"
             value="support us"
             border="1px solid"
+            cls_name="text-white hover:bg-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
           ></Button>
         </div>
       </div>
