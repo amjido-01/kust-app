@@ -135,13 +135,15 @@ export const Feedback = () => {
 
             <div>
               <Button
-                color="#0F9D58"
-                hoverColor="red"
                 value="Send"
-                cls_name="text-white  hover:bg-red-400 flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
                 icon={<RiSendPlane2Line className="ml-1" />}
-                border="none"
+                cls_name="text-white bg-[#0F9D58] feed border-2 flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
               ></Button>
+              {/* <Button
+                color=""
+                cls_name="text-white hover:bg-red-500 flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+                border="none"
+              ></Button> */}
             </div>
           </form>
           <ToastContainer />

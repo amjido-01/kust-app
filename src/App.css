@@ -146,6 +146,10 @@ body {
     height: 80px;
 }
 
+/* hover:bg-transparent hover:borde-[#FFFFFF] hover:text-[#FFFFFF] */
+.feed:hover {
+    background-color: transparent;
+}
 
 @media screen and (min-width: 700px) {
     .mobile-two {
@@ -290,8 +294,6 @@ body {
         flex-wrap: wrap;
     }
   }
-
-
 
 
 

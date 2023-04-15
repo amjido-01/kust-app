@@ -54,10 +54,8 @@ export const Header = () => {
         <div className="flex cursor-pointer">
           <Button
             onSmash={() => navigate("/support-us")}
-            hoverColor="green"
             value="support us"
-            border="1px solid"
-            cls_name="text-white hover:bg-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+            cls_name="text-white hover:bg-[#0F9D58] border flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
           ></Button>
         </div>
       </div>

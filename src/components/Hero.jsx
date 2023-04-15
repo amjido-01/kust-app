@@ -47,12 +47,10 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 border-2">
             <Button
               value="get started"
-              color="#4285F4"
-              border="none"
-              cls_name="text-white hover:bg-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
           </div>
         </div>
