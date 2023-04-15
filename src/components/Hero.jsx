@@ -35,17 +35,25 @@ export const Hero = () => {
           ></span>
 
           <div className="mt-2 w-[70%] md:w-full">
-            <p className="font-bold text-2xl sm:text-3xl md:text-[48px] " style={{lineHeight: '58px'}}>
+            <p
+              className="font-bold text-2xl sm:text-3xl md:text-[48px] "
+              style={{ lineHeight: "58px" }}
+            >
               all your handout and past question are now in one place.
             </p>
             <p className="mt-2 font-medium text-[22px] sm:text-xl md:text-xl">
-              free website for KUST students to download their favorites
-              handout and past question papers.
+              free website for KUST students to download their favorites handout
+              and past question papers.
             </p>
           </div>
 
           <div className="mt-8">
-            <Button value="get started" color="#4285F4" border="none"></Button>
+            <Button
+              value="get started"
+              color="#4285F4"
+              border="none"
+              cls_name="text-white hover:bg-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+            ></Button>
           </div>
         </div>
 

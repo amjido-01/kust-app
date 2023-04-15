@@ -136,8 +136,9 @@ export const Feedback = () => {
             <div>
               <Button
                 color="#0F9D58"
-                hoverColor='red'
+                hoverColor="red"
                 value="Send"
+                cls_name="text-white  hover:bg-red-400 flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
                 icon={<RiSendPlane2Line className="ml-1" />}
                 border="none"
               ></Button>
