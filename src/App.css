@@ -146,10 +146,20 @@ body {
     height: 80px;
 }
 
-/* hover:bg-transparent hover:borde-[#FFFFFF] hover:text-[#FFFFFF] */
 
 .start {
     cursor: pointer;
+}
+
+@media screen and (min-width: 425px) {
+    .look {
+        margin-top: 70px;
+    }  
+}
+@media screen and (min-width: 1000px) {
+    .look {
+        margin-top: 0px;
+    }  
 }
 
 @media screen and (min-width: 700px) {

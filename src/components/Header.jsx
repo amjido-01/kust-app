@@ -18,7 +18,7 @@ export const Header = () => {
   };
   return (
     <nav className="bg-[#212327] font-bold justify px-2 sm:px-4 py-2 fixed w-full z-20 top-0 left-0">
-      <div className="container w-[75%] flex flex-wrap items-center justify-between mx-auto">
+      <div className="container w-[98%] md:w-[75%] flex flex-wrap justify-between items-center border-2 mx-auto">
         <div>
           <a href="/" className="flex items-center">
             <span className="self-center text-2xl whitespace-nowrap dark:text-white">
@@ -29,7 +29,7 @@ export const Header = () => {
 
         {/* desktop */}
         <div className="hidden md:block items-center justify-between md:w-auto">
-          <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 font-[14px] md:text-[18px] md:font-medium ">
+          <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 font-[12px] md:text-[15px] md:font-medium">
             <li
               className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:bg-transparent md:p-0 font-medium"
               aria-current="page"
