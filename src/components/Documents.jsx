@@ -4,7 +4,6 @@ import { Footer } from "./Footer";
 import { useState } from "react";
 import { Data } from "../Data";
 
-
 export const Documents = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredItems, setFilteredItems] = useState(Data);
@@ -24,33 +23,36 @@ export const Documents = () => {
     <section className="relative min-h-screen flex flex-col">
       <Header />
 
-      <div className="container w-[90%] md:w-[66%] mx-auto mt-[7rem] flex-1 border-2 border-red-600 mb-[50px]">
-        <div className="text-[#000000] my-7">
-          <h1 className="uppercase font-semibold text-[22px]">
-            welcome to the document page{" "}
+      <div className="container w-full p-4 md:p-0 md:w-[73%] mx-auto mt-[5rem] md:mt-[7rem] flex-1 mb-[50px]">
+        <div className="text-[#000000] mb-4 md:mb-7">
+          <h1
+            style={{ fontFamily: "poppins" }}
+            className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
+          >
+            welcome to the document page
           </h1>
-          <p className="capitalize font-normal">
+          <p className="capitalize font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">
             choose your faculty and click/tap to proceed.
           </p>
         </div>
 
-        <div className="container bg-[#B0F2B4] border border-red-500 mx-auto">
+        <div className="container border-[3px] border-[#000000] rounded-[30px] bg-[#B0F2B4] mx-auto">
           <div className="container">
-            <h1 className="text-center uppercase">FACULTIES</h1>
-            <input
+            <h1 style={{fontFamily: "poppins"}} className="md:text-center px-8 pt-4 uppercase text-[17px] font-semibold leading-[26px] md:text-[28px] md:pt-5 md:font-medium">FACULTIES</h1>
+            {/* <input
               type="text"
               className="border-2 border-green-500"
               value={searchQuery}
               onChange={handleSearch}
               placeholder="search"
-            />
+            /> */}
 
-            <div className="border-2 border-yellow-400 flex flex-col md:flex-row md:items-center md:justify-center">
-              <div className="w-[100%] flex justify-center items-center  mx-auto md:w-[45%]">
+            <div className="pb-[20px] pt-1 pl-6 md:px-8 md:py-[50px] flex flex-col md:flex-row md:items-center md:justify-center">
+              <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
                 <ul className=" list-disc">
                   {filteredItems.map((item) => (
                     <a key={item.id} href="#">
-                      <li className="p-0.5 text-[14px] font-normal ">
+                      <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
                         {item.first_name}
                       </li>
                     </a>
@@ -58,17 +60,18 @@ export const Documents = () => {
                 </ul>
               </div>
 
-              <div className="w-[45%]">
+              <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
                 <ul className=" list-disc">
                   {filteredItems.map((item) => (
                     <a key={item.id} href="#">
-                      <li className="p-0.5 text-[14px] font-normal ">
+                      <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
                         {item.first_name}
                       </li>
                     </a>
                   ))}
                 </ul>
               </div>
+
             </div>
           </div>
         </div>
