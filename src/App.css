@@ -147,8 +147,9 @@ body {
 }
 
 /* hover:bg-transparent hover:borde-[#FFFFFF] hover:text-[#FFFFFF] */
-.feed:hover {
-    background-color: transparent;
+
+.start {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 700px) {

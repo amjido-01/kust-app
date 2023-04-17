@@ -34,7 +34,7 @@ export const Hero = () => {
             className="italic text-[#0F9D58] Poppins text-[18px] font-normal md:font-semibold"
           ></span>
 
-          <div className="mt-2 w-[70%] md:w-full">
+          <div className="mt-2 w-[70%] md:w-full border-2">
             <p
               className="font-bold text-2xl sm:text-3xl md:text-[48px] "
               style={{ lineHeight: "58px" }}
@@ -47,10 +47,10 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-8 border-2">
+          <div className="mt-8 border-2 block">
             <Button
               value="get started"
-              cls_name="text-white cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white block cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
           </div>
         </div>

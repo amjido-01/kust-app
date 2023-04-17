@@ -15,7 +15,7 @@ export const Card = (props) => {
     <div>
       <div
         data-aos={props.animation}
-        className="flex max-w-md overflow-hidden bg-white py-3 px-10 md:px-3 my-3 text-center"
+        className="flex max-w-md overflow-hidden py-3 px-10 md:px-3 my-3 text-center"
       >
         <div className="">
           <div className="flex items-center justify-center">
