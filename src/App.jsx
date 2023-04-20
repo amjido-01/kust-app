@@ -25,7 +25,7 @@ function App() {
       <Route path="sample" element={<Sample />}>
         {" "}
       </Route>
-      <Route path="department" element={<Dept />}>
+      <Route path="document/departments" element={<Dept />}>
         {" "}
       </Route>
       <Route path="*" element={<PageNotFound />}></Route>
