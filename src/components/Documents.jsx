@@ -23,7 +23,7 @@ export const Documents = () => {
     <section className="relative min-h-screen flex flex-col">
       <Header />
 
-      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[10rem] flex-1">
+      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
         <div className="lookflex flex-col justify-center">
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
