@@ -4,7 +4,13 @@ import { Dept } from './Dept'
 export const Computer = () => {
   return (
     <div>
-        <Dept title="FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)"></Dept>
+        <Dept 
+        faculty="FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)"
+        deptOne="computer science"
+        deptTwo="mathematics"
+        deptThree="statistics"
+        deptFour="information tech"
+        ></Dept>
     </div>
   )
 }

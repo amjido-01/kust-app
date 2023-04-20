@@ -9,7 +9,7 @@ import { PageNotFound } from "./components/PageNotFound";
 import { Sample } from "./components/Sample";
 import { Dept } from "./components/Dept"
 import { Computer } from "./components/Computer";
-
+import { Test } from "./components/Test";
 function App() {
   return (
     <Routes>
@@ -18,7 +18,8 @@ function App() {
         {" "}
       </Route>
       <Route path="documents" element={<Documents />}>
-        {" "}
+        <Route path="computer" element={<Computer />}></Route>
+        <Route path="test" element={<Test />}></Route>
       </Route>
       <Route path="support-us" element={<Support />}>
         {" "}
@@ -26,9 +27,9 @@ function App() {
       <Route path="sample" element={<Sample />}>
         {" "}
       </Route>
-      <Route path="document/computer" element={<Computer />}>
+      {/* <Route path="document/computer" element={<Computer />}>
         {" "}
-      </Route>
+      </Route> */}
       <Route path="*" element={<PageNotFound />}></Route>
     </Routes>
     

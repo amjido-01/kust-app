@@ -29,12 +29,12 @@ export const Dept = (props) => {
                 style={{ fontFamily: "poppins" }}
                 className="px-8 pt-4 uppercase text-[17px] font-semibold leading-[26px] md:text-[26px] md:pt-5 md:font-medium"
               >
-                {props.title}
+                {props.faculty}
               </h2>
 
               <div className="flex justify-between font-medium text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
                 <div className="">
-                  <h3>computer science</h3>
+                  <h3>{props.deptOne}</h3>
 
                   <ul className=" list-disc mt-4">
                     <li>Level one</li>
@@ -45,7 +45,7 @@ export const Dept = (props) => {
                 </div>
 
                 <div>
-                  <h3>mathematics</h3>
+                  <h3>{props.deptTwo}</h3>
 
                   <ul className=" list-disc mt-4">
                     <li>Level one</li>
@@ -56,7 +56,7 @@ export const Dept = (props) => {
                 </div>
 
                 <div>
-                  <h3>statistics</h3>
+                  <h3>{props.deptThree}</h3>
 
                   <ul className=" list-disc mt-4">
                     <li>Level one</li>
@@ -67,7 +67,7 @@ export const Dept = (props) => {
                 </div>
 
                 <div>
-                  <h3>information technology</h3>
+                  <h3>{props.deptFour}</h3>
 
                   <ul className=" list-disc mt-4">
                     <li>Level one</li>

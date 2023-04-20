@@ -4,6 +4,7 @@ import { Footer } from "./Footer";
 import { useState } from "react";
 import { Data } from "../Data";
 import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Dept } from "./Dept";
 
 export const Documents = () => {
@@ -57,18 +58,20 @@ export const Documents = () => {
 
               <div className="pb-[20px] pt-1 pl-6 md:px-8 md:py-[50px] flex flex-col md:flex-row md:items-center md:justify-center">
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
-                  <ul className=" list-disc">
+                <nav>
+                <ul className=" list-disc">
                     <li>
-                      <Link to="/document/computer">FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)</Link>
+                      <Link to="computer">
+                        FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)
+                      </Link>
                     </li>
-                    {/* {filteredItems.map((item) => (
-                      <a key={item.id} href="#">
-                        <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
-                          {item.first_name}
-                        </li>
-                      </a>
-                    ))} */}
+                    <li>
+                      <Link to="test">FACULTY OF Engineering</Link>
+                    </li>
                   </ul>
+                </nav>
+                  
+                  <Outlet />
                 </div>
 
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
