@@ -59,7 +59,7 @@ export const Documents = () => {
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
                   <ul className=" list-disc">
                     <li>
-                      <Link to="/document/departments">FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)</Link>
+                      <Link to="/document/computer">FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)</Link>
                     </li>
                     {/* {filteredItems.map((item) => (
                       <a key={item.id} href="#">

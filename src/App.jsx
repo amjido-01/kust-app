@@ -8,6 +8,7 @@ import { Routes } from "react-router-dom";
 import { PageNotFound } from "./components/PageNotFound";
 import { Sample } from "./components/Sample";
 import { Dept } from "./components/Dept"
+import { Computer } from "./components/Computer";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
       <Route path="sample" element={<Sample />}>
         {" "}
       </Route>
-      <Route path="document/departments" element={<Dept />}>
+      <Route path="document/computer" element={<Computer />}>
         {" "}
       </Route>
       <Route path="*" element={<PageNotFound />}></Route>

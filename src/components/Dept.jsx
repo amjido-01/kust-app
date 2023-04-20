@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { useState } from "react";
 
-export const Dept = () => {
+export const Dept = (props) => {
   return (
     <section className="relative min-h-screen flex flex-col">
       <Header />
@@ -29,10 +29,10 @@ export const Dept = () => {
                 style={{ fontFamily: "poppins" }}
                 className="px-8 pt-4 uppercase text-[17px] font-semibold leading-[26px] md:text-[26px] md:pt-5 md:font-medium"
               >
-                FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)
+                {props.title}
               </h2>
 
-              <div className="flex justify-between uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
+              <div className="flex justify-between font-medium text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
                 <div className="">
                   <h3>computer science</h3>
 
