@@ -1,7 +1,7 @@
 import React from 'react'
 import { Dept } from './Dept'
 
-export const Computer = () => {
+export const Facms = () => {
   return (
     <div>
         <Dept 

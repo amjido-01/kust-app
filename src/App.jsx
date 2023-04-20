@@ -8,8 +8,9 @@ import { Routes } from "react-router-dom";
 import { PageNotFound } from "./components/PageNotFound";
 import { Sample } from "./components/Sample";
 import { Dept } from "./components/Dept"
-import { Computer } from "./components/Computer";
-import { Test } from "./components/Test";
+import { Engineering } from "./components/Engineering";
+import { Facms } from "./components/Facms";
+
 function App() {
   return (
     <Routes>
@@ -18,8 +19,6 @@ function App() {
         {" "}
       </Route>
       <Route path="documents" element={<Documents />}>
-        <Route path="computer" element={<Computer />}></Route>
-        <Route path="test" element={<Test />}></Route>
       </Route>
       <Route path="support-us" element={<Support />}>
         {" "}
@@ -27,9 +26,12 @@ function App() {
       <Route path="sample" element={<Sample />}>
         {" "}
       </Route>
-      {/* <Route path="document/computer" element={<Computer />}>
+      <Route path="documents/facms" element={<Facms />}>
         {" "}
-      </Route> */}
+      </Route>
+      <Route path="documents/engineering" element={<Engineering />}>
+        {" "}
+      </Route>
       <Route path="*" element={<PageNotFound />}></Route>
     </Routes>
     

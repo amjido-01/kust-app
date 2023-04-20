@@ -60,13 +60,19 @@ export const Documents = () => {
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
                 <nav>
                 <ul className=" list-disc">
-                    <li>
-                      <Link to="computer">
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                      <Link to="facms">
                         FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)
                       </Link>
                     </li>
-                    <li>
-                      <Link to="test">FACULTY OF Engineering</Link>
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                      <Link to="engineering">FACULTY OF ENGINEERING</Link>
+                    </li>
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                      <Link to="">FACULTY OF SCIENCE</Link>
+                    </li>
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                      <Link to="">FACULTY OF AGRICULTURE & AGRICULTURAL TECH</Link>
                     </li>
                   </ul>
                 </nav>
