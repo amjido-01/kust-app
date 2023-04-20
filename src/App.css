@@ -303,6 +303,7 @@ body {
     .foot {
         display: flex;
         flex-wrap: wrap;
+        
     }
   }
 

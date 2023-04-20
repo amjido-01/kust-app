@@ -48,7 +48,7 @@ export const Footer = ({ className }) => {
                   </li>
                 </ul>
               </div>
-              <div className="">
+              <div className="mt-6 md:mt-0">
                 <h2 className="mb-2 text-sm font-semibold uppercase">
                   follow us
                 </h2>
