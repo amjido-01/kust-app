@@ -4,8 +4,13 @@ import { Footer } from "./Footer";
 import { useState } from "react";
 import { Data } from "../Data";
 import { Link } from "react-router-dom";
-import { Outlet } from "react-router-dom";
-import { Dept } from "./Dept";
+import one from "../assets/one.svg";
+import two from "../assets/two.svg";
+import three from "../assets/three.svg";
+import four from "../assets/four.svg";
+import five from "../assets/five.svg";
+import six from "../assets/six.svg";
+import seven from "../assets/seven.svg";
 
 export const Documents = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -58,37 +63,83 @@ export const Documents = () => {
 
               <div className="pb-[20px] pt-1 pl-6 md:px-8 md:py-[50px] flex flex-col md:flex-row md:items-center md:justify-center">
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
-                <nav>
-                <ul className=" list-disc">
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
-                      <Link to="facms">
-                        FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)
-                      </Link>
-                    </li>
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
-                      <Link to="engineering">FACULTY OF ENGINEERING</Link>
-                    </li>
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
-                      <Link to="">FACULTY OF SCIENCE</Link>
-                    </li>
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
-                      <Link to="">FACULTY OF AGRICULTURE & AGRICULTURAL TECH</Link>
-                    </li>
-                  </ul>
-                </nav>
-                  
-                  <Outlet />
+                    <ul className=" list-disc">
+                      <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                        <Link to="facms">
+                          FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)
+                        </Link>
+                      </li>
+                      <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                        <Link to="engineering">FACULTY OF ENGINEERING</Link>
+                      </li>
+                      <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                        <Link to="">FACULTY OF SCIENCES</Link>
+                      </li>
+                    </ul>
                 </div>
+
+
+                <img
+        src={one}
+        className="absolute top-[45%] md:top-16 w-[23px] md:w-[30px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={two}
+        className="absolute -bottom-[12%] left-10 md:left-[30%] w-[25px] md:w-[60px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={three}
+        className="absolute top-[60%] w-[30px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={four}
+        className="absolute right-0 w-[20px] md:right-0 md:top-0 md:w-[20px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={five}
+        className="absolute right-[25%] md:top-[10%] top-[15%] w-[24px] md:w-[40px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={six}
+        className="absolute right-0 top-[70%] w-[30px] md:w-[40px]"
+        alt=""
+        srcset=""
+      />
+      <img
+        src={seven}
+        className="absolute right-0 md:left-[45%] top-[40%] w-[25px] md:w-[35px]"
+        alt=""
+        srcset=""
+      />
+
 
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
                   <ul className=" list-disc">
-                    {/* {filteredItems.map((item) => (
-                      <a key={item.id} href="#">
-                        <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
-                          {item.first_name}
-                        </li>
-                      </a>
-                    ))} */}
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                      <Link to="">
+                        FACULTY OF AGRICULTURE & AGRICULTURAL TECH
+                      </Link>
+                    </li>
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                      <Link to="">
+                        FACULTY OF SCIENCE EDUCATION
+                      </Link>
+                    </li>
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                      <Link to="">
+                        FACULTY OF EARTH & ENVIRONMENTAL SCI
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
