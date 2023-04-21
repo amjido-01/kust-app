@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./Button";
 import heroImg from "../assets/bro.png";
-import Rec from "../assets/Rectangle.png";
+// import Rec from "../assets/Rectangle.png";
 import mobilehero from "../assets/mobilehero.png";
 import Testing from "../assets/Ellipse.svg";
 import Typed from "typed.js";
