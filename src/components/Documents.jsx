@@ -4,14 +4,14 @@ import { Footer } from "./Footer";
 import { useState } from "react";
 import { Data } from "../Data";
 import { Link } from "react-router-dom";
-import one from "../assets/one.svg";
-import two from "../assets/two.svg";
-import Rec from "../assets/Rec.svg"
-import three from "../assets/three.svg";
-import four from "../assets/four.svg";
-import five from "../assets/five.svg";
-import six from "../assets/six.svg";
+import Poly from "../assets/Poly.svg";
+import Polyg from "../assets/Polyg.svg";
+import Rec from "../assets/Rec.svg";
+import Polygo from "../assets/Polygo.svg";
+import Ellip from "../assets/Ellip.svg";
+import Polygon from "../assets/Polygon.svg";
 import seven from "../assets/seven.svg";
+// import Polygo from "../assets/Polygo";
 
 export const Documents = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -100,47 +100,45 @@ export const Documents = () => {
         </div>
       </div>
       <img
-        src={one}
-        className="absolute top-[45%] md:top-16 w-[23px] md:w-[30px]"
+        src={Poly}
+        className="absolute right-[8rem] top-36 md:top-[17%] w-[23px] md:w-[30px]"
         alt=""
-        srcset=""
       />
       <img
-        src={two}
-        className="absolute  bottom-[50%] left-10 md:left-[30%] w-[25px] md:w-[60px]"
+        src={Polyg}
+        className="absolute top-[37%] right-0 w-[25px] md:w-[15px]"
         alt=""
-        srcset=""
       />
       <img
         src={Rec}
-        className="absolute  border-2 top-[60%] w-[30px]"
+        className="absolute right-[50%] top-[58%] w-[50px]"
         alt=""
-        srcset=""
       />
       <img
-        src={Rec}
-        className="absolute  border-2 right-0 w-[20px] md:right-0 md:top-0 md:w-[20px]"
+        src={Polygo}
+        className="absolute top-[20%] w-5"
         alt=""
-        srcset=""
-      />
-      {/* <img
-        src={five}
-        className="absolute  border-2 right-[25%] md:top-[10%] top-[15%] w-[24px] md:w-[40px]"
-        alt=""
-        srcset=""
       />
       <img
-        src={six}
-        className="absolute  border-2 right-0 top-[70%] w-[30px] md:w-[40px]"
+        src={Polygo}
+        className="absolute top-[35%] left-24 w-4"
         alt=""
-        srcset=""
+      />
+      <img
+        src={Ellip}
+        className="absolute right-[8%] md:top-[32%] top-[15%] w-[24px] md:w-[15px]"
+        alt=""
+      />
+      <img
+        src={Polygon}
+        className="absolute right-0 top-[70%] w-[30px] md:w-[40px]"
+        alt=""
       />
       <img
         src={seven}
-        className="absolute right-0 md:left-[45%] top-[40%] w-[25px] md:w-[35px]"
+        className="absolute border-4 border-green-700 right-0 md:left-[45%] top-[40%] w-[25px] md:w-[35px]"
         alt=""
-        srcset=""
-      /> */}
+      />
       <div className="relative bottom-0">
         <Footer className="w-full" />
       </div>
