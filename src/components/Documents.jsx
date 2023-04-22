@@ -101,42 +101,42 @@ export const Documents = () => {
       </div>
       <img
         src={Poly}
-        className="absolute right-[8rem] top-36 md:top-[17%] w-[23px] md:w-[30px]"
+        className="hidden md:block absolute right-[8rem] top-36 md:top-[17%] w-[23px] md:w-[30px]"
         alt=""
       />
       <img
         src={Polyg}
-        className="absolute top-[37%] right-0 w-[25px] md:w-[15px]"
+        className="hidden md:block absolute top-[37%] right-0 w-[25px] md:w-[15px]"
         alt=""
       />
       <img
         src={Rec}
-        className="absolute right-[50%] top-[58%] w-[50px]"
+        className="hidden md:block absolute right-[50%] top-[58%] w-[50px]"
         alt=""
       />
       <img
         src={Polygo}
-        className="absolute top-[20%] w-5"
+        className="hidden md:block absolute top-[20%] w-5"
         alt=""
       />
       <img
         src={Polygo}
-        className="absolute top-[35%] left-24 w-4"
+        className="hidden md:block absolute top-[35%] left-24 w-4"
         alt=""
       />
       <img
         src={Ellip}
-        className="absolute right-[8%] md:top-[32%] top-[15%] w-[24px] md:w-[15px]"
+        className="hidden md:block absolute right-[8%] md:top-[32%] top-[15%] w-[24px] md:w-[15px]"
         alt=""
       />
       <img
         src={Polygon}
-        className="absolute right-0 top-[70%] w-[30px] md:w-[40px]"
+        className="hidden md:block absolute right-0 top-[70%] w-[30px] md:w-[40px]"
         alt=""
       />
       <img
         src={seven}
-        className="absolute border-4 border-green-700 right-0 md:left-[45%] top-[40%] w-[25px] md:w-[35px]"
+        className="hidden md:block absolute right-0 md:left-[45%] top-[10%] w-[25px] md:w-[20px]"
         alt=""
       />
       <div className="relative bottom-0">

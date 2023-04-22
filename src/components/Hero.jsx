@@ -34,7 +34,7 @@ export const Hero = () => {
             className="italic text-[#0F9D58] Poppins text-[18px] font-normal md:font-semibold"
           ></span>
 
-          <div className="mt-2 w-[70%] md:w-full border-2">
+          <div className="mt-2 w-[70%] md:w-full">
             <p
               className="font-bold text-2xl sm:text-3xl md:text-[48px] "
               style={{ lineHeight: "58px" }}
