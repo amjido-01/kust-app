@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "./Button";
 import heroImg from "../assets/bro.png";
-// import Rec from "../assets/Rectangle.png";
 import mobilehero from "../assets/mobilehero.png";
 import Testing from "../assets/Ellipse.svg";
 import Typed from "typed.js";
@@ -40,7 +39,7 @@ export const Hero = () => {
             >
               all your handout and past question are now in one place.
             </p>
-            <p className="mt-2 font-medium text-[22px] sm:text-xl md:text-xl">
+            <p className="mt-3.5 font-medium text-[22px] sm:text-xl md:text-xl">
               free website for KUST students to download their favorites handout
               and past question papers.
             </p>

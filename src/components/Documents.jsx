@@ -79,7 +79,7 @@ export const Documents = () => {
                   </ul>
                 </div>
 
-                <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
+                <div className="w-[100%] flex items-center mx-auto md:w-[45%]">
                   <ul className=" list-disc">
                     <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
                       <Link to="">
