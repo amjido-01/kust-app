@@ -9,7 +9,7 @@ export const Facms = () => {
         deptOne="computer science"
         deptTwo="mathematics"
         deptThree="statistics"
-        deptFour="information tech"
+        deptFour={`information \n tech`}
         ></Dept>
     </div>
   )

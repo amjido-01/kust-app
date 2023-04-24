@@ -32,9 +32,40 @@ export const Dept = (props) => {
                 {props.faculty}
               </h2>
 
-              <div className="flex justify-between flex-wrap font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
-                <div className="">
-                  <h3 className="text-[13px] md:text-[16px] ">{props.deptOne}</h3>
+              <div className="md:flex justify-between font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
+                <div className="flex justify-evenly mt-2 mb-4">
+                  <div className="">
+                    <h3 className="text-[13px] md:text-[16px] ">
+                      {props.deptOne}
+                    </h3>
+
+                    <ul className=" list-disc mt-2 md:mt-4">
+                      <li>Level one</li>
+                      <li>level two</li>
+                      <li>level three</li>
+                      <li>level four</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[13px] md:text-[16px]">
+                      {props.deptTwo}
+                    </h3>
+
+                    <ul className=" list-disc mt-2 md:mt-4">
+                      <li>Level one</li>
+                      <li>level two</li>
+                      <li>level three</li>
+                      <li>level four</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex justify-evenly my-2">
+                <div>
+                  <h3 className="text-[13px] md:text-[16px]">
+                    {props.deptThree}
+                  </h3>
 
                   <ul className=" list-disc mt-2 md:mt-4">
                     <li>Level one</li>
@@ -45,7 +76,9 @@ export const Dept = (props) => {
                 </div>
 
                 <div>
-                  <h3 className="text-[13px] md:text-[16px]">{props.deptTwo}</h3>
+                  <h3 className="text-[13px] md:text-[16px]">
+                    {props.deptFour}
+                  </h3>
 
                   <ul className=" list-disc mt-2 md:mt-4">
                     <li>Level one</li>
@@ -54,28 +87,8 @@ export const Dept = (props) => {
                     <li>level four</li>
                   </ul>
                 </div>
-
-                <div>
-                  <h3 className="text-[13px] md:text-[16px]">{props.deptThree}</h3>
-
-                  <ul className=" list-disc mt-4">
-                    <li>Level one</li>
-                    <li>level two</li>
-                    <li>level three</li>
-                    <li>level four</li>
-                  </ul>
                 </div>
 
-                <div>
-                  <h3 className="text-[13px] md:text-[16px]">{props.deptFour}</h3>
-
-                  <ul className=" list-disc mt-4">
-                    <li>Level one</li>
-                    <li>level two</li>
-                    <li>level three</li>
-                    <li>level four</li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
