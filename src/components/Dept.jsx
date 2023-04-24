@@ -32,8 +32,8 @@ export const Dept = (props) => {
                 {props.faculty}
               </h2>
 
-              <div className="md:flex justify-between font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
-                <div className="flex justify-evenly mt-2 mb-4">
+              <div className="block md:flex border-2 border-red-500 justify-evenly font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
+                <div className="flex justify-evenly mt-2 mb-4 w-full md:w-1/2">
                   <div className="">
                     <h3 className="text-[13px] md:text-[16px] ">
                       {props.deptOne}
@@ -61,7 +61,7 @@ export const Dept = (props) => {
                   </div>
                 </div>
 
-                <div className="flex justify-evenly my-2">
+                <div className="flex border-2 border-emerald-500 w-full md:w-1/2 justify-evenly md:justify-around my-2">
                 <div>
                   <h3 className="text-[13px] md:text-[16px]">
                     {props.deptThree}
