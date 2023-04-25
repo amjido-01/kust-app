@@ -8,8 +8,8 @@ export const Facms = () => {
         faculty="FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)"
         deptOne="computer science"
         deptTwo="mathematics"
-        deptThree="statistics"
-        deptFour={`information \n tech`}
+        deptThree="information tech"
+        deptFour={`statistics`}
         ></Dept>
     </div>
   )

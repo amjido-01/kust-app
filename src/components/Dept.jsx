@@ -1,7 +1,12 @@
 import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import Polygo from "../assets/dept/Polygo.svg";
+import Polygon from "../assets/dept/Polygon.svg";
+import Polyg from "../assets/dept/Polyg.svg";
+import Rectangl from "../assets/dept/Rectangl.svg";
+import Rectangle from "../assets/dept/Rectangle.svg";
 
 export const Dept = (props) => {
   return (
@@ -32,15 +37,15 @@ export const Dept = (props) => {
                 {props.faculty}
               </h2>
 
-              <div className="block md:flex border-2 border-red-500 justify-evenly font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
-                <div className="flex justify-evenly mt-2 mb-4 w-full md:w-1/2">
+              <div className="block md:flex justify-evenly font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
+                <div className="flex justify-evenly md:justify-around mt-2 mb-4 w-full md:w-1/2 text-[11px] leading-[16px] font-semibold md:text-[18px] md:leading-[30px]">
                   <div className="">
-                    <h3 className="text-[13px] md:text-[16px] ">
-                      {props.deptOne}
-                    </h3>
+                    <h3 className="">{props.deptOne}</h3>
 
                     <ul className=" list-disc mt-2 md:mt-4">
-                      <li>Level one</li>
+                      <li className="">
+                        <Link to="">Level one </Link>
+                      </li>
                       <li>level two</li>
                       <li>level three</li>
                       <li>level four</li>
@@ -61,39 +66,63 @@ export const Dept = (props) => {
                   </div>
                 </div>
 
-                <div className="flex border-2 border-emerald-500 w-full md:w-1/2 justify-evenly md:justify-around my-2">
-                <div>
-                  <h3 className="text-[13px] md:text-[16px]">
-                    {props.deptThree}
-                  </h3>
+                <div className="flex w-full md:w-1/2 justify-evenly md:justify-around my-2 text-[11px] leading-[16px] font-semibold md:text-[18px] md:leading-[30px]">
+                  <div className="">
+                    <h3 className="text-[13px] md:text-[16px]">
+                      {props.deptThree}
+                    </h3>
 
-                  <ul className=" list-disc mt-2 md:mt-4">
-                    <li>Level one</li>
-                    <li>level two</li>
-                    <li>level three</li>
-                    <li>level four</li>
-                  </ul>
+                    <ul className=" list-disc mt-2 md:mt-4">
+                      <li>Level one</li>
+                      <li>level two</li>
+                      <li>level three</li>
+                      <li>level four</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[13px] md:text-[16px]">
+                      {props.deptFour}
+                    </h3>
+
+                    <ul className=" list-disc mt-2 md:mt-4">
+                      <li>Level one</li>
+                      <li>level two</li>
+                      <li>level three</li>
+                      <li>level four</li>
+                    </ul>
+                  </div>
                 </div>
-
-                <div>
-                  <h3 className="text-[13px] md:text-[16px]">
-                    {props.deptFour}
-                  </h3>
-
-                  <ul className=" list-disc mt-2 md:mt-4">
-                    <li>Level one</li>
-                    <li>level two</li>
-                    <li>level three</li>
-                    <li>level four</li>
-                  </ul>
-                </div>
-                </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
+      <img
+        src={Polygon}
+        className="hidden md:block absolute top-[35%] left-[9rem] w-6"
+        alt=""
+      />
+      <img
+        src={Rectangl}
+        className="hidden md:block absolute top-[25.5%] -z-10 left-[50rem] w-10"
+        alt=""
+      />
+      <img
+        src={Rectangle}
+        className="hidden md:block absolute top-[60%] left-[27rem] w-10"
+        alt=""
+      />
+      <img
+        src={Polyg}
+        className="hidden md:block absolute top-[35%] right-0 w-8"
+        alt=""
+      />
+      <img
+        src={Polygo}
+        className="hidden md:block absolute top-[60%] right-0 w-8"
+        alt=""
+      />
       <div className="relative bottom-0">
         <Footer className="w-full" />
       </div>
