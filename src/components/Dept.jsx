@@ -7,6 +7,7 @@ import Polygon from "../assets/dept/Polygon.svg";
 import Polyg from "../assets/dept/Polyg.svg";
 import Rectangl from "../assets/dept/Rectangl.svg";
 import Rectangle from "../assets/dept/Rectangle.svg";
+import Rectang from "../assets/dept/Rectang.svg";
 
 export const Dept = (props) => {
   return (
@@ -119,8 +120,13 @@ export const Dept = (props) => {
         alt=""
       />
       <img
+        src={Rectang}
+        className="hidden md:block absolute top-[44%] right-10 w-8"
+        alt=""
+      />
+      <img
         src={Polygo}
-        className="hidden md:block absolute top-[60%] right-0 w-8"
+        className="hidden md:block absolute top-[57%] left-[65rem] -z-10 w-7"
         alt=""
       />
       <div className="relative bottom-0">
