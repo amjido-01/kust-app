@@ -47,9 +47,15 @@ export const Dept = (props) => {
                       <li className="">
                         <Link to="">Level one </Link>
                       </li>
-                      <li>level two</li>
-                      <li>level three</li>
-                      <li>level four</li>
+                      <li>
+                        <Link to="">level two</Link>
+                      </li>
+                      <li>
+                        <Link>level three</Link>
+                      </li>
+                      <li>
+                        <Link>level four</Link>
+                      </li>
                     </ul>
                   </div>
 
@@ -59,10 +65,18 @@ export const Dept = (props) => {
                     </h3>
 
                     <ul className=" list-disc mt-2 md:mt-4">
-                      <li>Level one</li>
-                      <li>level two</li>
-                      <li>level three</li>
-                      <li>level four</li>
+                      <li>
+                        <Link>Level one</Link>
+                      </li>
+                      <li>
+                        <Link>level two</Link>
+                      </li>
+                      <li>
+                        <Link>level three</Link>
+                      </li>
+                      <li>
+                        <Link>level four</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -74,10 +88,18 @@ export const Dept = (props) => {
                     </h3>
 
                     <ul className=" list-disc mt-2 md:mt-4">
-                      <li>Level one</li>
-                      <li>level two</li>
-                      <li>level three</li>
-                      <li>level four</li>
+                      <li>
+                        <Link>Level one</Link>
+                      </li>
+                      <li>
+                        <Link>level two</Link>
+                      </li>
+                      <li>
+                        <Link>level three</Link>
+                      </li>
+                      <li>
+                        <Link>level four</Link>
+                      </li>
                     </ul>
                   </div>
 
@@ -88,9 +110,15 @@ export const Dept = (props) => {
 
                     <ul className=" list-disc mt-2 md:mt-4">
                       <li>Level one</li>
-                      <li>level two</li>
-                      <li>level three</li>
-                      <li>level four</li>
+                      <li>
+                        <Link>level two</Link>
+                      </li>
+                      <li>
+                        <Link>level three</Link>
+                      </li>
+                      <li>
+                        <Link>level four</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>

@@ -3,6 +3,8 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import auto from "../assets/auto.svg";
 import auto2 from "../assets/auto2.svg";
+import auto2sq from "../assets/auto2sq.jpg"
+import autosq from "../assets/autosq.jpg"
 import { Autor } from "./Autor";
 import one from "../assets/one.svg";
 import two from "../assets/two.svg";
@@ -23,6 +25,7 @@ export const About = () => {
       role: "frontend developer, UI/UX designer. ",
       alt: "designer",
       qouteColor: "#D9D9D9",
+      placeHolder: auto2sq
     },
     {
       imgURI: auto,
@@ -33,8 +36,10 @@ export const About = () => {
       role: "frontend software engineer.",
       alt: "developer",
       qouteColor: "rgba(252, 158, 28, 0.5)",
+      placeHolder: autosq
     },
   ];
+  console.log(placeHolder)
   return (
     <section className="relative">
       <Header />
@@ -52,7 +57,7 @@ export const About = () => {
       </div>
       <img
         src={one}
-        className="absolute top-[45%] md:top-16 w-[23px] md:w-[30px]"
+        className="absolute border-2 border-emerald-600 top-[45%] md:top-16 w-[23px] md:w-[30px]"
         alt=""
         srcset=""
       />
@@ -96,6 +101,7 @@ export const About = () => {
         <div className="container flex flex-col md:flex-row">
           <Autor
             src={person[0].imgURI}
+            placeHolder={person[0].placeHolder}
             quote={person[0].qoute}
             name={person[0].name}
             level={person[0].level}
@@ -107,6 +113,7 @@ export const About = () => {
 
           <Autor
             src={person[1].imgURI}
+            placeHolder={person[1].placeHolder}
             quote={person[1].qoute}
             name={person[1].name}
             level={person[1].level}

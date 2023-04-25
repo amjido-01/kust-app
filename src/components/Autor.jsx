@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const Autor = ({
   src,
@@ -9,6 +10,7 @@ export const Autor = ({
   alt,
   quoteColor,
   triangleColor,
+  placeHolder
 }) => {
   return (
     <div className="text-[#000000]">
@@ -28,9 +30,10 @@ export const Autor = ({
           }}
         ></span>
       </div>
-      <img
+      <LazyLoadImage
         src={src}
-        className="w-[70%] mx-auto text-[#000000] my-2"
+        className="w-[70%] border-2 border-red-500 mx-auto text-[#000000] my-2"
+        placeholder={placeHolder}
         alt={alt}
       />
       <div className="content capitalize text-center bg-[#D9D9D9] rounded-[8px] w-[90%] md:w-[70%] p-2 md:p-1 mx-auto">
