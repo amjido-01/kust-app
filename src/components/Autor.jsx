@@ -1,5 +1,5 @@
 import React from "react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Autor = ({
   src,
@@ -10,7 +10,7 @@ export const Autor = ({
   alt,
   quoteColor,
   triangleColor,
-  placeHolder
+  placeHolder,
 }) => {
   return (
     <div className="text-[#000000]">

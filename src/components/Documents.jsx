@@ -111,7 +111,7 @@ export const Documents = () => {
       />
       <img
         src={Rec}
-        className="hidden md:block absolute right-[50%] top-[58%] w-[50px]"
+        className="hidden md:block absolute -z-10 right-[50%] top-[58%] w-[50px]"
         alt=""
       />
       <img
