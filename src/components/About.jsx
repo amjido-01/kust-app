@@ -99,7 +99,7 @@ export const About = () => {
         <div className="container flex flex-col md:flex-row">
           <Autor
             src={person[0].imgURI}
-            // placeHolder={autosq}
+            placeHolder={autosq}
             quote={person[0].qoute}
             name={person[0].name}
             level={person[0].level}
@@ -111,7 +111,7 @@ export const About = () => {
 
           <Autor
             src={person[1].imgURI}
-            // placeHolder={auto2sq}
+            placeHolder={auto2sq}
             quote={person[1].qoute}
             name={person[1].name}
             level={person[1].level}
