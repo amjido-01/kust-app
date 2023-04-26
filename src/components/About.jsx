@@ -25,7 +25,6 @@ export const About = () => {
       role: "frontend developer, UI/UX designer. ",
       alt: "designer",
       qouteColor: "#D9D9D9",
-      placeHolder: auto2sq
     },
     {
       imgURI: auto,
@@ -36,10 +35,9 @@ export const About = () => {
       role: "frontend software engineer.",
       alt: "developer",
       qouteColor: "rgba(252, 158, 28, 0.5)",
-      placeHolder: autosq
     },
   ];
-  console.log(placeHolder)
+  console.log(auto2sq)
   return (
     <section className="relative">
       <Header />
@@ -101,7 +99,7 @@ export const About = () => {
         <div className="container flex flex-col md:flex-row">
           <Autor
             src={person[0].imgURI}
-            placeHolder={person[0].placeHolder}
+            // placeHolder={autosq}
             quote={person[0].qoute}
             name={person[0].name}
             level={person[0].level}
@@ -113,7 +111,7 @@ export const About = () => {
 
           <Autor
             src={person[1].imgURI}
-            placeHolder={person[1].placeHolder}
+            // placeHolder={auto2sq}
             quote={person[1].qoute}
             name={person[1].name}
             level={person[1].level}

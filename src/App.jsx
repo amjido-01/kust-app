@@ -10,6 +10,7 @@ import { Sample } from "./components/Sample";
 import { Dept } from "./components/Dept"
 import { Engineering } from "./components/Engineering";
 import { Facms } from "./components/Facms";
+import { Test } from "./components/Test";
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
       <Route path="support-us" element={<Support />}>
         {" "}
       </Route>
+
+      <Route path="test" element={<Test />}>
+        {" "}
+      </Route>
+      
       <Route path="sample" element={<Sample />}>
         {" "}
       </Route>
