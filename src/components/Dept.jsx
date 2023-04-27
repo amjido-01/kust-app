@@ -14,9 +14,9 @@ export const Dept = (props) => {
     <section className="relative min-h-screen flex flex-col">
       <Header />
 
-      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
-        <div className="lookflex flex-col justify-center">
-          <div className="text-[#000000] mb-4 md:mb-7">
+      <div className="container w-full border-2 border-green-600 p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
+        <div className="look flex border-2 border-red-400 flex-col justify-center">
+          <div className="text-[#000000] border-2 border-green-600 mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
               className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
@@ -45,7 +45,7 @@ export const Dept = (props) => {
 
                     <ul className=" list-disc mt-2 md:mt-4">
                       <li className="">
-                        <Link to="/documents/facms/level-one/materials">Level one </Link>
+                        <Link to="/documents/facms/level-one-materials">Level one </Link>
                       </li>
                       <li>
                         <Link to="">level two</Link>
