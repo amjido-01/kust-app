@@ -2,7 +2,6 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { useState } from "react";
-import { Data } from "../Data";
 import { Link } from "react-router-dom";
 import Poly from "../assets/Poly.svg";
 import Polyg from "../assets/Polyg.svg";
@@ -14,19 +13,7 @@ import seven from "../assets/seven.svg";
 // import Polygo from "../assets/Polygo";
 
 export const Documents = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredItems, setFilteredItems] = useState(Data);
 
-  const handleSearch = (e) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-    console.log(searchQuery);
-
-    const filtered = Data.filter((item) =>
-      item.first_name.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredItems(filtered);
-  };
 
   return (
     <section className="relative min-h-screen flex flex-col">
@@ -54,13 +41,6 @@ export const Documents = () => {
               >
                 FACULTIES
               </h1>
-              {/* <input
-              type="text"
-              className="border-2 border-green-500"
-              value={searchQuery}
-              onChange={handleSearch}
-              placeholder="search"
-            /> */}
 
               <div className="pb-[20px] pt-1 pl-6 md:px-8 md:py-[50px] flex flex-col md:flex-row md:items-center md:justify-center">
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">

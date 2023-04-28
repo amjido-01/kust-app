@@ -2,7 +2,25 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Docs } from "./Docs";
+import { useState } from "react";
+import { Data } from "../Data";
+
+
 export const Materials = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredItems, setFilteredItems] = useState(Data);
+
+  const handleSearch = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    console.log(searchQuery);
+
+    const filtered = Data.filter((item) =>
+      item.first_name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredItems(filtered);
+  };
+
   return (
     <section className="relative min-h-screen flex flex-col">
       <Header />
@@ -23,6 +41,15 @@ export const Materials = () => {
           </div>
 
           <h4 className=" bg-[#0F9D58] mb-[8px] w-[15rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-[5px]">first semester</h4>
+
+           <input
+              type="text"
+              className="border-2 border-green-500"
+              value={searchQuery}
+              onChange={handleSearch}
+              placeholder="search"
+            />
+
           <div className="container mx-auto">
             <div className="container">
 
