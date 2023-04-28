@@ -7,9 +7,9 @@ export const Materials = () => {
     <section className="relative min-h-screen flex flex-col">
       <Header />
 
-      <div className="container w-full border-2 border-green-600 p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
-        <div className="look flex border-2 border-red-400 flex-col justify-center">
-          <div className="text-[#000000] border-2 border-green-600 mb-4 md:mb-7">
+      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
+        <div className="look flex flex-col justify-center">
+          <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
               className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
@@ -22,11 +22,11 @@ export const Materials = () => {
             </p>
           </div>
 
-          <h4>first semester</h4>
-          <div className="container border-[3px] border-[#000000] mx-auto">
-            <div className="container border-2 border-green-500">
+          <h4 className=" bg-[#0F9D58] w-[15rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-[5px]">first semester</h4>
+          <div className="container mx-auto">
+            <div className="container">
 
-              <div className="block md:flex md:justify-between border-2 border-orange-500 uppercase">
+              <div className="block md:flex md:justify-between uppercase">
                 <Docs title="handouts" background="#8CB6B5"/>
                 <Docs title="past question" background="#D4ADB7"/>
               </div>
