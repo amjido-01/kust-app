@@ -22,7 +22,7 @@ export const Materials = () => {
             </p>
           </div>
 
-          <h4 className=" bg-[#0F9D58] w-[15rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-[5px]">first semester</h4>
+          <h4 className=" bg-[#0F9D58] mb-[8px] w-[15rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-[5px]">first semester</h4>
           <div className="container mx-auto">
             <div className="container">
 
