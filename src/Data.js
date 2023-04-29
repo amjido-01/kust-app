@@ -1,17 +1,17 @@
 export const Data = [{
     "id": 1,
-    "first_name": "FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)"
+    "first_name": "MATHEMATICS"
   }, {
     "id": 2,
-    "first_name": "FACULTY OF SCIENCE EDUCATION"
+    "first_name": "ENGLISH"
   }, {
     "id": 3,
-    "first_name": "FACULTY OF EARTH AND ENVIRONMENTAL SCIENCE"
+    "first_name": "GST"
   }, {
     "id": 4,
-    "first_name": "FACULTY OF AGRICULTURAL SCIENCE"
+    "first_name": "PHYSICS"
   }, {
     "id": 5,
-    "first_name": "FACULTY OF ENGINEERING"
+    "first_name": "BIOLOGY"
   }
 ]

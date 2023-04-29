@@ -1,7 +1,6 @@
 import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Poly from "../assets/Poly.svg";
 import Polyg from "../assets/Polyg.svg";
@@ -10,7 +9,6 @@ import Polygo from "../assets/Polygo.svg";
 import Ellip from "../assets/Ellip.svg";
 import Polygon from "../assets/Polygon.svg";
 import seven from "../assets/seven.svg";
-// import Polygo from "../assets/Polygo";
 
 export const Documents = () => {
 

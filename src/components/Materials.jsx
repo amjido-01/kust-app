@@ -7,19 +7,23 @@ import { Data } from "../Data";
 
 
 export const Materials = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [data, setData] = useState(Data)
   const [filteredItems, setFilteredItems] = useState(Data);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
     console.log(searchQuery);
 
-    const filtered = Data.filter((item) =>
+    const filtered = data.filter((item) =>
       item.first_name.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredItems(filtered);
   };
+
+ 
+
 
   return (
     <section className="relative min-h-screen flex flex-col">
@@ -54,8 +58,15 @@ export const Materials = () => {
             <div className="container">
 
               <div className="block md:flex md:justify-between uppercase">
-                <Docs title="handouts" background="#8CB6B5"/>
-                <Docs title="past question" background="#D4ADB7"/>
+              <div style={{backgroundColor: "#8CB6B5"}} className={` rounded-xl border-2 pb-4 border-[#000000] w-full md:w-[49.5%]`}>
+                 <ul>
+                  {filteredItems.map((item) => <li key={item.id} className='bg-white text-[15px] my-[4px] font-medium leading-[24px] uppercase text-[#000000] p-2'>{item.first_name}</li>)}
+                 </ul>
+              </div>
+  {/* const listItems = Data.map(item => ); */}
+
+                {/* <Docs title="handouts" background="#8CB6B5"/> */}
+                {/* <Docs title="past question" background="#D4ADB7"/> */}
               </div>
             </div>
           </div>
