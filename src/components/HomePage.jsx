@@ -11,6 +11,8 @@ import { Feedback } from "./Feedback";
 import { Footer } from "./Footer";
 
 export const HomePage = () => {
+
+
   return (
     <div className="relative min-h-[100vh]">
       <Header />

@@ -2,9 +2,16 @@ import React from "react";
 import { Button } from "./Button";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { motion, useScroll, useSpring } from "framer-motion"
 
 export const Header = () => {
   const navigate = useNavigate();
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   // active page indicator
   const navLinkStyle = ({ isActive }) => {
@@ -17,7 +24,7 @@ export const Header = () => {
     };
   };
   return (
-    <nav className="bg-[#212327] font-bold justify px-2 sm:px-4 py-2 fixed w-full z-20 top-0 left-0">
+    <nav className="bg-[#212327] font-bold justify px-2 sm:px-4 pt-2 fixed w-full z-20 top-0 left-0">
       <div className="container w-[98%] md:w-[75%] flex flex-wrap justify-between items-center mx-auto">
         <div>
           <a href="/" className="flex items-center">
@@ -58,7 +65,10 @@ export const Header = () => {
             cls_name="text-white hover:bg-[#0F9D58] border flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
           ></Button>
         </div>
+        
       </div>
+      <motion.div className="progress-bar" style={{ scaleX }} />
+
     </nav>
   );
 };

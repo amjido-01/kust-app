@@ -146,6 +146,15 @@ body {
     height: 80px;
 }
 
+.progress-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #0F9D58;
+    margin-bottom: 8px;
+    transform-origin: 0%;
+  }
 
 .start {
     cursor: pointer;
