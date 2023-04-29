@@ -55,7 +55,7 @@ export const About = () => {
       </div>
       <img
         src={one}
-        className="absolute border-2 border-emerald-600 top-[45%] md:top-16 w-[23px] md:w-[30px]"
+        className="absolute top-[45%] md:top-16 w-[23px] md:w-[30px]"
         alt=""
         srcset=""
       />
