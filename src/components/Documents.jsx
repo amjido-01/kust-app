@@ -9,12 +9,13 @@ import Polygo from "../assets/Polygo.svg";
 import Ellip from "../assets/Ellip.svg";
 import Polygon from "../assets/Polygon.svg";
 import seven from "../assets/seven.svg";
+import { motion } from "framer-motion";
 
 export const Documents = () => {
 
 
   return (
-    <section className="relative min-h-screen flex flex-col">
+    <motion.section className="relative min-h-screen flex flex-col">
       <Header />
 
       <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[10rem] flex-1">
@@ -120,6 +121,6 @@ export const Documents = () => {
       <div className="relative bottom-0">
         <Footer className="w-full" />
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -3,8 +3,8 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import auto from "../assets/auto.svg";
 import auto2 from "../assets/auto2.svg";
-import auto2sq from "../assets/auto2sq.jpg"
-import autosq from "../assets/autosq.jpg"
+import auto2sq from "../assets/auto2sq.jpg";
+import autosq from "../assets/autosq.jpg";
 import { Autor } from "./Autor";
 import one from "../assets/one.svg";
 import two from "../assets/two.svg";
@@ -13,6 +13,7 @@ import four from "../assets/four.svg";
 import five from "../assets/five.svg";
 import six from "../assets/six.svg";
 import seven from "../assets/seven.svg";
+import { motion } from "framer-motion";
 
 export const About = () => {
   const person = [
@@ -37,9 +38,14 @@ export const About = () => {
       qouteColor: "rgba(252, 158, 28, 0.5)",
     },
   ];
-  console.log(auto2sq)
+  console.log(auto2sq);
   return (
-    <section className="relative">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="relative"
+    >
       <Header />
       <div className="container w-[90%] md:w-[50%] mx-auto mt-[7rem] flex items-center justify-center">
         <div className="text-center md:w-[70%]">
@@ -123,6 +129,6 @@ export const About = () => {
         </div>
       </div>
       <Footer className="absolute w-full" />
-    </section>
+    </motion.div>
   );
 };

@@ -12,23 +12,24 @@ import { Footer } from "./Footer";
 import { motion } from "framer-motion";
 
 export const HomePage = () => {
-  // initial={{ opacity: 0 }}
-  //     animate={{ opacity: 1 }}
-  //     exit={{ opacity: 0 }}
+  // initial={{ opacity: 0, scale: 0.5 }}
+  //     animate={{ opacity: 1, scale: 1 }}
+  //     transition={{
+  //       duration: 0.5,
+  //       ease: [0, 0.71, 0.2, 1.01],
+  //       scale: {
+  //         type: "spring",
+  //         damping: 10,
+  //         stiffness: 100,
+  //         restDelta: 0.001,
+  //       },
+  //     }}
+
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.3,
-        ease: [0, 0.71, 0.2, 1.01],
-        scale: {
-          type: "spring",
-          damping: 5,
-          stiffness: 100,
-          restDelta: 0.001
-        }
-      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="relative min-h-[100vh]"
     >
       <Header />

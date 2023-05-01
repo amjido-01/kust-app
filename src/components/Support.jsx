@@ -1,10 +1,15 @@
 import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { motion } from "framer-motion";
 
 export const Support = () => {
   return (
-    <section className="relative min-h-screen flex flex-col">
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+     className="relative min-h-screen flex flex-col">
       <Header />
 
       <div className="container text-center w-full p-4 md:p-0 md:w-[73%] md:mb-20 mx-auto mt-[5rem] md:mt-[8rem] flex-1">
@@ -36,6 +41,6 @@ export const Support = () => {
       <div className="relative bottom-0">
         <Footer className="w-full" />
       </div>
-    </section>
+    </motion.div>
   );
 };
