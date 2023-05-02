@@ -5,6 +5,7 @@ import { Docs } from "./Docs";
 import { useState } from "react";
 import { Data } from "../Data";
 import { motion } from "framer-motion";
+import { Download } from "./Download";
 
 
 export const Materials = () => {
@@ -62,16 +63,17 @@ export const Materials = () => {
           <div className="container mx-auto">
             <div className="container">
 
-              <div className="block md:flex md:justify-between uppercase">
+              <div className="block md:flex md:justify-between">
+
               <div style={{backgroundColor: "#8CB6B5"}} className={` rounded-xl border-2 pb-4 border-[#000000] w-full md:w-[49.5%]`}>
-                 <ul>
-                  {filteredItems.map((item) => <li key={item.id} className='bg-white text-[15px] my-[4px] font-medium leading-[24px] uppercase text-[#000000] p-2'>{item.first_name}</li>)}
+                <h3>
+                  HandOuts
+                </h3>
+                 <ul className=" uppercase">
+                  {filteredItems.map((item) => <li key={item.id} className='bg-white text-[15px] my-[4px] font-medium leading-[24px] uppercase text-[#000000] border-2 border-red-600 w-full flex justify-between items-center'>{item.first_name} {<Download/>}</li>)}
                  </ul>
               </div>
-  {/* const listItems = Data.map(item => ); */}
 
-                {/* <Docs title="handouts" background="#8CB6B5"/> */}
-                {/* <Docs title="past question" background="#D4ADB7"/> */}
               </div>
             </div>
           </div>
