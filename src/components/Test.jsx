@@ -1,21 +1,16 @@
 import React from 'react'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import lady from "../assets/lady.jpg"
-import placeHolderImg from "../assets/ladyplace.jpg"
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { useState } from 'react'
 
 export const Test = () => {
+  const [update, setUpdate] = useState('hello')
+
+  const handleClick = () => {
+    setUpdate('hello world')
+  }
   return (
     <div>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
-        <LazyLoadImage src={lady} alt="test" placeholderSrc={placeHolderImg}  effect='blur' className='w-1/2 mt-28'/>
+       {update} <br></br>
+       <button onClick={handleClick} className='border-2 border-green-500'>click me</button>
     </div>
   )
 }

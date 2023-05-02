@@ -94,7 +94,7 @@ export const Materials = () => {
 
 
                   <div
-                  style={{ backgroundColor: "#8CB6B5" }}
+                  style={{ backgroundColor: "#D4ADB7" }}
                   className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full md:w-[49.5%]`}
                 >
                   <h3>HandOuts</h3>
