@@ -19,9 +19,9 @@ export const Dept = (props) => {
      className="relative min-h-screen flex flex-col">
       <Header />
 
-      <div className="container w-full border-2 border-green-600 p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
-        <div className="look flex border-2 border-red-400 flex-col justify-center">
-          <div className="text-[#000000] border-2 border-green-600 mb-4 md:mb-7">
+      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
+        <div className="look flex flex-col justify-center">
+          <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
               className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
@@ -34,19 +34,19 @@ export const Dept = (props) => {
             </p>
           </div>
 
-          <div className="container border-[3px] border-[#000000] rounded-[30px] bg-[#F1E2B9] mx-auto">
+          <div className="container border-[3px] border-[#000000] rounded-[20px] bg-[#F1E2B9] mx-auto">
             <div className="container">
               <h2
                 style={{ fontFamily: "poppins" }}
-                className="px-8 pt-4 uppercase text-[17px] font-semibold leading-[26px] md:text-[26px] md:pt-5 md:font-medium"
+                className="px-8 pt-4 uppercase text-[17px] md:pl-12 font-semibold leading-[26px] md:text-[26px] md:pt-5 md:font-medium"
               >
                 {props.faculty}
               </h2>
 
-              <div className="block md:flex justify-evenly font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 pl-6 md:px-8">
+              <div className="block  md:flex justify-evenly font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 md:pl-6 md:px-8">
                 <div className="flex justify-evenly md:justify-around mt-2 mb-4 w-full md:w-1/2 text-[11px] leading-[16px] font-semibold md:text-[18px] md:leading-[30px]">
                   <div className="">
-                    <h3 className="">{props.deptOne}</h3>
+                    <h3 className="text-[13px] md:text-[16px]">{props.deptOne}</h3>
 
                     <ul className=" list-disc mt-2 md:mt-4">
                       <li className="">
