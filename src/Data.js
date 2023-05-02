@@ -13,5 +13,25 @@ export const Data = [{
   }, {
     "id": 5,
     "first_name": "introduction to computer science"
+  },
+   {
+    "id": 6,
+    "first_name": "introduction to computer science"
+  },
+   {
+    "id": 7,
+    "first_name": "introduction to computer science"
+  },
+   {
+    "id": 8,
+    "first_name": "introduction to computer science"
+  },
+   {
+    "id": 8,
+    "first_name": "introduction to computer science"
+  },
+   {
+    "id": 8,
+    "first_name": "introduction to computer science"
   }
 ]

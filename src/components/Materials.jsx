@@ -7,9 +7,8 @@ import { Data } from "../Data";
 import { motion } from "framer-motion";
 import { Download } from "./Download";
 
-
 export const Materials = () => {
-  const [data, setData] = useState(Data)
+  const [data, setData] = useState(Data);
   const [filteredItems, setFilteredItems] = useState(Data);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -24,15 +23,13 @@ export const Materials = () => {
     setFilteredItems(filtered);
   };
 
- 
-
-
   return (
     <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-     className="relative min-h-screen flex flex-col">
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="relative min-h-screen flex flex-col"
+    >
       <Header />
 
       <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
@@ -50,30 +47,72 @@ export const Materials = () => {
             </p>
           </div>
 
-          <h4 className=" bg-[#0F9D58] mb-[8px] w-[15rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-[5px]">first semester</h4>
+          <h4 className="uppercase bg-[#0F9D58] mb-[8px] w-[15rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-[6px]">
+            first semester
+          </h4>
 
-           <input
-              type="text"
-              className="border-2 border-green-500"
+          <div className="relative my-3" data-te-input-wrapper-init>
+            <input
               value={searchQuery}
               onChange={handleSearch}
-              placeholder="search"
+              type="search"
+              className="peer block min-h-[auto] w-[15rem] rounded border-2 border-green-500 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              id="exampleSearch2"
             />
+            <label
+              for="exampleSearch2"
+              className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none  dark:peer-focus:text-primary"
+            >
+              Search
+            </label>
+          </div>
 
           <div className="container mx-auto">
             <div className="container">
+              <div className="block border-2 md:flex md:justify-between">
+                <div
+                  style={{ backgroundColor: "#8CB6B5" }}
+                  className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full md:w-[49.5%]`}
+                >
+                  <h3>HandOuts</h3>
+                  {filteredItems.length === 0 && (
+                    <p className="mt-10 text-white">No such file found :)</p>
+                  )}
+                  <ul className=" uppercase">
+                    {filteredItems.map((item) => (
+                      <li
+                        key={item.id}
+                        style={{ fontStyle: "normal" }}
+                        className="bg-white pl-4 text-[15px] my-[10px] font-medium leading-[24px] uppercase text-[#000000] w-full flex justify-between items-center"
+                      >
+                        {item.first_name} {<Download />}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-              <div className="block md:flex md:justify-between">
 
-              <div style={{backgroundColor: "#8CB6B5"}} className={` rounded-xl border-2 pb-4 border-[#000000] w-full md:w-[49.5%]`}>
-                <h3>
-                  HandOuts
-                </h3>
-                 <ul className=" uppercase">
-                  {filteredItems.map((item) => <li key={item.id} className='bg-white text-[15px] my-[4px] font-medium leading-[24px] uppercase text-[#000000] border-2 border-red-600 w-full flex justify-between items-center'>{item.first_name} {<Download/>}</li>)}
-                 </ul>
-              </div>
 
+                  <div
+                  style={{ backgroundColor: "#8CB6B5" }}
+                  className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full md:w-[49.5%]`}
+                >
+                  <h3>HandOuts</h3>
+                  {filteredItems.length === 0 && (
+                    <p className="mt-10 text-white">No such file found :)</p>
+                  )}
+                  <ul className=" uppercase">
+                    {filteredItems.map((item) => (
+                      <li
+                        key={item.id}
+                        style={{ fontStyle: "normal" }}
+                        className="bg-white pl-4 text-[15px] my-[10px] font-medium leading-[24px] uppercase text-[#000000] w-full flex justify-between items-center"
+                      >
+                        {item.first_name} {<Download />}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
