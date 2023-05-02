@@ -4,6 +4,7 @@ import { Footer } from "./Footer";
 import { Docs } from "./Docs";
 import { useState } from "react";
 import { Data } from "../Data";
+import { motion } from "framer-motion";
 
 
 export const Materials = () => {
@@ -26,7 +27,11 @@ export const Materials = () => {
 
 
   return (
-    <section className="relative min-h-screen flex flex-col">
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+     className="relative min-h-screen flex flex-col">
       <Header />
 
       <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
@@ -76,6 +81,6 @@ export const Materials = () => {
       <div className="relative bottom-0">
         <Footer className="w-full" />
       </div>
-    </section>
+    </motion.div>
   );
 };

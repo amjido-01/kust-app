@@ -8,10 +8,15 @@ import Polyg from "../assets/dept/Polyg.svg";
 import Rectangl from "../assets/dept/Rectangl.svg";
 import Rectangle from "../assets/dept/Rectangle.svg";
 import Rectang from "../assets/dept/Rectang.svg";
+import { motion } from "framer-motion";
 
 export const Dept = (props) => {
   return (
-    <section className="relative min-h-screen flex flex-col">
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+     className="relative min-h-screen flex flex-col">
       <Header />
 
       <div className="container w-full border-2 border-green-600 p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
@@ -160,6 +165,6 @@ export const Dept = (props) => {
       <div className="relative bottom-0">
         <Footer className="w-full" />
       </div>
-    </section>
+    </motion.div>
   );
 };

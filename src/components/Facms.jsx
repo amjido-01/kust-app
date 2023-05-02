@@ -1,9 +1,10 @@
 import React from 'react'
 import { Dept } from './Dept'
+import { motion } from 'framer-motion'
 
 export const Facms = () => {
   return (
-    <div>
+    <motion.div>
         <Dept 
         faculty="FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)"
         deptOne="computer science"
@@ -11,6 +12,6 @@ export const Facms = () => {
         deptThree="information tech"
         deptFour={`statistics`}
         ></Dept>
-    </div>
+    </motion.div>
   )
 }
