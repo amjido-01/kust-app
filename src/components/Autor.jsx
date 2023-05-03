@@ -1,6 +1,6 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 export const Autor = ({
   src,
@@ -32,8 +32,6 @@ export const Autor = ({
         ></span>
       </div>
       <LazyLoadImage
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 10 }}
         src={src}
         effect="blur"
         className="w-[70%] mx-auto text-[#000000] my-2"
