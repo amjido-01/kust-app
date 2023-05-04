@@ -12,15 +12,16 @@ import "aos/dist/aos.css";
 
 export const Feedback = () => {
   const form = useRef();
-  const [userName, setUserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
+  const [userInput, setUserInput] = useState({
+    userName: "",
+    userEmail: "",
+    message: "",
+  });
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    if (userName.trim() === "" || userEmail.trim() === "") {
+    if (userInput.userName.trim() === "" || userInput.userEmail.trim() === "") {
       return false;
     }
 
@@ -38,10 +39,13 @@ export const Feedback = () => {
           fontSize: "14px",
         },
       });
-      setUserName("");
-      setMessage("");
-      setUserEmail("");
+      setUserInput({
+        userName: "",
+        userEmail: "",
+        message: "",
+      });
     } catch (error) {
+      console.log(error);
       toast.error("something went wrong, try again!", {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 3000,
@@ -53,13 +57,30 @@ export const Feedback = () => {
   };
 
   const handleName = (e) => {
-    setUserName(e.target.value);
+    setUserInput((prevState) => {
+      return {
+        ...prevState,
+        userName: e.target.value,
+      };
+    });
   };
+
   const handleEmail = (e) => {
-    setUserEmail(e.target.value);
+    setUserInput((prevState) => {
+      return {
+        ...prevState,
+        userEmail: e.target.value,
+      };
+    });
   };
+
   const handleMessage = (e) => {
-    setMessage(e.target.value);
+    setUserInput((prevState) => {
+      return {
+        ...prevState,
+        message: e.target.value,
+      };
+    });
   };
 
   return (
@@ -87,7 +108,7 @@ export const Feedback = () => {
               <input
                 type="text"
                 name="user_name"
-                value={userName}
+                value={userInput.userName}
                 onChange={handleName}
                 id="name"
                 placeholder="Tanimu Bala"
@@ -106,7 +127,7 @@ export const Feedback = () => {
               <input
                 type="email"
                 name="user_email"
-                value={userEmail}
+                value={userInput.userEmail}
                 onChange={handleEmail}
                 id="email"
                 placeholder="example@gmail.com"
@@ -124,7 +145,7 @@ export const Feedback = () => {
               </label>
               <textarea
                 name="message"
-                value={message}
+                value={userInput.message}
                 onChange={handleMessage}
                 id="message"
                 required
