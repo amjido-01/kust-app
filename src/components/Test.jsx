@@ -4,31 +4,37 @@ import { useState } from 'react';
 export const Test = () => {
   const [userInput, setUserInput] = useState({
     firstName: "",
-    lastName: "",
+    lastName: ""
   })
 
-  const [count, setCont] = useState(0)
-
   const handleFirstName = (e) => {
-    setUserInput((preState) => {
-      return {
-        ...preState,
+    setUserInput((prevState) => {
+      return{
+        ...prevState,
         firstName: e.target.value
       }
     })
   }
-const handleCounter = () => {
-  setCont(count + 1)
-}
+  const handleLasttName = (e) => {
+    setUserInput((prevState) => {
+      return{
+        ...prevState,
+        lastName: e.target.value
+      }
+    })
+  }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(userInput)
+  }
   return (
-    <div>
-      <input type="text" value={userInput.firstName} onChange={handleFirstName} placeholder='first name' className='border-2 border-red-500 mt-4' />
+    <form onSubmit={handleSubmit}>
+      <input type="text" onChange={handleFirstName} value={userInput.firstName} placeholder='first-name' className='border-2 border-red-500 mt-2'/>
       {userInput.firstName.trim().length >= 3 ? "valid" : "invalid"}
-      <br></br>
-      <input type="text" placeholder='last name' className='border-2 border-red-500 mt-4' />
-      {count}
-      <button onClick={handleCounter}>count</button>
-    </div>
+      <br />
+      <input type="text" onChange={handleLasttName} value={userInput.lastName} placeholder='last-name' className='border-2 border-red-500 mt-2'/> <br />
+      <button type='submit' className='border-2'>submit</button>
+    </form>
   )
 }
