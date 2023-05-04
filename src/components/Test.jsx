@@ -1,25 +1,34 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import { useState } from 'react';
 
 export const Test = () => {
-  const [update, setUpdate] = useState("hello");
-  const [name, setName] = useState("");
+  const [state, setState] = useState({
+    count: 0,
+    name: "",
+    isOn: false
+  })
 
-  const handleClick = () => {
-    setUpdate("hello world");
-  };
+  function handleIncrement() {
+    setState(pre => ({
+      ...pre,
+      count: pre.count + 1
+    }))
+  }
 
-  const handleInput = (event) => {
-    setName(event.target.value);
-  };
+  function handleName(e) {
+    setState(pre => ({
+      ...pre,
+      name: e.target.value
+    }))
+  }
+
   return (
     <div>
-      {update} <br></br>
-      <button onClick={handleClick} className="border-2 border-green-500">
-        click me
-      </button>
-      <input type="text" value={name} onChange={handleInput} />
-      <p>Name: {name}</p>
+      <p>{state.count}</p>
+      <button onClick={handleIncrement}> Increment </button>
+
+      <input type="text" value={state.name} onChange={handleName}/>
+      <p>{state.name}</p>
     </div>
-  );
-};
+  )
+}
