@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 
 export const Feedback = () => {
   const form = useRef();
+  const [loading, setIsLoading] = useState(false)
   const [userInput, setUserInput] = useState({
     userName: "",
     userEmail: "",
@@ -24,7 +25,7 @@ export const Feedback = () => {
     if (userInput.userName.trim() === "" || userInput.userEmail.trim() === "") {
       return false;
     }
-
+    setIsLoading(true)
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_YOUR_SERVICE_ID,
@@ -54,6 +55,7 @@ export const Feedback = () => {
         },
       });
     }
+    setIsLoading(false)
   };
 
   const handleName = (e) => {
@@ -156,9 +158,11 @@ export const Feedback = () => {
 
             <div>
               <Button
+                disabled={loading}
                 value="Send"
                 icon={<RiSendPlane2Line className="ml-1" />}
-                cls_name="text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+                cls_name={loading ? 'bg-blue-500 cursor-not-allowed hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded' : "text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"}
+                // cls_name="text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
               ></Button>
             </div>
           </form>
