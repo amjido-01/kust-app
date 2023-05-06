@@ -159,6 +159,26 @@ body {
 .start {
     cursor: pointer;
 }
+/* .box {
+    margin-bottom: 20px;
+} */
+.let {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media screen and (min-width: 1000px) {
+    .let {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 0px;
+    }
+    .box {
+        width: 45.5%;
+    }
+}
 
 @media screen and (min-width: 425px) {
     .look {
@@ -315,7 +335,6 @@ body {
         
     }
   }
-
 
 
   .foot-svg {

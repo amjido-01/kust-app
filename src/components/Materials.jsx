@@ -32,7 +32,7 @@ export const Materials = () => {
     >
       <Header />
 
-      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
+      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[2rem] md:mt-[7rem] flex-1">
         <div className="look flex flex-col justify-center">
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
@@ -69,12 +69,12 @@ export const Materials = () => {
 
           <div className="container mx-auto">
             <div className="container">
-              <div className="block border-2 md:flex md:justify-between">
+              <div className="let">
                 <div
                   style={{ backgroundColor: "#8CB6B5" }}
-                  className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full md:w-[49.5%]`}
+                  className={`rounded-xl border-2 pb-4 border-[#000000] px-5 w-full box`}
                 >
-                  <h3>HandOuts</h3>
+                  <h3 style={{fontStyle: "normal"}} className=" font-bold my-2 text-[14px] md:text-[22px] leading-[21px] md:leading-[33px] capitalize">HandOuts</h3>
                   {filteredItems.length === 0 && (
                     <p className="mt-10 text-white">No such file found :)</p>
                   )}
@@ -83,7 +83,7 @@ export const Materials = () => {
                       <li
                         key={item.id}
                         style={{ fontStyle: "normal" }}
-                        className="bg-white pl-4 text-[15px] my-[10px] font-medium leading-[24px] uppercase text-[#000000] w-full flex justify-between items-center"
+                        className="bg-white cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
                       >
                         {item.first_name} {<Download />}
                       </li>
@@ -95,9 +95,9 @@ export const Materials = () => {
 
                   <div
                   style={{ backgroundColor: "#D4ADB7" }}
-                  className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full md:w-[49.5%]`}
+                  className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full`}
                 >
-                  <h3>HandOuts</h3>
+                  <h3 style={{fontStyle: "normal"}} className=" font-bold my-2 text-[14px] md:text-[22px] leading-[21px] md:leading-[33px] capitalize">HandOuts</h3>
                   {filteredItems.length === 0 && (
                     <p className="mt-10 text-white">No such file found :)</p>
                   )}
@@ -106,7 +106,7 @@ export const Materials = () => {
                       <li
                         key={item.id}
                         style={{ fontStyle: "normal" }}
-                        className="bg-white pl-4 text-[15px] my-[10px] font-medium leading-[24px] uppercase text-[#000000] w-full flex justify-between items-center"
+                        className="bg-white pl-4 cursor-pointer text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
                       >
                         {item.first_name} {<Download />}
                       </li>
