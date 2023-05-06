@@ -161,8 +161,7 @@ export const Feedback = () => {
                 disabled={loading}
                 value="Send"
                 icon={<RiSendPlane2Line className="ml-1" />}
-                cls_name={loading ? 'bg-blue-500 cursor-not-allowed hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded' : "text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"}
-                // cls_name="text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+                cls_name={loading ? 'bg-[#85edba] cursor-not-allowed text-sm text-white font-medium py-2 px-5 flex items-center text-center capitalize' : "text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"}
               ></Button>
             </div>
           </form>
