@@ -33,7 +33,7 @@ export const Autor = ({
       </div>
       <LazyLoadImage
         src={src}
-        effect="blur"
+        // effect="blur"
         className="w-[70%] mx-auto text-[#000000] my-2"
         placeholderSrc={placeHolder}
         alt={alt}

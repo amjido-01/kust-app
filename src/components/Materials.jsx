@@ -74,7 +74,12 @@ export const Materials = () => {
                   style={{ backgroundColor: "#8CB6B5" }}
                   className={`rounded-xl border-2 pb-4 border-[#000000] px-5 w-full box`}
                 >
-                  <h3 style={{fontStyle: "normal"}} className=" font-bold my-2 text-[14px] md:text-[22px] leading-[21px] md:leading-[33px] capitalize">HandOuts</h3>
+                  <h3
+                    style={{ fontStyle: "normal" }}
+                    className=" font-bold my-2 text-[14px] md:text-[22px] leading-[21px] md:leading-[33px] capitalize"
+                  >
+                    HandOuts
+                  </h3>
                   {filteredItems.length === 0 && (
                     <p className="mt-10 text-white">No such file found :)</p>
                   )}
@@ -91,13 +96,16 @@ export const Materials = () => {
                   </ul>
                 </div>
 
-
-
-                  <div
+                <div
                   style={{ backgroundColor: "#D4ADB7" }}
                   className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full`}
                 >
-                  <h3 style={{fontStyle: "normal"}} className=" font-bold my-2 text-[14px] md:text-[22px] leading-[21px] md:leading-[33px] capitalize">HandOuts</h3>
+                  <h3
+                    style={{ fontStyle: "normal" }}
+                    className=" font-bold my-2 text-[14px] md:text-[22px] leading-[21px] md:leading-[33px] capitalize"
+                  >
+                    HandOuts
+                  </h3>
                   {filteredItems.length === 0 && (
                     <p className="mt-10 text-white">No such file found :)</p>
                   )}
