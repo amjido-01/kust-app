@@ -13,6 +13,7 @@ import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
+import { Handouts } from "../Handouts";
 
 
 
@@ -33,6 +34,9 @@ export const AnimatedRoutes = () => {
           {" "}
         </Route>
         <Route path="sample" element={<Sample />}>
+          {" "}
+        </Route>
+        <Route path="handouts" element={<Handouts />}>
           {" "}
         </Route>
         <Route path="documents/facms" element={<Facms />}>
