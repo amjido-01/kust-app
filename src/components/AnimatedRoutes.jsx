@@ -14,6 +14,7 @@ import { useLocation } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Handouts } from "../Handouts";
+import { Dic } from "./Dic";
 
 
 
@@ -31,6 +32,9 @@ export const AnimatedRoutes = () => {
           {" "}
         </Route>
         <Route path="test" element={<Test />}>
+          {" "}
+        </Route>
+        <Route path="dictionary" element={<Dic />}>
           {" "}
         </Route>
         <Route path="sample" element={<Sample />}>

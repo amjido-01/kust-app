@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.10.0",
     "@types/typed.js": "^2.0.9",
     "aos": "^2.3.4",
+    "axios": "^1.4.0",
     "emailjs-com": "^3.2.0",
     "firebase": "^9.21.0",
     "framer-motion": "^10.12.4",
