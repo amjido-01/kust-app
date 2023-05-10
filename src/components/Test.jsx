@@ -2,31 +2,24 @@ import React from "react";
 import { useState } from "react";
 
 export const Test = () => {
-  const [show, setShow] = useState(false);
+  const [highlight, setHighlight] = useState(false);
 
   const handleDelete = () => {
-    setShow(true);
+    setHighlight(true)
   };
 
   const handleProcced = () => {
-    setShow(false);
-  };
-
+    setHighlight(false)
+  }
   return (
     <div>
-      {show ? (
-        <div id="alert">
-          <h2>Are you sure?</h2>
-          <p>These changes can't be reverted!</p>
-          <button onClick={handleProcced}>Proceed</button>
-        </div>
-      ) : (
-        ""
-      )}
-
-      <button onClick={handleDelete} className="border-2">
-        delete
-      </button>
+      {highlight ? <div id="alert">
+        <h2>Are you sure?</h2>
+        <p>These changes can't be reverted!</p>
+        <button onClick={handleProcced} className="border-2 border-green-400">Proceed</button>
+      </div>
+: ""}
+      <button onClick={handleDelete} className="border-2 border-green-400">Change</button>
     </div>
   );
 };
