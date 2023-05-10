@@ -4,9 +4,12 @@ import axios from "axios";
 
 export const Dic = () => {
   const [word, setWord] = useState("");
-  const [defination, setDefination] = useState("");
-  const [test, setTest] = useState("")
+  const [defination, setDefination] = useState(
+    "Discover the world of words with KustBooklet Dictionary, your language companion for definitions, synonyms, and more."
+  );
+  const [test, setTest] = useState("Dictionry");
   const [pho, setPho] = useState("");
+  const [audio, setAudio] = useState()
 
   const handleSearch = async () => {
     try {
@@ -16,7 +19,7 @@ export const Dic = () => {
       const data = res.data[0].meanings[0].definitions[0].definition;
       const test = res.data[0].word;
       console.log(data);
-      console.log(test);
+      setAudio(res.data[0].phonetics[0].audio)
       setDefination(data);
       setWord("");
     } catch (error) {
@@ -26,13 +29,15 @@ export const Dic = () => {
 
   const handleChange = (e) => {
     setWord(e.target.value);
+    setTest(e.target.value);
   };
 
   return (
     <div>
-      <p>
-        Dictionary
-      </p>
+      <div>
+        <h1>{test}</h1>
+        {defination}
+      </div>
 
       <input
         className="border-2 border-green-500"
@@ -40,9 +45,13 @@ export const Dic = () => {
         value={word}
         onChange={handleChange}
       />
-      <button onClick={handleSearch}>search</button>
-      <p>{word}</p>
-      <p>{defination}</p>
+
+      <div>
+        <button onClick={handleSearch}>search</button>
+         <audio controls>
+          <source src={audio} type="audio/ogg" />
+        </audio> 
+      </div>
     </div>
   );
 };
