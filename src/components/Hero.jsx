@@ -20,7 +20,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative min-h-[540px] py-16 md:py-20 px-8 md:px-4">
+    <section className="bg-[#212327] relative w-full min-h-[540px] py-16 md:py-20 px-8 md:px-4">
       <div className="container flex items-center justify-center flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <img
           className="absolute md:hidden top-20 right-4 mobile"

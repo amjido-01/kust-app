@@ -30,7 +30,7 @@ export const HomePage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="relative min-h-[100vh]"
+      className="relative min-h-[100vh] w-full overflow-x-hidden"
     >
       <Header />
       <Hero />
