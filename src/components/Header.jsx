@@ -28,7 +28,7 @@ export const Header = () => {
       <div className="container w-[98%] py-2 md:py-1 md:w-[75%] flex flex-wrap justify-between items-center mx-auto">
         <div>
           <a href="/" className="flex items-center">
-            <span className="self-center text-[18px] md:text-2xl whitespace-nowrap dark:text-white">
+            <span className="self-center text-[18px] md:text-2xl whitespace-nowrap text-white">
               KUST<span className="text-[#0F9D58]">Booklets</span>
             </span>
           </a>
