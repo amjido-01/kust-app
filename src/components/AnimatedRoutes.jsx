@@ -15,13 +15,12 @@ import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Handouts } from "../Handouts";
 import { Dic } from "./Dic";
-
-
+import { Upload } from "../../Upload";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <AnimatePresence mode='wait'>
+    <AnimatePresence mode="wait">
       <Routes location={location} key={location.key}>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="about" element={<About />}>
@@ -41,6 +40,9 @@ export const AnimatedRoutes = () => {
           {" "}
         </Route>
         <Route path="handouts" element={<Handouts />}>
+          {" "}
+        </Route>
+        <Route path="upload" element={<Upload />}>
           {" "}
         </Route>
         <Route path="documents/facms" element={<Facms />}>
