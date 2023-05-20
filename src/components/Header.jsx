@@ -25,7 +25,7 @@ export const Header = () => {
   };
   return (
     <nav className="bg-[#212327] font-bold justify px-2 sm:px-4 pt-2 fixed w-full z-20 top-0 left-0">
-      <div className="container w-[98%] border-2 border-red-600 md:w-[75%] flex flex-wrap justify-between items-center mx-auto">
+      <div className="container w-[98%] py-2 md:py-1 md:w-[75%] flex flex-wrap justify-between items-center mx-auto">
         <div>
           <a href="/" className="flex items-center">
             <span className="self-center text-[18px] md:text-2xl whitespace-nowrap dark:text-white">
