@@ -4,7 +4,6 @@ import { About } from "./About";
 import { Documents } from "./Documents";
 import { Support } from "./Support";
 import { PageNotFound } from "./PageNotFound";
-import { Sample } from "./Sample";
 import { Engineering } from "./Engineering";
 import { Facms } from "./Facms";
 import { Test } from "./Test";
@@ -34,9 +33,6 @@ export const AnimatedRoutes = () => {
           {" "}
         </Route>
         <Route path="dictionary" element={<Dic />}>
-          {" "}
-        </Route>
-        <Route path="sample" element={<Sample />}>
           {" "}
         </Route>
         <Route path="handouts" element={<Handouts />}>
