@@ -1,5 +1,5 @@
-import { storage } from "./Firebase";
-import { db } from "./Firebase";
+import { storage } from "./firebase";
+import { db } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
 
