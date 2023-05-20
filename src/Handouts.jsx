@@ -2,11 +2,10 @@ import { storage } from "./Firebase";
 import { db } from "./Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import { ref, getDownloadURL } from "firebase/storage";
 
 export const Handouts = () => {
-  const handoutsCollection = collection(db, "handouts");
-  const [data, setData] = useState([]);
+  const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
+  const [data, setData] = useState([]); // to store the qqueried response
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,26 +13,17 @@ export const Handouts = () => {
       let new_data = [];
       response.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
+
         console.log(doc.id, " => ", doc.data());
-        const url = getUrl(doc.data().handout);
-        new_data = [...new_data, { ...doc.data(), url:url }];
-        console.log(url, "new");
+        new_data = [...new_data, doc.data()];
       });
-      console.log(new_data);
+      console.log("new_data", new_data);
       setData(new_data);
     };
 
     fetchData();
   }, []);
 
-  const getUrl = async (url) => {
-    //get download url
-    const handoutRef = ref(storage, `handouts/${url}`);
-    return getDownloadURL(handoutRef).then((url) => {
-      console.log(url);
-      return url;
-    });
-  };
   return (
     <div>
       <button>Get Handouts</button>
@@ -43,7 +33,7 @@ export const Handouts = () => {
             <>
               <h1>{handout.title} bala</h1>
               <p>{handout.level}</p>
-              {/* <a href={handout.url}>Handout</a> */}
+              <a href={handout.handout}>Handout</a>
             </>
           );
         })}
