@@ -35,11 +35,11 @@ export const Hero = () => {
 
           <div className="mt-2 w-[70%] md:w-full">
             <p
-              className="font-bold text-2xl leading-8 md:leading-[58px] sm:text-3xl md:text-[48px] "
+              className="font-bold text-2xl leading-8 md:leading-[58px] sm:text-[28px] md:text-[48px] "
             >
               all your handout and past question are now in one place.
             </p>
-            <p className="mt-3.5 font-medium text-[22px] sm:text-xl md:text-xl">
+            <p className="mt-3.5 font-medium text-[20px] sm:text-xl md:text-xl">
               free website for KUST students to download their favorites handout
               and past question papers.
             </p>
