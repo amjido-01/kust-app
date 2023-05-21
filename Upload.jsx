@@ -106,7 +106,7 @@ export const Upload = () => {
             onChange={handleUserPassword}
             className="border-2 border-green-500"
           />
-          <button>submit</button>
+          <button className="text-red-500 border-2">submit</button>
         </form>
       </div>
 
@@ -116,7 +116,7 @@ export const Upload = () => {
           <p>{percent} uploaded</p>
         </div>
       ) : (
-        <p className="provide credentials">{error}</p>
+        <p style={{color: "red"}} className="text-red-500 text-4xl">{error}</p>
       )}
     </div>
   );
