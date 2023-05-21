@@ -6,6 +6,50 @@ import { getDownloadURL } from "firebase/storage";
 
 export const Upload = () => {
   const [percent, setPercent] = useState(0);
+  const [isAuthenticated, setISAuthenticated] = useState(false);
+  const [error, setError] = useState("");
+  const [credentials, setCredentials] = useState({
+    email: "youndsadeeq10@gmail.com",
+    password: "123456",
+  });
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    if (
+      user.email === credentials.email &&
+      user.password === credentials.password
+    ) {
+      setISAuthenticated(true);
+      setUser({
+        email: "",
+        password: "",
+      });
+      return;
+    }
+    setError("please provide your credentials");
+  };
+
+  const handleUserEmail = (e) => {
+    setUser((prev) => {
+      return {
+        ...prev,
+        email: e.target.value,
+      };
+    });
+  };
+
+  const handleUserPassword = (e) => {
+    setUser((prev) => {
+      return {
+        ...prev,
+        password: e.target.value,
+      };
+    });
+  };
 
   const uploadHandout = (e) => {
     console.log("called");
@@ -46,8 +90,34 @@ export const Upload = () => {
   };
   return (
     <div>
-      <input type="file" required onChange={(e) => uploadHandout(e)} />
-      <p>{percent} uploaded</p>
+      <div className="border-2">
+        <form onSubmit={formSubmitHandler}>
+          <input
+            type="email"
+            value={user.email}
+            onChange={handleUserEmail}
+            className="border-2 border-green-500"
+          />
+          <br />
+          <br />
+          <input
+            type="password"
+            value={user.password}
+            onChange={handleUserPassword}
+            className="border-2 border-green-500"
+          />
+          <button>submit</button>
+        </form>
+      </div>
+
+      {isAuthenticated ? (
+        <div>
+          <input type="file" required onChange={(e) => uploadHandout(e)} />
+          <p>{percent} uploaded</p>
+        </div>
+      ) : (
+        <p className="provide credentials">{error}</p>
+      )}
     </div>
   );
 };
