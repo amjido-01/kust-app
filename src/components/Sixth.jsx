@@ -23,7 +23,10 @@ export const Sixth = () => {
           alt="mobilehero"
         />
         <div className="md:w-[50%] md:mr-20 md:mt-20 text-[#000000] capitalize">
-          <div className="mt-20 md:mt-2 w-[65%] md:w-full font-medium">
+          <div
+            className="mt-20 md:mt-2 w-[65%] md:w-full font-medium"
+            data-aos="fade-down-right"
+          >
             <p className="">
               We have devoted a lot of time and effort to collect and organize
               these materials for you, in order to spare you some hassle,
@@ -32,11 +35,12 @@ export const Sixth = () => {
             </p>
           </div>
 
-          <div className="mt-4">
-          <Button
-                value="Support Us"
-                cls_name="text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
-              ></Button>
+          <div className="mt-4" data-aos="fade-down-left">
+            <Button
+              
+              value="Support Us"
+              cls_name="text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+            ></Button>
           </div>
         </div>
 

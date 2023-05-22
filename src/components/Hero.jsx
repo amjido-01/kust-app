@@ -2,11 +2,14 @@ import React from "react";
 import { Button } from "./Button";
 import heroImg from "../assets/bro.png";
 import mobilehero from "../assets/mobilehero.png";
-import Testing from "../assets/Ellipse.svg";
 import Typed from "typed.js";
 import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const options = {
       strings: ["It has been solved!", "It made easier!"],
@@ -34,9 +37,7 @@ export const Hero = () => {
           ></span>
 
           <div className="mt-2 w-[70%] md:w-full">
-            <p
-              className="font-bold text-2xl leading-8 md:leading-[58px] sm:text-3xl md:text-[48px] "
-            >
+            <p className="font-bold text-2xl leading-8 md:leading-[58px] sm:text-3xl md:text-[48px] ">
               all your handout and past question are now in one place.
             </p>
             <p className="mt-3.5 font-medium text-[22px] sm:text-xl md:text-xl">
@@ -45,10 +46,11 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-8 border-2 block">
+          <div className="mt-8 flex z-20 cursor-pointer">
             <Button
+              onSmash={() => navigate("/documents")}
               value="get started"
-              cls_name="text-white block cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white z-20 flex absolute cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
           </div>
         </div>
@@ -57,6 +59,7 @@ export const Hero = () => {
           <img src={heroImg} className="" alt="hero_icon" />
         </div>
       </div>
+      <div></div>
 
       <div className="curve">
         <svg
