@@ -8,6 +8,7 @@ export const Upload = () => {
   const [percent, setPercent] = useState(0);
   const [isAuthenticated, setISAuthenticated] = useState(false);
   const [error, setError] = useState("");
+  const [showForm, setShowForm] = useState(true)
   const [credentials, setCredentials] = useState({
     email: "youndsadeeq10@gmail.com",
     password: "123456",
@@ -24,6 +25,7 @@ export const Upload = () => {
       user.password === credentials.password
     ) {
       setISAuthenticated(true);
+      setShowForm(false)
       setUser({
         email: "",
         password: "",
@@ -91,7 +93,7 @@ export const Upload = () => {
   return (
     <div>
       <div className="border-2">
-        <form onSubmit={formSubmitHandler}>
+        {showForm ? <form onSubmit={formSubmitHandler}>
           <input
             type="email"
             value={user.email}
@@ -107,7 +109,7 @@ export const Upload = () => {
             className="border-2 border-green-500"
           />
           <button className="text-red-500 border-2">submit</button>
-        </form>
+        </form> : ""}
       </div>
 
       {isAuthenticated ? (
