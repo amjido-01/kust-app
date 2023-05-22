@@ -9,6 +9,7 @@ export const Upload = () => {
   const [isAuthenticated, setISAuthenticated] = useState(false);
   const [error, setError] = useState("");
   const [showForm, setShowForm] = useState(true)
+  const [disabled, setDisabled] = useState(true)
   const [credentials, setCredentials] = useState({
     email: "youndsadeeq10@gmail.com",
     password: "123456",
@@ -24,6 +25,7 @@ export const Upload = () => {
       user.email === credentials.email &&
       user.password === credentials.password
     ) {
+      setDisabled(false)
       setISAuthenticated(true);
       setShowForm(false)
       setUser({

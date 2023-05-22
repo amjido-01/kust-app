@@ -39,19 +39,19 @@ export const Main = () => {
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-evenly card mx-auto">
           <Card
             title="comfortably"
-            icon={<MdChair />}
+            icon={<MdChair className="text-2xl"/>}
             animation="fade-up"
             text='at any location and any moment without anticipating a colleague to transmit it to you.'
           ></Card>
           <Card
             title="easily"
-            icon={<MdSwapHorizontalCircle />}
+            icon={<MdSwapHorizontalCircle className="text-2xl"/>}
             animation="fade-left"
             text='with a few simple taps and swift downloads, you can access it instantly. Isn’t that remarkable?'
           ></Card>
           <Card
             title="reliable"
-            icon={<FaHandHoldingHeart />}
+            icon={<FaHandHoldingHeart className="text-2xl" />}
             animation="fade-right"
             text="ones that you can rely no doubting its authenticity. Isn't that cool !"
           ></Card>
