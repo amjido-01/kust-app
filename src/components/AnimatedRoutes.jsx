@@ -15,6 +15,7 @@ import { Routes } from "react-router-dom";
 import { Handouts } from "../Handouts";
 import { Dic } from "./Dic";
 import { Upload } from "../../Upload";
+import { Books } from "./Books";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -36,6 +37,9 @@ export const AnimatedRoutes = () => {
           {" "}
         </Route>
         <Route path="handouts" element={<Handouts />}>
+          {" "}
+        </Route>
+        <Route path="books" element={<Books />}>
           {" "}
         </Route>
         <Route path="upload" element={<Upload />}>

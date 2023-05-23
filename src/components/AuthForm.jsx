@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export const AuthForm = () => {
+export const AuthForm = (props) => {
   return (
-    <div>AuthForm</div>
-  )
-}
+    <div>
+     
+    </div>
+  );
+};

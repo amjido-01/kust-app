@@ -51,6 +51,11 @@ export const Footer = ({ className }) => {
                       upload
                     </NavLink>
                   </li>
+                  <li>
+                  <NavLink to="/dictionary" className="hover:underline">
+                      library
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
               <div className="mt-6 md:mt-0">

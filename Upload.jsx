@@ -3,8 +3,9 @@ import { storage, db } from "./src/firebase";
 import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { getDownloadURL } from "firebase/storage";
+import { AuthForm } from "./src/components/AuthForm";
 
-export const Upload = () => {
+export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
   const [isAuthenticated, setISAuthenticated] = useState(false);
   const [error, setError] = useState("");
@@ -95,23 +96,23 @@ export const Upload = () => {
   return (
     <div>
       <div className="border-2">
-        {showForm ? <form onSubmit={formSubmitHandler}>
-          <input
-            type="email"
-            value={user.email}
-            onChange={handleUserEmail}
-            className="border-2 border-green-500"
-          />
-          <br />
-          <br />
-          <input
-            type="password"
-            value={user.password}
-            onChange={handleUserPassword}
-            className="border-2 border-green-500"
-          />
-          <button className="text-red-500 border-2">submit</button>
-        </form> : ""}
+        {showForm ?  <form onSubmit={formSubmitHandler}>
+        <input
+          type="email"
+          value={user.email}
+          onChange={handleUserEmail}
+          className="border-2 border-green-500"
+        />
+        <br />
+        <br />
+        <input
+          type="password"
+          value={user.password}
+          onChange={handleUserPassword}
+          className="border-2 border-green-500"
+        />
+        <button className="text-red-500 border-2">submit</button>
+      </form>  : ""}
       </div>
 
       {isAuthenticated ? (
