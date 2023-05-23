@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 export const Dic = () => {
   const [word, setWord] = useState("");
@@ -36,6 +37,7 @@ export const Dic = () => {
     <div>
       <div>
         <h1>{test}</h1>
+        <NavLink to="/books">library</NavLink><br />
         {defination}
       </div>
 
