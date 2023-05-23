@@ -6,7 +6,8 @@ export const Books = () => {
   //   const test = import.meta.env.VITE_YOUR_GOOGLE_API_KEY;
   const [query, setQuery] = useState("");
   const [books, setBooks] = useState([]);
-  const [message, setMessage] = useState("")
+  const [message, setMessage] = useState("");
+  const [loading, setIsLoadine] = useState(false)
   //   const [freeBooks, setFreeBooks] = useState([]);
 
   const handleInputChange = (e) => {
@@ -15,10 +16,11 @@ export const Books = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (query.trim().length === "") {
+    if (query.trim()=== "") {
+        setMessage("please enter a book title");
       return;
     }
-
+    setIsLoadine(true)
     try {
       const response = await axios.get(
         `https://openlibrary.org/search.json?title=${encodeURIComponent(
@@ -27,7 +29,7 @@ export const Books = () => {
       );
       const res = response.data;
       console.log(res);
-      const filteredBooks = res.docs.filter((book) => book.cover_i)
+      const filteredBooks = res.docs.filter((book) => book.cover_i);
       if (filteredBooks.length > 0) {
         setBooks(filteredBooks);
         setMessage("");
@@ -41,7 +43,10 @@ export const Books = () => {
       //   setFreeBooks(filteredBooks);
     } catch (error) {
       console.error(error);
+      //   setMessage("please enter a book title");
     }
+  setIsLoadine(false)
+
   };
 
 
@@ -54,8 +59,8 @@ export const Books = () => {
           value={query}
           onChange={handleInputChange}
         />
-        <button className="border-2 border-red-500" type="submit">
-          Search
+        <button disabled={loading} className={loading ? "bg-blue-300 border-2 border-red-500" : "bg-blue-500"} type="submit">
+          {loading ? "searching..." : "search"}
         </button>
       </form>
       {books.length > 0 ? (
