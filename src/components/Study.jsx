@@ -34,11 +34,11 @@ export const Study = () => {
             className=" uppercase font-medium "
           >
             <ul className="flex flex-col gap-4 md:gap-2 md:flex-row justify-around">
-                <li className="border-2 text-[20px] my-4 md:my-0 w-1/2">
+                <li className="border-2 text-[20px] mx-auto my-4 md:my-0 w-full md:w-1/2">
                 <p className="text-[16px] md:text-[18px]">Build Your Vocabulary Everyday with this amazing ddictionary </p>
                     <Link className="text-white w-[8rem] mx-auto my-2 cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize" to="/dictionary">Dictionary</Link>
                 </li>
-                <li className="border-2 text-[20px] w-1/2">
+                <li className="border-2 text-[20px] mb-4 md:mb-0 mx-auto w-full md:w-1/2">
                     <p className="text-[16px] md:text-[18px]">read and Get Books Recommendation for All Courses!</p>
                     <Link className="text-white w-[8rem] mx-auto my-2 cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize" to="/books">Read Books</Link>
                 </li>
