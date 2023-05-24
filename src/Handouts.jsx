@@ -7,6 +7,11 @@ export const Handouts = () => {
   const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
   const [data, setData] = useState([]); // to store the qqueried response
 
+  const timestamp = Date.now().toString(36); // Convert timestamp to base36 string
+  const randomChars = Math.random().toString(36).substr(2, 5); // Generate random characters
+  const randomId = timestamp + randomChars; // Combine timestamp and random characters
+  console.log(randomId)
+  
   useEffect(() => {
     const fetchData = async () => {
       const response = await getDocs(handoutsCollection);
@@ -27,17 +32,17 @@ export const Handouts = () => {
   return (
     <div>
       <button>Get Handouts</button>
-      <div>
+      <ul>
         {data.map((handout) => {
           return (
-            <>
+            <li key={randomId}>
               <h1>{handout.title} bala</h1>
               <p>{handout.level}</p>
               <a href={handout.handout}>Handout</a>
-            </>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 };
