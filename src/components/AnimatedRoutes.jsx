@@ -16,6 +16,7 @@ import { Handouts } from "../Handouts";
 import { Dic } from "./Dic";
 import { Upload } from "../../Upload";
 import { Books } from "./Books";
+import { Study } from "./Study";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -43,6 +44,9 @@ export const AnimatedRoutes = () => {
           {" "}
         </Route>
         <Route path="upload" element={<Upload />}>
+          {" "}
+        </Route>
+        <Route path="study" element={<Study />}>
           {" "}
         </Route>
         <Route path="documents/facms" element={<Facms />}>

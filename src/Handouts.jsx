@@ -12,9 +12,11 @@ export const Handouts = () => {
   const randomId = timestamp + randomChars; // Combine timestamp and random characters
   console.log(randomId)
   
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await getDocs(handoutsCollection);
+      console.log(response.data)
       let new_data = [];
       response.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
