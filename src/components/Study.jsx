@@ -20,11 +20,10 @@ export const Study = () => {
               style={{ fontFamily: "poppins" }}
               className="uppercase my-2 font-semibold text-[17px] md:text-[32px] leading-[31px] md:leading-[49px]"
             >
-              Great futures are not built alone, but <br /> with the help of
-              individuals like you !
+              Want To study ahead?<br />Got you covered!
             </h1>
             <p className="capitalize font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">
-              ready to do something incredible
+              happy learning!
             </p>
           </div>
         </div>
@@ -32,14 +31,16 @@ export const Study = () => {
         <div className="container mt-[20%] md:mt-[8%]">
           <h1
             style={{ fontFamily: "Poppins" }}
-            className="text-[20px] uppercase font-medium leading-[48px]"
+            className=" uppercase font-medium "
           >
-            <ul>
-                <li>
-                    <Link to="/dictonary">Dictionary</Link>
+            <ul className="block md:flex justify-around">
+                <li className="text-[20px] my-4 md:my-0">
+                <p className="text-[18px]">Build Your Vocabulary Everyday</p>
+                    <Link className="text-white w-[8rem] mx-auto my-2 cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize" to="/dictionary">Dictionary</Link>
                 </li>
-                <li>
-                    <Link >Read Books</Link>
+                <li className="text-[20px]">
+                    <p className="text-[18px]">Get Books Recommendation for All Courses!</p>
+                    <Link className="text-white w-[8rem] mx-auto my-2 cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize" to="/books">Read Books</Link>
                 </li>
             </ul>
           </h1>
