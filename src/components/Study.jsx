@@ -28,18 +28,18 @@ export const Study = () => {
           </div>
         </div>
 
-        <div className="container mt-[20%] md:mt-[8%]">
+        <div className="container mt-[15%] md:mt-[8%]">
           <h1
             style={{ fontFamily: "Poppins" }}
             className=" uppercase font-medium "
           >
-            <ul className="block md:flex justify-around">
-                <li className="text-[20px] my-4 md:my-0">
-                <p className="text-[18px]">Build Your Vocabulary Everyday</p>
+            <ul className="flex flex-col gap-4 md:gap-2 md:flex-row justify-around">
+                <li className="border-2 text-[20px] my-4 md:my-0 w-1/2">
+                <p className="text-[16px] md:text-[18px]">Build Your Vocabulary Everyday with this amazing ddictionary </p>
                     <Link className="text-white w-[8rem] mx-auto my-2 cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize" to="/dictionary">Dictionary</Link>
                 </li>
-                <li className="text-[20px]">
-                    <p className="text-[18px]">Get Books Recommendation for All Courses!</p>
+                <li className="border-2 text-[20px] w-1/2">
+                    <p className="text-[16px] md:text-[18px]">read and Get Books Recommendation for All Courses!</p>
                     <Link className="text-white w-[8rem] mx-auto my-2 cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize" to="/books">Read Books</Link>
                 </li>
             </ul>

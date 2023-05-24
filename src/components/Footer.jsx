@@ -52,8 +52,8 @@ export const Footer = ({ className }) => {
                     </NavLink>
                   </li>
                   <li>
-                  <NavLink to="/dictionary" className="hover:underline">
-                      library
+                  <NavLink to="/study" className="hover:underline">
+                      study
                     </NavLink>
                   </li>
                 </ul>
