@@ -19,7 +19,7 @@ export const Dic = () => {
       );
       const data = res.data[0].meanings[0].definitions[0].definition;
       const test = res.data[0].word;
-      console.log(data);
+      // console.log(data);
       setAudio(res.data[0].phonetics[0].audio)
       setDefination(data);
       setWord("");
@@ -37,7 +37,6 @@ export const Dic = () => {
     <div>
       <div>
         <h1>{test}</h1>
-        <NavLink to="/books">library</NavLink><br />
         {defination}
       </div>
 
