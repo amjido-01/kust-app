@@ -1,6 +1,7 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 // import { motion } from "framer-motion";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const Autor = ({
   src,
@@ -33,7 +34,7 @@ export const Autor = ({
       </div>
       <LazyLoadImage
         src={src}
-        // effect="blur"
+        effect="blur"
         className="w-[70%] mx-auto text-[#000000] my-2"
         placeholderSrc={placeHolder}
         alt={alt}

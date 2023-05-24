@@ -12,6 +12,7 @@ import dic from "../assets/dic.jpg";
 import dic1 from "../assets/dic1.jpg";
 import dic2 from "../assets/dic2.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const Study = () => {
   return (
@@ -48,7 +49,7 @@ export const Study = () => {
             <ul className="flex flex-col gap-4 md:gap-2 md:flex-row justify-around">
               <li className="border-2 text-[20px] mx-auto my-4 md:my-0 w-full md:w-[40%]">
                 <Link to="/dictionary">
-                <LazyLoadImage src={dic} alt="dictionary" className=" object-cover" />
+                <LazyLoadImage effect="blur" src={dic} alt="dictionary" className=" object-cover" />
                 </Link>
                 <p className="text-[16px] md:text-[18px]">
                   Build Your Vocabulary Everyday with this amazing ddictionary{" "}
@@ -62,7 +63,7 @@ export const Study = () => {
               </li>
               <li className="border-2 text-[20px] mb-4 md:mb-0 mx-auto w-full md:w-[40%]">
                 <Link to="/books">
-                  <LazyLoadImage src={library4} alt="" className="object-cover" />
+                  <LazyLoadImage effect="blur" src={library4} alt="" className="object-cover" />
                 </Link>
                 <p className="text-[16px] md:text-[18px]">
                   read and Get Books Recommendation for All Courses!
