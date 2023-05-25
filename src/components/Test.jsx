@@ -18,59 +18,79 @@
 //     </div>
 //   );
 // };
-import React from "react";
-import { useState } from "react";
+// import React from "react";
+// import { useState } from "react";
+
+// export const Test = () => {
+//   const [loading, setIsLoading] = useState(false);
+//   const [userInputs, setUserInputs] = useState({
+//     fName: "",
+//     lName: "",
+//   });
+
+//   const handleFname = (e) => {
+//     setUserInputs((prevState) => {
+//       return {
+//         ...prevState,
+//         fName: e.target.value,
+//       };
+//     });
+//   };
+//   const handleLname = (e) => {
+//     setUserInputs((prevState) => {
+//       return {
+//         ...prevState,
+//         lName: e.target.value,
+//       };
+//     });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setIsLoading(true);
+//     setTimeout(() => {
+//       console.log(userInputs.fName);
+//       console.log(userInputs.lName);
+//       setIsLoading(false)
+//     }, 2000);
+//   };
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <input
+//         type="text"
+//         value={userInputs.fName}
+//         onChange={handleFname}
+//         className="border-2 border-red-500"
+//       />
+//       <input
+//         type="text"
+//         value={userInputs.lName}
+//         onChange={handleLname}
+//         className="border-2 border-red-500"
+//       />
+//       <button className="border-2 border-green-600">
+//         {loading ? "submitting..." : "submit"}
+//       </button>
+//     </form>
+//   );
+// };
+
+import React from 'react';
+import axios from 'axios';
 
 export const Test = () => {
-  const [loading, setIsLoading] = useState(false);
-  const [userInputs, setUserInputs] = useState({
-    fName: "",
-    lName: "",
-  });
-
-  const handleFname = (e) => {
-    setUserInputs((prevState) => {
-      return {
-        ...prevState,
-        fName: e.target.value,
-      };
-    });
-  };
-  const handleLname = (e) => {
-    setUserInputs((prevState) => {
-      return {
-        ...prevState,
-        lName: e.target.value,
-      };
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setTimeout(() => {
-      console.log(userInputs.fName);
-      console.log(userInputs.lName);
-      setIsLoading(false)
-    }, 2000);
-  };
+  const handleClick = async() => {
+    try {
+      const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
+      // const res = response.data()
+      console.log(response)
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={userInputs.fName}
-        onChange={handleFname}
-        className="border-2 border-red-500"
-      />
-      <input
-        type="text"
-        value={userInputs.lName}
-        onChange={handleLname}
-        className="border-2 border-red-500"
-      />
-      <button className="border-2 border-green-600">
-        {loading ? "submitting..." : "submit"}
-      </button>
-    </form>
-  );
-};
+    <div>
+      <button onClick={handleClick}>get data</button>
+    </div>
+  )
+}
