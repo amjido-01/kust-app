@@ -75,22 +75,52 @@
 //   );
 // };
 
-import React from 'react';
-import axios from 'axios';
+// import React from 'react';
+// import axios from 'axios';
+
+// export const Test = () => {
+//   const handleClick = async() => {
+//     try {
+//       const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
+//       // const res = response.data()
+//       console.log(response)
+//     } catch (error) {
+//       console.log(error)
+//     }
+//   }
+//   return (
+//     <div>
+//       <button onClick={handleClick}>get data</button>
+//     </div>
+//   )
+// }
+
+import React from "react";
+import axios from "axios";
+import { useState } from "react";
 
 export const Test = () => {
-  const handleClick = async() => {
-    try {
-      const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
-      // const res = response.data()
-      console.log(response)
-    } catch (error) {
-      console.log(error)
-    }
+  const [data, setData] = useState([]);
+ const handleClick = async() => {
+  try {
+    const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+    let new_data = []
+    let output = response.data.map((data) => {
+      new_data = [...new_data, data]
+    })
+    setData(new_data)
+    console.log(data)
+  } catch (error) {
+    console.log(error)
   }
+ }
+   
   return (
     <div>
-      <button onClick={handleClick}>get data</button>
+      <button onClick={handleClick}>get Data</button>
+      <div>
+        {data.map((item) => <li>{item}</li>)}
+      </div>
     </div>
-  )
-}
+  );
+};
