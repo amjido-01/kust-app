@@ -12,9 +12,9 @@ export const Upload = (props) => {
   const [error, setError] = useState("");
   const [showForm, setShowForm] = useState(true);
   const [disabled, setDisabled] = useState(true);
-  const [dept, setDept] = useState("");
-  const [faculty, setFaculty] = useState("");
-  const [level, setLevel] = useState("");
+  const [selectedFaculty, setSelectedFaculty] = useState("");
+  const [selectedDepartment, setSelectedDepartment] = useState("");
+  const [selectedLevel, setSelectedLevel] = useState("");
   const [credentials, setCredentials] = useState({
     email: "youndsadeeq10@gmail.com",
     password: "123456",
@@ -26,17 +26,37 @@ export const Upload = (props) => {
 
   const inputRef = useRef(null);
 
-  const handleDept = (e) => {
-    setDept(e.target.value);
-    // console.log(e.target.value);
+  const faculties = ["FACMS", "FAENG", "FASEET"];
+  const departments = {
+    FACMS: ["Computer", "ICT", "Maths"],
+    FAENG: ["Computer", "ICT", "Maths"],
+    FASEET: ["Electrical", "Electronic", "Mechanical"],
   };
-  const handleFaculty = (e) => {
-    setFaculty(e.target.value);
-    // console.log(e.target.value);
+  const departmentLevels = {
+    Computer: ["100", "200", "300", "400", "500"],
+    ICT: ["100", "200", "300", "400", "500"],
+    Maths: ["100", "200", "300", "400", "500"],
+    Electrical: ["100", "200", "300", "400"],
+    Electronic: ["100", "200", "300", "400"],
+    Mechanical: ["100", "200", "300", "400"],
   };
-  const handleLevel = (e) => {
-    setLevel(e.target.value);
-    // console.log(e.target.value);
+
+  const handleFacultyChange = (e) => {
+    const selectedFaculty = e.target.value;
+    setSelectedFaculty(selectedFaculty);
+    setSelectedDepartment("");
+    setSelectedLevel("");
+  };
+
+  const handleDepartmentChange = (e) => {
+    const selectedDepartment = e.target.value;
+    setSelectedDepartment(selectedDepartment);
+    setSelectedLevel("");
+  };
+
+  const handleLevelChange = (e) => {
+    const selectedLevel = e.target.value;
+    setSelectedLevel(selectedLevel);
   };
 
   const formSubmitHandler = (e) => {
@@ -102,20 +122,19 @@ export const Upload = (props) => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           let handoutDoc = collection(db, "handouts");
           addDoc(handoutDoc, {
-            department: dept,
-            faculty: faculty,
+            department: selectedDepartment,
+            faculty: selectedFaculty,
             handout: url,
-            level: level,
+            level: selectedLevel,
             title: handout.name,
           });
         });
       }
     );
-    setDept("")
-    setFaculty("")
-    setLevel("")
     inputRef.current.value = null;
-
+    console.log("Selected Faculty:", selectedFaculty);
+    console.log("Selected Department:", selectedDepartment);
+    console.log("Selected Level:", selectedLevel);
   };
   return (
     <div>
@@ -149,43 +168,47 @@ export const Upload = (props) => {
       {isAuthenticated ? (
         <div className="border-2 border-red-400">
           <div>
-            <label htmlFor="dept">Department</label>
-            <input
-              style={{ border: "2px solid green" }}
-              value={dept}
-              onChange={handleDept}
-              type="text"
-              id="dept"
-              className="border-2 border-blue-500"
-            />
-          </div>
-          <br />
+            <select value={selectedFaculty} onChange={handleFacultyChange}>
+              <option value="">Select Faculty</option>
+              {faculties.map((faculty) => (
+                <option key={faculty} value={faculty}>
+                  {faculty}
+                </option>
+              ))}
+            </select>
 
-          <div>
-            <label htmlFor="faculty">Faculty</label>
-            <input
-              style={{ border: "2px solid green" }}
-              value={faculty}
-              onChange={handleFaculty}
-              type="text"
-              id="faculty"
-            />
-          </div>
-          <br />
+            {selectedFaculty && (
+              <select
+                value={selectedDepartment}
+                onChange={handleDepartmentChange}
+              >
+                <option value="">Select Department</option>
+                {departments[selectedFaculty].map((department) => (
+                  <option key={department} value={department}>
+                    {department}
+                  </option>
+                ))}
+              </select>
+            )}
 
-          <div>
-            <label htmlFor="level">Level</label>
-            <input
-              style={{ border: "2px solid green" }}
-              value={level}
-              onChange={handleLevel}
-              type="text"
-              id="level"
-            />
+            {selectedDepartment && (
+              <select value={selectedLevel} onChange={handleLevelChange}>
+                <option value="">Select Level</option>
+                {departmentLevels[selectedDepartment].map((level) => (
+                  <option key={level} value={level}>
+                    {level}
+                  </option>
+                ))}
+              </select>
+            )}
           </div>
-          <br />
 
-          <input ref={inputRef}  type="file" required onChange={(e) => uploadHandout(e)} />
+          <input
+            ref={inputRef}
+            type="file"
+            required
+            onChange={(e) => uploadHandout(e)}
+          />
           <p>{percent} uploaded</p>
         </div>
       ) : (
