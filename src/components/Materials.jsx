@@ -51,7 +51,11 @@ export const Materials = () => {
       querySnapShot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         console.log(doc.id, " => ", doc.data());
-        new_data = [...new_data, doc.data()];
+        // new_data = [...new_data, doc.data()];
+        new_data = [
+          ...new_data,
+          { ...doc.data(), fileRef: doc.data().handout },
+        ];
       });
       // console.log(response.data)
       console.log("new_data", new_data);
