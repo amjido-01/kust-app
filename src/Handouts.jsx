@@ -5,18 +5,17 @@ import { useState, useEffect } from "react";
 export const Handouts = () => {
   const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
   const [data, setData] = useState([]); // to store the qqueried response
-  
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await getDocs(handoutsCollection);
-      const q =  query(handoutsCollection, where("department", "==", "Computer"));
+      const q = query(handoutsCollection, where("department", "==", "ICT"));
       let new_data = [];
-      const querySnapShot = await getDocs(q)
+      const querySnapShot = await getDocs(q);
       querySnapShot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         console.log(doc.id, " => ", doc.data());
-        new_data = [...new_data, doc.data()]
+        new_data = [...new_data, doc.data()];
       });
       // console.log(response.data)
       console.log("new_data", new_data);

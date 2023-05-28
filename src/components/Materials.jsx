@@ -2,26 +2,48 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Docs } from "./Docs";
-import { useState } from "react";
-import { Data } from "../Data";
+// import { Data } from "../Data";
 import { motion } from "framer-motion";
-import { Download } from "./Download";
+// import { Download } from "./Download";
+import { db } from "../firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { useState, useEffect } from "react";
 
 export const Materials = () => {
-  const [data, setData] = useState(Data);
-  const [filteredItems, setFilteredItems] = useState(Data);
-  const [searchQuery, setSearchQuery] = useState("");
+  const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
+  const [data, setData] = useState([]);
+  // const [filteredItems, setFilteredItems] = useState(Data);
+  // const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearch = (e) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-    console.log(searchQuery);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await getDocs(handoutsCollection);
+      const q = query(handoutsCollection, where("department", "==", "Maths"));
+      let new_data = [];
+      const querySnapShot = await getDocs(q);
+      querySnapShot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        new_data = [...new_data, doc.data()];
+      });
+      // console.log(response.data)
+      console.log("new_data", new_data);
+      setData(new_data);
+    };
 
-    const filtered = data.filter((item) =>
-      item.first_name.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredItems(filtered);
-  };
+    fetchData();
+  }, []);
+
+  // const handleSearch = (e) => {
+  //   const query = e.target.value;
+  //   setSearchQuery(query);
+  //   console.log(searchQuery);
+
+  //   const filtered = data.filter((item) =>
+  //     item.first_name.toLowerCase().includes(query.toLowerCase())
+  //   );
+  //   setFilteredItems(filtered);
+  // };
 
   return (
     <motion.div
@@ -53,14 +75,14 @@ export const Materials = () => {
 
           <div className="relative my-3" data-te-input-wrapper-init>
             <input
-              value={searchQuery}
-              onChange={handleSearch}
+              // value={searchQuery}
+              // onChange={handleSearch}
               type="search"
               className="peer block min-h-[auto] w-[15rem] rounded border-2 border-green-500 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
               id="exampleSearch2"
             />
             <label
-              for="exampleSearch2"
+              htmlFor="exampleSearch2"
               className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none  dark:peer-focus:text-primary"
             >
               Search
@@ -80,23 +102,25 @@ export const Materials = () => {
                   >
                     HandOuts
                   </h3>
-                  {filteredItems.length === 0 && (
+                  {data.length === 0 && (
                     <p className="mt-10 text-white">No such file found :)</p>
                   )}
                   <ul className=" uppercase">
-                    {filteredItems.map((item) => (
+                    {data.map((handout, index) => (
                       <li
-                        key={item.id}
+                        key={index}
                         style={{ fontStyle: "normal" }}
                         className="bg-white cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
                       >
-                        {item.first_name} {<Download />}
+                        {handout.title} 
+                        <a className='bg-[#755FFE] text-[#FFFFFF] text-[15px] p-2 font-medium leading-[24px] uppercase' href={handout.handout}>download</a>
+                        {/* {<Download onClick={() => handout.handout}/>} */}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div
+                {/* <div
                   style={{ backgroundColor: "#D4ADB7" }}
                   className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full`}
                 >
@@ -120,7 +144,7 @@ export const Materials = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
