@@ -8,6 +8,29 @@ import { motion } from "framer-motion";
 import { db } from "../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useState, useEffect } from "react";
+import { getDownloadURL, getStorage, ref } from "firebase/storage";
+
+const storage = getStorage();
+const openPDFInNewTab = (fileRef) => {
+  try {
+    // Get the download URL of the PDF file
+    getDownloadURL(ref(storage, fileRef))
+      .then((downloadURL) => {
+        // Create an anchor element
+        const link = document.createElement("a");
+        link.href = downloadURL;
+        link.target = "_blank";
+
+        // Simulate a click on the anchor element to open the file in a new tab
+        link.click();
+      })
+      .catch((error) => {
+        console.log("Error opening PDF file:", error);
+      });
+  } catch (error) {
+    console.log("Error opening PDF file:", error);
+  }
+};
 
 export const Materials = () => {
   const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
@@ -18,7 +41,11 @@ export const Materials = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await getDocs(handoutsCollection);
-      const q = query(handoutsCollection, where("department", "==", "Maths"));
+      const q = query(
+        handoutsCollection,
+        where("department", "==", "Computer"),
+        where("level", "==", "100")
+      );
       let new_data = [];
       const querySnapShot = await getDocs(q);
       querySnapShot.forEach((doc) => {
@@ -33,6 +60,17 @@ export const Materials = () => {
 
     fetchData();
   }, []);
+
+  const handleButtonClick = (fileRef, shouldDownload) => {
+    // const fileRef = handoutsCollection; // Replace with the actual file reference
+    if (shouldDownload) {
+      // Trigger file download
+      window.open(fileRef, "_blank");
+    } else {
+      // Open file in new tab
+      openPDFInNewTab(fileRef);
+    }
+  };
 
   // const handleSearch = (e) => {
   //   const query = e.target.value;
@@ -110,10 +148,20 @@ export const Materials = () => {
                       <li
                         key={index}
                         style={{ fontStyle: "normal" }}
+                        onClick={() =>
+                          handleButtonClick(handout.handout, false)
+                        }
                         className="bg-white cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
                       >
-                        {handout.title} 
-                        <a className='bg-[#755FFE] text-[#FFFFFF] text-[15px] p-2 font-medium leading-[24px] uppercase' href={handout.handout}>download</a>
+                        {handout.title}
+                        <button
+                          className="bg-[#755FFE] text-[#FFFFFF] text-[15px] p-2 font-medium leading-[24px] uppercase"
+                          onClick={() =>
+                            handleButtonClick(handout.handout, true)
+                          } // Download
+                        >
+                          Download
+                        </button>
                         {/* {<Download onClick={() => handout.handout}/>} */}
                       </li>
                     ))}
