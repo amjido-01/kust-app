@@ -9,8 +9,8 @@ export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
   const [isAuthenticated, setISAuthenticated] = useState(false);
   const [error, setError] = useState("");
-  const [showForm, setShowForm] = useState(true)
-  const [disabled, setDisabled] = useState(true)
+  const [showForm, setShowForm] = useState(true);
+  const [disabled, setDisabled] = useState(true);
   const [credentials, setCredentials] = useState({
     email: "youndsadeeq10@gmail.com",
     password: "123456",
@@ -26,9 +26,9 @@ export const Upload = (props) => {
       user.email === credentials.email &&
       user.password === credentials.password
     ) {
-      setDisabled(false)
+      setDisabled(false);
       setISAuthenticated(true);
-      setShowForm(false)
+      setShowForm(false);
       setUser({
         email: "",
         password: "",
@@ -95,33 +95,42 @@ export const Upload = (props) => {
   };
   return (
     <div>
-      <div className="border-2">
-        {showForm ?  <form onSubmit={formSubmitHandler}>
-        <input
-          type="email"
-          value={user.email}
-          onChange={handleUserEmail}
-          className="border-2 border-green-500"
-        />
-        <br />
-        <br />
-        <input
-          type="password"
-          value={user.password}
-          onChange={handleUserPassword}
-          className="border-2 border-green-500"
-        />
-        <button className="text-red-500 border-2">submit</button>
-      </form>  : ""}
+      <div className="border-2 border-red-400">
+        {showForm ? (
+          <form
+            className="border-2 border-red-400"
+            onSubmit={formSubmitHandler}
+          >
+            <input
+              type="email"
+              value={user.email}
+              onChange={handleUserEmail}
+              className="border-2 border-green-500"
+            />
+            <br />
+            <br />
+            <input
+              type="password"
+              value={user.password}
+              onChange={handleUserPassword}
+              className="border-2 border-green-500"
+            />
+            <button className="text-red-500 border-2">submit</button>
+          </form>
+        ) : (
+          ""
+        )}
       </div>
 
       {isAuthenticated ? (
-        <div>
+        <div className="border-2 border-red-400">
           <input type="file" required onChange={(e) => uploadHandout(e)} />
           <p>{percent} uploaded</p>
         </div>
       ) : (
-        <p style={{color: "red"}} className="text-red-500 text-4xl">{error}</p>
+        <p style={{ color: "red" }} className="text-red-500 text-4xl">
+          {error}
+        </p>
       )}
     </div>
   );
