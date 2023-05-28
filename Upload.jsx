@@ -11,6 +11,9 @@ export const Upload = (props) => {
   const [error, setError] = useState("");
   const [showForm, setShowForm] = useState(true);
   const [disabled, setDisabled] = useState(true);
+  const [dept, setDept] = useState("");
+  const [faculty, setFaculty] = useState("");
+  const [level, setLevel] = useState("");
   const [credentials, setCredentials] = useState({
     email: "youndsadeeq10@gmail.com",
     password: "123456",
@@ -19,6 +22,19 @@ export const Upload = (props) => {
     email: "",
     password: "",
   });
+
+  const handleDept = (e) => {
+    setDept(e.target.value);
+    // console.log(e.target.value);
+  };
+  const handleFaculty = (e) => {
+    setFaculty(e.target.value);
+    // console.log(e.target.value);
+  };
+  const handleLevel = (e) => {
+    setLevel(e.target.value);
+    // console.log(e.target.value);
+  };
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -83,14 +99,15 @@ export const Upload = (props) => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           let handoutDoc = collection(db, "handouts");
           addDoc(handoutDoc, {
-            department: "comp",
-            faculty: "facoms",
+            department: dept,
+            faculty: faculty,
             handout: url,
-            level: "100",
+            level: level,
             title: handout.name,
           });
         });
       }
+      
     );
   };
   return (
@@ -124,6 +141,43 @@ export const Upload = (props) => {
 
       {isAuthenticated ? (
         <div className="border-2 border-red-400">
+          <div>
+            <label htmlFor="dept">Department</label>
+            <input
+              style={{ border: "2px solid green" }}
+              value={dept}
+              onChange={handleDept}
+              type="text"
+              id="dept"
+              className="border-2 border-blue-500"
+            />
+          </div>
+          <br />
+
+          <div>
+            <label htmlFor="faculty">Faculty</label>
+            <input
+              style={{ border: "2px solid green" }}
+              value={faculty}
+              onChange={handleFaculty}
+              type="text"
+              id="faculty"
+            />
+          </div>
+          <br />
+
+          <div>
+            <label htmlFor="level">Level</label>
+            <input
+              style={{ border: "2px solid green" }}
+              value={level}
+              onChange={handleLevel}
+              type="text"
+              id="level"
+            />
+          </div>
+          <br />
+
           <input type="file" required onChange={(e) => uploadHandout(e)} />
           <p>{percent} uploaded</p>
         </div>
