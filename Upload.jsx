@@ -5,6 +5,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { getDownloadURL } from "firebase/storage";
 import { AuthForm } from "./src/components/AuthForm";
 import { useRef } from "react";
+import { useEffect } from "react";
 
 export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
@@ -12,6 +13,7 @@ export const Upload = (props) => {
   const [error, setError] = useState("");
   const [showForm, setShowForm] = useState(true);
   const [disabled, setDisabled] = useState(true);
+  const [inputDisabled, setInputDisabled] = useState(true);
   const [selectedFaculty, setSelectedFaculty] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("");
@@ -24,6 +26,7 @@ export const Upload = (props) => {
     password: "",
   });
 
+  // updating the input file field to null after submissinon
   const inputRef = useRef(null);
 
   const faculties = ["FACMS", "FAENG", "FASEET"];
@@ -58,6 +61,16 @@ export const Upload = (props) => {
     const selectedLevel = e.target.value;
     setSelectedLevel(selectedLevel);
   };
+
+  useEffect(() => {
+    // Check if all required values are selected
+    if (selectedFaculty && selectedDepartment && selectedLevel) {
+      setInputDisabled(false); // Enable input field
+    } else {
+      setInputDisabled(true); // Disable input field
+    }
+  }, [selectedFaculty, selectedDepartment, selectedLevel]);
+
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -132,6 +145,9 @@ export const Upload = (props) => {
       }
     );
     inputRef.current.value = null;
+    setSelectedFaculty("");
+    setSelectedDepartment("");
+    setSelectedLevel("");
     console.log("Selected Faculty:", selectedFaculty);
     console.log("Selected Department:", selectedDepartment);
     console.log("Selected Level:", selectedLevel);
@@ -176,7 +192,8 @@ export const Upload = (props) => {
                 </option>
               ))}
             </select>
-
+            <br />
+            <br />
             {selectedFaculty && (
               <select
                 value={selectedDepartment}
@@ -190,7 +207,8 @@ export const Upload = (props) => {
                 ))}
               </select>
             )}
-
+            <br />
+            <br />
             {selectedDepartment && (
               <select value={selectedLevel} onChange={handleLevelChange}>
                 <option value="">Select Level</option>
@@ -202,12 +220,14 @@ export const Upload = (props) => {
               </select>
             )}
           </div>
-
+          {/* <br/>
+                <br/> */}
           <input
             ref={inputRef}
             type="file"
             required
             onChange={(e) => uploadHandout(e)}
+            disabled={inputDisabled}
           />
           <p>{percent} uploaded</p>
         </div>

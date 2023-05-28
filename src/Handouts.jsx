@@ -10,15 +10,15 @@ export const Handouts = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await getDocs(handoutsCollection);
-      // const response = await query(handoutsCollection, where("department", "==", "comp"));
-      console.log(response.data)
+      const q =  query(handoutsCollection, where("department", "==", "Computer"));
       let new_data = [];
-      response.forEach((doc) => {
+      const querySnapShot = await getDocs(q)
+      querySnapShot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-
         console.log(doc.id, " => ", doc.data());
-        new_data = [...new_data, doc.data()];
+        new_data = [...new_data, doc.data()]
       });
+      // console.log(response.data)
       console.log("new_data", new_data);
       setData(new_data);
     };
