@@ -4,6 +4,7 @@ import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { getDownloadURL } from "firebase/storage";
 import { AuthForm } from "./src/components/AuthForm";
+import { useRef } from "react";
 
 export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
@@ -22,6 +23,8 @@ export const Upload = (props) => {
     email: "",
     password: "",
   });
+
+  const inputRef = useRef(null);
 
   const handleDept = (e) => {
     setDept(e.target.value);
@@ -107,8 +110,12 @@ export const Upload = (props) => {
           });
         });
       }
-      
     );
+    setDept("")
+    setFaculty("")
+    setLevel("")
+    inputRef.current.value = null;
+
   };
   return (
     <div>
@@ -178,7 +185,7 @@ export const Upload = (props) => {
           </div>
           <br />
 
-          <input type="file" required onChange={(e) => uploadHandout(e)} />
+          <input ref={inputRef}  type="file" required onChange={(e) => uploadHandout(e)} />
           <p>{percent} uploaded</p>
         </div>
       ) : (
