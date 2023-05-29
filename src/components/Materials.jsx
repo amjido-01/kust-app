@@ -150,9 +150,9 @@ export const Materials = () => {
                     HandOuts
                   </h3>
                   {filteredItems.length === 0 && (
-                    <p className="mt-10 text-white"> </p>
+                    <p className="mt-10 text-white"> no such file</p>
                   )}
-                  {loading ? "loading files....." : <ul className=" uppercase">
+                 {loading ? "loading files" :  <ul className=" uppercase">
                     {filteredItems.map((handout, index) => (
                       <li
                         key={index}
