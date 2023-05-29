@@ -2,13 +2,13 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Docs } from "./Docs";
-// import { Data } from "../Data";
 import { motion } from "framer-motion";
 // import { Download } from "./Download";
 import { db } from "../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
+
 
 const storage = getStorage();
 const openPDFInNewTab = (fileRef) => {
@@ -37,6 +37,7 @@ export const Materials = () => {
   const [data, setData] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,6 +62,7 @@ export const Materials = () => {
       console.log("new_data", new_data);
       setData(new_data);
       setFilteredItems(new_data)
+      setLoading(false)
       console.log(filteredItems, "i am here")
     };
 
@@ -148,9 +150,9 @@ export const Materials = () => {
                     HandOuts
                   </h3>
                   {filteredItems.length === 0 && (
-                    <p className="mt-10 text-white"> no such file</p>
+                    <p className="mt-10 text-white"> </p>
                   )}
-                  <ul className=" uppercase">
+                  {loading ? "loading files....." : <ul className=" uppercase">
                     {filteredItems.map((handout, index) => (
                       <li
                         key={index}
@@ -172,7 +174,7 @@ export const Materials = () => {
                         {/* {<Download onClick={() => handout.handout}/>} */}
                       </li>
                     ))}
-                  </ul>
+                  </ul>}
                 </div>
 
                 {/* <div
