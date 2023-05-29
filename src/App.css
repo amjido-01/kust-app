@@ -150,6 +150,19 @@ body {
     height: 80px;
 }
 
+/* @media screen and (max-width: 500px) {
+    .seeing {
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: red; 
+    }
+} */
+
+.dd {
+    text-overflow: ellipsis;
+}
+
 .progress-bar {
     position: fixed;
     left: 0;

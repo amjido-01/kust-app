@@ -35,8 +35,8 @@ const openPDFInNewTab = (fileRef) => {
 export const Materials = () => {
   const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
   const [data, setData] = useState([]);
-  // const [filteredItems, setFilteredItems] = useState(Data);
-  // const [searchQuery, setSearchQuery] = useState("");
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,6 +60,8 @@ export const Materials = () => {
       // console.log(response.data)
       console.log("new_data", new_data);
       setData(new_data);
+      setFilteredItems(new_data)
+      console.log(filteredItems, "i am here")
     };
 
     fetchData();
@@ -76,16 +78,17 @@ export const Materials = () => {
     }
   };
 
-  // const handleSearch = (e) => {
-  //   const query = e.target.value;
-  //   setSearchQuery(query);
-  //   console.log(searchQuery);
+  const handleSearch = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    console.log(searchQuery);
 
-  //   const filtered = data.filter((item) =>
-  //     item.first_name.toLowerCase().includes(query.toLowerCase())
-  //   );
-  //   setFilteredItems(filtered);
-  // };
+    const filtered = data.filter((item) =>
+      item.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredItems(filtered);
+    console.log(filteredItems, "see me")
+  };
 
   return (
     <motion.div
@@ -117,8 +120,8 @@ export const Materials = () => {
 
           <div className="relative my-3" data-te-input-wrapper-init>
             <input
-              // value={searchQuery}
-              // onChange={handleSearch}
+              value={searchQuery}
+              onChange={handleSearch}
               type="search"
               className="peer block min-h-[auto] w-[15rem] rounded border-2 border-green-500 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
               id="exampleSearch2"
@@ -144,18 +147,18 @@ export const Materials = () => {
                   >
                     HandOuts
                   </h3>
-                  {data.length === 0 && (
-                    <p className="mt-10 text-white">No such file found :)</p>
+                  {filteredItems.length === 0 && (
+                    <p className="mt-10 text-white"> no such file</p>
                   )}
                   <ul className=" uppercase">
-                    {data.map((handout, index) => (
+                    {filteredItems.map((handout, index) => (
                       <li
                         key={index}
                         style={{ fontStyle: "normal" }}
                         onClick={() =>
                           handleButtonClick(handout.handout, false)
                         }
-                        className="bg-white cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
+                        className="bg-white dd cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
                       >
                         {handout.title}
                         <button
