@@ -32,16 +32,16 @@ export const Upload = (props) => {
   const faculties = ["FACMS", "FAENG", "FASEET"];
   const departments = {
     FACMS: ["Computer", "ICT", "Maths"],
-    FAENG: ["Computer", "ICT", "Maths"],
-    FASEET: ["Electrical", "Electronic", "Mechanical"],
+    FAENG: ["Electrical", "Electronic", "Mechanical"],
+    FASEET: ["Testing", "Checking", "Working"],
   };
   const departmentLevels = {
-    Computer: ["100", "200", "300", "400", "500"],
+    Computer: ["100", "200", "300", "400"],
     ICT: ["100", "200", "300", "400", "500"],
-    Maths: ["100", "200", "300", "400", "500"],
-    Electrical: ["100", "200", "300", "400"],
-    Electronic: ["100", "200", "300", "400"],
-    Mechanical: ["100", "200", "300", "400"],
+    Maths: ["100", "200", "300", "400"],
+    Electrical: ["100", "200", "300", "400", "500"],
+    Electronic: ["100", "200", "300", "400", "500"],
+    Mechanical: ["100", "200", "300", "400", "500"],
   };
 
   const handleFacultyChange = (e) => {
