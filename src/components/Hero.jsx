@@ -46,11 +46,11 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-8 flex z-20 cursor-pointer">
+          <div className="mt-8 flex cursor-pointer">
             <Button
               onSmash={() => navigate("/documents")}
               value="get started"
-              cls_name="text-white z-20 flex absolute cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white z-10 flex absolute cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
           </div>
         </div>
