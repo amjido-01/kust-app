@@ -22,13 +22,13 @@ export const Main = () => {
 
   return (
     <section className="relative flex-col justify-center items-center bg-[#FFFFFF] min-h-[250px] capitalize">
-      <h1
+      <h2
         data-aos="fade-right"
-        className="text-[#000000] text-center font-bold my-2 px-1 text-[32px] unbounded"
+        className="text-[#000000] text-center font-bold my-2 px-1 text-[25px] md:text-[30px] unbounded"
 
       >
         You can get them all for free now!
-      </h1>
+      </h2>
       <img
         src={sqleft}
         className="hidden md:block absolute w-[4%] top-18 -left-2"
