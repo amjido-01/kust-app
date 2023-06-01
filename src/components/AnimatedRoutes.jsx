@@ -20,7 +20,8 @@ import { Study } from "./Study";
 import { Pground } from "./Pground";
 import { ComLevelOne } from "./ComLevelOne";
 import { ComLevelTwo } from "./ComLevelTwo";
-
+import { ComLevelThree } from "./ComLevelThree";
+import { ComLevelFour } from "./ComLevelFour";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -46,6 +47,14 @@ export const AnimatedRoutes = () => {
         <Route
           path="documents/facms/level-two-materials"
           element={<ComLevelTwo />}
+        ></Route>
+        <Route
+          path="documents/facms/level-three-materials"
+          element={<ComLevelThree />}
+        ></Route>
+        <Route
+          path="documents/facms/level-four-materials"
+          element={<ComLevelFour />}
         ></Route>
         <Route path="documents/engineering" element={<Engineering />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>

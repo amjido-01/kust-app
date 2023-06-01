@@ -7,19 +7,21 @@ import { Download } from "./Download";
 import { db } from "../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import { getDownloadURL, getStorage, ref } from "firebase/storage";
-
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export const Materials = (props) => {
   const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
   const [data, setData] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [dataLoading, setDataLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
+      setDataLoading(true);
       const response = await getDocs(handoutsCollection);
       const q = query(
         handoutsCollection,
@@ -38,11 +40,18 @@ export const Materials = (props) => {
         ];
       });
       // console.log(response.data)
+      if (new_data.length === 0) {
+        console.log("No data found");
+        // Set a flag or state to indicate no data found
+        setMessage("no file yet");
+      }
       console.log("new_data", new_data);
       setData(new_data);
-      setFilteredItems(new_data)
-      setLoading(false)
-      console.log(filteredItems, "i am here")
+      setFilteredItems(new_data);
+      setMessage(new_data.length === 0 ? "no file yet" : "");
+      // setLoading(false)
+      setDataLoading(false);
+      console.log(filteredItems, "i am here");
     };
 
     fetchData();
@@ -68,7 +77,7 @@ export const Materials = (props) => {
       item.title.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredItems(filtered);
-    console.log(filteredItems, "see me")
+    console.log(filteredItems, "see me");
   };
 
   return (
@@ -87,7 +96,10 @@ export const Materials = (props) => {
               style={{ fontFamily: "poppins" }}
               className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
             >
-              welcome to the download page
+              welcome to{" "}
+              <span className="text-[#0F9D58]">{props.department} sci</span>{" "}
+              level <span className=" text-[#8CB6B5]">{props.level}</span>{" "}
+              download page
             </h1>
             <p className="capitalize font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">
               Please select either the handout or the past question. Then,{" "}
@@ -129,25 +141,37 @@ export const Materials = (props) => {
                     HandOuts
                   </h3>
                   {filteredItems.length === 0 && (
-                    <p className="mt-10 text-white"> no such file</p>
+                    <p className="mt-10 text-white"> {message}</p>
                   )}
-                 {loading ? "loading files" :  <ul className=" uppercase">
-                    {filteredItems.map((handout, index) => (
-                      <li
-                        key={index}
-                        style={{ fontStyle: "normal" }}
-                        onClick={() =>
-                          handleButtonClick(handout.handout, false)
-                        }
-                        className="bg-white dd cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
-                      >
-                        {handout.title}
-                         {<Download cls_name="bg-[#755FFE] text-[#FFFFFF] text-[15px] p-2 font-medium leading-[24px] uppercase" onSmash={() => {
-                          handleButtonClick(handout.handout, true)
-                         }}/>}
-                      </li>
-                    ))}
-                  </ul>}
+                  {dataLoading ? (
+                    <div>
+                      <Skeleton baseColor="#edebeb" highlightColor="#d6d6d6" count={4} height={40} />{" "}
+                      {/* Adjust the count and height as needed */}
+                    </div>
+                  ) : (
+                    <ul className=" uppercase">
+                      {filteredItems.map((handout, index) => (
+                        <li
+                          key={index}
+                          style={{ fontStyle: "normal" }}
+                          onClick={() =>
+                            handleButtonClick(handout.handout, false)
+                          }
+                          className="bg-white dd cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
+                        >
+                          {handout.title}
+                          {
+                            <Download
+                              cls_name="bg-[#755FFE] text-[#FFFFFF] text-[15px] p-2 font-medium leading-[24px] uppercase"
+                              onSmash={() => {
+                                handleButtonClick(handout.handout, true);
+                              }}
+                            />
+                          }
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
 
                 {/* <div

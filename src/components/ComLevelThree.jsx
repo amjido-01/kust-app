@@ -31,8 +31,9 @@ export const ComLevelThree = () => {
 
   return (
     <div>
-        <h1>hello from level one</h1>
         <Materials level="300" department="Computer" openPDFInNewTab={openPDFInNewTab}/>
+        <h1>hello from level one</h1>
+
     </div>
   )
 }
