@@ -17,7 +17,7 @@ import { Dic } from "./Dic";
 import { Upload } from "../../Upload";
 import { Books } from "./Books";
 import { Study } from "./Study";
-import { Play } from "./Play";
+import { Pground } from "./Pground";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -29,7 +29,7 @@ export const AnimatedRoutes = () => {
         <Route path="documents" element={<Documents />}></Route>
         <Route path="support-us" element={<Support />}></Route>
         <Route path="test" element={<Test />}></Route>
-        <Route path="playground" element={<Play />}></Route>
+        <Route path="playground" element={<Pground />}></Route>
         <Route path="dictionary" element={<Dic />}></Route>
         <Route path="handouts" element={<Handouts />}></Route>
         <Route path="books" element={<Books />}></Route>
