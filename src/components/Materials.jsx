@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Docs } from "./Docs";
 import { motion } from "framer-motion";
-// import { Download } from "./Download";
+import { Download } from "./Download";
 import { db } from "../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useState, useEffect } from "react";
@@ -11,28 +11,8 @@ import { getDownloadURL, getStorage, ref } from "firebase/storage";
 
 
 const storage = getStorage();
-const openPDFInNewTab = (fileRef) => {
-  try {
-    // Get the download URL of the PDF file
-    getDownloadURL(ref(storage, fileRef))
-      .then((downloadURL) => {
-        // Create an anchor element
-        const link = document.createElement("a");
-        link.href = downloadURL;
-        link.target = "_blank";
 
-        // Simulate a click on the anchor element to open the file in a new tab
-        link.click();
-      })
-      .catch((error) => {
-        console.log("Error opening PDF file:", error);
-      });
-  } catch (error) {
-    console.log("Error opening PDF file:", error);
-  }
-};
-
-export const Materials = () => {
+export const Materials = (props) => {
   const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
   const [data, setData] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
@@ -44,8 +24,8 @@ export const Materials = () => {
       const response = await getDocs(handoutsCollection);
       const q = query(
         handoutsCollection,
-        where("department", "==", "Computer"),
-        where("level", "==", "100")
+        where("department", "==", props.department),
+        where("level", "==", props.level)
       );
       let new_data = [];
       const querySnapShot = await getDocs(q);
@@ -76,7 +56,7 @@ export const Materials = () => {
       window.open(fileRef, "_blank");
     } else {
       // Open file in new tab
-      openPDFInNewTab(fileRef);
+      props.openPDFInNewTab(fileRef);
     }
   };
 
@@ -163,15 +143,9 @@ export const Materials = () => {
                         className="bg-white dd cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
                       >
                         {handout.title}
-                        <button
-                          className="bg-[#755FFE] text-[#FFFFFF] text-[15px] p-2 font-medium leading-[24px] uppercase"
-                          onClick={() =>
-                            handleButtonClick(handout.handout, true)
-                          } // Download
-                        >
-                          Download
-                        </button>
-                        {/* {<Download onClick={() => handout.handout}/>} */}
+                         {<Download cls_name="bg-[#755FFE] text-[#FFFFFF] text-[15px] p-2 font-medium leading-[24px] uppercase" onSmash={() => {
+                          handleButtonClick(handout.handout, true)
+                         }}/>}
                       </li>
                     ))}
                   </ul>}

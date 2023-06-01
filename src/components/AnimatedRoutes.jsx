@@ -18,6 +18,8 @@ import { Upload } from "../../Upload";
 import { Books } from "./Books";
 import { Study } from "./Study";
 import { Pground } from "./Pground";
+import { ComLevelOne } from "./ComLevelOne";
+
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -38,7 +40,7 @@ export const AnimatedRoutes = () => {
         <Route path="documents/facms" element={<Facms />}></Route>
         <Route
           path="documents/facms/level-one-materials"
-          element={<Materials />}
+          element={<ComLevelOne />}
         ></Route>
         <Route path="documents/engineering" element={<Engineering />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
