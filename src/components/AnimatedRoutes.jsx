@@ -19,6 +19,7 @@ import { Books } from "./Books";
 import { Study } from "./Study";
 import { Pground } from "./Pground";
 import { ComLevelOne } from "./ComLevelOne";
+import { ComLevelTwo } from "./ComLevelTwo";
 
 
 export const AnimatedRoutes = () => {
@@ -41,6 +42,10 @@ export const AnimatedRoutes = () => {
         <Route
           path="documents/facms/level-one-materials"
           element={<ComLevelOne />}
+        ></Route>
+        <Route
+          path="documents/facms/level-two-materials"
+          element={<ComLevelTwo />}
         ></Route>
         <Route path="documents/engineering" element={<Engineering />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>

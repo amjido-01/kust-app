@@ -13,10 +13,11 @@ import { motion } from "framer-motion";
 export const Dept = (props) => {
   return (
     <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-     className="relative min-h-screen flex flex-col">
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="relative min-h-screen flex flex-col"
+    >
       <Header />
 
       <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[7rem] flex-1">
@@ -46,20 +47,22 @@ export const Dept = (props) => {
               <div className="block  md:flex justify-evenly font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 md:pl-6 md:px-8">
                 <div className="flex justify-evenly md:justify-around mt-2 mb-4 w-full md:w-1/2 text-[11px] leading-[16px] font-semibold md:text-[18px] md:leading-[30px]">
                   <div className="">
-                    <h3 className="text-[13px] md:text-[16px]">{props.deptOne}</h3>
+                    <h3 className="text-[13px] md:text-[16px]">
+                      {props.deptOne}
+                    </h3>
 
                     <ul className=" list-disc mt-2 md:mt-4">
                       <li className="">
-                        <Link to="/documents/facms/level-one-materials">Level one </Link>
+                        <Link to={props.levelOne}>Level one </Link>
                       </li>
                       <li>
-                        <Link to="">level two</Link>
+                        <Link to={props.levelTwo}>level two</Link>
                       </li>
                       <li>
-                        <Link>level three</Link>
+                        <Link to={props.levelThree}>level three</Link>
                       </li>
                       <li>
-                        <Link>level four</Link>
+                        <Link to={props.levelFour}>level four</Link>
                       </li>
                     </ul>
                   </div>

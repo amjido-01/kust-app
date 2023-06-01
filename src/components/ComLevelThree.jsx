@@ -6,7 +6,7 @@ const storage = getStorage();
 
 
 
-export const ComLevelOne = () => {
+export const ComLevelThree = () => {
     const openPDFInNewTab = (fileRef) => {
         try {
           // Get the download URL of the PDF file
@@ -32,7 +32,7 @@ export const ComLevelOne = () => {
   return (
     <div>
         <h1>hello from level one</h1>
-        <Materials level="100" department="Computer" openPDFInNewTab={openPDFInNewTab}/>
+        <Materials level="300" department="Computer" openPDFInNewTab={openPDFInNewTab}/>
     </div>
   )
 }

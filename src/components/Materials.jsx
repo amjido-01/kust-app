@@ -10,7 +10,6 @@ import { useState, useEffect } from "react";
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
 
 
-const storage = getStorage();
 
 export const Materials = (props) => {
   const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database

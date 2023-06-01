@@ -32,7 +32,7 @@ export const ComLevelOne = () => {
   return (
     <div>
         <h1>hello from level one</h1>
-        <Materials level="100" department="Computer" openPDFInNewTab={openPDFInNewTab}/>
+        <Materials level="400" department="Computer" openPDFInNewTab={openPDFInNewTab}/>
     </div>
   )
 }
