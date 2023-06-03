@@ -31,7 +31,6 @@ export const ComLevelTwo = () => {
 
   return (
     <div>
-        <h1>hello from level one</h1>
         <Materials level="200" department="Computer" openPDFInNewTab={openPDFInNewTab}/>
     </div>
   )

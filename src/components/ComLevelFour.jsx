@@ -16,7 +16,6 @@ export const ComLevelFour = () => {
               const link = document.createElement("a");
               link.href = downloadURL;
               link.target = "_blank";
-      
               // Simulate a click on the anchor element to open the file in a new tab
               link.click();
             })
@@ -31,7 +30,6 @@ export const ComLevelFour = () => {
 
   return (
     <div>
-        <h1>hello from level one</h1>
         <Materials level="400" department="Computer" openPDFInNewTab={openPDFInNewTab}/>
     </div>
   )

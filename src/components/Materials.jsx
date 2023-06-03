@@ -32,26 +32,20 @@ export const Materials = (props) => {
       const querySnapShot = await getDocs(q);
       querySnapShot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
+        // console.log(doc.id, " => ", doc.data());
         // new_data = [...new_data, doc.data()];
         new_data = [
           ...new_data,
           { ...doc.data(), fileRef: doc.data().handout },
         ];
       });
-      // console.log(response.data)
       if (new_data.length === 0) {
-        console.log("No data found");
-        // Set a flag or state to indicate no data found
         setMessage("no file yet");
       }
-      console.log("new_data", new_data);
       setData(new_data);
       setFilteredItems(new_data);
       setMessage(new_data.length === 0 ? "no file yet" : "");
-      // setLoading(false)
       setDataLoading(false);
-      console.log(filteredItems, "i am here");
     };
 
     fetchData();
@@ -71,13 +65,11 @@ export const Materials = (props) => {
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
-    console.log(searchQuery);
 
     const filtered = data.filter((item) =>
       item.title.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredItems(filtered);
-    console.log(filteredItems, "see me");
   };
 
   return (
@@ -141,12 +133,11 @@ export const Materials = (props) => {
                     HandOuts
                   </h3>
                   {filteredItems.length === 0 && (
-                    <p className="mt-10 text-white"> {message}</p>
+                    <p className=" font-bold">{message}</p>
                   )}
                   {dataLoading ? (
                     <div>
                       <Skeleton baseColor="#edebeb" highlightColor="#d6d6d6" count={4} height={40} />{" "}
-                      {/* Adjust the count and height as needed */}
                     </div>
                   ) : (
                     <ul className=" uppercase">
