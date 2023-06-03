@@ -6,6 +6,7 @@ import { getDownloadURL } from "firebase/storage";
 import { AuthForm } from "./src/components/AuthForm";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { Data } from "./src/Data";
 
 export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
@@ -26,10 +27,11 @@ export const Upload = (props) => {
     password: "",
   });
 
+  console.log(Data[0])
   // updating the input file field to null after submissinon
   const inputRef = useRef(null);
 
-  const faculties = ["FACMS", "FAENG", "FASEET"];
+  const faculties = Data[0].faculties;
   const departments = {
     FACMS: ["Computer", "ICT", "Maths"],
     FAENG: ["Electrical", "Electronic", "Mechanical"],
@@ -42,6 +44,9 @@ export const Upload = (props) => {
     Electrical: ["100", "200", "300", "400", "500"],
     Electronic: ["100", "200", "300", "400", "500"],
     Mechanical: ["100", "200", "300", "400", "500"],
+    Testing: ["100", "200", "300", "400", "500"],
+    Checking: ["100", "200", "300", "400", "500"],
+    Working: ["100", "200", "300", "400", "500"],
   };
 
   const handleFacultyChange = (e) => {
@@ -70,7 +75,6 @@ export const Upload = (props) => {
       setInputDisabled(true); // Disable input field
     }
   }, [selectedFaculty, selectedDepartment, selectedLevel]);
-
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -194,7 +198,8 @@ export const Upload = (props) => {
             </select>
             <br />
             <br />
-            {selectedFaculty && (
+
+            {/* {selectedFaculty && (
               <select
                 value={selectedDepartment}
                 onChange={handleDepartmentChange}
@@ -206,10 +211,23 @@ export const Upload = (props) => {
                   </option>
                 ))}
               </select>
-            )}
+            )} */}
+            <select
+              value={selectedDepartment}
+              onChange={handleDepartmentChange}
+            >
+              <option value="">Select Department</option>
+              {selectedFaculty &&
+                departments[selectedFaculty].map((department, index) => (
+                  <option key={index} value={department}>
+                    {department}
+                  </option>
+                ))}
+            </select>
+
             <br />
             <br />
-            {selectedDepartment && (
+            {/* {selectedDepartment && (
               <select value={selectedLevel} onChange={handleLevelChange}>
                 <option value="">Select Level</option>
                 {departmentLevels[selectedDepartment].map((level) => (
@@ -218,7 +236,12 @@ export const Upload = (props) => {
                   </option>
                 ))}
               </select>
-            )}
+            )} */}
+            <select value={selectedLevel} onChange={handleLevelChange}>
+              <option value="">Select Level</option>
+              {selectedDepartment && departmentLevels[selectedDepartment].map((item, index) => <option key={index} value={item
+              }>{item}</option>)}
+            </select>
           </div>
           {/* <br/>
                 <br/> */}

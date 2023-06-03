@@ -1,39 +1,26 @@
-export const Data = [{
-    "id": 1,
-    "first_name": "introduction to computer science"
-  }, {
-    "id": 2,
-    "first_name": "introduction to computer science"
-  }, {
-    "id": 3,
-    "first_name": "introduction to computer science"
-  }, {
-    "id": 4,
-    "first_name": "introduction to computer science"
-  }, {
-    "id": 5,
-    "first_name": "introduction to computer science"
+export const Data = [
+  {
+    faculties: ["FACMS", "FAENG", "FASEET"]
   },
-   {
-    "id": 6,
-    "first_name": "introduction to computer science"
-  },
-   {
-    "id": 7,
-    "first_name": "introduction to computer science"
-  },
-   {
-    "id": 8,
-    "first_name": "introduction to computer science"
-  },
-   {
-    "id": 8,
-    "first_name": "introduction to computer science"
-  },
-   {
-    "id": 8,
-    "first_name": "introduction to computer science"
+
+ {departments: {
+    FACMS: ["Computer", "ICT", "Maths"],
+    FAENG: ["Electrical", "Electronic", "Mechanical"],
+    FASEET: ["Testing", "Checking", "Working"],
+  }},
+
+ {departmentLevels: {
+    Computer: ["100", "200", "300", "400"],
+    ICT: ["100", "200", "300", "400", "500"],
+    Maths: ["100", "200", "300", "400"],
+    Electrical: ["100", "200", "300", "400", "500"],
+    Electronic: ["100", "200", "300", "400", "500"],
+    Mechanical: ["100", "200", "300", "400", "500"],
+    Testing: ["100", "200", "300", "400", "500"],
+    Checking: ["100", "200", "300", "400", "500"],
+    Working: ["100", "200", "300", "400", "500"],
   }
+}
 ]
 
 
