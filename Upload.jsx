@@ -27,7 +27,6 @@ export const Upload = (props) => {
     password: "",
   });
 
-  console.log(Data[0])
   // updating the input file field to null after submissinon
   const inputRef = useRef(null);
 

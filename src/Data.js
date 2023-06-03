@@ -7,7 +7,8 @@ export const Data = [
     FACMS: ["Computer", "ICT", "Maths"],
     FAENG: ["Electrical", "Electronic", "Mechanical"],
     FASEET: ["Testing", "Checking", "Working"],
-  }},
+  }
+},
 
  {departmentLevels: {
     Computer: ["100", "200", "300", "400"],

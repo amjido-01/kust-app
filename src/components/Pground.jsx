@@ -7,8 +7,9 @@ export const Pground = () => {
   const [selectedFoodExamples, setSelectedFoodExamples] = useState("")
   const [price, setPrice] = useState("")
   
-  // let faculty = Data[0].map((item) => console.log(item, "from here"))
-  console.log(Data[0].faculties.map((item) => console.log(item)))
+  const facs = Data[0].faculties.map((item) => console.log(item))
+  const dept = Data[1].departments
+  console.log(dept)
 
   const foodCategories = ["Fruits", "Vegetables", "Cabohydrates"]
   const foodExamples = {
