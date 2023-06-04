@@ -9,7 +9,8 @@ export const Pground = () => {
   
   const facs = Data[0].faculties.map((item) => console.log(item))
   const dept = Data[1].departments
-  console.log(dept)
+  // console.log(dept)
+  // object.entries(dept).map((key) => console.log(key))
 
   const foodCategories = ["Fruits", "Vegetables", "Cabohydrates"]
   const foodExamples = {

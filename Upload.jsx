@@ -18,6 +18,7 @@ export const Upload = (props) => {
   const [selectedFaculty, setSelectedFaculty] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("");
+  const [selectedType, setSelectedType] = useState("")
   const [credentials, setCredentials] = useState({
     email: "youndsadeeq10@gmail.com",
     password: "123456",
@@ -47,24 +48,33 @@ export const Upload = (props) => {
     Checking: ["100", "200", "300", "400", "500"],
     Working: ["100", "200", "300", "400", "500"],
   };
+  const types = ["Handout", "Past question"]
 
   const handleFacultyChange = (e) => {
     const selectedFaculty = e.target.value;
     setSelectedFaculty(selectedFaculty);
     setSelectedDepartment("");
     setSelectedLevel("");
+    setSelectedType("")
   };
 
   const handleDepartmentChange = (e) => {
     const selectedDepartment = e.target.value;
     setSelectedDepartment(selectedDepartment);
     setSelectedLevel("");
+    setSelectedType("")
   };
 
   const handleLevelChange = (e) => {
     const selectedLevel = e.target.value;
     setSelectedLevel(selectedLevel);
+    setSelectedType("")
   };
+
+  const handleTypeChange = (e) => {
+    const selectedType = e.target.value;
+    setSelectedType(selectedType)
+  }
 
   useEffect(() => {
     // Check if all required values are selected
@@ -142,6 +152,7 @@ export const Upload = (props) => {
             faculty: selectedFaculty,
             handout: url,
             level: selectedLevel,
+            type: selectedType,
             title: handout.name,
           });
         });
@@ -151,9 +162,11 @@ export const Upload = (props) => {
     setSelectedFaculty("");
     setSelectedDepartment("");
     setSelectedLevel("");
+    setSelectedType("");
     console.log("Selected Faculty:", selectedFaculty);
     console.log("Selected Department:", selectedDepartment);
     console.log("Selected Level:", selectedLevel);
+    console.log("selectedType:", selectedType)
   };
   return (
     <div>
@@ -242,6 +255,11 @@ export const Upload = (props) => {
               }>{item}</option>)}
             </select>
           </div>
+
+          <select value={selectedType} onChange={handleTypeChange}>
+            <option value="">Select Type</option>
+            {selectedLevel && types.map((type, index) => <option value={type} key={index}>{type}</option> )}
+          </select>
           {/* <br/>
                 <br/> */}
           <input

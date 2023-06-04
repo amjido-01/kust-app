@@ -3,12 +3,10 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Docs } from "./Docs";
 import { motion } from "framer-motion";
-import { Download } from "./Download";
 import { db } from "../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+import { HandoutsList } from "./HandoutsList";
 
 export const Materials = (props) => {
   const handoutsCollection = collection(db, "handouts"); // address to the particular collection in database
@@ -43,6 +41,7 @@ export const Materials = (props) => {
         setMessage("no file yet");
       }
       setData(new_data);
+      console.log(data)
       setFilteredItems(new_data);
       setMessage(new_data.length === 0 ? "no file yet" : "");
       setDataLoading(false);
@@ -122,51 +121,22 @@ export const Materials = (props) => {
           <div className="container mx-auto">
             <div className="container">
               <div className="let">
-                <div
-                  style={{ backgroundColor: "#8CB6B5" }}
-                  className={`rounded-xl border-2 pb-4 border-[#000000] px-5 w-full box`}
-                >
-                  <h3
-                    style={{ fontStyle: "normal" }}
-                    className=" font-bold my-2 text-[14px] md:text-[22px] leading-[21px] md:leading-[33px] capitalize"
-                  >
-                    HandOuts
-                  </h3>
-                  {filteredItems.length === 0 && (
-                    <p className=" font-bold">{message}</p>
-                  )}
-                  {dataLoading ? (
-                    <div>
-                      <Skeleton baseColor="#edebeb" highlightColor="#d6d6d6" count={4} height={40} />{" "}
-                    </div>
-                  ) : (
-                    <ul className=" uppercase">
-                      {filteredItems.map((handout, index) => (
-                        <li
-                          key={index}
-                          style={{ fontStyle: "normal" }}
-                          onClick={() =>
-                            handleButtonClick(handout.handout, false)
-                          }
-                          className="bg-white dd cursor-pointer pl-4 text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
-                        >
-                          {handout.title}
-                          {
-                            <Download
-                              cls_name="bg-[#755FFE] text-[#FFFFFF] text-[15px] p-2 font-medium leading-[24px] uppercase"
-                              onSmash={() => {
-                                handleButtonClick(handout.handout, true);
-                              }}
-                            />
-                          }
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-
+                <HandoutsList
+                  filteredItems={filteredItems}
+                  dataLoading={dataLoading}
+                  bg="#8CB6B5"
+                  title="Handouts"
+                  handleButtonClick={handleButtonClick}
+                />
+                <HandoutsList
+                  filteredItems={filteredItems}
+                  dataLoading={dataLoading}
+                  bg="#D4ADB7"
+                  title="Past Questions"
+                  handleButtonClick={handleButtonClick}
+                />
                 {/* <div
-                  style={{ backgroundColor: "#D4ADB7" }}
+                  style={{ backgroundColor: "" }}
                   className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full`}
                 >
                   <h3
