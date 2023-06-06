@@ -1,7 +1,6 @@
 import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { Docs } from "./Docs";
 import { motion } from "framer-motion";
 import { db } from "../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -16,6 +15,8 @@ export const Materials = (props) => {
   const [loading, setLoading] = useState(true);
   const [dataLoading, setDataLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [handoutsLists, setHandoutsLists] = useState([])
+  const [pastQuestionLists, setPastQuestionLists] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,6 +37,7 @@ export const Materials = (props) => {
           ...new_data,
           { ...doc.data(), fileRef: doc.data().handout },
         ];
+        
       });
       if (new_data.length === 0) {
         setMessage("no file yet");
@@ -43,8 +45,13 @@ export const Materials = (props) => {
       setData(new_data);
       console.log(data)
       setFilteredItems(new_data);
+      console.log(filteredItems.filter((item, index) => item.type === "Past question"), "from here")
       setMessage(new_data.length === 0 ? "no file yet" : "");
       setDataLoading(false);
+      const filteredHandoutLists = data.filter((item) => item.type === "Handout")
+        console.log(filteredHandoutLists, "hope to see y")
+        setHandoutsLists(filteredHandoutLists)
+        console.log(handoutsLists, "bye")
     };
 
     fetchData();
@@ -61,11 +68,11 @@ export const Materials = (props) => {
     }
   };
 
-  const handleSearch = (e) => {
+  const handleHandoutList = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
 
-    const filtered = data.filter((item) =>
+    const filtered = handoutsLists.filter((item) =>
       item.title.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredItems(filtered);
@@ -102,7 +109,7 @@ export const Materials = (props) => {
             first semester
           </h4>
 
-          <div className="relative my-3" data-te-input-wrapper-init>
+          {/* <div className="relative my-3" data-te-input-wrapper-init>
             <input
               value={searchQuery}
               onChange={handleSearch}
@@ -116,50 +123,27 @@ export const Materials = (props) => {
             >
               Search
             </label>
-          </div>
+          </div> */}
 
           <div className="container mx-auto">
             <div className="container">
               <div className="let">
                 <HandoutsList
-                  filteredItems={filteredItems}
+                  filteredItems={filteredItems.filter((item) => item.type === "Handout")}
                   dataLoading={dataLoading}
                   bg="#8CB6B5"
                   title="Handouts"
                   handleButtonClick={handleButtonClick}
+                  searchQuery={searchQuery}
+                  handleSearch={handleHandoutList}
                 />
                 <HandoutsList
-                  filteredItems={filteredItems}
+                  filteredItems={filteredItems.filter((item) => item.type === "Past question")}
                   dataLoading={dataLoading}
                   bg="#D4ADB7"
                   title="Past Questions"
                   handleButtonClick={handleButtonClick}
                 />
-                {/* <div
-                  style={{ backgroundColor: "" }}
-                  className={` rounded-xl border-2 pb-4 border-[#000000] px-5 w-full`}
-                >
-                  <h3
-                    style={{ fontStyle: "normal" }}
-                    className=" font-bold my-2 text-[14px] md:text-[22px] leading-[21px] md:leading-[33px] capitalize"
-                  >
-                    HandOuts
-                  </h3>
-                  {filteredItems.length === 0 && (
-                    <p className="mt-10 text-white">No such file found :)</p>
-                  )}
-                  <ul className=" uppercase">
-                    {filteredItems.map((item) => (
-                      <li
-                        key={item.id}
-                        style={{ fontStyle: "normal" }}
-                        className="bg-white pl-4 cursor-pointer text-[15px] my-[10px] font-medium leading-[20px] uppercase text-[#000000] w-full flex justify-between items-center"
-                      >
-                        {item.first_name} {<Download />}
-                      </li>
-                    ))}
-                  </ul>
-                </div> */}
               </div>
             </div>
           </div>
