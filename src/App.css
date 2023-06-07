@@ -197,6 +197,14 @@ body {
     }
 }
 
+.swiper-button-prev {
+    background-color: white;
+    color: #666666 !important;
+    border-radius: 50%;
+    width: 8% !important;
+    height: 35% !important;
+}
+
 @media screen and (min-width: 425px) {
     .look {
         margin-top: 70px;

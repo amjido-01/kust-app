@@ -15,8 +15,8 @@ export const Materials = (props) => {
   const [loading, setLoading] = useState(true);
   const [dataLoading, setDataLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [handoutsLists, setHandoutsLists] = useState([])
-  const [pastQuestionLists, setPastQuestionLists] = useState([])
+  const [handoutsLists, setHandoutsLists] = useState([]);
+  const [pastQuestionLists, setPastQuestionLists] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,21 +37,29 @@ export const Materials = (props) => {
           ...new_data,
           { ...doc.data(), fileRef: doc.data().handout },
         ];
-        
       });
       if (new_data.length === 0) {
         setMessage("no file yet");
       }
       setData(new_data);
-      console.log(data)
+      console.log(data);
       setFilteredItems(new_data);
-      console.log(filteredItems.filter((item, index) => item.type === "Past question"), "from here")
+      // console.log(filteredItems.filter((item, index) => item.type === "Past question"), "from here")
       setMessage(new_data.length === 0 ? "no file yet" : "");
       setDataLoading(false);
-      const filteredHandoutLists = data.filter((item) => item.type === "Handout")
-        console.log(filteredHandoutLists, "hope to see y")
-        setHandoutsLists(filteredHandoutLists)
-        console.log(handoutsLists, "bye")
+      const filteredPastQuestionList = data.filter(
+        (item) => item.type === "Past question"
+      );
+      console.log(filteredPastQuestionList, "dance");
+      const filteredHandoutLists = data.filter(
+        (item) => item.type === "Handout"
+      );
+      console.log(filteredHandoutLists, "hope to see y");
+      setHandoutsLists(filteredHandoutLists);
+      setPastQuestionLists(filteredPastQuestionList);
+      // console.log(pastQuestionLists, "checking");
+      console.log(handoutsLists, "bye");
+      console.log(pastQuestionLists, "kkk")
     };
 
     fetchData();
@@ -76,6 +84,18 @@ export const Materials = (props) => {
       item.title.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredItems(filtered);
+    console.log(filteredItems, "goodbye");
+  };
+
+  const handlePastQuestionsList = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    const filtered = pastQuestionLists.filter((item) =>
+      item.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredItems(filtered);
+    console.log(filteredItems, "goodbye");
   };
 
   return (
@@ -129,7 +149,9 @@ export const Materials = (props) => {
             <div className="container">
               <div className="let">
                 <HandoutsList
-                  filteredItems={filteredItems.filter((item) => item.type === "Handout")}
+                  filteredItems={filteredItems.filter(
+                    (item) => item.type === "Handout"
+                  )}
                   dataLoading={dataLoading}
                   bg="#8CB6B5"
                   title="Handouts"
@@ -138,11 +160,13 @@ export const Materials = (props) => {
                   handleSearch={handleHandoutList}
                 />
                 <HandoutsList
-                  filteredItems={filteredItems.filter((item) => item.type === "Past question")}
+                  filteredItems={filteredItems.filter(
+                    (item) => item.type === "Past question"
+                  )}
                   dataLoading={dataLoading}
                   bg="#D4ADB7"
                   title="Past Questions"
-                  handleButtonClick={handleButtonClick}
+                  handleButtonClick={handlePastQuestionsList}
                 />
               </div>
             </div>
