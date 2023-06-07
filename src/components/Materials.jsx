@@ -59,7 +59,7 @@ export const Materials = (props) => {
       setPastQuestionLists(filteredPastQuestionList);
       // console.log(pastQuestionLists, "checking");
       console.log(handoutsLists, "bye");
-      console.log(pastQuestionLists, "kkk")
+      // console.log(pastQuestionLists, "kkk")
     };
 
     fetchData();
