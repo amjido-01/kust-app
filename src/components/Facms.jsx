@@ -11,10 +11,10 @@ export const Facms = () => {
         deptTwo="mathematics"
         deptThree="information tech"
         deptFour={`statistics`}
-        levelOne="/documents/facms/level-one-materials"
-        levelTwo="/documents/facms/level-two-materials"
-        levelThree="/documents/facms/level-three-materials"
-        levelFour="/documents/facms/level-four-materials"
+        levelOne="/documents/facms/coms/level-one-materials"
+        levelTwo="/documents/facms/coms/level-two-materials"
+        levelThree="/documents/coms/facms/level-three-materials"
+        levelFour="/documents/coms/facms/level-four-materials"
       ></Dept>
     </motion.div>
   );

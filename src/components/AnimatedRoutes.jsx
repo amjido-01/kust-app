@@ -22,6 +22,7 @@ import { ComLevelOne } from "./ComLevelOne";
 import { ComLevelTwo } from "./ComLevelTwo";
 import { ComLevelThree } from "./ComLevelThree";
 import { ComLevelFour } from "./ComLevelFour";
+import { IctLevelOne } from "./FACMS/ict/IctLevelOne";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -41,20 +42,24 @@ export const AnimatedRoutes = () => {
         <Route path="study" element={<Study />}></Route>
         <Route path="documents/facms" element={<Facms />}></Route>
         <Route
-          path="documents/facms/level-one-materials"
+          path="documents/facms/coms/level-one-materials"
           element={<ComLevelOne />}
         ></Route>
         <Route
-          path="documents/facms/level-two-materials"
+          path="documents/facms/coms/level-two-materials"
           element={<ComLevelTwo />}
         ></Route>
         <Route
-          path="documents/facms/level-three-materials"
+          path="documents/facms/coms/level-three-materials"
           element={<ComLevelThree />}
         ></Route>
         <Route
-          path="documents/facms/level-four-materials"
+          path="documents/facms/coms/level-four-materials"
           element={<ComLevelFour />}
+        ></Route>
+        <Route
+          path="documents/facms/ict/level-four-materials"
+          element={<IctLevelOne />}
         ></Route>
         <Route path="documents/engineering" element={<Engineering />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
