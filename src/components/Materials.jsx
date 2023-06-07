@@ -76,22 +76,12 @@ export const Materials = (props) => {
     }
   };
 
-  const handleHandoutList = (e) => {
+
+  const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
 
-    const filtered = handoutsLists.filter((item) =>
-      item.title.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredItems(filtered);
-    console.log(filteredItems, "goodbye");
-  };
-
-  const handlePastQuestionsList = (e) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-
-    const filtered = pastQuestionLists.filter((item) =>
+    const filtered = data.filter((item) =>
       item.title.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredItems(filtered);
@@ -129,7 +119,7 @@ export const Materials = (props) => {
             first semester
           </h4>
 
-          {/* <div className="relative my-3" data-te-input-wrapper-init>
+          <div className="relative my-3" data-te-input-wrapper-init>
             <input
               value={searchQuery}
               onChange={handleSearch}
@@ -143,7 +133,7 @@ export const Materials = (props) => {
             >
               Search
             </label>
-          </div> */}
+          </div>
 
           <div className="container mx-auto">
             <div className="container">
@@ -157,7 +147,7 @@ export const Materials = (props) => {
                   title="Handouts"
                   handleButtonClick={handleButtonClick}
                   searchQuery={searchQuery}
-                  handleSearch={handleHandoutList}
+                  handleSearch={handleSearch}
                 />
                 <HandoutsList
                   filteredItems={filteredItems.filter(
@@ -166,7 +156,7 @@ export const Materials = (props) => {
                   dataLoading={dataLoading}
                   bg="#D4ADB7"
                   title="Past Questions"
-                  handleButtonClick={handlePastQuestionsList}
+                  handleButtonClick={handleSearch}
                 />
               </div>
             </div>

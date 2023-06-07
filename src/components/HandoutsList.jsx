@@ -7,7 +7,7 @@ export const HandoutsList = (props) => {
 
   return (
     <div>
-          <div className="relative my-3" data-te-input-wrapper-init>
+          {/* <div className="relative my-3" data-te-input-wrapper-init>
             <input
               value={props.searchQuery}
               onChange={props.handleSearch}
@@ -21,7 +21,7 @@ export const HandoutsList = (props) => {
             >
               Search
             </label>
-          </div>
+          </div> */}
           <div
                   style={{ backgroundColor: props.bg }}
                   className={`rounded-xl border-2 pb-4 border-[#000000] px-5 w-full box`}
