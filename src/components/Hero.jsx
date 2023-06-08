@@ -1,7 +1,9 @@
 import React from "react";
 import { Button } from "./Button";
 import heroImg from "../assets/bro.png";
-import mobilehero from "../assets/mobilehero.png";
+import mobilehero from "../assets/test.png";
+// import mobile from "../assets/mobile.png"
+// import test from "../assets/test.png"
 import Typed from "typed.js";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -23,10 +25,10 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full min-h-[540px] py-16 md:py-20 px-8 md:px-4">
+    <section className="bg-[#212327] relative w-full min-h-[600px] py-16 md:py-20 px-8 md:px-4">
       <div className="container flex items-center justify-center flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <img
-          className="absolute md:hidden top-20 right-4 mobile"
+          className="absolute md:hidden top-[10rem] right-4 mobile"
           src={mobilehero}
           alt="mobilehero"
         />
@@ -37,10 +39,10 @@ export const Hero = () => {
           ></span>
 
           <div className="mt-2 w-[70%] md:w-full">
-            <p className="font-bold text-2xl leading-8 md:leading-[58px] sm:text-3xl md:text-[48px] ">
+            <p className="font-bold text-[32px] leading-[48px] md:leading-[72px] md:text-[48px] ">
               all your handout and past question are now in one place.
             </p>
-            <p className="mt-3.5 font-medium text-[22px] sm:text-xl md:text-xl">
+            <p className="mt-3.5 font-medium text-[16px] leading-[24px] md:leading-[36px] md:text-[24px]">
               free website for KUST students to download their favorites handout
               and past question papers.
             </p>

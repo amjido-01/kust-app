@@ -46,7 +46,7 @@ body {
   }
 
 .mobile {
-    width: 50%;
+    width: 30%;
 }
 .mobile-two {
     width: 40%;
@@ -159,6 +159,10 @@ body {
     }
 } */
 
+.unbounded {
+    font-family: 'Unbounded', cursive;
+}
+
 .dd {
     text-overflow: ellipsis;
 }
@@ -245,8 +249,8 @@ body {
 
 @media (max-width: 765px) {
     .curve svg {
-        width: calc(160% + 1.3px);
-        height: 80px;
+        width: calc(149% + 1.3px);
+        height: 56px;
     }
     .curvetwo svg {
         width: calc(155% + 1.3px);

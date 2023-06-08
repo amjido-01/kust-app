@@ -21,10 +21,10 @@ export const Main = () => {
   }, []);
 
   return (
-    <section className="relative flex-col justify-center items-center bg-[#FFFFFF] min-h-[250px] capitalize">
+    <section className="relative flex-col mt-[20px] justify-center items-center bg-[#FFFFFF] min-h-[250px] capitalize">
       <h2
         data-aos="fade-right"
-        className="text-[#000000] text-center font-bold my-2 px-1 text-[25px] md:text-[30px] unbounded"
+        className="text-[#000000] text-center font-bold my-2 px-1 text-[16px] md:text-[32px] md:leading-[40px] leading-[20px] unbounded"
 
       >
         You can get them all for free now!
