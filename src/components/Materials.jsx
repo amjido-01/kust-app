@@ -105,7 +105,7 @@ export const Materials = (props) => {
               className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
             >
               welcome to{" "}
-              <span className="text-[#0F9D58]">{props.department} sci</span>{" "}
+              <span className="text-[#0F9D58]">{props.department}</span>{" "}
               level <span className=" text-[#8CB6B5]">{props.level}</span>{" "}
               download page
             </h1>

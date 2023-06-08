@@ -23,6 +23,9 @@ import { ComLevelTwo } from "./ComLevelTwo";
 import { ComLevelThree } from "./ComLevelThree";
 import { ComLevelFour } from "./ComLevelFour";
 import { IctLevelOne } from "./FACMS/ict/IctLevelOne";
+import { IctLevelTwo } from "./FACMS/ict/IctLevelTwo";
+import { IctLevelThree } from "./FACMS/ict/IctLevelThree";
+import { IctLevelFour } from "./FACMS/ict/IctLevelFour";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -58,8 +61,20 @@ export const AnimatedRoutes = () => {
           element={<ComLevelFour />}
         ></Route>
         <Route
-          path="documents/facms/ict/level-four-materials"
+          path="documents/facms/ict/level-one-materials"
           element={<IctLevelOne />}
+        ></Route>
+        <Route
+          path="documents/facms/ict/level-two-materials"
+          element={<IctLevelTwo />}
+        ></Route>
+        <Route
+          path="documents/facms/ict/level-three-materials"
+          element={<IctLevelThree />}
+        ></Route>
+        <Route
+          path="documents/facms/ict/level-four-materials"
+          element={<IctLevelFour />}
         ></Route>
         <Route path="documents/engineering" element={<Engineering />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>

@@ -97,10 +97,10 @@ export const Dept = (props) => {
 
                     <ul className=" list-disc mt-2 md:mt-4">
                       <li>
-                        <Link>Level one</Link>
+                        <Link to="/documents/facms/ict/level-one-materials">Level one</Link>
                       </li>
                       <li>
-                        <Link>level two</Link>
+                        <Link to="/documents/facms/ict/level-two-materials">level two</Link>
                       </li>
                       <li>
                         <Link>level three</Link>
