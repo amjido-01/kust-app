@@ -25,7 +25,6 @@ export const Main = () => {
       <h2
         data-aos="fade-right"
         className="text-[#000000] text-center font-bold my-2 px-1 text-[16px] md:text-[32px] md:leading-[40px] leading-[20px] unbounded"
-
       >
         You can get them all for free now!
       </h2>
@@ -39,30 +38,30 @@ export const Main = () => {
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-evenly card mx-auto">
           <Card
             title="comfortably"
-            icon={<MdChair className="text-2xl"/>}
+            icon={<MdChair className="text-2xl" />}
             animation="fade-up"
-            text='at any location and any moment without anticipating a colleague to transmit it to you.'
+            text="at any location and any moment without anticipating a colleague to transmit it to you."
           ></Card>
           <Card
             title="easily"
-            icon={<MdSwapHorizontalCircle className="text-2xl"/>}
-            animation="fade-left"
-            text='with a few simple taps and swift downloads, you can access it instantly. Isn’t that remarkable?'
+            icon={<MdSwapHorizontalCircle className="text-2xl" />}
+            animation="fade-up"
+            text="with a few simple taps and swift downloads, you can access it instantly. Isn’t that remarkable?"
           ></Card>
           <Card
             title="reliable"
             icon={<FaHandHoldingHeart className="text-2xl" />}
-            animation="fade-right"
+            animation="fade-up"
             text="ones that you can rely no doubting its authenticity. Isn't that cool !"
           ></Card>
           <img
             src={sqleft}
-            className="block md:hidden absolute w-[15%] top-[48%] -left-5"
+            className="block md:hidden absolute w-[28%] top-[21%] -left-[2.75rem]"
             alt="svg_icon"
           />
           <img
             src={conleft}
-            className="absolute top-[32%] right-0 w-[25%] md:hidden"
+            className="absolute top-[32%] -right-[2.75rem] w-[30%] md:hidden"
             alt="svg_icon"
           />
         </div>

@@ -19,26 +19,26 @@ export const ThirdSection = () => {
       <div className="container md:w-[70%] mx-auto flex flex-col md:flex-row-reverse items-center justify-center">
         <img
           src={secondconleft}
-          className="absolute w-[30%] top-10 md:top-10 md:w-[16%] left-4 md:left-10"
+          className="absolute w-[40%] top-10 md:top-10 md:w-[16%] left-1 md:left-10"
           alt="svg_icon"
         />
 
         <div
-          data-aos="fade-right"
+          data-aos="fade-left"
           className="flex items-center justify-end pr-5"
         >
           <img
             src={techonoly}
-            className="object-cover w-[60%] md:w-[77%]"
+            className="object-cover w-[80%] md:w-[77%]"
             alt="section_img"
           />
         </div>
 
         <div
-          data-aos="fade-left"
+          data-aos="fade-right"
           className="text-[#D9D9D9] md:w-1/2 text-start md:text-end pt-20"
         >
-          <h1 className="font-bold text-[18px] leading-[32px] Unbounded py-4">
+          <h1 className="font-bold text-[16px] leading-[32px] Unbounded py-4">
             Technology advancement
           </h1>
           <p>

@@ -20,17 +20,17 @@ export const SecondSection = () => {
       <div className="container md:w-[65%] mx-auto flex flex-col md:flex-row items-center justify-center capitalize">
         <img
           src={comfetti}
-          className="absolute w-[15%] md:w-[7%] top-20 md:top-40 right-10 md:right-32"
+          className="absolute w-[20%] md:w-[7%] top-20 md:top-40 right-5 md:right-32"
           alt="section_svg"
         />
 
         <div
           data-aos="fade-right"
-          className="text-white md:w-1/2 mt-10 md:mt-5 mb-5 md:ml-10 pl-4"
+          className="text-white md:w-1/2 mt-0 md:mt-5 mb-5 md:ml-10 pl-4"
         >
           <img
             src={SecondHeroImg}
-            className="object-cover w-1/2 md:w-[85%]"
+            className="object-cover w-[70%] md:w-[85%]"
             alt="section_img"
           />
         </div>
@@ -39,7 +39,7 @@ export const SecondSection = () => {
           data-aos="fade-left"
           className="text-[#D9D9D9] md:w-1/2 text-start w-[95%] ml-6"
         >
-          <h1 className="font-bold text-[18px] leading-[32px] py-4">
+          <h1 className="font-bold text-[16px] leading-[32px] py-4 unbounded">
             our struggle
           </h1>
           <p>

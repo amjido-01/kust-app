@@ -45,7 +45,7 @@ export const FourthSection = () => {
 
   return (
       <section className='md:w-[70%]  relative overflow-hidden mx-auto min-h-[200px] py-5 px-7 my-10'>
-        <h1 data-aos="fade-down-right" className='my-4 capitalize text-[#000000] font-bold px-1 text-[24px]'>what students a saying about this site</h1>
+        <h1 data-aos="fade-right" className='my-4 capitalize text-[#000000] font-bold px-1 text-[24px]'>what students a saying about this site</h1>
       <Swiper className='container mx-auto'
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         autoplay={{
