@@ -15,19 +15,20 @@ export const Sixth = () => {
     });
   }, []);
   return (
-    <section className="linear relative min-h-[100px] px-8 md:px-4">
+    <section className="linear relative px-8 md:px-4">
       <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2">
         <img
-          className="absolute md:hidden right-1 md:right-4 mobile-two"
+        data-aos="fade-left"
+          className="absolute md:hidden top-[13rem] right-1 md:right-4 mobile-two"
           src={mobilesupport}
           alt="mobilehero"
         />
-        <div className="md:w-[50%] md:mr-20 md:mt-20 text-[#000000] capitalize">
-          <div
-            className="mt-20 md:mt-2 w-[65%] md:w-full font-medium"
-            data-aos="fade-down-right"
-          >
-            <p className="">
+        <div
+          data-aos="fade-right"
+          className="md:w-[50%] md:mr-20 md:mt-20 text-[#000000] capitalize"
+        >
+          <div className="mt-20 md:mt-2 w-[65%] md:w-full font-medium ">
+            <p className="text-[16px] leading-[24px]">
               We have devoted a lot of time and effort to collect and organize
               these materials for you, in order to spare you some hassle,
               expense and time. If you appreciate our work, please give us a
@@ -35,9 +36,8 @@ export const Sixth = () => {
             </p>
           </div>
 
-          <div className="mt-4" data-aos="fade-down-left">
+          <div className="mt-4">
             <Button
-              
               value="Support Us"
               cls_name="text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>

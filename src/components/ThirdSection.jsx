@@ -15,7 +15,7 @@ export const ThirdSection = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] test relative md:pb-1 pb-20 px-8 md:px-5">
+    <section className="bg-[#212327] test min-h-[200px] relative md:pb-1 pb-[3.5rem] px-8 md:px-5">
       <div className="container md:w-[70%] mx-auto flex flex-col md:flex-row-reverse items-center justify-center">
         <img
           src={secondconleft}
