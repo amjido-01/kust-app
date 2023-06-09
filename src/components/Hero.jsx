@@ -38,7 +38,7 @@ export const Hero = () => {
             className="italic text-[#0F9D58] Poppins text-[18px] font-normal md:font-semibold"
           ></span>
 
-          <div className="mt-2 w-[70%] md:w-full">
+          <div className="mt-2 w-[70%] md:w-full border-2 border-red-500">
             <p className="font-bold text-[32px] leading-[48px] md:leading-[72px] md:text-[48px] ">
               all your handout and past question are now in one place.
             </p>
