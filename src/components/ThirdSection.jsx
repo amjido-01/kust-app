@@ -38,7 +38,7 @@ export const ThirdSection = () => {
           data-aos="fade-right"
           className="text-[#D9D9D9] md:w-1/2 text-start md:text-end pt-20"
         >
-          <h1 className="font-bold text-[16px] leading-[32px] Unbounded py-4">
+          <h1 className="font-bold text-[16px] leading-[32px] unbounded py-4">
             Technology advancement
           </h1>
           <p>

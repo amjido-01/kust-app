@@ -11,7 +11,7 @@ export const Footer = ({ className }) => {
       <footer className="bg-[#263238] text-[#F5F5F5]">
         <div className="mx-auto w-full container p-4 sm:p-6">
           <div className="md:flex md:justify-between mt-20">
-            <div className="flex foot mx-auto justify-between w-full md:w-[80%]">
+            <div className="flex foot mx-auto  justify-between w-[85%] md:w-[80%]">
               <div>
                 <h2 className="mb-2 text-sm font-semibold">
                   <NavLink to="/">

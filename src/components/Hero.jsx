@@ -26,7 +26,7 @@ export const Hero = () => {
 
   return (
     <section className="bg-[#212327] relative w-full min-h-[600px] py-16 md:py-20 px-8 md:px-4">
-      <div className="container flex items-center justify-center flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
+      <div className="container flex items-center justify-center mt-10 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <img
           className="absolute md:hidden top-[10rem] right-4 mobile"
           src={mobilehero}

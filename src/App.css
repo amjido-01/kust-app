@@ -380,7 +380,7 @@ body {
     position: relative;
     display: block;
     width: calc(162% + 1.3px);
-    height: 103px;
+    height: 80px;
 }
 
 .foot-svg .shape-fill {
