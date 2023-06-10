@@ -18,16 +18,16 @@ export const Documents = () => {
     <motion.section className="relative min-h-screen flex flex-col">
       <Header />
 
-      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[10rem] flex-1">
-        <div className="lookflex flex-col justify-center">
-          <div className="text-[#000000] mb-4 md:mb-7">
+      <div className="container w-full p-6 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[10rem] flex-1">
+        <div className="look  border-2 border-red-500 flex flex-col justify-center">
+          <div className="text-[#000000] border-2 border-red-700 mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
+              className="uppercase my-2 font-semibold text-[18px] w-full md:text-[32px] leading-[31px] md:leading-[49px]"
             >
               welcome to the document page
             </h1>
-            <p className="capitalize font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">
+            <p className="capitalize font-medium text-[14px] md:text-[18px] leading-[18px] md:leading-[28px]">
               choose your faculty and click/tap to proceed.
             </p>
           </div>
