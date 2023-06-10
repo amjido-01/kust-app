@@ -57,7 +57,7 @@ export const Footer = ({ className }) => {
                 <h2 className="mb-2 text-sm font-semibold uppercase">
                   follow us
                 </h2>
-                <ul className="flex flex-col gap-2 font-medium text-[12px] uppercase">
+                <ul className="flex flex-col gap-2 font-medium text-[12px]">
                   <li className="flex items-center">
                     <a
                       href="#"
@@ -97,13 +97,13 @@ export const Footer = ({ className }) => {
                       <span className="sr-only">Twitter page</span>
                     </a>
                     <a href="#" className="hover:underline">
-                      muhammad Niimatullah/ amjido_01
+                      ItxProf/ amjido_01
                     </a>
                   </li>
                   <li className="flex items-center">
                     <CiLinkedin className="w-5 h-5 hover:text-gray-900 dark:hover:text-white" />
                     <a href="#" className="hover:underline pl-2">
-                      itx_prof/ amjido_01
+                      Muhammad Niimatullah/ amjido_01
                     </a>
                   </li>
 
@@ -138,9 +138,11 @@ export const Footer = ({ className }) => {
           <div className="text-center">
             <span className="text-sm sm:text-center">
               Copyright © 2023 - {test}{" "}
-              <a href="/" className="hover:underline lowercase">
-                MR PROFESSOR & AMJIDO_01™
+              <a href="/" className="hover:underline">
+                MR PROFESSOR
               </a>
+              <span> & </span>
+              <a href="">AMJIDO_01™</a>
             </span>
           </div>
         </div>

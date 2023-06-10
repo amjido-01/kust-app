@@ -13,9 +13,10 @@ export const Autor = ({
   quoteColor,
   triangleColor,
   placeHolder,
+  cls_name
 }) => {
   return (
-    <div className="text-[#000000]">
+    <div className={cls_name}>
       <div className="flex flex-col justify-center items-center">
         <p
           className="p-4 md:p-3 w-[90%] md:w-[70%] mx-auto rounded text-[14px] md:text-[14px] font-normal md:font-medium"

@@ -25,7 +25,7 @@ export const About = () => {
       level: "computer science level 200, kUST wudil.",
       role: "frontend developer, UI/UX designer. ",
       alt: "designer",
-      qouteColor: "#D9D9D9",
+      qouteColor: "#D1DFF5",
     },
     {
       imgURI: auto,
@@ -35,7 +35,7 @@ export const About = () => {
       level: "computer science level 200, kUST wudil.",
       role: "frontend software engineer.",
       alt: "developer",
-      qouteColor: "rgba(252, 158, 28, 0.5)",
+      qouteColor: "#FECF8D",
     },
   ];
   console.log(auto2sq);
@@ -94,6 +94,7 @@ export const About = () => {
       <div className="container w-[90%] md:w-[70%] mx-auto my-10">
         <div className="container flex flex-col md:flex-row">
           <Autor
+            cls_name={'text-[#000000]'}
             src={person[0].imgURI}
             placeHolder={autosq}
             quote={person[0].qoute}
@@ -106,6 +107,7 @@ export const About = () => {
           ></Autor>
 
           <Autor
+            cls_name={"text-[#000000] mt-8"}
             src={person[1].imgURI}
             placeHolder={auto2sq}
             quote={person[1].qoute}
