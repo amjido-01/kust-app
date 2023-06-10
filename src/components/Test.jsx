@@ -75,7 +75,6 @@
 //   );
 // };
 
-
 // import React from 'react';
 // import { useState } from 'react';
 // import axios from "axios";
@@ -104,74 +103,42 @@
 //   )
 // }
 
-import React from 'react';
-import { useState } from 'react';
+//
+import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+// Default theme
+import "@splidejs/react-splide/css";
+
+// or other themes
+import "@splidejs/react-splide/css/skyblue";
+import "@splidejs/react-splide/css/sea-green";
+
+// or only core styles
+import "@splidejs/react-splide/css/core";
 
 export const Test = () => {
-  const [selectedFaculty, setSelectedFaculty] = useState("");
-  const [selectedDepartment, setSelectedDepartment] = useState("");
-  const [selectedLevel, setSelectedLevel] = useState("");
-
-  const faculties = ["FACMS", "FAENG", "FASEET"];
-  const departments = {
-    FACMS: ["Computer", "ICT", "Maths"],
-    FAENG: ["Computer", "ICT", "Maths"],
-    FASEET: ["Electrical", "Electronic", "Mechanical"],
-  };
-  const departmentLevels = {
-    Computer: ["100", "200", "300", "400", "500"],
-    ICT: ["100", "200", "300", "400", "500"],
-    Maths: ["100", "200", "300", "400", "500"],
-    Electrical: ["100", "200", "300", "400"],
-    Electronic: ["100", "200", "300", "400"],
-    Mechanical: ["100", "200", "300", "400"],
-  };
-
-  const handleFacultyChange = (e) => {
-    const selectedFaculty = e.target.value;
-    setSelectedFaculty(selectedFaculty);
-    setSelectedDepartment("");
-    setSelectedLevel("");
-  };
-
-  const handleDepartmentChange = (e) => {
-    const selectedDepartment = e.target.value;
-    setSelectedDepartment(selectedDepartment);
-    setSelectedLevel("");
-  };
-
-  const handleLevelChange = (e) => {
-    const selectedLevel = e.target.value;
-    setSelectedLevel(selectedLevel);
-  };
-
   return (
-    <div>
-      <select value={selectedFaculty} onChange={handleFacultyChange}>
-        <option value="">Select Faculty</option>
-        {faculties.map((faculty) => (
-          <option key={faculty} value={faculty}>{faculty}</option>
-        ))}
-      </select>
-
-      {selectedFaculty && (
-        <select value={selectedDepartment} onChange={handleDepartmentChange}>
-          <option value="">Select Department</option>
-          {departments[selectedFaculty].map((department) => (
-            <option key={department} value={department}>{department}</option>
-          ))}
-        </select>
-      )}
-
-      {selectedDepartment && (
-        <select value={selectedLevel} onChange={handleLevelChange}>
-          <option value="">Select Level</option>
-          {departmentLevels[selectedDepartment].map((level) => (
-            <option key={level} value={level}>{level}</option>
-          ))}
-        </select>
-      )}
-    </div>
+    <Splide
+      options={{
+        rewind: true,
+        // gap: "1rem",
+        type: "loop",
+        width: 800,
+        perPage: 2,
+        focus: "center",
+      }}
+      aria-label="My Favorite Images"
+      className="border-2 border-red-500"
+    >
+      <SplideSlide>
+        <img src="image1.jpg" alt="Image 1" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src="image2.jpg" alt="Image 2" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src="image3.jpg" alt="Image 3" />
+      </SplideSlide>
+    </Splide>
   );
-}
-
+};
