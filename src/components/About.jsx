@@ -48,7 +48,7 @@ export const About = () => {
     >
       <Header />
       <div className="container w-[90%] md:w-[50%] mx-auto mt-[7rem] flex items-center justify-center">
-        <div className="text-start md:w-[70%]">
+        <div className="text-start w-[90%] md:w-[70%]">
           <h1 className="text-[#1F1F1F] font-bold md:font-bold leading-[28px] text-[18px] md:text-[19px]">
             We are a team of two programmers and designers
           </h1>
