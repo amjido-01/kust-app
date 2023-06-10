@@ -33,17 +33,12 @@ export const Footer = ({ className }) => {
               </div>
               <div>
                 <h2 className="mb-2 text-sm font-semibold uppercase">
-                  DOcuments
+                  quick links
                 </h2>
                 <ul className="flex flex-col gap-2 font-medium text-[12px] uppercase">
-                  <li className="">
-                    <a href="#" className="hover:underline ">
-                      Handouts
-                    </a>
-                  </li>
                   <li>
                   <NavLink to="/documents" className="hover:underline">
-                      Sample
+                      Documents
                     </NavLink>
                   </li>
                   <li>

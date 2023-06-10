@@ -48,14 +48,15 @@ export const About = () => {
     >
       <Header />
       <div className="container w-[90%] md:w-[50%] mx-auto mt-[7rem] flex items-center justify-center">
-        <div className="text-center md:w-[70%]">
-          <h1 className="text-[#1F1F1F] font-semibold md:font-bold text-[18px] md:text-[19px] leading-6">
-            We are a team of two programmers and designers{" "}
+        <div className="text-start md:w-[70%]">
+          <h1 className="text-[#1F1F1F] font-bold md:font-bold leading-[28px] text-[18px] md:text-[19px]">
+            We are a team of two programmers and designers
           </h1>
-          <p className=" font-medium md:font-semibold text-[13px] md:text-[14px] mt-2">
-            From kano state, Nigeria. and a students of KUST wudil who dedicated
-            thier time to create some innovations and provide simplicity to our
-            esteemed fellow students of KUST Wudil.
+          <p className=" font-normal leading-[21px] md:font-semibold text-[14px] md:text-[14px] mt-2">
+            We are students of Kano University of Science and Technology (KUST),
+            Wudil, Nigeria. We have dedicated our time for creating innovative
+            solutions that provide simplicity to our esteemed fellow students of
+            KUST Wudil.
           </p>
         </div>
       </div>
@@ -69,11 +70,7 @@ export const About = () => {
         className="absolute -bottom-[12%] left-10 md:left-[30%] w-[25px] md:w-[60px]"
         alt=""
       />
-      <img
-        src={three}
-        className="absolute top-[60%] w-[30px]"
-        alt=""
-      />
+      <img src={three} className="absolute top-[60%] w-[30px]" alt="" />
       <img
         src={four}
         className="absolute right-0 w-[20px] md:right-0 md:top-0 md:w-[20px]"

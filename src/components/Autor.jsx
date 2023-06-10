@@ -1,7 +1,7 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 // import { motion } from "framer-motion";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export const Autor = ({
   src,
@@ -18,7 +18,7 @@ export const Autor = ({
     <div className="text-[#000000]">
       <div className="flex flex-col justify-center items-center">
         <p
-          className="p-2 md:p-3 w-[90%] md:w-[70%] mx-auto mt-5 rounded text-[12px] md:text-[14px] font-normal md:font-medium"
+          className="p-4 md:p-3 w-[90%] md:w-[70%] mx-auto rounded text-[14px] md:text-[14px] font-normal md:font-medium"
           style={{ background: quoteColor }}
         >
           {quote}
@@ -26,9 +26,11 @@ export const Autor = ({
         <span
           className="down-triangle"
           style={{
-            borderLeft: "transparent solid 15px",
-            borderRight: "transparent solid 15px",
-            borderTop: `30px solid ${triangleColor}`,
+            borderLeft: "transparent solid 25px",
+            borderRight: "transparent solid 25px",
+            // borderRadius: "10px",
+            // border: "0 10px 10px 0",
+            borderTop: `40px solid ${triangleColor}`,
           }}
         ></span>
       </div>
