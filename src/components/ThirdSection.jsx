@@ -36,15 +36,17 @@ export const ThirdSection = () => {
 
         <div
           data-aos="fade-right"
-          className="text-[#D9D9D9] md:w-1/2 text-start md:text-end pt-20"
+          className="text-[#D9D9D9] md:w-1/2 text-right md:text-end pb-10 pt-5 pr-6"
         >
           <h1 className="font-bold text-[16px] leading-[32px] unbounded py-4">
             Technology advancement
           </h1>
           <p>
-            Every day, technology progresses and simplifies things for us in
-            various ways. We aspire to keep up with the changes and innovations
-            that it brings to our lives.
+            As technology advanced things are getting simpler and Every day,
+            technology progresses and simplifies things for us in various ways.
+            We aspire to keep up with the changes and innovations that it brings
+            to our lives. everyday, so that’s why we don’t want to be left
+            behind.
           </p>
         </div>
       </div>

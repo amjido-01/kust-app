@@ -25,8 +25,8 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full min-h-[600px] py-16 md:py-20 px-8 md:px-4">
-      <div className="container flex items-center justify-center mt-10 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
+    <section className="bg-[#212327] relative w-full min-h-[600px] py-16 md:py-20 px-[1.9rem] md:px-4">
+      <div className="container flex items-center justify-center mt-14 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <img
           className="absolute md:hidden top-[12rem] -right-[1rem] mobile"
           src={mobilehero}
@@ -42,7 +42,7 @@ export const Hero = () => {
             <p className="font-bold text-[32px] w-full leading-[48px] md:leading-[72px] md:text-[48px] ">
               all your handout and past question are now in one place.
             </p>
-            <p className="mt-3.5 font-medium w-[70%] text-[16px] leading-[24px] md:leading-[36px] md:text-[24px]">
+            <p className="mt-3.5 font-medium w-[80%] text-[16px] leading-[24px] md:leading-[36px] md:text-[24px]">
               free website for KUST students to download their favorites handout
               and past question papers.
             </p>
