@@ -25,10 +25,10 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full min-h-[600px] py-16 md:py-20 px-[1.9rem] md:px-4">
+    <section className="bg-[#212327] relative w-full min-h-[600px] py-16 md:py-20 px-[1.8rem] md:px-4">
       <div className="container flex items-center justify-center mt-14 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <img
-          className="absolute md:hidden top-[12rem] -right-[1rem] mobile"
+          className="absolute md:hidden top-[12rem] -right-[1.2rem] mobile"
           src={mobilehero}
           alt="mobilehero"
         />
