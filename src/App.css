@@ -239,6 +239,13 @@ body {
     }
 }
 
+@media screen and (min-width: 300px) {
+    .mobile-two {
+        width: 59%;
+        border: 1px soliid red;
+    }
+}
+
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .curve svg {
