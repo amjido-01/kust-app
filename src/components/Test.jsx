@@ -116,29 +116,35 @@ import "@splidejs/react-splide/css/sea-green";
 // or only core styles
 import "@splidejs/react-splide/css/core";
 
+import InputSearch from "./InputSearch";
+
 export const Test = () => {
   return (
-    <Splide
-      options={{
-        rewind: true,
-        // gap: "1rem",
-        type: "loop",
-        width: 800,
-        perPage: 2,
-        focus: "center",
-      }}
-      aria-label="My Favorite Images"
-      className="border-2 border-red-500"
-    >
-      <SplideSlide>
-        <img src="image1.jpg" alt="Image 1" />
-      </SplideSlide>
-      <SplideSlide>
-        <img src="image2.jpg" alt="Image 2" />
-      </SplideSlide>
-      <SplideSlide>
-        <img src="image3.jpg" alt="Image 3" />
-      </SplideSlide>
-    </Splide>
+    <>
+      <Splide
+        options={{
+          rewind: true,
+          // gap: "1rem",
+          type: "loop",
+          width: 800,
+          perPage: 2,
+          focus: "center",
+        }}
+        aria-label="My Favorite Images"
+        className="border-2 border-red-500"
+      >
+        <SplideSlide>
+          <img src="image1.jpg" alt="Image 1" />
+        </SplideSlide>
+        <SplideSlide>
+          <img src="image2.jpg" alt="Image 2" />
+        </SplideSlide>
+        <SplideSlide>
+          <img src="image3.jpg" alt="Image 3" />
+        </SplideSlide>
+      </Splide>
+
+      <InputSearch />
+    </>
   );
 };
