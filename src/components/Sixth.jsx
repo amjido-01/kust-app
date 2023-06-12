@@ -19,7 +19,7 @@ export const Sixth = () => {
       <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2">
         <img
         data-aos="fade-left"
-          className="absolute md:hidden top-[13rem] right-1 md:right-4 mobile-two"
+          className="absolute md:hidden top-[13.5rem] right-1 md:right-4 mobile-two"
           src={mobilesupport}
           alt="mobilehero"
         />
