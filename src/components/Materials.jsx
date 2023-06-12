@@ -77,7 +77,6 @@ export const Materials = (props) => {
     }
   };
 
-
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
@@ -106,9 +105,9 @@ export const Materials = (props) => {
               className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
             >
               welcome to{" "}
-              <span className="text-[#0F9D58]">{props.department}</span>{" "}
-              level <span className=" text-[#8CB6B5]">{props.level}</span>{" "}
-              download page
+              <span className="text-[#0F9D58]">{props.department}</span> level{" "}
+              <span className=" text-[#8CB6B5]">{props.level}</span> download
+              page
             </h1>
             <p className="capitalize font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">
               Please select either the handout or the past question. Then,{" "}
@@ -134,11 +133,11 @@ export const Materials = (props) => {
             >
               Search
             </label> */}
-            <InputSearch value={searchQuery} onChange={handleSearch}/>
+            <InputSearch value={searchQuery} onChange={handleSearch} />
           </div>
 
           <div className="container mx-auto">
-            <div className="container">
+            <div className="container border-2 border-red-500">
               <div className="let">
                 <HandoutsList
                   filteredItems={filteredItems.filter(
@@ -150,6 +149,7 @@ export const Materials = (props) => {
                   handleButtonClick={handleButtonClick}
                   searchQuery={searchQuery}
                   handleSearch={handleSearch}
+                  // className="border-2 border-green-600"
                 />
                 <HandoutsList
                   filteredItems={filteredItems.filter(

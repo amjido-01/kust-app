@@ -219,7 +219,8 @@ body {
         margin-bottom: 0px;
     }
     .box {
-        width: 45.5%;
+        /* width: 45.5%; */
+        width: 100%;
     }
 }
 
