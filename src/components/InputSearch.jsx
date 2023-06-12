@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { CiSearch } from "react-icons/ci";
 
-const InputSearch = () => {
+const InputSearch = (props) => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -25,6 +25,8 @@ const InputSearch = () => {
           unmountOnExit
         >
           <input
+          value={props.value}
+          onChange={props.onChange}
             type="text"
             className={`pl-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 sm:ml-4 sm:w-40`}
             placeholder="Search"
