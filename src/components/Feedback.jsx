@@ -97,7 +97,7 @@ export const Feedback = () => {
   return (
     <div className="">
       <section className="bg-[#FFFFFF] feedback text-gray-600 body-font px-8 md:px-4 ">
-        <div className="container md:w-[70%] mt-32 mx-auto">
+        <div className="container md:w-[70%] mt-[8.7rem] md:mt-32 mx-auto">
           <form
             data-aos="fade-up"
             ref={form}
