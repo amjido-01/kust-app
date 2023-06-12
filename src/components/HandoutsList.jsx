@@ -24,7 +24,7 @@ export const HandoutsList = (props) => {
           </div> */}
           <div
                   style={{ backgroundColor: props.bg }}
-                  className={`rounded-xl border-2 pb-4 border-[#000000] px-5 w-full md:w-[] box`}
+                  className={`rounded-xl border-2 pb-4 border-[#000000] px-5 w-full box`}
                 >
                   <h3
                     style={{ fontStyle: "normal" }}
