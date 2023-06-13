@@ -223,12 +223,12 @@ body {
     }
 }
 
-.swiper-button-prev {
-    background-color: white;
+.swiper-button-prev, .swiper-button-next {
     color: #666666 !important;
-    border-radius: 50%;
-    width: 8% !important;
-    height: 35% !important;
+
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 50px !important;
 }
 
 @media screen and (min-width: 425px) {

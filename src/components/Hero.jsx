@@ -51,18 +51,18 @@ export const Hero = () => {
             <Button
               onSmash={() => navigate("/documents")}
               value="Download Here"
-              cls_name="text-white rounded-[4px] z-10 flex border-2 border-[#0F9D58] cursor bg-[#0F9D58] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white rounded-[4px] z-10 flex border-2 hover:bg-[#0F9D58] border-[#0F9D58] cursor bg-[#0F9D58] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
 
             <Button
               onSmash={() => navigate("/documents")}
               value="Study"
-              cls_name="text-white z-10 flex rounded-[4px] cursor bg start border-[2px] border-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white z-10 flex rounded-[4px] hover:bg-transparent cursor bg start border-[2px] border-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
           </div>
         </div>
 
-        <div className="hidden z-10  md:flex justify-center absolute right-[5rem] top-[6rem] w-[70%] md:w-[40%] mb-4 md:mb-0 bg-transparent">
+        <div className="hidden z-10 md:flex justify-center absolute right-[5rem] top-[6rem] w-[70%] md:w-[40%] mb-4 md:mb-0 bg-transparent">
           <img src={heroImg} className="" alt="hero_icon" />
         </div>
       </div>

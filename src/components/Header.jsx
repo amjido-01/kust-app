@@ -51,11 +51,6 @@ export const Header = () => {
               </NavLink>
             </li>
             <li className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:p-0 font-medium">
-              <NavLink style={navLinkStyle} to="/study">
-                Study
-              </NavLink>
-            </li>
-            <li className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:p-0 font-medium">
               <NavLink style={navLinkStyle} to="/about">
                 about us
               </NavLink>

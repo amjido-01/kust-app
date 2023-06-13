@@ -1,5 +1,4 @@
 import React from "react";
-// import techonoly from "../assets/technology.png";
 import Webiner from "../assets/Webinar.png"
 import secondconleft from "../assets/secondconleft.svg";
 import { useEffect } from "react";
