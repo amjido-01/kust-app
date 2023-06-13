@@ -26,6 +26,15 @@ import { IctLevelOne } from "./FACMS/ict/IctLevelOne";
 import { IctLevelTwo } from "./FACMS/ict/IctLevelTwo";
 import { IctLevelThree } from "./FACMS/ict/IctLevelThree";
 import { IctLevelFour } from "./FACMS/ict/IctLevelFour";
+import { MathsLevelFour } from "./FACMS/maths/MathsLevelFour";
+import { MathsLevelOne } from "./FACMS/maths/MathsLevelOne";
+import { MathsLevelThree } from "./FACMS/maths/MathsLevelThree";
+import { MathsLevelTwo } from "./FACMS/maths/MathsLevelTwo";
+import { StaLevelFour } from "./FACMS/stat/StaLevelFour";
+import { StaLevelOne } from "./FACMS/stat/StaLevelOne";
+import { StaLevelTwo } from "./FACMS/stat/StaLevelTwo";
+import { StaLevelThree } from "./FACMS/stat/StaLevelThree";
+
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -75,6 +84,22 @@ export const AnimatedRoutes = () => {
         <Route
           path="documents/facms/ict/level-four-materials"
           element={<IctLevelFour />}
+        ></Route>
+        <Route
+          path="documents/facms/maths/level-one-materials"
+          element={<MathsLevelOne />}
+        ></Route>
+        <Route
+          path="documents/facms/maths/level-two-materials"
+          element={<MathsLevelTwo />}
+        ></Route>
+        <Route
+          path="documents/facms/maths/level-three-materials"
+          element={<MathsLevelThree />}
+        ></Route>
+        <Route
+          path="documents/facms/maths/level-four-materials"
+          element={<MathsLevelFour />}
         ></Route>
         <Route path="documents/engineering" element={<Engineering />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
