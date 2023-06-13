@@ -1,5 +1,6 @@
 import React from "react";
-import techonoly from "../assets/technology.png";
+// import techonoly from "../assets/technology.png";
+import Webiner from "../assets/Webinar.png"
 import secondconleft from "../assets/secondconleft.svg";
 import { useEffect } from "react";
 import Aos from "aos";
@@ -28,8 +29,8 @@ export const ThirdSection = () => {
           className="flex items-center justify-end pr-5"
         >
           <img
-            src={techonoly}
-            className="object-cover w-[80%] md:w-[77%]"
+            src={Webiner}
+            className="object-cover mb-8 w-[80%] md:w-[77%]"
             alt="section_img"
           />
         </div>

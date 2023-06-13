@@ -25,45 +25,44 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full min-h-[800px] py-16 md:py-20 px-[1.8rem] md:px-4">
-      <div className="container flex items-center justify-center mt-12 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
+    <section className="bg-[#212327] relative w-full min-h-[700px] py-16 md:py-8 px-[1.8rem] md:px-4">
+      <div className="container items-center justify-center mt-12 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <img
           className="absolute md:hidden top-[12rem] -right-[1.2rem] mobile"
           src={mobilehero}
           alt="mobilehero"
         />
-        <div className="md:w-[65%] text-[#FFFFFF] mt-1 capitalize">
+        <div className="md:w-[65%] text-[#FFFFFF] md:mt-0 mt-1 capitalize">
           <span
             id="target"
             className="italic text-[#0F9D58] Poppins text-[18px] font-normal md:font-semibold"
           ></span>
 
-          <div className="mt-2 w-[90%] md:w-full">
-            <p className="font-bold text-[32px] w-full leading-[48px] md:leading-[72px] md:text-[48px] ">
+          <div className="mt-2 w-[90%] ">
+            <p className="font-bold text-[32px]  leading-[48px] md:leading-[72px] md:text-[46px] ">
               all your handout and past question are now in one place.
             </p>
-            <p className="mt-3.5 font-medium w-[80%] text-[16px] leading-[24px] md:leading-[36px] md:text-[24px]">
-              free website for KUST students to download their favorites handout
-              and past question papers.
+            <p className="mt-3.5 font-medium w-[90%] text-[16px] leading-[22px] md:leading-[30px] md:text-[20px]">
+            This website is a free resource for KUST students who want to access their preferred handouts, past exam papers and study tips. It allows you to download the materials you need and learn more effectively than ever before.
             </p>
           </div>
 
-          <div className="mt-8 flex absolute z-20 justify-between w-[30%] cursor-pointer">
+          <div className="mt-8 flex absolute z-10 justify-between w-[20%] cursor-pointer">
             <Button
               onSmash={() => navigate("/documents")}
-              value="get started"
-              cls_name="text-white z-10 flex  cursor bg-[#0F9D58] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              value="Download Here"
+              cls_name="text-white rounded-[4px] z-10 flex border-2 border-[#0F9D58] cursor bg-[#0F9D58] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
 
             <Button
               onSmash={() => navigate("/documents")}
               value="Study"
-              cls_name="text-white z-10 flex  cursor bg start border-[2px] border-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white z-10 flex rounded-[4px] cursor bg start border-[2px] border-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
           </div>
         </div>
 
-        <div className="hidden z-10 ml-20 md:flex justify-center w-[70%] md:w-[65%] mb-4 bg-transparent">
+        <div className="hidden z-10  md:flex justify-center absolute right-[5rem] top-[6rem] w-[70%] md:w-[40%] mb-4 md:mb-0 bg-transparent">
           <img src={heroImg} className="" alt="hero_icon" />
         </div>
       </div>
