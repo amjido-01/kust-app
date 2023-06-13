@@ -12,22 +12,20 @@ import seven from "../assets/seven.svg";
 import { motion } from "framer-motion";
 
 export const Documents = () => {
-
-
   return (
     <motion.section className="relative min-h-screen flex flex-col">
       <Header />
 
-      <div className="container w-full p-6 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[10rem] flex-1">
-        <div className="look  border-2 border-red-500 flex flex-col justify-center">
-          <div className="text-[#000000] border-2 border-red-700 mb-4 md:mb-7">
+      <div className="container w-full p-8 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[5rem] md:mt-[10rem] flex-1">
+        <div className="look flex flex-col justify-center">
+          <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase my-2 font-semibold text-[18px] w-full md:text-[32px] leading-[31px] md:leading-[49px]"
+              className="uppercase my-2 font-semibold text-[18px] w-full md:text-[32px] leading-[20px] md:leading-[49px]"
             >
               welcome to the document page
             </h1>
-            <p className="capitalize font-medium text-[14px] md:text-[18px] leading-[18px] md:leading-[28px]">
+            <p className="capitalize font-medium text-[14px] md:text-[18px] leading-[14px] md:leading-[28px]">
               choose your faculty and click/tap to proceed.
             </p>
           </div>
@@ -36,23 +34,23 @@ export const Documents = () => {
             <div className="container">
               <h1
                 style={{ fontFamily: "poppins" }}
-                className="md:text-center px-8 pt-4 uppercase text-[17px] font-semibold leading-[26px] md:text-[28px] md:pt-5 md:font-medium"
+                className="md:text-center px-8 pt-4 uppercase text-[17px] font-semibold leading-[26px] md:text-[28px] md:leading-[42px] md:pt-5 md:font-medium"
               >
                 FACULTIES
               </h1>
 
-              <div className="pb-[20px] pt-1 pl-6 md:px-8 md:py-[50px] flex flex-col md:flex-row md:items-center md:justify-center">
+              <div className="pb-[20px] pt-1 px-[2.5rem] md:px-8 md:py-[50px] flex flex-col md:flex-row md:items-center md:justify-center">
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
-                  <ul className=" list-disc">
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                  <ul className=" list-disc ">
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[12px] font-medium md:text-[18px] leading-[17px] text-[#1F1F1F] md:font-medium md:leading-[27px]">
                       <Link to="facms">
                         FACULTY OF COMPUTING AND MATHEMATICAL SCIENCE (FACMS)
                       </Link>
                     </li>
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[12px] font-medium md:text-[18px] leading-[17px] text-[#1F1F1F] md:font-medium md:leading-[27px]">
                       <Link to="engineering">FACULTY OF ENGINEERING</Link>
                     </li>
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[12px] font-medium md:text-[18px] leading-[17px] text-[#1F1F1F] md:font-medium md:leading-[27px]">
                       <Link to="">FACULTY OF SCIENCES</Link>
                     </li>
                   </ul>
@@ -60,15 +58,15 @@ export const Documents = () => {
 
                 <div className="w-[100%] flex items-center mx-auto md:w-[45%]">
                   <ul className=" list-disc">
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[12px] font-medium md:text-[18px] leading-[17px] text-[#1F1F1F] md:font-medium md:leading-[27px]">
                       <Link to="">
                         FACULTY OF AGRICULTURE & AGRICULTURAL TECH
                       </Link>
                     </li>
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[12px] font-medium md:text-[18px] leading-[17px] text-[#1F1F1F] md:font-medium md:leading-[27px]">
                       <Link to="">FACULTY OF SCIENCE EDUCATION</Link>
                     </li>
-                    <li className="md:px-0.5 py-[4px] md:py-1 text-[18.5px] font-medium md:text-[18px] leading-[27px] text-[#1F1F1F] md:font-normal">
+                    <li className="md:px-0.5 py-[4px] md:py-1 text-[12px] font-medium md:text-[18px] leading-[17px] text-[#1F1F1F] md:font-medium md:leading-[27px]">
                       <Link to="">FACULTY OF EARTH & ENVIRONMENTAL SCI</Link>
                     </li>
                   </ul>

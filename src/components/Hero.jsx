@@ -25,7 +25,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full min-h-[600px] py-16 md:py-20 px-[1.8rem] md:px-4">
+    <section className="bg-[#212327] relative w-full min-h-[800px] py-16 md:py-20 px-[1.8rem] md:px-4">
       <div className="container flex items-center justify-center mt-12 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <img
           className="absolute md:hidden top-[12rem] -right-[1.2rem] mobile"
@@ -48,11 +48,17 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-8 flex cursor-pointer">
+          <div className="mt-8 flex absolute z-20 justify-between w-[30%] cursor-pointer">
             <Button
               onSmash={() => navigate("/documents")}
               value="get started"
-              cls_name="text-white z-10 flex absolute cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white z-10 flex  cursor bg-[#0F9D58] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+            ></Button>
+
+            <Button
+              onSmash={() => navigate("/documents")}
+              value="Study"
+              cls_name="text-white z-10 flex  cursor bg start border-[2px] border-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
           </div>
         </div>

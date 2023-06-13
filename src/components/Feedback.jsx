@@ -23,10 +23,10 @@ export const Feedback = () => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
-      easing: 'ease-out',
+      easing: "ease-out",
       delay: 100,
     });
-  }, [])
+  }, []);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -97,16 +97,14 @@ export const Feedback = () => {
   return (
     <div className="">
       <section className="bg-[#FFFFFF] feedback text-gray-600 body-font px-8 md:px-4 ">
-        <div className="container md:w-[70%] md:mt-32 mx-auto">
+        <div className="container md:w-[70%] mt-28 md:mt-32 mx-auto">
           <form
             data-aos="fade-up"
             ref={form}
             onSubmit={sendEmail}
             className="w-full md:w-[45%] flex flex-col md:ml-aut md:py-8 mt-8 md:mt-0"
           >
-            <h2
-              className="text-[#000000] capitalize font-bold text-lg unbounded mb-1 title-font"
-            >
+            <h2 className="text-[#000000] capitalize font-bold text-lg unbounded mb-1 title-font">
               want to say something
             </h2>
             <div className="mb-4">
