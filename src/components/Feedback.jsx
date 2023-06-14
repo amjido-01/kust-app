@@ -97,7 +97,7 @@ export const Feedback = () => {
   return (
     <div className="">
       <section className="bg-[#FFFFFF] feedback text-gray-600 body-font px-8 md:px-4 ">
-        <div className="container md:w-[70%] mt-28 md:mt-[3rem] mx-auto">
+        <div className="container md:w-[70%] mt-28 md:mt-[0rem] mx-auto">
           <form
             data-aos="fade-up"
             ref={form}
@@ -170,8 +170,8 @@ export const Feedback = () => {
                 icon={<RiSendPlane2Line className="ml-1" />}
                 cls_name={
                   loading
-                    ? "bg-[#85edba] cursor-not-allowed text-sm text-white font-medium py-2 px-5 flex items-center text-center capitalize"
-                    : "text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+                    ? "bg-[#85edba] cursor-not-allowed rounded-[4px] text-sm text-white font-medium py-2 px-5 flex items-center text-center capitalize"
+                    : "text-white bg-[#0F9D58] rounded-[4px] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
                 }
               ></Button>
             </div>

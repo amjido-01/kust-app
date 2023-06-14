@@ -62,7 +62,7 @@ export const Header = () => {
           <Button
             onSmash={() => navigate("/support-us")}
             value="support us"
-            cls_name="text-white bg-[#0F9D58] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-sm px-3 md:px-5 py-2 text-center capitalize"
+            cls_name="text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize"
           ></Button>
         </div>
       </div>

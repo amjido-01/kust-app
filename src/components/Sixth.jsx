@@ -39,7 +39,7 @@ export const Sixth = () => {
           <div className="mt-4">
             <Button
               value="Support Us"
-              cls_name="text-white bg-[#0F9D58] hover:bg-[#22bf73] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
+              cls_name="text-white bg-[#0F9D58] rounded-[4px] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
           </div>
         </div>

@@ -13,7 +13,7 @@ export const Hero = () => {
     const options = {
       strings: [
         "Introducing the Game-Changer",
-        "We are unlocking the Power of Technology for everyone",
+        "Empowering you with simple tech solution",
         "Effortles searching at Your Fingertips",
       ],
       typeSpeed: 50,

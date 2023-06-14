@@ -25,33 +25,33 @@ export const Dept = (props) => {
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[31px] md:leading-[49px]"
+              className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[30px] md:leading-[49px]"
             >
               welcome to the department page
             </h1>
-            <p className="capitalize font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">
-              choose between department and select your level <br /> then, to
+            <p className="capitalize font-medium text-[12px] md:text-[16px] leading-[18px] md:leading-[28px]">
+              choose between department and select your level. then, to
               proceed click/tap on the screen.
             </p>
           </div>
 
-          <div className="container border-[3px] border-[#000000] rounded-[20px] bg-[#F1E2B9] mx-auto">
+          <div className="container border-[3px] border-[#000000] rounded-[8px] bg-[#F1E2B9] mx-auto">
             <div className="container">
               <h2
                 style={{ fontFamily: "poppins" }}
-                className="px-8 pt-4 uppercase text-[17px] md:pl-12 font-semibold leading-[26px] md:text-[26px] md:pt-5 md:font-medium"
+                className="px-3 uppercase text-[14px] md:pl-12 pt-4 font-semibold leading-[20px] md:text-[24px] md:pt-5 md:font-semibold"
               >
                 {props.faculty}
               </h2>
 
-              <div className="block  md:flex justify-evenly font-medium md:text-[16px] uppercase my-4 pb-[20px] pt-1 md:pl-6 md:px-8">
+              <div className="block  md:flex justify-evenly font-medium md:text-[16px] uppercase my-2 pb-[20px] pt-1 md:pl-6 md:px-8">
                 <div className="flex justify-evenly md:justify-around mt-2 mb-4 w-full md:w-1/2 text-[11px] leading-[16px] font-semibold md:text-[18px] md:leading-[30px]">
                   <div className="">
-                    <h3 className="text-[13px] md:text-[16px]">
+                    <h3 className="text-[13px] font-semibold md:text-[18px] mr-4">
                       {props.deptOne}
                     </h3>
 
-                    <ul className=" list-disc mt-2 md:mt-4">
+                    <ul className=" list-disc mt-2 text-[12px] md:text-[16px] leading-6 list-inside font-medium md:mt-4">
                       <li className="">
                         <Link to={props.levelOne}>Level one </Link>
                       </li>
@@ -68,11 +68,11 @@ export const Dept = (props) => {
                   </div>
 
                   <div>
-                    <h3 className="text-[13px] md:text-[16px]">
+                    <h3 className="text-[13px] font-semibold md:text-[18px]">
                       {props.deptTwo}
                     </h3>
 
-                    <ul className=" list-disc mt-2 md:mt-4">
+                    <ul className=" list-disc list-inside mt-2 text-[12px] leading-6 md:text-[16px] font-medium md:mt-4">
                       <li>
                         <Link>Level one</Link>
                       </li>
@@ -91,11 +91,11 @@ export const Dept = (props) => {
 
                 <div className="flex w-full md:w-1/2 justify-evenly md:justify-around my-2 text-[11px] leading-[16px] font-semibold md:text-[18px] md:leading-[30px]">
                   <div className="">
-                    <h3 className="text-[13px] md:text-[16px]">
+                    <h3 className="text-[13px] font-semibold md:text-[18px]">
                       {props.deptThree}
                     </h3>
 
-                    <ul className=" list-disc mt-2 md:mt-4">
+                    <ul className="  list-disc list-inside mt-2 text-[12px] md:text-[16px] leading-6 font-medium md:mt-4">
                       <li>
                         <Link to="/documents/facms/ict/level-one-materials">Level one</Link>
                       </li>
@@ -112,11 +112,11 @@ export const Dept = (props) => {
                   </div>
 
                   <div>
-                    <h3 className="text-[13px] md:text-[16px]">
+                    <h3 className="text-[13px] font-semibold md:text-[18px]">
                       {props.deptFour}
                     </h3>
 
-                    <ul className=" list-disc mt-2 md:mt-4">
+                    <ul className="  list-disc list-inside mt-2 text-[12px] md:text-[16px] leading-6 font-medium md:mt-4">
                       <li>Level one</li>
                       <li>
                         <Link>level two</Link>
