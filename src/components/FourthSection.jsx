@@ -49,7 +49,7 @@ export const FourthSection = () => {
         data-aos="fade-right"
         className="my-4 capitalize text-[#000000] font-bold px-1 text-[16px] unbounded"
       >
-        what students a saying about this site
+        what students are saying about this site
       </h1>
       <Swiper
         className="container mx-auto"

@@ -27,8 +27,8 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full min-h-[660px] md:min-h-[700px] py-16 md:py-8 px-[1.8rem] md:px-4">
-      <div className="container items-center justify-center mt-[2rem] flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
+    <section className="bg-[#212327] relative w-full min-h-[550px] md:min-h-[700px] py-16 md:py-8 px-[1.8rem] md:px-4">
+      <div className="container items-center justify-center mt-[1.5rem] flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <div className="md:w-[65%] text-[#FFFFFF] md:mt-0 mt-1 capitalize">
           <span
             id="target"
@@ -37,12 +37,11 @@ export const Hero = () => {
 
           <div className="mt-2 w-full md:w-[90%]">
             <p className="font-bold text-[34px] leading-[46px] md:leading-[72px] md:text-[46px] ">
-              all your handout and past question are now in one place.
+              all your reading materials are now in one place.
             </p>
             <p className="mt-3.5 font-medium w-full md:w-[90%] text-[16px] leading-[22px] md:leading-[30px] md:text-[20px]">
               This website is a free resource for KUST students: Access
-              handouts, past exams, and study tips all at your finger tip.
-              Downloadable materials for effective learning
+              handouts, past exams questions, and study tips all at your finger tip.
             </p>
           </div>
 
