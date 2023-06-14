@@ -1,9 +1,6 @@
 import React from "react";
 import { Button } from "./Button";
 import heroImg from "../assets/bro.png";
-import mobilehero from "../assets/test.png";
-// import mobile from "../assets/mobile.png"
-// import test from "../assets/test.png"
 import Typed from "typed.js";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -15,7 +12,9 @@ export const Hero = () => {
   useEffect(() => {
     const options = {
       strings: ["It has been solved!", "It made easier!"],
-      typeSpeed: 100,
+      typeSpeed: 50,
+      backSpeed: 50,
+      smartBackspace: true,
       loop: true,
     };
     const typed = new Typed("#target", options);
@@ -25,20 +24,15 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full min-h-[700px] py-16 md:py-8 px-[1.8rem] md:px-4">
+    <section className="bg-[#212327] relative w-full min-h-[640px] md:min-h-[700px] py-16 md:py-8 px-[1.8rem] md:px-4">
       <div className="container items-center justify-center mt-12 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
-        {/* <img
-          className="absolute md:hidden top-[12rem] -right-[1.2rem] mobile"
-          src={mobilehero}
-          alt="mobilehero"
-        /> */}
         <div className="md:w-[65%] text-[#FFFFFF] md:mt-0 mt-1 capitalize">
           <span
             id="target"
-            className="italic text-[#0F9D58] Poppins text-[18px] font-normal md:font-semibold"
+            className="italic text-[#FFFFFF] Poppins text-[18px] font-normal md:font-semibold"
           ></span>
 
-          <div className="mt-2 w-full md:w-[90%] border-2">
+          <div className="mt-2 w-full md:w-[90%]">
             <p className="font-bold text-[34px] leading-[51px] md:leading-[72px] md:text-[46px] ">
               all your handout and past question are now in one place.
             </p>
@@ -47,7 +41,7 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-8 flex absolute z-10 justify-between w-[70%] border-2 md:w-[20%] cursor-pointer">
+          <div className="mt-8 flex absolute z-10 justify-between w-[70%] md:w-[20%] cursor-pointer">
             <Button
               onSmash={() => navigate("/documents")}
               value="Download Here"

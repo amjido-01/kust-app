@@ -34,7 +34,7 @@ export const Main = () => {
         alt="svg_icon"
       />
 
-      <div className="container mx-auto md:w-[70%]">
+      <div className="container mx-auto md:w-[70%] md:mt-7">
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-evenly card mx-auto">
           <Card
             title="comfortably"

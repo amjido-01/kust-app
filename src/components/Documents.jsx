@@ -30,7 +30,7 @@ export const Documents = () => {
             </p>
           </div>
 
-          <div className="container border-[3px] border-[#000000] rounded-[30px] bg-[#B0F2B4] mx-auto">
+          <div className="container border-[3px] border-[#000000] rounded-[8px] bg-[#B0F2B4] mx-auto">
             <div className="container">
               <h1
                 style={{ fontFamily: "poppins" }}

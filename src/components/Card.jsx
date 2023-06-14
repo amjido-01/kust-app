@@ -22,7 +22,7 @@ export const Card = (props) => {
             {props.icon}
             <h1 className="font-bold text-[16px] md:text-[24px] md:leading-[36px] leading-[24px] px-4">{props.title}</h1>
           </div>
-          <p className=" font-normal text-[15px] leading-[24px] md:text-[20px] md:leading-[30px] pr-5">
+          <p className=" font-normal text-[15px] leading-[24px] md:text-[16px] md:leading-[22px] pr-5">
             {props.text}
           </p>
         </div>

@@ -12,15 +12,15 @@ export const Fifth = () => {
     });
   }, []);
   return (
-    <section className="min-h-[200px] border-t border-gray-500">
+    <section className="min-h-[250px] pt-8 border-t border-gray-500 md:mt-[1.5rem] ">
       <div className="container text-[#000000] flex justify-center items-center mx-auto capitalize">
         <div className="w-[80%] md:px-0 font-medium px-4 md:w-1/2 text-center">
-          <h1
+          <h2
             data-aos="fade-up"
-            className="my-4 capitalize font-bold px-1 text-[16px] unbounded"
+            className="my-4 capitalize font-bold px-1 text-[16px] md:text-[32px] leading-[20px] md:leading-[40px] unbounded"
           >
             our emphasis on education
-          </h1>
+          </h2>
           <p data-aos="fade-up">
             education is a valuable asset, and we believe whoever you help get
             knowledge you give him the greatest gift in life. that is why we
