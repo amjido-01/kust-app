@@ -3,8 +3,7 @@ import { Button } from "./Button";
 import heroImg from "../assets/bro.png";
 import Typed from "typed.js";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -28,8 +27,8 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full min-h-[640px] md:min-h-[700px] py-16 md:py-8 px-[1.8rem] md:px-4">
-      <div className="container items-center justify-center mt-12 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
+    <section className="bg-[#212327] relative w-full min-h-[660px] md:min-h-[700px] py-16 md:py-8 px-[1.8rem] md:px-4">
+      <div className="container items-center justify-center mt-[2rem] flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
         <div className="md:w-[65%] text-[#FFFFFF] md:mt-0 mt-1 capitalize">
           <span
             id="target"
@@ -37,7 +36,7 @@ export const Hero = () => {
           ></span>
 
           <div className="mt-2 w-full md:w-[90%]">
-            <p className="font-bold text-[34px] leading-[51px] md:leading-[72px] md:text-[46px] ">
+            <p className="font-bold text-[34px] leading-[46px] md:leading-[72px] md:text-[46px] ">
               all your handout and past question are now in one place.
             </p>
             <p className="mt-3.5 font-medium w-full md:w-[90%] text-[16px] leading-[22px] md:leading-[30px] md:text-[20px]">

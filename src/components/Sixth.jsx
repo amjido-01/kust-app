@@ -3,10 +3,12 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import support from "../assets/support.png";
-import mobilesupport from "../assets/mobilesupport.png";
+import mobilesupport from "../assets/sprt.png";
 import { Button } from "./Button";
+import { useNavigate } from "react-router-dom";
 
 export const Sixth = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -18,7 +20,7 @@ export const Sixth = () => {
     <section className="linear relative px-8 md:px-4">
       <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto md:w-[70%] mt-2">
         <img
-        data-aos="fade-left"
+          data-aos="fade-left"
           className="absolute md:hidden top-[13.5rem] -right-1 md:right-4 mobile-two"
           src={mobilesupport}
           alt="mobilehero"
@@ -38,6 +40,7 @@ export const Sixth = () => {
 
           <div className="mt-4">
             <Button
+              onSmash={() => navigate("/support-us")}
               value="Support Us"
               cls_name="text-white bg-[#0F9D58] rounded-[4px] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
