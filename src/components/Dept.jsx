@@ -25,11 +25,11 @@ export const Dept = (props) => {
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase my-2 font-semibold text-[20px] md:text-[32px] leading-[30px] md:leading-[49px]"
+              className="uppercase my-2 font-semibold text-[20px] mt-[4rem] md:text-[32px] leading-[30px] md:leading-[49px]"
             >
               welcome to the department page
             </h1>
-            <p className="capitalize font-medium text-[12px] md:text-[16px] leading-[18px] md:leading-[28px]">
+            <p className="capitalize font-medium text-[14px] md:text-[16px] leading-[18px] md:leading-[28px]">
               choose between department and select your level. then, to
               proceed click/tap on the screen.
             </p>

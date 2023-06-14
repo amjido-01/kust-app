@@ -35,7 +35,7 @@ export const Header = () => {
         </div>
 
         {/* desktop */}
-        <div className="hidden md:block items-center justify-between md:w-auto">
+        <div className="hidden items-center border-2 justify-between md:w-auto">
           <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 font-[12px] md:text-[15px] md:font-medium">
             <li
               className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:bg-transparent md:p-0 font-medium"

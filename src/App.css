@@ -95,6 +95,15 @@ body {
     list-style-type: disc;
 }
 
+.swiper-button-prev, .swiper-button-next {
+    color: #666666 !important;
+
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 30px !important;
+    /* border-width: 30px !important; */
+}
+
 .curve {
     position: absolute;
     bottom: 0;
@@ -210,6 +219,158 @@ body {
     flex-direction: column;
     gap: 20px;
 }
+
+/* @media screen and (max-width: 768px) {
+    .hero {
+        border: 1px solid red;
+        margin-top: 5rem;
+    }
+} */
+
+@media screen and (min-width: 350px) {
+    .btns {
+        width: 73%;
+    }
+
+    .hero_parent {
+        min-height: 480px;
+    }
+    .hero {
+        margin-top: 2rem;
+    }
+    .intro {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .sub_intro {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .btns {
+        width: 65%;
+    }
+
+    .hero_parent {
+        min-height: 470px;
+    }
+    .hero {
+        margin-top: 2rem;
+    }
+    .intro {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .sub_intro {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (min-width: 420px) {
+    .btns {
+        width: 58%;
+    }
+
+    .hero_parent {
+        min-height: 460px;
+    }
+    .hero {
+        margin-top: 2rem;
+    }
+    .intro {
+        font-size: 32px;
+        line-height: 41px;
+    }
+    .sub_intro {
+        font-size: 17px;
+        line-height: 17px;
+    }
+}
+@media screen and (min-width: 470px) {
+    .btns {
+        width: 58%;
+    }
+
+    .hero_parent {
+        min-height: 460px;
+    }
+    .hero {
+        margin-top: 2rem;
+    }
+    .intro {
+        font-size: 34px;
+        line-height: 41px;
+    }
+    .sub_intro {
+        font-size: 17px;
+        line-height: 19px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .btns {
+        width: 50%;
+    }
+
+    .hero_parent {
+        min-height: 490px;
+    }
+    .hero {
+        margin-top: 2rem;
+    }
+    .intro {
+        font-size: 38px;
+        line-height: 45px;
+    }
+    .sub_intro {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+@media screen and (min-width: 530px) {
+    .btns {
+        width: 50%;
+    }
+
+    .hero_parent {
+        min-height: 470px;
+    }
+    .hero {
+        margin-top: 2rem;
+    }
+    
+}
+@media screen and (min-width: 600px) {
+    .btns {
+        width: 50%;
+    }
+
+    .hero_parent {
+        min-height: 470px;
+    }
+    .hero {
+        margin-top: 2rem;
+    }
+    
+    .intro {
+        font-size: 43px;
+        line-height: 50px;
+    }
+    .sub_intro {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    
+}
+
+
+
+
+
+
 @media screen and (min-width: 1000px) {
     .let {
         display: flex;
@@ -223,14 +384,7 @@ body {
     }
 }
 
-.swiper-button-prev, .swiper-button-next {
-    color: #666666 !important;
 
-}
-.swiper-button-prev:after, .swiper-button-next:after {
-    font-size: 30px !important;
-    /* border-width: 30px !important; */
-}
 
 @media screen and (min-width: 425px) {
     .look {
@@ -268,8 +422,45 @@ body {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .curve svg {
+        width: calc(177% + 1.3px) !important;
+        height: 168px !important;
+        /* border: 1px solid green; */
+    }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+    .intro_container {
+        width: 55%;
+    }
+    .intro {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .sub_intro {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .hero_parent {
+        min-height: 580px;
+    }
+    .hero {
+        width: 90%;
+        margin-top: 7rem;
+    }
+    .btns {
+        width: 33%;
+    }
+    .hero_img {
+    }
+    .hero_img img{
+        width: 85%;
+        position: absolute;
+        right: -130px;
+        top: -19rem;
+    }
+}
+
+@media screen and (max-width: 1023px) {
     .curve svg {
         width: calc(223% + 1.3px);
         height: 317px;

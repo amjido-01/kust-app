@@ -16,7 +16,7 @@ export const Documents = () => {
     <motion.section className="relative min-h-screen flex flex-col">
       <Header />
 
-      <div className="container w-full p-8 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[4rem] md:mt-[7rem] flex-1">
+      <div className="container w-full p-8 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[2rem] md:mt-[7rem] flex-1">
         <div className="look flex flex-col justify-center">
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
