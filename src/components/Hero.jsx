@@ -11,7 +11,11 @@ export const Hero = () => {
 
   useEffect(() => {
     const options = {
-      strings: ["It has been solved!", "It made easier!"],
+      strings: [
+        "Introducing the Game-Changer",
+        "We are unlocking the Power of Technology for everyone",
+        "Effortles searching at Your Fingertips",
+      ],
       typeSpeed: 50,
       backSpeed: 50,
       smartBackspace: true,
@@ -29,7 +33,7 @@ export const Hero = () => {
         <div className="md:w-[65%] text-[#FFFFFF] md:mt-0 mt-1 capitalize">
           <span
             id="target"
-            className="italic text-[#FFFFFF] Poppins text-[18px] font-normal md:font-semibold"
+            className="italic text-[#FFFFFF] Poppins text-[12px] md:text-[16px] font-normal md:font-semibold"
           ></span>
 
           <div className="mt-2 w-full md:w-[90%]">
@@ -37,7 +41,9 @@ export const Hero = () => {
               all your handout and past question are now in one place.
             </p>
             <p className="mt-3.5 font-medium w-full md:w-[90%] text-[16px] leading-[22px] md:leading-[30px] md:text-[20px]">
-            This website is a free resource for KUST students who want to access their preferred handouts, past exam papers and study tips. It allows you to download the materials you need and learn more effectively than ever before.
+              This website is a free resource for KUST students: Access
+              handouts, past exams, and study tips all at your finger tip.
+              Downloadable materials for effective learning
             </p>
           </div>
 

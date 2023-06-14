@@ -228,7 +228,8 @@ body {
 
 }
 .swiper-button-prev:after, .swiper-button-next:after {
-    font-size: 50px !important;
+    font-size: 30px !important;
+    /* border-width: 30px !important; */
 }
 
 @media screen and (min-width: 425px) {
