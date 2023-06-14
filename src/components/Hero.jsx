@@ -27,27 +27,27 @@ export const Hero = () => {
   return (
     <section className="bg-[#212327] relative w-full min-h-[700px] py-16 md:py-8 px-[1.8rem] md:px-4">
       <div className="container items-center justify-center mt-12 flex-col-reverse md:mt-20 md:flex-row mx-auto md:w-[75%]">
-        <img
+        {/* <img
           className="absolute md:hidden top-[12rem] -right-[1.2rem] mobile"
           src={mobilehero}
           alt="mobilehero"
-        />
+        /> */}
         <div className="md:w-[65%] text-[#FFFFFF] md:mt-0 mt-1 capitalize">
           <span
             id="target"
             className="italic text-[#0F9D58] Poppins text-[18px] font-normal md:font-semibold"
           ></span>
 
-          <div className="mt-2 w-[90%] ">
-            <p className="font-bold text-[32px]  leading-[48px] md:leading-[72px] md:text-[46px] ">
+          <div className="mt-2 w-full md:w-[90%] border-2">
+            <p className="font-bold text-[34px] leading-[51px] md:leading-[72px] md:text-[46px] ">
               all your handout and past question are now in one place.
             </p>
-            <p className="mt-3.5 font-medium w-[90%] text-[16px] leading-[22px] md:leading-[30px] md:text-[20px]">
+            <p className="mt-3.5 font-medium w-full md:w-[90%] text-[16px] leading-[22px] md:leading-[30px] md:text-[20px]">
             This website is a free resource for KUST students who want to access their preferred handouts, past exam papers and study tips. It allows you to download the materials you need and learn more effectively than ever before.
             </p>
           </div>
 
-          <div className="mt-8 flex absolute z-10 justify-between w-[20%] cursor-pointer">
+          <div className="mt-8 flex absolute z-10 justify-between w-[70%] border-2 md:w-[20%] cursor-pointer">
             <Button
               onSmash={() => navigate("/documents")}
               value="Download Here"
