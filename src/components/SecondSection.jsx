@@ -16,8 +16,8 @@ export const SecondSection = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] md:border-b-[1.5px] border-gray-700 relative min-h-[400px] py-16 md:py-2 px-8 md:px-4 md:pt-24">
-      <div className="container md:w-[65%] mx-auto flex flex-col md:flex-row items-center justify-center capitalize">
+    <section className="bg-[#212327] second_main md:border-b-[1.5px] border-gray-700 relative py-16 md:py-2 px-8">
+      <div className="second_section mx-auto flex flex-col md:flex-row items-center justify-center capitalize">
         <img
           src={comfetti}
           className="absolute w-[20%] md:w-[7%] top-20 md:top-40 right-5 md:right-32"
@@ -43,10 +43,7 @@ export const SecondSection = () => {
             our struggle
           </h1>
           <p>
-            Our aim is to alleviate the challenges that students encounter when
-            searching for reliable handouts or past question papers for their
-            relevant courses. For this reason, we have developed this platform
-            for your convenience.
+          Our aim is to alleviate the challenges that students encounter when searching for reliable studying materials for their relevant courses. That’s why, we have developed this platform for your convenience.
           </p>
         </div>
       </div>

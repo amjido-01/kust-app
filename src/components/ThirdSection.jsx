@@ -16,7 +16,7 @@ export const ThirdSection = () => {
 
   return (
     <section className="bg-[#212327] test min-h-[200px] relative md:pb-1 pb-[3.5rem] px-8 md:px-5">
-      <div className="container md:w-[70%] mx-auto flex flex-col md:flex-row-reverse items-center justify-center">
+      <div className="mx-auto flex third_section flex-col md:flex-row-reverse items-center justify-between">
         <img
           src={secondconleft}
           className="absolute w-[40%] top-10 md:top-10 md:w-[16%] left-1 md:left-10"
@@ -29,24 +29,20 @@ export const ThirdSection = () => {
         >
           <img
             src={Webiner}
-            className="object-cover mb-8 w-[80%] md:w-[77%]"
+            className="object-cover webner md:mr-10 mb-8 w-[80%]"
             alt="section_img"
           />
         </div>
 
         <div
           data-aos="fade-right"
-          className="text-[#D9D9D9] md:w-1/2 text-right md:text-end pb-10 pt-5 pr-6"
+          className="text-[#D9D9D9] third_containt text-right md:text-end pb-10 pt-5"
         >
           <h1 className="font-bold text-[16px] leading-[32px] unbounded py-4">
             Technology advancement
           </h1>
           <p>
-            As technology advanced things are getting simpler and Every day,
-            technology progresses and simplifies things for us in various ways.
-            We aspire to keep up with the changes and innovations that it brings
-            to our lives. everyday, so that’s why we don’t want to be left
-            behind.
+          Technology advances and eases our lives daily. We strive to follow its dynamic changes and innovations that offer us new possibilities and solutions.
           </p>
         </div>
       </div>

@@ -21,10 +21,10 @@ export const Main = () => {
   }, []);
 
   return (
-    <section className="relative flex-col mt-[20px] justify-center items-center bg-[#FFFFFF] min-h-[250px] capitalize">
+    <section className="relative flex-col main mt-[20px] justify-center items-center bg-[#FFFFFF] min-h-[230px] capitalize">
       <h2
         data-aos="fade-right"
-        className="text-[#000000] text-center font-bold mb-2 mt-10 px-1 text-[16px] md:text-[32px] md:leading-[40px] leading-[20px] unbounded"
+        className="text-[#000000] text-center font-bold mb-2 mt-10 px-1 unbounded"
       >
         You can get them all for free now!
       </h2>
@@ -34,19 +34,19 @@ export const Main = () => {
         alt="svg_icon"
       />
 
-      <div className="container mx-auto md:w-[70%] md:mt-7">
+      <div className="mx-auto md:mt-2">
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-evenly card mx-auto">
           <Card
             title="comfortably"
             icon={<MdChair className="text-2xl" />}
             animation="fade-up"
-            text="at any location and any moment without anticipating a colleague to transmit it to you."
+            text="at any location and any moment without requiring a lengthy stroll to locate it ."
           ></Card>
           <Card
             title="easily"
             icon={<MdSwapHorizontalCircle className="text-2xl" />}
             animation="fade-up"
-            text="with a few simple taps and swift downloads, you can access it instantly. Isn’t that remarkable?"
+            text="with a few simple taps and swift downloads, you can access it instantly."
           ></Card>
           <Card
             title="reliable"

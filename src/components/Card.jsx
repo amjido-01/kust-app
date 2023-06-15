@@ -17,12 +17,12 @@ export const Card = (props) => {
         data-aos={props.animation}
         className="flex max-w-md overflow-hidden py-3 px-10 md:px-3 my-3 text-center"
       >
-        <div className="">
-          <div className="flex items-center justify-center">
+        <div className="card_contents">
+          <div className="flex items-center  justify-center">
             {props.icon}
-            <h1 className="font-bold text-[16px] md:text-[24px] md:leading-[36px] leading-[24px] px-4">{props.title}</h1>
+            <h3 className="px-4">{props.title}</h3>
           </div>
-          <p className=" font-normal text-[15px] leading-[24px] md:text-[16px] md:leading-[22px] pr-5">
+          <p className="pr-5">
             {props.text}
           </p>
         </div>

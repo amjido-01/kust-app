@@ -233,7 +233,7 @@ body {
     }
 
     .hero_parent {
-        min-height: 480px;
+        min-height: 410px;
     }
     .hero {
         margin-top: 2rem;
@@ -245,6 +245,9 @@ body {
     .sub_intro {
         font-size: 16px;
         line-height: 24px;
+    }
+    .main h2 {
+        font-size: 16px;
     }
 }
 
@@ -268,6 +271,10 @@ body {
         font-size: 15px;
         line-height: 18px;
         width: 90%;
+    }
+
+    .main h2 {
+        font-size: 18px;
     }
 }
 
@@ -331,6 +338,10 @@ body {
         font-size: 18px;
         line-height: 20px;
     }
+
+    .main h2 {
+        font-size: 20px;
+    }
 }
 @media screen and (min-width: 530px) {
     .btns {
@@ -366,8 +377,28 @@ body {
         line-height: 26px;
         width: 75%;
     }
+
+    .main h2 {
+        font-size: 22px;
+    }
+    .card {
+        width: 90%;
+    }
+    .card_contents h3 {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 18px;
+    }
+    .card_contents p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
     
 }
+/* font-bold text-[16px] md:text-[24px] md:leading-[36px] leading-[24px] */
+
+/* font-normal text-[15px] leading-[24px] md:text-[16px] md:leading-[22px] */
 
 @media screen and (min-width: 768px) {
     .header {
@@ -402,17 +433,34 @@ body {
     .btns {
         width: 33%;
     }
-    .hero_img {
-    }
+
     .hero_img img{
         width: 78%;
         position: absolute;
         right: -100px;
         top: -17rem;
     }
+
+    .main h2 {
+        font-size: 24px;
+    }
+
+    .second_main {
+        min-height: 300px;
+    }
+    .second_section {
+        width: 100%;
+    }
+    .third_containt {
+        width: 65%;
+    }
+
+    .webner img{
+        width: 77%;
+    }
 }
 
-
+/* text-[16px] md:text-[32px] md:leading-[40px] leading-[20px] */
 
 @media screen and (min-width: 1000px) {
     .let {
