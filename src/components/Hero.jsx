@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./Button";
-import heroImg from "../assets/bro.png";
+import heroImg from "../assets/latest.png";
 import Typed from "typed.js";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -32,16 +32,15 @@ export const Hero = () => {
         <div className="intro_container text-[#FFFFFF] md:mt-0 mt-1 capitalize">
           <span
             id="target"
-            className="italic text-[#FFFFFF] Poppins text-[13px] md:text-[16px] font-normal md:font-semibold"
+            className="italic text-[#FFFFFF] Poppins text-[13px] font-normal md:font-semibold"
           ></span>
 
-          <div className="mt-2">
+          <div className="mt-2 titles">
             <p className="font-bold intro">
               all your reading materials are now in one place.
             </p>
-            <p className="mt-3.5 font-medium w-full md:w-[90%] sub_intro">
-              This website is a free resource for KUST students: Access
-              handouts, past exams questions, and study tips all at your finger tip.
+            <p className="mt-3.5 font-medium sub_intro">
+              Access handouts, past exams questions, and study tips all at your finger tip.
             </p>
           </div>
 

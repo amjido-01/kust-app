@@ -244,9 +244,10 @@ body {
     }
     .sub_intro {
         font-size: 16px;
-        line-height: 22px;
+        line-height: 24px;
     }
 }
+
 
 @media screen and (min-width: 400px) {
     .btns {
@@ -266,6 +267,7 @@ body {
     .sub_intro {
         font-size: 15px;
         line-height: 18px;
+        width: 90%;
     }
 }
 
@@ -345,11 +347,11 @@ body {
 }
 @media screen and (min-width: 600px) {
     .btns {
-        width: 50%;
+        width: 45%;
     }
 
     .hero_parent {
-        min-height: 470px;
+        min-height: 520px;
     }
     .hero {
         margin-top: 2rem;
@@ -357,17 +359,58 @@ body {
     
     .intro {
         font-size: 43px;
-        line-height: 50px;
+        line-height: 55px;
     }
     .sub_intro {
         font-size: 20px;
-        line-height: 22px;
+        line-height: 26px;
+        width: 75%;
     }
     
 }
 
+@media screen and (min-width: 768px) {
+    .header {
+        width: 85%;
+    }
+    .curve svg {
+        width: calc(177% + 1.3px) !important;
+        height: 168px !important;
+    }
 
-
+    .intro_container {
+        width: 55%;
+    }
+    .intro {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .titles {
+        width: 80%;
+    }
+    .sub_intro {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .hero_parent {
+        min-height: 500px;
+    }
+    .hero {
+        width: 85%;
+        margin-top: 6rem;
+    }
+    .btns {
+        width: 33%;
+    }
+    .hero_img {
+    }
+    .hero_img img{
+        width: 78%;
+        position: absolute;
+        right: -100px;
+        top: -17rem;
+    }
+}
 
 
 
@@ -422,43 +465,7 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) {
-    .curve svg {
-        width: calc(177% + 1.3px) !important;
-        height: 168px !important;
-        /* border: 1px solid green; */
-    }
 
-    .intro_container {
-        width: 55%;
-    }
-    .intro {
-        font-size: 24px;
-        line-height: 35px;
-    }
-    .sub_intro {
-        font-size: 11px;
-        line-height: 16px;
-    }
-    .hero_parent {
-        min-height: 580px;
-    }
-    .hero {
-        width: 90%;
-        margin-top: 7rem;
-    }
-    .btns {
-        width: 33%;
-    }
-    .hero_img {
-    }
-    .hero_img img{
-        width: 85%;
-        position: absolute;
-        right: -130px;
-        top: -19rem;
-    }
-}
 
 @media screen and (max-width: 1023px) {
     .curve svg {
