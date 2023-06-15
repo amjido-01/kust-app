@@ -102,7 +102,7 @@ export const Feedback = () => {
             data-aos="fade-up"
             ref={form}
             onSubmit={sendEmail}
-            className="w-full md:w-[45%] flex flex-col md:ml-aut md:py-8 mt-8 md:mt-0"
+            className="feedback_form flex flex-col md:ml-aut md:py-8 mt-8 md:mt-0"
           >
             <h2 className="text-[#000000] capitalize font-bold text-lg unbounded mb-1 title-font">
               want to say something

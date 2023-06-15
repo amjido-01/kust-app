@@ -458,6 +458,14 @@ body {
     .webner img{
         width: 77%;
     }
+
+    .fourth h2 {
+        font-size: 20px;
+    }
+
+    .feedback_form {
+        width: 90%;
+    }
 }
 
 /* text-[16px] md:text-[32px] md:leading-[40px] leading-[20px] */
