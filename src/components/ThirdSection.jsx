@@ -29,14 +29,14 @@ export const ThirdSection = () => {
         >
           <img
             src={Webiner}
-            className="object-cover webner md:mr-10 mb-8 w-[80%]"
+            className="object-cover webner md:mr-10 w-[80%]"
             alt="section_img"
           />
         </div>
 
         <div
           data-aos="fade-right"
-          className="text-[#D9D9D9] third_containt text-right md:text-end pb-10 pt-5"
+          className="text-[#D9D9D9] third_containt text-right md:text-end pb-10 "
         >
           <h1 className="font-bold text-[16px] leading-[32px] unbounded py-4">
             Technology advancement
