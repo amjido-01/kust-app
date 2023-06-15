@@ -18,7 +18,7 @@ export const Card = (props) => {
         className="flex max-w-md overflow-hidden py-3 px-10 md:px-3 my-3 text-center"
       >
         <div className="card_contents">
-          <div className="flex items-center  justify-center">
+          <div className="flex items-center justify-center">
             {props.icon}
             <h3 className="px-4">{props.title}</h3>
           </div>
