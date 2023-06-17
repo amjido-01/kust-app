@@ -40,7 +40,8 @@ export const Hero = () => {
               all your reading materials are now in one place.
             </p>
             <p className="mt-3.5 font-medium sub_intro">
-              Access handouts, past exams questions, and study tips all at your finger tip.
+              Access handouts, past exams questions, and study tips all at your
+              finger tip.
             </p>
           </div>
 
@@ -52,7 +53,7 @@ export const Hero = () => {
             ></Button>
 
             <Button
-              onSmash={() => navigate("/documents")}
+              onSmash={() => navigate("/study")}
               value="Study"
               cls_name="text-white z-10 flex rounded-[4px] hover:bg-transparent cursor bg start border-[2px] border-[#0F9D58] flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
             ></Button>
