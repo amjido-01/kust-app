@@ -38,7 +38,7 @@ export const HomePage = () => {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      <div className="text-red-500 text-lg absolute z-40">test</div>
+      <div className="text-red-500 text-lg fixed z-40 top-[70%]">test</div>
       <Fifth />
       <Sixth />
       <Feedback />
