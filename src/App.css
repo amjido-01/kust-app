@@ -1,107 +1,111 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    font-family: 'poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.down-triangle { 
-    width: 0;
-	height: 0;
-    border-radius: 0 0 150% 150%;
- }
- .border-style {
-	border-top: 30px solid #D9D9D9;
-
- }
- .border-style-two {
-	border-top: 30px solid #FC9E1C;
- }
+.down-triangle {
+  width: 0;
+  height: 0;
+  border-radius: 0 0 150% 150%;
+}
+.border-style {
+  border-top: 30px solid #d9d9d9;
+}
+.border-style-two {
+  border-top: 30px solid #fc9e1c;
+}
 
 .under {
-    display: inline-block;
-    position: relative;
-    color: #0F9D58;
-  }
-  
-  .under::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1.7px;
-    /* width: 50%; */
-    bottom: 0;
-    left: 0;
-    background-color: #0F9D58;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .under:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  display: inline-block;
+  position: relative;
+  color: #0f9d58;
+}
+
+.under::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.7px;
+  /* width: 50%; */
+  bottom: 0;
+  left: 0;
+  background-color: #0f9d58;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.under:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 .mobile {
-    width: 30%;
+  width: 30%;
 }
 .mobile-two {
-    width: 80%;
+  width: 80%;
 }
 
 .swiper-scrollbar-drag {
-    display: none;
+  display: none;
 }
 
-.swiper-scrollbar {display: none;}
-.swiper-scrollbar-horizontal {display: none;}
+.swiper-scrollbar {
+  display: none;
+}
+.swiper-scrollbar-horizontal {
+  display: none;
+}
 
 .swiper-pagination-bullet {
-    margin-top: 20px;
-    border: 2px solid green;
+  margin-top: 20px;
+  border: 2px solid green;
 }
 
 .swiper-button-next {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .swiper-pagination {
-    margin-top: 30px;
-    position: absolute;
-    bottom: 0;
+  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
-  
+
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 5px;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
 }
-   
+
 ::-webkit-scrollbar-thumb {
-    background: #212327;
-    border-radius: 5px;
+  background: #212327;
+  border-radius: 5px;
 }
-  
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #0F9D58; 
+  background: #0f9d58;
 }
 .lists {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 
-.swiper-button-prev, .swiper-button-next {
-    color: #666666 !important;
-
+.swiper-button-prev,
+.swiper-button-next {
+  color: #666666 !important;
 }
-.swiper-button-prev:after, .swiper-button-next:after {
-    font-size: 30px !important;
-    /* border-width: 30px !important; */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 30px !important;
+  /* border-width: 30px !important; */
 }
 
 /* .curve {
@@ -126,58 +130,56 @@ body {
     fill: #FFFFFF;
 } */
 
-
 .curvetwo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .curvetwo .shape-fill {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .slide-enter {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  
-  .slide-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: all 300ms ease-in;
-  }
-  
-  .slide-exit {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  .slide-exit-active {
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: all 300ms ease-in;
-  }
-  
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 300ms ease-in;
+}
+
+.slide-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
 
 .custom-shape-divider-bottom-1678378618 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1678378618 svg {
-    position: relative;
-    display: block;
-    width: calc(140% + 1.3px);
-    height: 80px;
+  position: relative;
+  display: block;
+  width: calc(140% + 1.3px);
+  height: 80px;
 }
 
 /* @media screen and (max-width: 500px) {
@@ -190,33 +192,33 @@ body {
 } */
 
 .unbounded {
-    font-family: 'Unbounded', cursive;
+  font-family: "Unbounded", cursive;
 }
 
 .dd {
-    text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 .progress-bar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #0F9D58;
-    margin-bottom: 8px;
-    transform-origin: 0%;
-  }
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0f9d58;
+  margin-bottom: 8px;
+  transform-origin: 0%;
+}
 
 .start {
-    cursor: pointer;
+  cursor: pointer;
 }
 .start:hover {
-    background-color: #75a7f6;
+  background-color: #75a7f6;
 }
 .let {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* @media screen and (max-width: 768px) {
@@ -227,556 +229,535 @@ body {
 } */
 
 @media screen and (min-width: 350px) {
-    .btns {
-        width: 73%;
-    }
+  .btns {
+    width: 73%;
+  }
 
-    .hero_parent {
-        min-height: 480px;
-    }
-    .hero {
-        margin-top: 2rem;
-    }
-    .intro {
-        font-size: 30px;
-        line-height: 40px;
-    }
-    .sub_intro {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    .main h2 {
-        font-size: 16px;
-    }
+  .hero_parent {
+    min-height: 480px;
+  }
+  .hero {
+    margin-top: 2rem;
+  }
+  .intro {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .sub_intro {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .main h2 {
+    font-size: 16px;
+  }
 
-    .card_contents h3 {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 24px;
-    }
-    .card_contents p {
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 22px;
-    }
+  .card_contents h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .card_contents p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+  }
 }
 
-
 @media screen and (min-width: 400px) {
-    .btns {
-        width: 65%;
-    }
+  .btns {
+    width: 65%;
+  }
 
-    .hero_parent {
-        min-height: 470px;
-    }
-    .hero {
-        margin-top: 2rem;
-    }
-    .intro {
-        font-size: 30px;
-        line-height: 40px;
-    }
-    .sub_intro {
-        font-size: 15px;
-        line-height: 18px;
-        width: 90%;
-    }
+  .hero_parent {
+    min-height: 470px;
+  }
+  .hero {
+    margin-top: 2rem;
+  }
+  .intro {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .sub_intro {
+    font-size: 15px;
+    line-height: 18px;
+    width: 90%;
+  }
 
-    .main h2 {
-        font-size: 18px;
-    }
+  .main h2 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 420px) {
-    .btns {
-        width: 58%;
-    }
+  .btns {
+    width: 58%;
+  }
 
-    .hero_parent {
-        min-height: 460px;
-    }
-    .hero {
-        margin-top: 2rem;
-    }
-    .intro {
-        font-size: 32px;
-        line-height: 41px;
-    }
-    .sub_intro {
-        font-size: 17px;
-        line-height: 17px;
-    }
+  .hero_parent {
+    min-height: 460px;
+  }
+  .hero {
+    margin-top: 2rem;
+  }
+  .intro {
+    font-size: 32px;
+    line-height: 41px;
+  }
+  .sub_intro {
+    font-size: 17px;
+    line-height: 17px;
+  }
 }
 @media screen and (min-width: 470px) {
-    .btns {
-        width: 58%;
-    }
+  .btns {
+    width: 58%;
+  }
 
-    .hero_parent {
-        min-height: 460px;
-    }
-    .hero {
-        margin-top: 2rem;
-    }
-    .intro {
-        font-size: 34px;
-        line-height: 41px;
-    }
-    .sub_intro {
-        font-size: 17px;
-        line-height: 19px;
-    }
+  .hero_parent {
+    min-height: 460px;
+  }
+  .hero {
+    margin-top: 2rem;
+  }
+  .intro {
+    font-size: 34px;
+    line-height: 41px;
+  }
+  .sub_intro {
+    font-size: 17px;
+    line-height: 19px;
+  }
 }
 
 @media screen and (min-width: 500px) {
-    .btns {
-        width: 50%;
-    }
+  .btns {
+    width: 50%;
+  }
 
-    .hero_parent {
-        min-height: 490px;
-    }
-    .hero {
-        margin-top: 2rem;
-    }
-    .intro {
-        font-size: 38px;
-        line-height: 45px;
-    }
-    .sub_intro {
-        font-size: 18px;
-        line-height: 20px;
-    }
+  .hero_parent {
+    min-height: 490px;
+  }
+  .hero {
+    margin-top: 2rem;
+  }
+  .intro {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .sub_intro {
+    font-size: 18px;
+    line-height: 20px;
+  }
 
-    .main h2 {
-        font-size: 20px;
-    }
+  .main h2 {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 530px) {
-    .btns {
-        width: 50%;
-    }
+  .btns {
+    width: 50%;
+  }
 
-    .hero_parent {
-        min-height: 470px;
-    }
-    .hero {
-        margin-top: 2rem;
-    }
-    
+  .hero_parent {
+    min-height: 470px;
+  }
+  .hero {
+    margin-top: 2rem;
+  }
 }
 @media screen and (min-width: 600px) {
-    .btns {
-        width: 45%;
-    }
+  .btns {
+    width: 45%;
+  }
 
-    .hero_parent {
-        min-height: 520px;
-    }
-    .hero {
-        margin-top: 2rem;
-    }
-    
-    .intro {
-        font-size: 43px;
-        line-height: 55px;
-    }
-    .sub_intro {
-        font-size: 20px;
-        line-height: 26px;
-        width: 75%;
-    }
+  .hero_parent {
+    min-height: 520px;
+  }
+  .hero {
+    margin-top: 2rem;
+  }
 
-    .main h2 {
-        font-size: 22px;
-    }
-    .card {
-        width: 90%;
-    }
-    .card_contents h3 {
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 18px;
-    }
-    .card_contents p {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 18px;
-    }
-    
+  .intro {
+    font-size: 43px;
+    line-height: 55px;
+  }
+  .sub_intro {
+    font-size: 20px;
+    line-height: 26px;
+    width: 75%;
+  }
+
+  .main h2 {
+    font-size: 22px;
+  }
+  .card {
+    width: 90%;
+  }
+  .card_contents h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+  }
+  .card_contents p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
 }
 /* font-bold text-[16px] md:text-[24px] md:leading-[36px] leading-[24px] */
 
 /* font-normal text-[15px] leading-[24px] md:text-[16px] md:leading-[22px] */
 
 @media screen and (min-width: 768px) {
-    .header {
-        width: 85%;
-    }
+  .header {
+    width: 85%;
+  }
 
-    .intro_container {
-        width: 55%;
-    }
-    .intro {
-        font-size: 24px;
-        line-height: 35px;
-    }
-    .titles {
-        width: 80%;
-    }
-    .sub_intro {
-        font-size: 11px;
-        line-height: 16px;
-    }
-    .hero_parent {
-        min-height: 500px;
-    }
-    .hero {
-        width: 85%;
-        margin-top: 6rem;
-    }
-    .btns {
-        width: 33%;
-    }
+  .intro_container {
+    width: 55%;
+  }
+  .intro {
+    font-size: 24px;
+    line-height: 35px;
+  }
+  .titles {
+    width: 80%;
+  }
+  .sub_intro {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .hero_parent {
+    min-height: 500px;
+  }
+  .hero {
+    width: 85%;
+    margin-top: 6rem;
+  }
+  .btns {
+    width: 33%;
+  }
 
-    .hero_img img{
-        width: 78%;
-        position: absolute;
-        right: -100px;
-        top: -17rem;
-    }
+  .hero_img img {
+    width: 78%;
+    position: absolute;
+    right: -100px;
+    top: -17rem;
+  }
 
-    .main h2 {
-        font-size: 24px;
-    }
+  .main h2 {
+    font-size: 24px;
+  }
 
-    .second_main {
-        min-height: 300px;
-    }
-    .second_section {
-        width: 100%;
-    }
-    .third_containt {
-        width: 65%;
-    }
+  .second_main {
+    min-height: 300px;
+  }
+  .second_section {
+    width: 100%;
+  }
+  .third_containt {
+    width: 65%;
+  }
 
-    .webner img{
-        width: 77%;
-    }
+  .webner img {
+    width: 77%;
+  }
 
-    .fourth h2 {
-        font-size: 20px;
-    }
+  .fourth h2 {
+    font-size: 20px;
+  }
 
-    .feedback_form {
-        width: 90%;
-    }
+  .feedback_form {
+    width: 90%;
+  }
 }
 
-
 @media screen and (min-width: 900px) {
-    .hero_parent {
-        min-height: 700px;
-    }
-    .hero_img img{
-        width: 75%;
-        position: absolute;
-        right: -100px;
-        top: -20rem;
-        border: 1px solid red;
-    }
-    .btns {
-        width: 30%;
-        border: 1px solid red;
-    }
+  .hero_parent {
+    min-height: 700px;
+  }
+  .hero_img img {
+    width: 75%;
+    position: absolute;
+    right: -100px;
+    top: -20rem;
+    
+  }
+  .btns {
+    width: 30%;
+    
+  }
 
-    .intro {
-        font-size: 26px;
-        line-height: 39px;
-        font-weight: 700;
-        border: 1px solid blue;
-        width: 100%;
-    }
-    .sub_intro {
-        font-size: 14px;
-        line-height: 21px;
-    }
+  .intro {
+    font-size: 26px;
+    line-height: 39px;
+    font-weight: 700;
+    width: 100%;
+  }
+  .sub_intro {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 @media screen and (min-width: 950px) {
-    .hero_parent {
-        min-height: 700px;
-    }
-    .hero_img img{
-        width: 70%;
-        position: absolute;
-        right: -45px;
-        top: -29rem;
-        border: 1px solid green;
-    }
-    .intro {
-        font-size: 48px;
-        line-height: 66px;
-        font-weight: 700;
-        border: 1px solid blue;
-        width: 100%;
-    }
-    .btns {
-        width: 30%;
-        border: 1px solid red;
-    }
-    
+  .hero_parent {
+    min-height: 700px;
+  }
+  .hero_img img {
+    width: 70%;
+    position: absolute;
+    right: -45px;
+    top: -29rem;
+  }
+  .intro {
+    font-size: 48px;
+    line-height: 66px;
+    font-weight: 700;
+    width: 100%;
+  }
+  .btns {
+    width: 30%;
+  }
 }
 /* text-[16px] md:text-[32px] md:leading-[40px] leading-[20px] */
 
 @media screen and (min-width: 1000px) {
-    .let {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 0px;
-    }
-    .box {
-        width: 45.5%;
-    }
+  .let {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 0px;
+  }
+  .box {
+    width: 45.5%;
+  }
 }
 
-
 @media screen and (min-width: 1100px) {
-    .hero_parent {
-        min-height: 700px;
-    }
-    .hero_img img{
-        width: 70%;
-        position: absolute;
-        right: -45px;
-        top: -29rem;
-        /* border: 1px solid green; */
-    }
-    .intro {
-        font-size: 48px;
-        line-height: 66px;
-        font-weight: 700;
-        border: 1px solid blue;
-        width: 100%;
-    }
-    .btns {
-        width: 25%;
-        border: 1px solid red;
-    }
-    
+  .hero_parent {
+    min-height: 700px;
+  }
+  .hero_img img {
+    width: 70%;
+    position: absolute;
+    right: -45px;
+    top: -29rem;
+    /* border: 1px solid green; */
+  }
+  .intro {
+    font-size: 48px;
+    line-height: 66px;
+    font-weight: 700;
+
+    width: 100%;
+  }
+  .btns {
+    width: 25%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .hero_parent {
-        min-height: 650px;
-    }
-    .hero_img img{
-        width: 60%;
-        position: absolute;
-        right: 8%;
-        top: -25rem;
-    }
-    .intro {
-        font-size: 48px;
-        line-height: 66px;
-        font-weight: 700;
-        border: 1px solid blue;
-        width: 100%;
-    }
-    .btns {
-        width: 20%;
-        border: 1px solid red;
-    }
-    
+  .hero_parent {
+    min-height: 650px;
+    margin-top: 1.1rem;
+  }
+  .hero_img img {
+    width: 65%;
+    position: absolute;
+    right: 2%;
+    top: -26rem;
+  }
+  .intro {
+    font-size: 48px;
+    line-height: 66px;
+    font-weight: 700;
+    width: 100%;
+  }
+  .btns {
+    width: 20%;
+  }
 }
 
 /* ------ */
 
-
 @media screen and (min-width: 425px) {
-    .look {
-        margin-top: 70px;
-    }  
+  .look {
+    margin-top: 70px;
+  }
 }
 @media screen and (min-width: 1000px) {
-    .look {
-        margin-top: 0px;
-    }  
+  .look {
+    margin-top: 0px;
+  }
 }
 
 @media screen and (min-width: 700px) {
-    .mobile-two {
-        position: absolute;
-        top: 2rem;
-    }
+  .mobile-two {
+    position: absolute;
+    top: 2rem;
+  }
 }
 @media screen and (min-width: 500px) {
-    .mobile-two {
-        top: 2rem;
-        width: 40%;
-    }
+  .mobile-two {
+    top: 2rem;
+    width: 40%;
+  }
 }
 @media screen and (min-width: 400px) {
-    .mobile-two {
-        top: 5rem;
-        width: 30%;
-    }
+  .mobile-two {
+    top: 5rem;
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 300px) {
-    .mobile-two {
-        width: 69%;
-    }
+  .mobile-two {
+    width: 69%;
+  }
 }
 
-
-
 @media screen and (max-width: 1023px) {
-    .curve svg {
-        width: calc(223% + 1.3px);
-        height: 317px;
-    }
+  .curve svg {
+    width: calc(223% + 1.3px);
+    height: 317px;
+  }
 }
 
 @media (max-width: 765px) {
-    .curve svg {
-        width: calc(149% + 1.3px);
-        height: 56px;
-    }
-    .curvetwo svg {
-        width: calc(155% + 1.3px);
-        height: 90px;
-    }
+  .curve svg {
+    width: calc(149% + 1.3px);
+    height: 56px;
+  }
+  .curvetwo svg {
+    width: calc(155% + 1.3px);
+    height: 90px;
+  }
 }
-
 
 @media screen and (min-width: 1000px) {
-    .curvetwo svg {
-        position: relative;
-        display: block;
-        width: calc(133% + 1.3px);
-        height: 162px;
-    }
+  .curvetwo svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 162px;
+  }
 }
 
-
 @media screen and (min-width: 120px) {
-    .custom-shape-divider-bottom-1678378618 svg {
-        position: relative;
-        display: block;
-        width: calc(135% + 1.3px);
-        height: 125px;
-    }
+  .custom-shape-divider-bottom-1678378618 svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 125px;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    .custom-shape-divider-bottom-1678378618 svg {
-        position: relative;
-        display: block;
-        width: calc(145% + 1.3px);
-        height: 66px;
-    }
+  .custom-shape-divider-bottom-1678378618 svg {
+    position: relative;
+    display: block;
+    width: calc(145% + 1.3px);
+    height: 66px;
+  }
 }
 
 .custom-shape-divider-bottom-1678378618 .shape-fill {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
-
 
 @media screen and (min-width: 430px) {
-    .test {
-        min-height: 500px;
-    }
+  .test {
+    min-height: 500px;
+  }
 }
 @media screen and (min-width: 490px) {
-    .test {
-        min-height: 540px;
-    }
+  .test {
+    min-height: 540px;
+  }
 }
 @media screen and (min-width: 580px) {
-    .test {
-        min-height: 580px;
-    }
+  .test {
+    min-height: 580px;
+  }
 }
 @media screen and (min-width: 580px) {
-    .test {
-        min-height: 600px;
-    }
+  .test {
+    min-height: 600px;
+  }
 }
 @media screen and (min-width: 768px) {
-    .test {
-        min-height: 400px;
-    }
+  .test {
+    min-height: 400px;
+  }
 }
 @media screen and (min-width: 1089px) {
-    .test {
-        min-height: 500px;
-    }
+  .test {
+    min-height: 500px;
+  }
 }
 
-
 .custom-shape-divider-top-1678566261 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .custom-shape-divider-top-1678566261 svg {
-    position: relative;
-    display: block;
-    width: calc(259% + 1.3px);
-    height: 72px;
-    transform: rotateY(180deg);
+  position: relative;
+  display: block;
+  width: calc(259% + 1.3px);
+  height: 72px;
+  transform: rotateY(180deg);
 }
 
 .custom-shape-divider-top-1678566261 .shape-fill {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
 
-
 .linear {
-    height: 350px !important;
-    background-color: #A7F9BE; /* For browsers that do not support gradients */
-    /* background-image: linear-gradient(red, yellow); */
-    background: linear-gradient(180deg, #A7F9BE 11.77%, rgba(234, 234, 234, 0.5) 57.11%);
+  height: 350px !important;
+  background-color: #a7f9be; /* For browsers that do not support gradients */
+  /* background-image: linear-gradient(red, yellow); */
+  background: linear-gradient(
+    180deg,
+    #a7f9be 11.77%,
+    rgba(234, 234, 234, 0.5) 57.11%
+  );
+}
+
+.feedback {
+  min-height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  .foot {
+    display: flex;
+    flex-wrap: wrap;
   }
+}
 
-
-  .feedback {
-    min-height: 200px;
-  }
-
-  @media screen and (max-width:600px) {
-    .foot {
-        display: flex;
-        flex-wrap: wrap;
-        
-    }
-  }
-
-
-  .foot-svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+.foot-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .foot-svg svg {
-    position: relative;
-    display: block;
-    width: calc(162% + 1.3px);
-    height: 80px;
+  position: relative;
+  display: block;
+  width: calc(162% + 1.3px);
+  height: 80px;
 }
 
 .foot-svg .shape-fill {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
