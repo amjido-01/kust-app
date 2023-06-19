@@ -27,7 +27,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] relative w-full  hero_parent py-16 md:py-8 px-[1.8rem] md:px-4">
+    <section className="bg-[#111] relative w-full  hero_parent py-16 md:py-8 px-[1.8rem] md:px-4">
       <div className=" hero items-center justify-center flex-col-reverse md:flex-row mx-auto ">
         <div className="intro_container text-[#FFFFFF] md:mt-0 mt-1 capitalize">
           <span
@@ -36,7 +36,21 @@ export const Hero = () => {
           ></span>
 
           <div className="mt-2 titles">
-            <p className="font-bold intro">
+            <svg
+              className="hero_svg"
+              viewBox="0 0 147 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.14611 11.1576C75.1333 16.3394 107.201 -10.5798 144.146 11.5135"
+                stroke="#DAA520"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p className="font-bold intro  text-[2.1rem] w-full leading-[48px] ">
               all your reading materials are now in one place.
             </p>
             <p className="mt-3.5 font-medium sub_intro">

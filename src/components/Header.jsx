@@ -24,7 +24,7 @@ export const Header = () => {
     };
   };
   return (
-    <nav className="bg-[#212327] font-bold justify px-6 sm:px-4 py-4 md:py-0 fixed w-full z-20 top-0 left-0">
+    <nav className="bg-[#111] font-bold justify px-6 sm:px-4 py-4 md:py-0 fixed w-full z-20 top-0 left-0">
       <div className="py-2 md:py-1 header flex flex-wrap justify-between items-center mx-auto">
         <div>
           <NavLink to="/" className="flex items-center">

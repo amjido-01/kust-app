@@ -114,7 +114,6 @@ body {
     line-height: 0;
     transform: rotate(180deg);
 }
-
 .curve svg {
     position: relative;
     display: block;
@@ -233,7 +232,14 @@ body {
     }
 
     .hero_parent {
-        min-height: 480px;
+        min-height: 550px;
+    }
+    .hero_svg {
+        position: relative;
+        top: 52px;
+        left: 180px;
+        width: 35%;
+        /* rotate: -10deg; */
     }
     .hero {
         margin-top: 2rem;
@@ -249,7 +255,6 @@ body {
     .main h2 {
         font-size: 16px;
     }
-
     .card_contents h3 {
         font-size: 16px;
         font-weight: 700;
