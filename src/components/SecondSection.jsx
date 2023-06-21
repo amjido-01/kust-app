@@ -16,7 +16,7 @@ export const SecondSection = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] second_main md:border-b-[1.5px] border-gray-700 relative py-16 md:py-2 px-8">
+    <section className="bg-[#111] second_main md:border-b-[1.5px] border-gray-700 relative py-16 md:py-2 px-8">
       <div className="second_section mx-auto flex flex-col md:flex-row items-center justify-center capitalize">
         <img
           src={comfetti}
@@ -30,19 +30,19 @@ export const SecondSection = () => {
         >
           <img
             src={SecondHeroImg}
-            className="object-cover w-[70%] md:w-[85%]"
+            className="object-cover w-[70%] md:w-[85%] md:ml-[2rem]"
             alt="section_img"
           />
         </div>
 
         <div
           data-aos="fade-left"
-          className="text-[#D9D9D9] md:w-1/2 text-start w-[95%] ml-6"
+          className="text-[#D9D9D9] md:w-1/2 text-start  w-[95%] ml-12"
         >
-          <h1 className="font-bold text-[16px] leading-[32px] py-4 unbounded">
+          <h1 className="font-bold text-[16px] md:mt-1 leading-[32px] py-4 unbounded">
             our struggle
           </h1>
-          <p>
+          <p className=" w-[60%] ">
           Our aim is to alleviate the challenges that students encounter when searching for reliable studying materials for their relevant courses. That’s why, we have developed this platform for your convenience.
           </p>
         </div>

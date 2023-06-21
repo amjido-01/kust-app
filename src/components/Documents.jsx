@@ -34,7 +34,7 @@ export const Documents = () => {
             <div className="container">
               <h1
                 style={{ fontFamily: "poppins" }}
-                className="md:text-center px-8 pt-4 uppercase text-[17px] font-semibold leading-[26px] md:text-[28px] md:leading-[42px] md:pt-5 md:font-medium"
+                className="md:text-center px-8 pt-4 uppercase text-[17px] font-bold leading-[26px] md:text-[24px] md:leading-[42px] md:pt-5 md:font-bold"
               >
                 FACULTIES
               </h1>

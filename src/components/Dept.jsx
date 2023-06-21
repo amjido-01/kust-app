@@ -25,7 +25,7 @@ export const Dept = (props) => {
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase my-2 font-semibold text-[20px] mt-[4rem] md:text-[32px] leading-[30px] md:leading-[49px]"
+              className="uppercase my-2 font-semibold text-[20px] md:mt-4 mt-[4rem] md:text-[32px] leading-[30px] md:leading-[49px]"
             >
               welcome to the department page
             </h1>

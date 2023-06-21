@@ -21,7 +21,7 @@ export const About = () => {
       imgURI: auto2,
       qoute:
         "if you love the design and everything you can see, Here is the dude behind it.",
-      name: "muhammad Ni’imatullahi aliyu",
+      name: "Muhammad Ni’imatullahi aliyu",
       level: "computer science level 200, kUST wudil.",
       role: "frontend developer, UI/UX designer. ",
       alt: "designer",
@@ -31,7 +31,7 @@ export const About = () => {
       imgURI: auto,
       qoute:
         "if you love the experience, Here is the soul that made it possible.",
-      name: "abubakar muhammad ala",
+      name: "Abubakar muhammad ala",
       level: "computer science level 200, kUST wudil.",
       role: "frontend software engineer.",
       alt: "developer",
@@ -47,12 +47,12 @@ export const About = () => {
       className="relative"
     >
       <Header />
-      <div className="container w-[90%] md:w-[50%] mx-auto mt-[7rem] flex items-center justify-center">
+      <div className="container w-[90%] md:w-full md:ml-36 mt-[8rem] ">
         <div className="text-start w-[90%] md:w-[70%]">
-          <h1 className="text-[#1F1F1F] font-bold md:font-bold leading-[28px] text-[18px] md:text-[19px]">
+          <h1 className="text-[#1F1F1F] font-bold md:font-bold uppercase leading-[28px] text-[18px] md:text-[28px]">
             We are a team of two programmers and designers
           </h1>
-          <p className=" font-normal leading-[21px] md:font-semibold text-[14px] md:text-[14px] mt-2">
+          <p className=" font-normal leading-[21px] md:font-normal text-[14px] md:text-[14px] mt-4">
             We are students of Kano University of Science and Technology (KUST),
             Wudil, Nigeria. We have dedicated our time for creating innovative
             solutions that provide simplicity to our esteemed fellow students of
@@ -60,7 +60,8 @@ export const About = () => {
           </p>
         </div>
       </div>
-      <img
+      <hr className="w-[80%] md:mx-auto md:my-4 "></hr>
+      <img 
         src={one}
         className="absolute top-[45%] md:top-16 w-[23px] md:w-[30px]"
         alt=""

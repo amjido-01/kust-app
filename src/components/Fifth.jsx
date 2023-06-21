@@ -13,7 +13,7 @@ export const Fifth = () => {
   }, []);
   return (
     <section className="min-h-[250px] pt-8 border-t border-gray-500 md:mt-[1.5rem] ">
-      <div className="container text-[#000000] flex justify-center items-center mx-auto capitalize">
+      <div className="container text-[#000000] flex justify-center items-center md:mt-4 md:mb-10  mx-auto capitalize">
         <div className="w-[80%] md:px-0 font-medium px-4 md:w-1/2 text-center">
           <h2
             data-aos="fade-up"
@@ -21,7 +21,7 @@ export const Fifth = () => {
           >
             our emphasis on education
           </h2>
-          <p data-aos="fade-up">
+          <p data-aos="fade-up" className=" text-xl font-medium">
             education is a valuable asset, and we believe whoever you help get
             knowledge you give him the greatest gift in life. that is why we
             decide to have your back on this journey, to make it simple for you

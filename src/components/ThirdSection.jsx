@@ -15,7 +15,7 @@ export const ThirdSection = () => {
   }, []);
 
   return (
-    <section className="bg-[#212327] test min-h-[200px] relative md:pb-1 pb-[3.5rem] px-8 md:px-5">
+    <section className="bg-[#111] test min-h-[200px] relative md:pb-10 pb-[3.5rem] px-8 md:px-5">
       <div className="mx-auto flex third_section flex-col md:flex-row-reverse items-center justify-between">
         <img
           src={secondconleft}
@@ -29,19 +29,19 @@ export const ThirdSection = () => {
         >
           <img
             src={Webiner}
-            className="object-cover webner md:mr-10 w-[80%]"
+            className="object-cover webner md:mr-14 w-[95%]"
             alt="section_img"
           />
         </div>
 
         <div
           data-aos="fade-right"
-          className="text-[#D9D9D9] third_containt text-right md:text-end pb-10 "
+          className="text-[#D9D9D9] third_containt text-right md:text-end pb-10"
         >
           <h1 className="font-bold text-[16px] leading-[32px] unbounded py-4">
             Technology advancement
           </h1>
-          <p>
+          <p className="md:w-[70%]">
           Technology advances and eases our lives daily. We strive to follow its dynamic changes and innovations that offer us new possibilities and solutions.
           </p>
         </div>

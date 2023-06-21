@@ -251,7 +251,7 @@ body {
     font-size: 16px;
   }
 
-  .card_contents h3 {
+  /* .card_contents h3 {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -260,7 +260,7 @@ body {
     font-size: 15px;
     font-weight: 400;
     line-height: 22px;
-  }
+  } */
 }
 
 @media screen and (min-width: 400px) {
@@ -394,7 +394,7 @@ body {
   .card {
     width: 90%;
   }
-  .card_contents h3 {
+  /* .card_contents h3 {
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
@@ -403,7 +403,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
-  }
+  } */
 }
 /* font-bold text-[16px] md:text-[24px] md:leading-[36px] leading-[24px] */
 
@@ -447,7 +447,7 @@ body {
   }
 
   .main h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .second_main {
@@ -457,7 +457,10 @@ body {
     width: 100%;
   }
   .third_containt {
-    width: 65%;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .webner img {
@@ -568,7 +571,7 @@ body {
     width: 65%;
     position: absolute;
     right: 2%;
-    top: -26rem;
+    top: -25rem;
   }
   .intro {
     font-size: 48px;
@@ -579,7 +582,12 @@ body {
   .btns {
     width: 20%;
   }
+  .Cards {
+    width: 250px;
+    
+  }
 }
+
 
 /* ------ */
 
@@ -721,7 +729,7 @@ body {
 }
 
 .linear {
-  height: 350px !important;
+  height: 450px !important;
   background-color: #a7f9be; /* For browsers that do not support gradients */
   /* background-image: linear-gradient(red, yellow); */
   background: linear-gradient(

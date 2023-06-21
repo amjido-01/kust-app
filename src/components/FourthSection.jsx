@@ -47,7 +47,7 @@ export const FourthSection = () => {
     <section className="md:w-[70%] fourth relative overflow-hidden mx-auto min-h-[200px] py-5 px-7 ">
       <h2
         data-aos="fade-right"
-        className="my-4 capitalize text-[#000000] font-bold px-1 unbounded"
+        className="my-4 capitalize text-[#000000] font-bold px-1 pt-8 pb-4 unbounded"
       >
         what students are saying about this site
       </h2>

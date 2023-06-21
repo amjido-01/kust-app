@@ -103,9 +103,9 @@ export const Materials = (props) => {
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase my-2 font-semibold text-[20px] mt-[2rem] md:text-[32px] leading-[31px] md:leading-[49px]"
+              className="uppercase my-2 font-semibold text-[20px] md:mt-4 mt-[2rem] md:text-[32px] leading-[31px] md:leading-[49px]"
             >
-              welcome to {props.department} {props.level} level download page
+              welcome to {props.department} sci, level {props.level} download page
             </h1>
             <p className="capitalize font-medium text-[14px] md:text-[16px] leading-[18px] md:leading-[28px]">
               Please select either the handout or the past question. Then,{" "}

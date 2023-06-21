@@ -17,14 +17,14 @@ export const Sixth = () => {
   }, []);
   return (
     <section className="linear relative px-8 md:px-4">
-      <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto min-h-[100px] md:w-[70%] mt-2">
+      <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto min-h-[150px] md:w-[70%] mt-2">
      
         <div
           data-aos="fade-right"
           className="md:w-[50%] md:mr-20 md:mt-20 text-[#000000] capitalize"
         >
           <div className="mt-20 md:mt-2 w-full md:w-full font-medium ">
-            <p className="text-[16px] pt-4 md:pt-0 leading-[24px]">
+            <p className="text-[16px] pt-4 md:pt-0 pb-8 leading-[24px]">
               We have devoted a lot of time and effort to collect and organize
               these materials for you, in order to spare you some hassle,
               expense and time. If you appreciate our work, please give us a
