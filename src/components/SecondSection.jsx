@@ -42,7 +42,7 @@ export const SecondSection = () => {
           <h1 className="font-bold text-[16px] md:mt-1 leading-[32px] py-4 unbounded">
             our struggle
           </h1>
-          <p className=" w-[60%] ">
+          <p className=" md:w-[60%] ">
           Our aim is to alleviate the challenges that students encounter when searching for reliable studying materials for their relevant courses. That’s why, we have developed this platform for your convenience.
           </p>
         </div>

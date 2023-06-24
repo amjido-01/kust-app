@@ -45,7 +45,7 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-8 flex absolute z-10 btns justify-between cursor-pointer">
+          <div className="md:mt-8 mt-12 flex absolute z-10 btns justify-between cursor-pointer">
             <Button
               onSmash={() => navigate("/documents")}
               value="Download Here"

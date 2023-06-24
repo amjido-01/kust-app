@@ -221,6 +221,15 @@ body {
   gap: 20px;
 }
 
+.deptborder {
+  border-bottom: 3px solid black;
+  padding-bottom: 10px;
+}
+
+.docBorder {
+  border-bottom: 3px solid black;
+  padding-bottom: 10px;
+}
 /* @media screen and (max-width: 768px) {
     .hero {
         border: 1px solid red;
@@ -230,25 +239,26 @@ body {
 
 @media screen and (min-width: 350px) {
   .btns {
-    width: 73%;
+    width: 65%;
   }
 
   .hero_parent {
-    min-height: 480px;
+    min-height: 600px;
   }
   .hero {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   .intro {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 58px;
   }
   .sub_intro {
     font-size: 16px;
     line-height: 24px;
   }
   .main h2 {
-    font-size: 16px;
+    font-size: 22px;
+    padding-top: 0.8em;
   }
 
   /* .card_contents h3 {
@@ -485,11 +495,9 @@ body {
     position: absolute;
     right: -100px;
     top: -20rem;
-    
   }
   .btns {
     width: 30%;
-    
   }
 
   .intro {
@@ -584,10 +592,8 @@ body {
   }
   .Cards {
     width: 250px;
-    
   }
 }
-
 
 /* ------ */
 

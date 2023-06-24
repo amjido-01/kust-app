@@ -29,19 +29,19 @@ export const ThirdSection = () => {
         >
           <img
             src={Webiner}
-            className="object-cover webner md:mr-14 w-[95%]"
+            className="object-cover webner -mr-4 md:mr-14 w-[95%]"
             alt="section_img"
           />
         </div>
 
-        <div
+        <div 
           data-aos="fade-right"
-          className="text-[#D9D9D9] third_containt text-right md:text-end pb-10"
+          className="text-[#D9D9D9] third_containt mr-10 text-right md:text-end pb-10"
         >
           <h1 className="font-bold text-[16px] leading-[32px] unbounded py-4">
             Technology advancement
           </h1>
-          <p className="md:w-[70%]">
+          <p className="md:w-[70%] ">
           Technology advances and eases our lives daily. We strive to follow its dynamic changes and innovations that offer us new possibilities and solutions.
           </p>
         </div>

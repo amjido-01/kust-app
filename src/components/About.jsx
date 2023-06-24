@@ -49,12 +49,12 @@ export const About = () => {
       <Header />
       <div className="container w-[90%] md:w-full md:ml-36 mt-[8rem] ">
         <div className="text-start w-[90%] md:w-[70%]">
-          <h1 className="text-[#1F1F1F] font-bold md:font-bold uppercase leading-[28px] text-[18px] md:text-[28px]">
+          <h1 className="text-[#1F1F1F] font-bold md:font-bold uppercase md:leading-[32px] leading-[28px] text-[18px] md:text-[28px]">
             We are a team of two programmers and designers
           </h1>
           <p className=" font-normal leading-[21px] md:font-normal text-[14px] md:text-[14px] mt-4">
             We are students of Kano University of Science and Technology (KUST),
-            Wudil, Nigeria. We have dedicated our time for creating innovative
+            Wudil, Nigeria. We have dedicated our time   for creating innovative
             solutions that provide simplicity to our esteemed fellow students of
             KUST Wudil.
           </p>

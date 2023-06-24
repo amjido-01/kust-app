@@ -30,7 +30,7 @@ export const Main = () => {
     <section className="relative flex-col main mt-[20px] justify-center items-center bg-[#FFFFFF] min-h-[300px] capitalize">
       <h2
         data-aos="fade-right"
-        className="text-[#000000] md:text-[36px] text-center font-bold mb-2 mt-20 px-1 unbounded"
+        className="text-[#000000] md:text-[36px] text-center font-bold md:mb-2 md:mt-20 px-1 unbounded"
       >
         You can get them all for free now!
       </h2>
@@ -41,7 +41,7 @@ export const Main = () => {
       />
 
       <div className="mx-auto md:mt-2 md:mb-24">
-        <div className="flex flex-col md:flex-row w-[70%] mt-[2rem] md:justify-evenly justify-center  items-center  mx-auto">
+        <div className="flex flex-col md:flex-row md:w-[70%] w-[60%] mt-[2rem] md:justify-evenly justify-center  items-center  mx-auto">
           <img src={comfort} className="Cards" data-aos="fade-up" alt="Comfortability Card" />
           <img src={reliable} className="Cards" data-aos="fade-up" alt="Reliability Card" />
           <img src={easy} className="Cards" data-aos="fade-up" alt="Easily Card" />
