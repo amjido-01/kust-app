@@ -239,18 +239,18 @@ body {
 
 @media screen and (min-width: 350px) {
   .btns {
-    width: 65%;
+    width: 70%;
   }
 
   .hero_parent {
     min-height: 600px;
   }
   .hero {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
   .intro {
-    font-size: 38px;
-    line-height: 58px;
+    font-size: 34px;
+    line-height: 52px;
   }
   .sub_intro {
     font-size: 16px;
@@ -259,6 +259,7 @@ body {
   .main h2 {
     font-size: 22px;
     padding-top: 0.8em;
+    margin: 0 1em;
   }
 
   /* .card_contents h3 {
@@ -735,7 +736,7 @@ body {
 }
 
 .linear {
-  height: 450px !important;
+  height: 420px;
   background-color: #a7f9be; /* For browsers that do not support gradients */
   /* background-image: linear-gradient(red, yellow); */
   background: linear-gradient(

@@ -21,7 +21,7 @@ export const Fifth = () => {
           >
             our emphasis on education
           </h2>
-          <p data-aos="fade-up" className=" md:text-xl font-medium">
+          <p data-aos="fade-up" className=" md:text-xl mb-12 font-medium text-justify">
             education is a valuable asset, and we believe whoever you help get
             knowledge you give him the greatest gift in life. that is why we
             decide to have your back on this journey, to make it simple for you

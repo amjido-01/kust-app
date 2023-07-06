@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import support from "../assets/support.png";
+import Support from "../assets/Support.png";
 import { Button } from "./Button";
 import { useNavigate } from "react-router-dom";
 
@@ -17,13 +17,16 @@ export const Sixth = () => {
   }, []);
   return (
     <section className="linear relative px-8 md:px-4">
-      <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto min-h-[150px] md:w-[70%] mt-2">
+      <div className="container flex items-center justify-center flex-col-reverse md:flex-row mx-auto min-h-[150px] md:w-[75%] mt-2">
      
         <div
           data-aos="fade-right"
           className="md:w-[50%] md:mr-20 md:mt-20 text-[#000000] capitalize"
         >
           <div className="mt-20 md:mt-2 w-full md:w-full font-medium ">
+            <blockquote className=" text-[1.3rem] font-bold my-4 md:text-[1.8rem]">
+              "We rise by lifting others"
+            </blockquote>
             <p className="text-[16px] pt-4 md:pt-0 leading-[24px]">
               We have devoted a lot of time and effort to collect and organize
               these materials for you, in order to spare you some hassle,
@@ -32,7 +35,7 @@ export const Sixth = () => {
             </p>
           </div>
 
-          <div className="mt-4">
+          <div className="mt-4 md:mb-60">
             <Button
               onSmash={() => navigate("/support-us")}
               value="Support Us"
@@ -43,13 +46,13 @@ export const Sixth = () => {
 
         <div
           data-aos="fade-up"
-          className="hidden md:mt-20 z-10 md:flex justify-center w-[70%] md:w-[40%]"
+          className="hidden md:flex md:justify-between md:-mt-36  md:-mr-6 w-[70%] md:w-[50%]"
         >
-          <img src={support} className="" alt="hero_icon" />
+          <img src={Support} className="" alt="hero_icon" />
         </div>
       </div>
 
-      <div className="custom-shape-divider-top-1678566261">
+      <div className=" hidden custom-shape-divider-top-1678566261">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

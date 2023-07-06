@@ -142,7 +142,7 @@ export const Footer = ({ className }) => {
           </div>
         </div>
       </footer>
-      <div className="foot-svg">
+      <div className=" hidden foot-svg">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

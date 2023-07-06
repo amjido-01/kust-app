@@ -27,7 +27,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-[#111] relative w-full  hero_parent py-16 md:py-8 px-[1.8rem] md:px-4">
+    <section className="bg-[#111] relative  hero_parent py-16 md:py-8 px-[1.8rem] md:px-4">
       <div className=" hero items-center justify-center flex-col-reverse md:flex-row mx-auto ">
         <div className="intro_container md:ml-10 text-[#FFFFFF] md:mt-[8rem] mt-1 capitalize">
           <span
