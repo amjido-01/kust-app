@@ -42,14 +42,14 @@ export const Autor = ({
         placeholderSrc={placeHolder}
         alt={alt}
       />
-      <div className="content capitalize text-center bg-[#D9D9D9] rounded-[8px] w-[90%] md:w-[70%] p-2 md:p-1 mx-auto">
+      <div className="content capitalize text-center bg-[#eee] rounded-[8px] w-[90%] md:w-[70%] p-2 md:p-1 mx-auto">
         <h1 className="font-semibold md:font-bold text-[14px] md:text-[18px]">
           {name}
         </h1>
-        <p className="font-semibold md:font-bold text-[11px] md:text-[14px]">
+        <p className="font-semibold md:font-normal text-[11px] md:text-[14px]">
           {level}
         </p>
-        <span className=" italic text-[12px] md:text-[13px] font-normal">
+        <span className="text-[12px] md:font-bold md:text-[13px] font-normal">
           {role}
         </span>
       </div>

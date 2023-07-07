@@ -21,11 +21,11 @@ export const Documents = () => {
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase my-2 font-semibold text-[18px] w-full md:text-[32px] leading-[20px] md:leading-[49px]"
+              className="uppercase font-semibold mb-1 text-[18px] w-full md:text-[32px] leading-[20px] md:leading-[49px]"
             >
               welcome to the document page
             </h1>
-            <p className="capitalize font-medium text-[14px] md:text-[16px] leading-[14px] md:leading-[28px]">
+            <p className="capitalize font-normal text-[14px] md:text-[18px] leading-[14px] md:leading-[28px]">
               choose your faculty and click/tap to proceed.
             </p>
           </div>
@@ -34,12 +34,12 @@ export const Documents = () => {
             <div className="container">
               <h1
                 style={{ fontFamily: "poppins" }}
-                className="md:text-center px-8 pt-4 uppercase text-[17px] font-semibold leading-[26px] md:text-[28px] md:leading-[42px] md:pt-5 md:font-medium"
+                className="md:text-center px-8 pt-4 text-center docBorder uppercase text-[17px] font-bold leading-[26px] md:text-[24px] md:leading-[42px] md:pt-4 md:font-bold"
               >
                 FACULTIES
               </h1>
 
-              <div className="pb-[20px] pt-1 px-[2.5rem] md:px-8 md:py-[50px] flex flex-col md:flex-row md:items-center md:justify-center">
+              <div className="pb-[20px] pt-1 px-[2.5rem] md:px-8 md:pt-[10px] md:pb-[6rem] flex flex-col md:flex-row md:items-center md:justify-center">
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
                   <ul className=" list-disc ">
                     <li className="md:px-0.5 py-[4px] md:py-1 text-[12px] font-medium md:text-[18px] leading-[17px] text-[#1F1F1F] md:font-medium md:leading-[27px]">

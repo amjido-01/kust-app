@@ -10,6 +10,8 @@ import { Sixth } from "./Sixth";
 import { Feedback } from "./Feedback";
 import { Footer } from "./Footer";
 import { motion } from "framer-motion";
+// import {AiOutlineToTop} from "react-icons/ai";
+import { ScrollBtn } from "./ScrollBtn";
 
 export const HomePage = () => {
   // initial={{ opacity: 0, scale: 0.5 }}
@@ -38,10 +40,12 @@ export const HomePage = () => {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      <div className="text-red-500 text-lg fixed z-40 top-[70%]">test</div>
-      <Fifth />
+
+      {/* <button className="text-red-500 text-lg fixed z-40 top-[70%]"><AiOutlineToTop /></button> */}
+      <Fifth /> 
       <Sixth />
       <Feedback />
+      <ScrollBtn />
       <Footer className="relative" />
     </motion.div>
   );

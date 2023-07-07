@@ -20,14 +20,14 @@ export const Dept = (props) => {
     >
       <Header />
 
-      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[1.8rem] md:mt-[7rem] flex-1">
+      <div className="container w-[92%] p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[1.8rem] md:mt-[7rem] flex-1">
         <div className="look flex flex-col justify-center">
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase my-2 font-semibold text-[20px] mt-[4rem] md:text-[32px] leading-[30px] md:leading-[49px]"
+              className="uppercase font-semibold text-[20px] md:mt-1 mt-[3rem] md:text-[32px] leading-[30px] md:leading-[49px]"
             >
-              welcome to the department page
+              welcome to the dept page
             </h1>
             <p className="capitalize font-medium text-[14px] md:text-[16px] leading-[18px] md:leading-[28px]">
               choose between department and select your level. then, to
@@ -39,12 +39,12 @@ export const Dept = (props) => {
             <div className="container">
               <h2
                 style={{ fontFamily: "poppins" }}
-                className="px-3 uppercase text-[14px] md:pl-12 pt-4 font-semibold leading-[20px] md:text-[24px] md:pt-5 md:font-semibold"
+                className="px-2 uppercase deptborder text-center text-[14px] md:py-8 pt-4 font-semibold leading-[20px] md:text-[24px] md:font-semibold"
               >
                 {props.faculty}
               </h2>
 
-              <div className="block  md:flex justify-evenly font-medium md:text-[16px] uppercase my-2 pb-[20px] pt-1 md:pl-6 md:px-8">
+              <div className="block md:flex justify-evenly font-medium md:text-[16px] uppercase pb-[20px] pt-1 md:pl-6 md:px-8">
                 <div className="flex justify-evenly md:justify-around mt-2 mb-4 w-full md:w-1/2 text-[11px] leading-[16px] font-semibold md:text-[18px] md:leading-[30px]">
                   <div className="">
                     <h3 className="text-[13px] font-semibold md:text-[18px] mr-4">
@@ -111,7 +111,7 @@ export const Dept = (props) => {
                     </ul>
                   </div>
 
-                  <div>
+                  <div className="ml-5">
                     <h3 className="text-[13px] font-semibold md:text-[18px]">
                       {props.deptFour}
                     </h3>
