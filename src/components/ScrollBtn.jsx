@@ -27,12 +27,12 @@ export const ScrollBtn = () => {
   return (
     <div>
         <button
-      className={`fixed bottom-4 right-4 p-2 z-20 rounded-full bg-gray-500 text-white ${
+      className={`fixed bottom-8 right-8 p-2 z-20 rounded-full bg-gray-500 text-white ${
         isVisible ? 'visible' : 'invisible'
       }`}
       onClick={scrollToTop}
     >
-        <AiOutlineToTop />
+        <AiOutlineToTop className='w-8 h-8'/>
     </button>
     </div>
   )
