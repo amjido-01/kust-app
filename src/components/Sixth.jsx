@@ -2,7 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Support from "../assets/Support.png";
+// import Support from "../assets/Support.png";
+import Support from "../assets/support.png"
 import { Button } from "./Button";
 import { useNavigate } from "react-router-dom";
 
