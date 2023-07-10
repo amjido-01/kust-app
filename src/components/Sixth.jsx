@@ -49,6 +49,8 @@ export const Sixth = () => {
           className="hidden md:flex md:justify-between md:-mt-36  md:-mr-6 w-[70%] md:w-[50%]"
         >
           <img src={Support} className="" alt="hero_icon" />
+
+  
         </div>
       </div>
 
