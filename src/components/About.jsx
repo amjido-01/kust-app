@@ -47,21 +47,21 @@ export const About = () => {
       className="relative"
     >
       <Header />
-      <div className="container w-[90%] md:w-full md:ml-36 mt-[8rem] ">
-        <div className="text-start w-[90%] md:w-[70%]">
+      <div className="container w-[90%] mt-24 ml-6 md:w-full md:ml-36 md:mt-[8rem] ">
+        <div className="text-start w-[95%] md:w-[70%]">
           <h1 className="text-[#1F1F1F] font-bold md:font-bold uppercase md:leading-[32px] leading-[28px] text-[18px] md:text-[28px]">
-            We are a team of two programmers and designers
+            We are a team of two programmers
           </h1>
-          <p className=" font-normal leading-[21px] md:font-normal text-[14px] md:text-[14px] mt-4">
+          <p className=" font-normal leading-[21px] text-justify md:font-normal pb-2 text-[14px] md:text-[14px] mt-1">
             We are students of Kano University of Science and Technology (KUST),
-            Wudil, Nigeria. We have dedicated our time   for creating innovative
+            Wudil, Nigeria. We have dedicated our time for creating innovative
             solutions that provide simplicity to our esteemed fellow students of
             KUST Wudil.
           </p>
         </div>
       </div>
-      <hr className="w-[80%] md:mx-auto md:my-4 "></hr>
-      <img 
+      <hr className="w-[80%] mx-auto md:my-4 "></hr>
+      <img
         src={one}
         className="absolute top-[45%] md:top-16 w-[23px] md:w-[30px]"
         alt=""
@@ -95,7 +95,7 @@ export const About = () => {
       <div className="container w-[90%] md:w-[70%] mx-auto my-10">
         <div className="container flex flex-col md:flex-row">
           <Autor
-            cls_name={'text-[#000000]'}
+            cls_name={"text-[#000000]"}
             src={person[0].imgURI}
             placeHolder={autosq}
             quote={person[0].qoute}

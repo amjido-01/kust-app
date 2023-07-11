@@ -77,7 +77,6 @@ export const Materials = (props) => {
     }
   };
 
-
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
@@ -98,27 +97,28 @@ export const Materials = (props) => {
     >
       <Header />
 
-      <div className="container w-full p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[3.8rem] md:mt-[7rem] flex-1">
+      <div className="container w-[85%] md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[3.8rem] md:mt-[7rem] flex-1">
         <div className="look flex flex-col justify-center">
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
               className="uppercase font-semibold text-[20px] md:mt-2 mt-[2rem] md:text-[32px] leading-[31px] md:leading-[49px]"
             >
-              welcome to {props.department} sci, level {props.level} download page
+              welcome to {props.department} sci, level {props.level} download
+              page
             </h1>
-            <p className="capitalize font-medium text-[14px] md:text-[16px] leading-[18px] md:leading-[28px]">
-              Please select either the handout or the past question. Then,{" "}
-            click on the download button to receive it on your device.
+            <p className="capitalize text-justify font-medium text-[14px] md:text-[16px] leading-[18px] md:leading-[28px]">
+              Please select either the handout or the past question. Then, click
+              on the download button to receive it on your device.
             </p>
           </div>
 
-          <h4 className="uppercase bg-[#0F9D58] mb-[8px] px-4 w-[11rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-[6px]">
-            first semester
-          </h4>
-
-          <div className="relative my-3" data-te-input-wrapper-init>
-            {/* <input
+          <div className=" flex justify-between my-4">
+            <h4 className="uppercase bg-[#0F9D58] mb-[8px] text-center w-[10.5rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-3">
+              first semester
+            </h4>
+            <div className="" data-te-input-wrapper-init>
+              {/* <input
               value={searchQuery}
               onChange={handleSearch}
               type="search"
@@ -131,7 +131,8 @@ export const Materials = (props) => {
             >
               Search
             </label> */}
-            <InputSearch value={searchQuery} onChange={handleSearch}/>
+              <InputSearch value={searchQuery} onChange={handleSearch} />
+            </div>
           </div>
 
           <div className="container mx-auto">

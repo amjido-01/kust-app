@@ -280,23 +280,25 @@ body {
   }
 
   .hero_parent {
-    min-height: 470px;
+    min-height: 480px;
   }
   .hero {
     margin-top: 2rem;
+    padding-left: 1em;
   }
   .intro {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 48px;
+    
   }
   .sub_intro {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 22px;
     width: 90%;
   }
 
   .main h2 {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 

@@ -39,7 +39,7 @@ export const Documents = () => {
                 FACULTIES
               </h1>
 
-              <div className="pb-[20px] pt-1 px-[2.5rem] md:px-8 md:pt-[10px] md:pb-[6rem] flex flex-col md:flex-row md:items-center md:justify-center">
+              <div className=" pt-1 px-[2.5rem] md:px-8 md:pt-[10px] pb-[5rem] flex flex-col md:flex-row md:items-center md:justify-center">
                 <div className="w-[100%] flex justify-center items-center mx-auto md:w-[45%]">
                   <ul className=" list-disc ">
                     <li className="md:px-0.5 py-[4px] md:py-1 text-[12px] font-medium md:text-[18px] leading-[17px] text-[#1F1F1F] md:font-medium md:leading-[27px]">

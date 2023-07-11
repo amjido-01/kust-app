@@ -20,7 +20,7 @@ export const Dept = (props) => {
     >
       <Header />
 
-      <div className="container w-[92%] p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[1.8rem] md:mt-[7rem] flex-1">
+      <div className="container w-[92%] p-4 md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[1.8rem] md:mt-[7rem] flex-1 pb-10">
         <div className="look flex flex-col justify-center">
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
