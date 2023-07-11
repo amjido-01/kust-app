@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 export const Footer = ({ className }) => {
   const navigate = useNavigate();
   const presentYear = new Date();
-  const test = presentYear.getFullYear()
+  const test = presentYear.getFullYear();
   return (
     <section className={className}>
       <footer className="bg-[#263238] text-[#F5F5F5]">
@@ -37,13 +37,18 @@ export const Footer = ({ className }) => {
                 </h2>
                 <ul className="flex flex-col gap-2 font-medium text-[12px] uppercase">
                   <li>
-                  <NavLink to="/documents" className="hover:underline">
+                    <NavLink to="/documents" className="hover:underline">
                       Documents
                     </NavLink>
                   </li>
                   <li>
-                  <NavLink to="/study" className="hover:underline">
+                    <NavLink to="/study" className="hover:underline">
                       study
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/upload" className="hover:underline">
+                      upload
                     </NavLink>
                   </li>
                 </ul>

@@ -19,7 +19,7 @@ export const Support = () => {
               style={{ fontFamily: "poppins" }}
               className="uppercase my-2 font-semibold text-[17px] md:text-[32px] leading-[31px] md:leading-[49px]"
             >
-              Great futures are not built alone, but <br /> with the help of
+              Great futures are not built alone, but with the help of
               individuals like you !
             </h1>
             <p className="capitalize font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">

@@ -113,8 +113,8 @@ export const Materials = (props) => {
             </p>
           </div>
 
-          <div className=" flex justify-between my-4">
-            <h4 className="uppercase bg-[#0F9D58] mb-[8px] text-center w-[10.5rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-3">
+          <div className=" flex justify-between mb-4 items-center">
+            <h4 className="uppercase bg-[#0F9D58] text-center w-[10.5rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-3">
               first semester
             </h4>
             <div className="relative my-3" data-te-input-wrapper-init>

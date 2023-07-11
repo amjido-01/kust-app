@@ -10,23 +10,23 @@ import { Data } from "./src/Data";
 
 export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
-  const [isAuthenticated, setISAuthenticated] = useState(false);
+  // const [isAuthenticated, setISAuthenticated] = useState(false);
   const [error, setError] = useState("");
-  const [showForm, setShowForm] = useState(true);
-  const [disabled, setDisabled] = useState(true);
+  // const [showForm, setShowForm] = useState(true);
+  // const [disabled, setDisabled] = useState(true);
   const [inputDisabled, setInputDisabled] = useState(true);
   const [selectedFaculty, setSelectedFaculty] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedType, setSelectedType] = useState("")
-  const [credentials, setCredentials] = useState({
-    email: "youndsadeeq10@gmail.com",
-    password: "123456",
-  });
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
+  // const [credentials, setCredentials] = useState({
+  //   email: "youndsadeeq10@gmail.com",
+  //   password: "123456",
+  // });
+  // const [user, setUser] = useState({
+  //   email: "",
+  //   password: "",
+  // });
 
   // updating the input file field to null after submissinon
   const inputRef = useRef(null);
@@ -103,23 +103,23 @@ export const Upload = (props) => {
     setError("please provide your credentials");
   };
 
-  const handleUserEmail = (e) => {
-    setUser((prev) => {
-      return {
-        ...prev,
-        email: e.target.value,
-      };
-    });
-  };
+  // const handleUserEmail = (e) => {
+  //   setUser((prev) => {
+  //     return {
+  //       ...prev,
+  //       email: e.target.value,
+  //     };
+  //   });
+  // };
 
-  const handleUserPassword = (e) => {
-    setUser((prev) => {
-      return {
-        ...prev,
-        password: e.target.value,
-      };
-    });
-  };
+  // const handleUserPassword = (e) => {
+  //   setUser((prev) => {
+  //     return {
+  //       ...prev,
+  //       password: e.target.value,
+  //     };
+  //   });
+  // };
 
   const uploadHandout = (e) => {
     console.log("called");
@@ -170,8 +170,8 @@ export const Upload = (props) => {
   };
   return (
     <div>
-      <div className="border-2 border-red-400">
-        {showForm ? (
+     {/* <div className="border-2 border-red-400">
+         {showForm ? (
           <form
             className="border-2 border-red-400"
             onSubmit={formSubmitHandler}
@@ -195,9 +195,9 @@ export const Upload = (props) => {
         ) : (
           ""
         )}
-      </div>
+      </div> */}
 
-      {isAuthenticated ? (
+      {/* {isAuthenticated ? ( */}
         <div className="border-2 border-red-400">
           <div>
             <select value={selectedFaculty} onChange={handleFacultyChange}>
@@ -271,11 +271,11 @@ export const Upload = (props) => {
           />
           <p>{percent} uploaded</p>
         </div>
-      ) : (
+      {/* ) : (
         <p style={{ color: "red" }} className="text-red-500 text-4xl">
           {error}
         </p>
-      )}
+      )} */}
     </div>
   );
 };

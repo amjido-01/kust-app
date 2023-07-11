@@ -16,7 +16,7 @@ const InputSearch = (props) => {
           className="p-2 rounded focus:outline-none sm:hidden"
           onClick={toggleExpand}
         >
-        <CiSearch />
+        <CiSearch className='text-[1.8em]'/>
         </button>
         <CSSTransition
           in={expanded}
@@ -28,7 +28,7 @@ const InputSearch = (props) => {
           value={props.value}
           onChange={props.onChange}
             type="text"
-            className={`pl-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 sm:ml-4 sm:w-40`}
+            className={`pl-4 py-2 w-[80%] bg-[#EEEEEE] my-auto rounded focus:outline-none focus:ring-1 focus:ring-[#111] sm:ml-4 sm:w-40`}
             placeholder="Search"
           />
         </CSSTransition>
