@@ -117,7 +117,7 @@ export const Materials = (props) => {
             <h4 className="uppercase bg-[#0F9D58] mb-[8px] text-center w-[10.5rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-3">
               first semester
             </h4>
-            <div className="" data-te-input-wrapper-init>
+            <div className="relative my-3" data-te-input-wrapper-init>
               {/* <input
               value={searchQuery}
               onChange={handleSearch}
