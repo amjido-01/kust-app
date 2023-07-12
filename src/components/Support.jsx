@@ -14,12 +14,12 @@ export const Support = () => {
     >
       <Header />
 
-      <div className="container w-full p-4  md:p-0 md:w-[75%] md:mb-20 mx-auto mt-[5rem] md:mt-[8rem] flex-1">
-        <div className="look flex flex-col border-2 justify-center">
+      <div className="container w-[90%] p-4  md:p-0 md:w-[75%] md:mb-20 mx-auto mt-[5rem] md:mt-[8rem] flex-1">
+        <div className="look flex flex-col justify-center">
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="capitalize text-start font-semibold text-[17px] md:text-[32px] leading-[24px] md:leading-[49px]"
+              className="capitalize text-start font-semibold text-[1.4rem] md:text-[32px] leading-[32px] mb-2  md:leading-[49px]"
             >
               Great future are not built alone, but with the help of individuals
               like you !
@@ -31,9 +31,9 @@ export const Support = () => {
           </div>
         </div>
 
-        <div className="container border-2 border-red-500">
+        <div className="container h-[30rem] md:flex md:items-center">
           <div className="md:w-[45%]">
-            <h3 className="text-[1.5rem] font-bold ">Contribute</h3>
+            <h3 className="md:text-[1.5rem] text-[1.2rem] mt-4 font-bold ">Contribute</h3>
             <p className="text-justify pt">
               By contributing with a single handout or past examination
               question, you have the potential to assist thousands of students
