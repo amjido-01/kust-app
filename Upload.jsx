@@ -18,7 +18,7 @@ export const Upload = (props) => {
   const [selectedFaculty, setSelectedFaculty] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("");
-  const [selectedType, setSelectedType] = useState("")
+  const [selectedType, setSelectedType] = useState("");
   // const [credentials, setCredentials] = useState({
   //   email: "youndsadeeq10@gmail.com",
   //   password: "123456",
@@ -48,33 +48,33 @@ export const Upload = (props) => {
     Checking: ["100", "200", "300", "400", "500"],
     Working: ["100", "200", "300", "400", "500"],
   };
-  const types = ["Handout", "Past question"]
+  const types = ["Handout", "Past question"];
 
   const handleFacultyChange = (e) => {
     const selectedFaculty = e.target.value;
     setSelectedFaculty(selectedFaculty);
     setSelectedDepartment("");
     setSelectedLevel("");
-    setSelectedType("")
+    setSelectedType("");
   };
 
   const handleDepartmentChange = (e) => {
     const selectedDepartment = e.target.value;
     setSelectedDepartment(selectedDepartment);
     setSelectedLevel("");
-    setSelectedType("")
+    setSelectedType("");
   };
 
   const handleLevelChange = (e) => {
     const selectedLevel = e.target.value;
     setSelectedLevel(selectedLevel);
-    setSelectedType("")
+    setSelectedType("");
   };
 
   const handleTypeChange = (e) => {
     const selectedType = e.target.value;
-    setSelectedType(selectedType)
-  }
+    setSelectedType(selectedType);
+  };
 
   useEffect(() => {
     // Check if all required values are selected
@@ -166,11 +166,12 @@ export const Upload = (props) => {
     console.log("Selected Faculty:", selectedFaculty);
     console.log("Selected Department:", selectedDepartment);
     console.log("Selected Level:", selectedLevel);
-    console.log("selectedType:", selectedType)
+    console.log("selectedType:", selectedType);
   };
   return (
-    <div>
-     {/* <div className="border-2 border-red-400">
+    <section className="">
+      <div className="flex border-2 items-center justify-center hh">
+        {/* <div className="border-2 border-red-400">
          {showForm ? (
           <form
             className="border-2 border-red-400"
@@ -197,21 +198,28 @@ export const Upload = (props) => {
         )}
       </div> */}
 
-      {/* {isAuthenticated ? ( */}
-        <div className="border-2 border-red-400">
-          <div>
-            <select value={selectedFaculty} onChange={handleFacultyChange}>
-              <option value="">Select Faculty</option>
-              {faculties.map((faculty) => (
-                <option key={faculty} value={faculty}>
-                  {faculty}
-                </option>
-              ))}
-            </select>
-            <br />
-            <br />
+        {/* {isAuthenticated ? ( */}
+        <div className=" contribute md:w-[40%] bg-[#eee]">
+          <div className="">
+            <h1>Contribute</h1>
 
-            {/* {selectedFaculty && (
+            <div className="mx-auto">
+              <select
+                className=""
+                value={selectedFaculty}
+                onChange={handleFacultyChange}
+              >
+                <option value="" className="">Select Faculty</option>
+                {faculties.map((faculty) => (
+                  <option key={faculty} value={faculty}>
+                    {faculty}
+                  </option>
+                ))}
+              </select>
+              <br />
+              <br />
+
+              {/* {selectedFaculty && (
               <select
                 value={selectedDepartment}
                 onChange={handleDepartmentChange}
@@ -224,22 +232,22 @@ export const Upload = (props) => {
                 ))}
               </select>
             )} */}
-            <select
-              value={selectedDepartment}
-              onChange={handleDepartmentChange}
-            >
-              <option value="">Select Department</option>
-              {selectedFaculty &&
-                departments[selectedFaculty].map((department, index) => (
-                  <option key={index} value={department}>
-                    {department}
-                  </option>
-                ))}
-            </select>
+              <select
+                value={selectedDepartment}
+                onChange={handleDepartmentChange}
+              >
+                <option value="">Select Department</option>
+                {selectedFaculty &&
+                  departments[selectedFaculty].map((department, index) => (
+                    <option key={index} value={department}>
+                      {department}
+                    </option>
+                  ))}
+              </select>
 
-            <br />
-            <br />
-            {/* {selectedDepartment && (
+              <br />
+              <br />
+              {/* {selectedDepartment && (
               <select value={selectedLevel} onChange={handleLevelChange}>
                 <option value="">Select Level</option>
                 {departmentLevels[selectedDepartment].map((level) => (
@@ -249,33 +257,54 @@ export const Upload = (props) => {
                 ))}
               </select>
             )} */}
-            <select value={selectedLevel} onChange={handleLevelChange}>
-              <option value="">Select Level</option>
-              {selectedDepartment && departmentLevels[selectedDepartment].map((item, index) => <option key={index} value={item
-              }>{item}</option>)}
-            </select>
-          </div>
+              <select value={selectedLevel} onChange={handleLevelChange}>
+                <option value="">Select Level</option>
+                {selectedDepartment &&
+                  departmentLevels[selectedDepartment].map((item, index) => (
+                    <option key={index} value={item}>
+                      {item}
+                    </option>
+                  ))}
+              </select>
 
-          <select value={selectedType} onChange={handleTypeChange}>
-            <option value="">Select Type</option>
-            {selectedLevel && types.map((type, index) => <option value={type} key={index}>{type}</option> )}
-          </select>
-          {/* <br/>
+              <br />
+              <br />
+              <select value={selectedType} onChange={handleTypeChange}>
+              <option value="">Select Type</option>
+              {selectedLevel &&
+                types.map((type, index) => (
+                  <option value={type} key={index}>
+                    {type}
+                  </option>
+                ))}
+            </select>
+
+            <br />
+              <br />
+            <input
+              ref={inputRef}
+              type="file"
+              required
+              onChange={(e) => uploadHandout(e)}
+              disabled={inputDisabled}
+              class="file relative justify-between m-0 block w-full min-w-0 border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+            />
+            <p className="mt-2 text-center">{percent}% uploaded</p>
+            </div>
+
+          
+            {/* <br/>
                 <br/> */}
-          <input
-            ref={inputRef}
-            type="file"
-            required
-            onChange={(e) => uploadHandout(e)}
-            disabled={inputDisabled}
-          />
-          <p>{percent} uploaded</p>
+       
+              
+          </div>
         </div>
-      {/* ) : (
+        {/* ) : (
         <p style={{ color: "red" }} className="text-red-500 text-4xl">
           {error}
         </p>
       )} */}
-    </div>
+      </div>
+    </section>
   );
 };

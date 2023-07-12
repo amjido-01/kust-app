@@ -14,12 +14,12 @@ export const Support = () => {
     >
       <Header />
 
-      <div className="container w-full p-4  md:p-0 md:w-[73%] md:mb-20 mx-auto mt-[5rem] md:mt-[8rem] flex-1">
+      <div className="container w-full p-4  md:p-0 md:w-[75%] md:mb-20 mx-auto mt-[5rem] md:mt-[8rem] flex-1">
         <div className="look flex flex-col border-2 justify-center">
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="uppercase text-start my-2 font-semibold text-[17px] md:text-[32px] leading-[24px] md:leading-[49px]"
+              className="capitalize text-start font-semibold text-[17px] md:text-[32px] leading-[24px] md:leading-[49px]"
             >
               Great future are not built alone, but with the help of individuals
               like you !
@@ -32,9 +32,9 @@ export const Support = () => {
         </div>
 
         <div className="container border-2 border-red-500">
-          <div>
-            <h3>contribute</h3>
-            <p>
+          <div className="md:w-[45%]">
+            <h3 className="text-[1.5rem] font-bold ">Contribute</h3>
+            <p className="text-justify pt">
               By contributing with a single handout or past examination
               question, you have the potential to assist thousands of students
               at this university. Contributions can be made in the form of
@@ -42,7 +42,7 @@ export const Support = () => {
               please ensure that it is taken with utmost clarity so that no
               details are missed.
             </p>
-            <Button />
+            <Button cls_name="text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize" />
           </div>
         </div>
       </div>

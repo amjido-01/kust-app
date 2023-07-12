@@ -199,6 +199,48 @@ body {
   text-overflow: ellipsis;
 }
 
+.hh {
+  border: 2px solid #111;
+  height: 100vh;
+}
+
+.hh h1 {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 1em;
+}
+
+.contribute {
+  border: 2px solid #111;
+  border-radius: 8px;
+  height: 80vh;
+  padding: 2em 3em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+select {
+  border: 1px solid #1f1f1f;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0 auto;
+  height: 35px;
+  padding-left: 20px;
+}
+
+.file {
+  border: 1px solid #1f1f1f;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+}
+
+select option {
+  font-size: 14px;
+}
+
 .progress-bar {
   position: fixed;
   left: 0;
@@ -261,6 +303,15 @@ body {
     padding-top: 0.8em;
     margin: 0 1em;
   }
+  .hh h1 {
+    font-size: 28px;
+    margin-bottom: 0.5em;
+  }
+  .contribute {
+    width: 85%;
+    padding: 2em 1.5em;
+    height: auto;
+  }
 
   /* .card_contents h3 {
     font-size: 16px;
@@ -289,7 +340,6 @@ body {
   .intro {
     font-size: 32px;
     line-height: 48px;
-    
   }
   .sub_intro {
     font-size: 16px;
