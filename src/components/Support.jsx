@@ -42,7 +42,7 @@ export const Support = () => {
               please ensure that it is taken with utmost clarity so that no
               details are missed.
             </p>
-            <Button cls_name="text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize" />
+            <Button value="Contribute" cls_name="text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize" />
           </div>
         </div>
       </div>
