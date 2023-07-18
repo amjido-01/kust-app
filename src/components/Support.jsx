@@ -3,8 +3,10 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const Support = () => {
+  const navigate = useNavigate();
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -33,7 +35,9 @@ export const Support = () => {
 
         <div className="container h-[30rem] md:flex md:items-center">
           <div className="md:w-[45%]">
-            <h3 className="md:text-[1.5rem] text-[1.2rem] mt-4 font-bold ">Contribute</h3>
+            <h3 className="md:text-[1.5rem] text-[1.2rem] mt-4 font-bold ">
+              Contribute
+            </h3>
             <p className="text-justify pt">
               By contributing with a single handout or past examination
               question, you have the potential to assist thousands of students
@@ -42,7 +46,11 @@ export const Support = () => {
               please ensure that it is taken with utmost clarity so that no
               details are missed.
             </p>
-            <Button value="Contribute" cls_name="text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize" />
+            <Button
+              value="Contribute"
+              onSmash={() => navigate("/upload")}
+              cls_name="text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize"
+            />
           </div>
         </div>
       </div>

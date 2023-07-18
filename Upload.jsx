@@ -10,23 +10,31 @@ import { Data } from "./src/Data";
 
 export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
-  // const [isAuthenticated, setISAuthenticated] = useState(false);
+
+  // ============================================================
+  const [isAuthenticated, setISAuthenticated] = useState(false);
+  const [showForm, setShowForm] = useState(true);
+  const [disabled, setDisabled] = useState(true);
+  // ==========================================================
+
   const [error, setError] = useState("");
-  // const [showForm, setShowForm] = useState(true);
-  // const [disabled, setDisabled] = useState(true);
   const [inputDisabled, setInputDisabled] = useState(true);
   const [selectedFaculty, setSelectedFaculty] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedType, setSelectedType] = useState("");
-  // const [credentials, setCredentials] = useState({
-  //   email: "youndsadeeq10@gmail.com",
-  //   password: "123456",
-  // });
-  // const [user, setUser] = useState({
-  //   email: "",
-  //   password: "",
-  // });
+
+  // comment this code =======
+  const [credentials, setCredentials] = useState({
+    email: "youndsadeeq10@gmail.com",
+    password: "123456",
+  });
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  // ==============
 
   // updating the input file field to null after submissinon
   const inputRef = useRef(null);
@@ -103,23 +111,28 @@ export const Upload = (props) => {
     setError("please provide your credentials");
   };
 
-  // const handleUserEmail = (e) => {
-  //   setUser((prev) => {
-  //     return {
-  //       ...prev,
-  //       email: e.target.value,
-  //     };
-  //   });
-  // };
 
-  // const handleUserPassword = (e) => {
-  //   setUser((prev) => {
-  //     return {
-  //       ...prev,
-  //       password: e.target.value,
-  //     };
-  //   });
-  // };
+  // comment this code =====================
+  const handleUserEmail = (e) => {
+    setUser((prev) => {
+      return {
+        ...prev,
+        email: e.target.value,
+      };
+    });
+  };
+
+  const handleUserPassword = (e) => {
+    setUser((prev) => {
+      return {
+        ...prev,
+        password: e.target.value,
+      };
+    });
+  };
+  // ======================================
+
+
 
   const uploadHandout = (e) => {
     console.log("called");
@@ -171,7 +184,9 @@ export const Upload = (props) => {
   return (
     <section className="">
       <div className="flex border-2 items-center justify-center hh">
-        {/* <div className="border-2 border-red-400">
+      
+        {/* comment this code ==============================*/}
+        <div className="border-2 border-red-400">
          {showForm ? (
           <form
             className="border-2 border-red-400"
@@ -196,9 +211,13 @@ export const Upload = (props) => {
         ) : (
           ""
         )}
-      </div> */}
+      </div>
+          {/* ========================================================== */}
 
-        {/* {isAuthenticated ? ( */}
+          {/* this ========== */}
+        {isAuthenticated ? (
+          // ============================
+
         <div className=" contribute md:w-[40%] bg-[#eee]">
           <div className="">
             <h1>Contribute</h1>
@@ -219,6 +238,8 @@ export const Upload = (props) => {
               <br />
               <br />
 
+
+                  {/* this also  ====================================== */}
               {/* {selectedFaculty && (
               <select
                 value={selectedDepartment}
@@ -232,6 +253,9 @@ export const Upload = (props) => {
                 ))}
               </select>
             )} */}
+            {/* ======================================================= */}
+
+
               <select
                 value={selectedDepartment}
                 onChange={handleDepartmentChange}
@@ -247,7 +271,9 @@ export const Upload = (props) => {
 
               <br />
               <br />
-              {/* {selectedDepartment && (
+
+              {/* this also ========================================== */}
+              {selectedDepartment && (
               <select value={selectedLevel} onChange={handleLevelChange}>
                 <option value="">Select Level</option>
                 {departmentLevels[selectedDepartment].map((level) => (
@@ -256,7 +282,10 @@ export const Upload = (props) => {
                   </option>
                 ))}
               </select>
-            )} */}
+            )}
+            {/* ============================================================ */}
+
+
               <select value={selectedLevel} onChange={handleLevelChange}>
                 <option value="">Select Level</option>
                 {selectedDepartment &&
@@ -299,11 +328,14 @@ export const Upload = (props) => {
               
           </div>
         </div>
-        {/* ) : (
+        // this also =================================================
+         ) : (
         <p style={{ color: "red" }} className="text-red-500 text-4xl">
           {error}
         </p>
-      )} */}
+      )} 
+      {/* ======================================================================== */}
+
       </div>
     </section>
   );
