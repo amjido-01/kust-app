@@ -6,6 +6,7 @@ import auto2 from "../assets/auto2.svg";
 import auto2sq from "../assets/auto2sq.jpg";
 import autosq from "../assets/autosq.jpg";
 import { Autor } from "./Autor";
+import prof from "../assets/prof.png";
 import one from "../assets/one.svg";
 import two from "../assets/two.svg";
 import three from "../assets/three.svg";
@@ -18,7 +19,7 @@ import { motion } from "framer-motion";
 export const About = () => {
   const person = [
     {
-      imgURI: auto2,
+      imgURI: prof,
       qoute:
         "if you love the design and everything you can see, Here is the dude behind it.",
       name: "Muhammad Ni’imatullahi aliyu",

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./Button";
 import heroImg from "../assets/latest.png";
+import ends from "../assets/ends.svg";
 import Typed from "typed.js";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -61,7 +62,7 @@ export const Hero = () => {
         </div>
 
         <div className="hidden z-10 md:flex justify-center absolute right-[5rem] w-[70%] hero_img mb-4 md:mb-0 bg-transparent">
-          <img src={heroImg} className="" alt="hero_icon" />
+          <img src={ends} className="" alt="hero_icon" />
         </div>
       </div>
       <div></div>
