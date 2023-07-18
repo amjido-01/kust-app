@@ -23,6 +23,7 @@ export const Upload = (props) => {
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedType, setSelectedType] = useState("");
+  const [selectSemester, setSelectSemester] = useState("")
 
   // comment this code =======
   const [credentials, setCredentials] = useState({
@@ -57,6 +58,7 @@ export const Upload = (props) => {
     Working: ["100", "200", "300", "400", "500"],
   };
   const types = ["Handout", "Past question"];
+  const sms = ["First semester", "Second semester"]
 
   const handleFacultyChange = (e) => {
     const selectedFaculty = e.target.value;
@@ -64,6 +66,7 @@ export const Upload = (props) => {
     setSelectedDepartment("");
     setSelectedLevel("");
     setSelectedType("");
+    setSelectSemester("");
   };
 
   const handleDepartmentChange = (e) => {
@@ -71,13 +74,21 @@ export const Upload = (props) => {
     setSelectedDepartment(selectedDepartment);
     setSelectedLevel("");
     setSelectedType("");
+    setSelectSemester("");
   };
 
   const handleLevelChange = (e) => {
     const selectedLevel = e.target.value;
     setSelectedLevel(selectedLevel);
     setSelectedType("");
+    setSelectSemester("");
   };
+
+  const handleSemester = (e) => {
+    const selectedSemester = e.target.value;
+    setSelectSemester(selectedSemester)
+    selectedType("")
+  }
 
   const handleTypeChange = (e) => {
     const selectedType = e.target.value;
@@ -166,6 +177,7 @@ export const Upload = (props) => {
             handout: url,
             level: selectedLevel,
             type: selectedType,
+            sms: selectSemester,
             title: handout.name,
           });
         });
@@ -273,7 +285,7 @@ export const Upload = (props) => {
               <br />
 
               {/* this also ========================================== */}
-              {selectedDepartment && (
+              {/* {selectedDepartment && (
               <select value={selectedLevel} onChange={handleLevelChange}>
                 <option value="">Select Level</option>
                 {departmentLevels[selectedDepartment].map((level) => (
@@ -282,7 +294,8 @@ export const Upload = (props) => {
                   </option>
                 ))}
               </select>
-            )}
+            )} */}
+
             {/* ============================================================ */}
 
 
@@ -296,11 +309,22 @@ export const Upload = (props) => {
                   ))}
               </select>
 
+              <br/><br/> {/* here */}
+              <select value={selectSemester} onChange={handleSemester}>
+                <option value="">Select Semester</option>
+                {selectedLevel &&
+                  sms.map((item, index) => (
+                    <option key={index} value={item}>
+                      {item}
+                    </option>
+                  ))}
+              </select>
+
               <br />
               <br />
               <select value={selectedType} onChange={handleTypeChange}>
               <option value="">Select Type</option>
-              {selectedLevel &&
+              {selectSemester &&
                 types.map((type, index) => (
                   <option value={type} key={index}>
                     {type}
@@ -336,6 +360,7 @@ export const Upload = (props) => {
       )} 
       {/* ======================================================================== */}
 
+      
       </div>
     </section>
   );
