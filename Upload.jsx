@@ -7,6 +7,7 @@ import { AuthForm } from "./src/components/AuthForm";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { Data } from "./src/Data";
+import Swal from 'sweetalert2';
 
 export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
@@ -144,6 +145,14 @@ export const Upload = (props) => {
   // ======================================
 
 
+  const showAlert = () => {
+    Swal.fire({
+      title: 'Done!',
+      text: 'File uploaded.',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+  };
 
   const uploadHandout = (e) => {
     console.log("called");
@@ -164,6 +173,7 @@ export const Upload = (props) => {
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
         setPercent(() => percentage);
+          showAlert()
       },
       (error) => {
         console.log(error);
