@@ -2,7 +2,6 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import auto from "../assets/auto.svg";
-import auto2 from "../assets/auto2.svg";
 import auto2sq from "../assets/auto2sq.jpg";
 import autosq from "../assets/autosq.jpg";
 import { Autor } from "./Autor";

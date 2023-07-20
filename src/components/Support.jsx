@@ -3,10 +3,19 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Contribute } from "./Contribute";
+import { ListElements } from "./ListElements";
 
 export const Support = () => {
-  const navigate = useNavigate();
+  const testing = (
+    <ListElements
+      listOne="The monthly domain subscription,"
+      listTwo="Data we used for building and managing the website,"
+      listThree="API subscription"
+      listFour=" Database management "
+    />
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,30 +38,33 @@ export const Support = () => {
             <p className="capitalize pb-2 font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">
               ready to do something incredible
             </p>
-            <hr />
+            <hr className="border-[1px] border-gray-400" />
           </div>
         </div>
-
-        <div className="container h-[30rem] md:flex md:items-center">
-          <div className="md:w-[45%]">
-            <h3 className="md:text-[1.5rem] text-[1.2rem] mt-4 font-bold ">
-              Contribute
-            </h3>
-            <p className="text-justify pt">
-              By contributing with a single handout or past examination
+        <Contribute
+          title="Contribute"
+          cls_name="container md:mb-16"
+          value="Upload"
+          page="/upload"
+          content=" By contributing with a single handout or past examination
               question, you have the potential to assist thousands of students
               at this university. Contributions can be made in the form of
-              pictures or PDF files. If you choose to contribute a picture,
-              please ensure that it is taken with utmost clarity so that no
-              details are missed.
-            </p>
-            <Button
-              value="Contribute"
-              onSmash={() => navigate("/upload")}
-              cls_name="text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize"
-            />
-          </div>
-        </div>
+              pictures, docx, pptx or PDF files. If you choose to contribute a
+              picture, please ensure that it is taken with utmost clarity so
+              that no details are missed."
+        />
+
+        <hr className="border-[1px] border-gray-400" />
+
+        <Contribute
+          cls_name="container md:mt-16 "
+          title="Donate"
+          value="Donate"
+          page="/donate"
+          content="By donating to the improvement of this website, you are helping us continue to bring simplicity to our esteemed fellow students. Your donations will be used to purchase necessary materials and such as :
+          "
+          listElemts={testing}
+        />
       </div>
 
       <div className="relative bottom-0">

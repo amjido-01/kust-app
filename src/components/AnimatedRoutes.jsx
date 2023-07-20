@@ -34,7 +34,7 @@ import { StaLevelFour } from "./FACMS/stat/StaLevelFour";
 import { StaLevelOne } from "./FACMS/stat/StaLevelOne";
 import { StaLevelTwo } from "./FACMS/stat/StaLevelTwo";
 import { StaLevelThree } from "./FACMS/stat/StaLevelThree";
-
+import { Donate } from "./Donate";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -51,6 +51,7 @@ export const AnimatedRoutes = () => {
         <Route path="handouts" element={<Handouts />}></Route>
         <Route path="books" element={<Books />}></Route>
         <Route path="upload" element={<Upload />}></Route>
+        <Route path="donate" element={<Donate />}></Route>
         <Route path="study" element={<Study />}></Route>
         <Route path="documents/facms" element={<Facms />}></Route>
         <Route
