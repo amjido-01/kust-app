@@ -220,10 +220,10 @@ useEffect(() => {
     setSelectedDepartment("");
     setSelectedLevel("");
     setSelectedType("");
-    // console.log("Selected Faculty:", selectedFaculty);
-    // console.log("Selected Department:", selectedDepartment);
-    // console.log("Selected Level:", selectedLevel);
-    // console.log("selectedType:", selectedType);
+    console.log("Selected Faculty:", selectedFaculty);
+    console.log("Selected Department:", selectedDepartment);
+    console.log("Selected Level:", selectedLevel);
+    console.log("selectedType:", selectedType);
   };
   return (
     <section className="">
