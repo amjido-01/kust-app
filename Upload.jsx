@@ -8,7 +8,6 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { Data } from "./src/Data";
 import Swal from "sweetalert2";
-import swal from "sweetalert";
 
 export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
