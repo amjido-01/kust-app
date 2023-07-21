@@ -30,12 +30,12 @@ export const Support = () => {
           <div className="text-[#000000] mb-4 md:mb-7">
             <h1
               style={{ fontFamily: "poppins" }}
-              className="capitalize text-start font-semibold text-[1.4rem] md:text-[32px] leading-[32px] mb-2  md:leading-[49px]"
+              className="uppercase text-start font-semibold text-[1.4rem] md:text-[32px] leading-[32px] mb-2  md:leading-[49px]"
             >
               Great future are not built alone, but with the help of individuals
               like you !
             </h1>
-            <p className="capitalize pb-2 font-medium text-[15px] md:text-[18px] leading-[18px] md:leading-[28px]">
+            <p className="capitalize pb-2 font-medium text-[15px] text-[#333333] md:text-[18px] leading-[18px] md:leading-[28px]">
               ready to do something incredible
             </p>
             <hr className="border-[1px] border-gray-400" />
@@ -43,7 +43,7 @@ export const Support = () => {
         </div>
         <Contribute
           title="Contribute"
-          cls_name="container md:mb-16"
+          cls_name="container md:mb-16 -mt-4"
           value="Upload"
           page="/upload"
           content=" By contributing with a single handout or past examination

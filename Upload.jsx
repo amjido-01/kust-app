@@ -147,30 +147,33 @@ export const Upload = (props) => {
   };
   // ======================================
 
+const handleFileUpload = () => {
+  const uploadSuccessful = true;
 
- const handleUploadFile = () => {
-  let status = true
-  if (status) {
-    swal.fire("Success", "File Uploaded!")
+  if (uploadSuccessful) {
+    setUploadStatue("success")
   } else {
-    swal.fire("Error", "SomeThing Wrong!")
+    setUploadStatue("fail")
   }
- }
+}
 
- useEffect( () => {
-
- })
-
-  // useEffect(() => {
-  // const showAlert = (title, msg) => {
-  //   Swal.fire({
-  //     title: title,
-  //     text: msg,
-  //     icon: "success",
-  //     confirmButtonText: "OK",
-  //   });
-  // };
-  // }, [])
+useEffect(() => {
+  if (uploadStatus === "success") {
+    Swal.fire({
+      title: 'Hello!',
+      text: 'This is a SweetAlert dialog.',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+  } else if (uploadStatus === "fail") {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href="">Why do I have this issue?</a>'
+    })
+  }
+}, [uploadStatus])
 
   const uploadHandout = (e) => {
     console.log("called");
@@ -191,7 +194,7 @@ export const Upload = (props) => {
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
         setPercent(() => percentage);
-        handleUploadFile()
+        handleFileUpload()
       },
       (error) => {
         console.log(error);
