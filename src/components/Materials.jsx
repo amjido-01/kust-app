@@ -135,12 +135,14 @@ export const Materials = (props) => {
             </div>
           </div>
 
-          <div className="container mx-auto border-2 border-red-500">
-            <div className="container border-green-500 border-2">
+          <div className="container mx-auto">
+            <div className="container">
               <div className="let">
                 <HandoutsList
                   filteredItems={filteredItems.filter(
-                    (item) => item.type === "Handout"
+                    (item) =>
+                      (item.type === "Handout") &
+                      (item.sms === "First semester")
                   )}
                   dataLoading={dataLoading}
                   bg="#8CB6B5"
@@ -151,7 +153,9 @@ export const Materials = (props) => {
                 />
                 <HandoutsList
                   filteredItems={filteredItems.filter(
-                    (item) => item.type === "Past question"
+                    (item) =>
+                      (item.type === "Past question") &
+                      (item.sms === "First semester")
                   )}
                   dataLoading={dataLoading}
                   bg="#D4ADB7"
@@ -162,14 +166,16 @@ export const Materials = (props) => {
               </div>
             </div>
 
-            <div className="container border-green-500 border-2">
-            <h4 className="uppercase my-6 bg-[#0F9D58] text-center w-[10.5rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-3">
-              first semester
-            </h4>
+            {/* <div className="container">
+              <h4 className="uppercase my-6 bg-[#0F9D58] text-center w-[11rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-3">
+                second semester
+              </h4>
               <div className="let">
                 <HandoutsList
                   filteredItems={filteredItems.filter(
-                    (item) => item.type === "Handout"
+                    (item) =>
+                      (item.type === "Handout") &
+                      (item.sms === "Second semester")
                   )}
                   dataLoading={dataLoading}
                   bg="#8CB6B5"
@@ -180,7 +186,9 @@ export const Materials = (props) => {
                 />
                 <HandoutsList
                   filteredItems={filteredItems.filter(
-                    (item) => item.type === "Past question"
+                    (item) =>
+                      (item.type === "Past question") &
+                      (item.sms === "Second semester")
                   )}
                   dataLoading={dataLoading}
                   bg="#D4ADB7"
@@ -189,7 +197,7 @@ export const Materials = (props) => {
                   handleButtonClick={handleSearch}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -219,6 +219,7 @@ useEffect(() => {
     setSelectedDepartment("");
     setSelectedLevel("");
     setSelectedType("");
+    setSelectSemester("")
     console.log("Selected Faculty:", selectedFaculty);
     console.log("Selected Department:", selectedDepartment);
     console.log("Selected Level:", selectedLevel);
