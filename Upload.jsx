@@ -13,9 +13,9 @@ export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
 
   // ============================================================
-  const [isAuthenticated, setISAuthenticated] = useState(false);
-  const [showForm, setShowForm] = useState(true);
-  const [disabled, setDisabled] = useState(true);
+  // const [isAuthenticated, setISAuthenticated] = useState(false);
+  // const [showForm, setShowForm] = useState(true);
+  // const [disabled, setDisabled] = useState(true);
   // ==========================================================
 
   const [error, setError] = useState("");
@@ -30,14 +30,14 @@ export const Upload = (props) => {
 
 
   // comment this code =======
-  const [credentials, setCredentials] = useState({
-    email: "youndsadeeq10@gmail.com",
-    password: "123456",
-  });
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
+  // const [credentials, setCredentials] = useState({
+  //   email: "youndsadeeq10@gmail.com",
+  //   password: "123456",
+  // });
+  // const [user, setUser] = useState({
+  //   email: "",
+  //   password: "",
+  // });
 
   // ==============
 
@@ -127,23 +127,23 @@ export const Upload = (props) => {
   };
 
   // comment this code =====================
-  const handleUserEmail = (e) => {
-    setUser((prev) => {
-      return {
-        ...prev,
-        email: e.target.value,
-      };
-    });
-  };
+  // const handleUserEmail = (e) => {
+  //   setUser((prev) => {
+  //     return {
+  //       ...prev,
+  //       email: e.target.value,
+  //     };
+  //   });
+  // };
 
-  const handleUserPassword = (e) => {
-    setUser((prev) => {
-      return {
-        ...prev,
-        password: e.target.value,
-      };
-    });
-  };
+  // const handleUserPassword = (e) => {
+  //   setUser((prev) => {
+  //     return {
+  //       ...prev,
+  //       password: e.target.value,
+  //     };
+  //   });
+  // };
   // ======================================
 
 const handleFileUpload = () => {
@@ -229,7 +229,7 @@ useEffect(() => {
     <section className="">
       <div className="flex border-2 items-center justify-center hh">
         {/* comment this code ==============================*/}
-        <div className="border-2 border-red-400">
+        {/* <div className="border-2 border-red-400">
           {showForm ? (
             <form
               className="border-2 border-red-400"
@@ -254,12 +254,11 @@ useEffect(() => {
           ) : (
             ""
           )}
-        </div>
+        </div> */}
         {/* ========================================================== */}
 
         {/* this ========== */}
-        {isAuthenticated ? (
-          // ============================
+        {/* {isAuthenticated ? ( */}
 
           <div className=" contribute md:w-[40%] bg-[#eee]">
             <div className="">
@@ -312,7 +311,7 @@ useEffect(() => {
                 <br />
                 <br />
                 {/* this also ========================================== */}
-                {/* {selectedDepartment && (
+                {selectedDepartment && (
               <select value={selectedLevel} onChange={handleLevelChange}>
                 <option value="">Select Level</option>
                 {departmentLevels[selectedDepartment].map((level) => (
@@ -321,8 +320,7 @@ useEffect(() => {
                   </option>
                 ))}
               </select>
-            )} */}
-                {/* ============================================================ */}
+            )}
                 <select value={selectedLevel} onChange={handleLevelChange}>
                   <option value="">Select Level</option>
                   {selectedDepartment &&
@@ -371,12 +369,12 @@ useEffect(() => {
                 <br/> */}
             </div>
           </div>
-        ) : (
-          // this also =================================================
+        {/* ) : ( */}
+          {/* // this also =================================================
           <p style={{ color: "red" }} className="text-red-500 text-4xl">
             {error}
-          </p>
-        )}
+          </p> */}
+        {/* )} */}
         {/* ======================================================================== */}
       </div>
     </section>
