@@ -5,9 +5,9 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 export const HandoutsList = (props) => {
   return (
-    <div>
+    <div className="">
       <div
-        style={{ backgroundColor: props.bg }}
+        style={{ backgroundColor: props.bg, marginBottom: props.mb }}
         className={`rounded-xl border-2 pb-4 border-[#000000] px-5 w-full box`}
       >
         <h3
@@ -29,7 +29,7 @@ export const HandoutsList = (props) => {
             />{" "}
           </div>
         ) : (
-          <ul className=" uppercase">
+          <ul className="uppercase">
             {props.filteredItems.map((handout, index) => (
               <li
                 key={index}
