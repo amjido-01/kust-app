@@ -13,9 +13,9 @@ export const Upload = (props) => {
   const [percent, setPercent] = useState(0);
 
   // ============================================================
-  // const [isAuthenticated, setISAuthenticated] = useState(false);
-  // const [showForm, setShowForm] = useState(true);
-  // const [disabled, setDisabled] = useState(true);
+  const [isAuthenticated, setISAuthenticated] = useState(false);
+  const [showForm, setShowForm] = useState(true);
+  const [disabled, setDisabled] = useState(true);
   // ==========================================================
 
   const [error, setError] = useState("");
@@ -30,14 +30,14 @@ export const Upload = (props) => {
 
 
   // comment this code =======
-  // const [credentials, setCredentials] = useState({
-  //   email: "youndsadeeq10@gmail.com",
-  //   password: "123456",
-  // });
-  // const [user, setUser] = useState({
-  //   email: "",
-  //   password: "",
-  // });
+  const [credentials, setCredentials] = useState({
+    email: "youndsadeeq10@gmail.com",
+    password: "123456",
+  });
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
 
   // ==============
 
@@ -127,23 +127,23 @@ export const Upload = (props) => {
   };
 
   // comment this code =====================
-  // const handleUserEmail = (e) => {
-  //   setUser((prev) => {
-  //     return {
-  //       ...prev,
-  //       email: e.target.value,
-  //     };
-  //   });
-  // };
+  const handleUserEmail = (e) => {
+    setUser((prev) => {
+      return {
+        ...prev,
+        email: e.target.value,
+      };
+    });
+  };
 
-  // const handleUserPassword = (e) => {
-  //   setUser((prev) => {
-  //     return {
-  //       ...prev,
-  //       password: e.target.value,
-  //     };
-  //   });
-  // };
+  const handleUserPassword = (e) => {
+    setUser((prev) => {
+      return {
+        ...prev,
+        password: e.target.value,
+      };
+    });
+  };
   // ======================================
 
 const handleFileUpload = () => {
@@ -159,8 +159,8 @@ const handleFileUpload = () => {
 useEffect(() => {
   if (uploadStatus === "success") {
     Swal.fire({
-      title: 'Hello!',
-      text: 'This is a SweetAlert dialog.',
+      title: 'Done',
+      text: 'File Uploaded!',
       icon: 'success',
       confirmButtonText: 'OK'
     });
@@ -169,7 +169,7 @@ useEffect(() => {
       icon: 'error',
       title: 'Oops...',
       text: 'Something went wrong!',
-      footer: '<a href="">Why do I have this issue?</a>'
+      footer: '<a>Try again):</a>'
     })
   }
 }, [uploadStatus])
@@ -220,16 +220,16 @@ useEffect(() => {
     setSelectedLevel("");
     setSelectedType("");
     setSelectSemester("")
-    console.log("Selected Faculty:", selectedFaculty);
-    console.log("Selected Department:", selectedDepartment);
-    console.log("Selected Level:", selectedLevel);
-    console.log("selectedType:", selectedType);
+    // console.log("Selected Faculty:", selectedFaculty);
+    // console.log("Selected Department:", selectedDepartment);
+    // console.log("Selected Level:", selectedLevel);
+    // console.log("selectedType:", selectedType);
   };
   return (
     <section className="">
       <div className="flex border-2 items-center justify-center hh">
         {/* comment this code ==============================*/}
-        {/* <div className="border-2 border-red-400">
+        <div className="border-2 border-red-400">
           {showForm ? (
             <form
               className="border-2 border-red-400"
@@ -254,11 +254,11 @@ useEffect(() => {
           ) : (
             ""
           )}
-        </div> */}
+        </div>
         {/* ========================================================== */}
 
         {/* this ========== */}
-        {/* {isAuthenticated ? ( */}
+        {isAuthenticated ? (
 
           <div className=" contribute md:w-[40%] bg-[#eee]">
             <div className="">
@@ -281,21 +281,7 @@ useEffect(() => {
                 </select>
                 <br />
                 <br />
-                {/* this also  ====================================== */}
-                {/* {selectedFaculty && (
-              <select
-                value={selectedDepartment}
-                onChange={handleDepartmentChange}
-              >
-                <option value="">Select Department</option>
-                {departments[selectedFaculty].map((department) => (
-                  <option key={department} value={department}>
-                    {department}
-                  </option>
-                ))}
-              </select>
-            )} */}
-                {/* ======================================================= */}
+
                 <select
                   value={selectedDepartment}
                   onChange={handleDepartmentChange}
@@ -310,17 +296,7 @@ useEffect(() => {
                 </select>
                 <br />
                 <br />
-                {/* this also ========================================== */}
-                {selectedDepartment && (
-              <select value={selectedLevel} onChange={handleLevelChange}>
-                <option value="">Select Level</option>
-                {departmentLevels[selectedDepartment].map((level) => (
-                  <option key={level} value={level}>
-                    {level}
-                  </option>
-                ))}
-              </select>
-            )}
+  
                 <select value={selectedLevel} onChange={handleLevelChange}>
                   <option value="">Select Level</option>
                   {selectedDepartment &&
@@ -369,12 +345,12 @@ useEffect(() => {
                 <br/> */}
             </div>
           </div>
-        {/* ) : ( */}
-          {/* // this also =================================================
+        ) : ( 
+          // this also =================================================
           <p style={{ color: "red" }} className="text-red-500 text-4xl">
             {error}
-          </p> */}
-        {/* )} */}
+          </p> 
+        )}
         {/* ======================================================================== */}
       </div>
     </section>
