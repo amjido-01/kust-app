@@ -122,7 +122,7 @@ export const Feedback = () => {
                 id="name"
                 placeholder="Tanimu Bala"
                 required
-                className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-indigo-500 focus:ring-[1.5px] focus:ring-indigo-400 outline-none transition-colors duration-200 ease-in-out"
+                className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-[#0F9D58] focus:ring-[#2ed082] focus:ring-[1.5px] outline-none transition-colors duration-200 ease-in-out"
               />
             </div>
 
@@ -141,7 +141,7 @@ export const Feedback = () => {
                 id="email"
                 placeholder="example@gmail.com"
                 required
-                className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-indigo-500 focus:ring-[1.5px] focus:ring-indigo-400 outline-none transition-colors duration-200 ease-in-out"
+                className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-[#0F9D58] focus:ring-[#2ed082] focus:ring-[1.5px] outline-none transition-colors duration-200 ease-in-out"
               />
             </div>
 
@@ -159,7 +159,7 @@ export const Feedback = () => {
                 id="message"
                 required
                 placeholder="Your Message"
-                className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-indigo-500 focus:ring-[1.5px] focus:ring-indigo-400 outline-none transition-colors duration-200 ease-in-out h-32"
+                className="w-full bg-[#D9D9D9] px-3 font-normal py-1 md:py-2 placeholder:text-[#696969] focus:border-[#0F9D58] focus:ring-[#2ed082] focus:ring-[1.5px] outline-none transition-colors duration-200 ease-in-out h-32"
               />
             </div>
 
