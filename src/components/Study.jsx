@@ -51,7 +51,7 @@ export const Study = () => {
                     className=" object-cover"
                   />
                 </Link>
-                <p className="text-[16px] md:text-[18px]">
+                <p className="text-[16px] md:text-[18px] md: mb-[2rem]">
                   Build Your Vocabulary Everyday with this amazing ddictionary{" "}
                 </p>
                 {/* <Link
@@ -62,7 +62,7 @@ export const Study = () => {
                 </Link> */}
                 <Button
                   value="Dictionary"
-                  cls_name=" mx-auto my-2 text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize"
+                  cls_name=" mx-auto my-2 text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize "
                 />
               </li>
               <li className="border-2 text-[20px] mb-4 md:mb-0 mx-auto w-full md:w-[40%]">
