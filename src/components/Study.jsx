@@ -4,15 +4,10 @@ import { Footer } from "./Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import library4 from "../assets/library4.jpg";
-import library from "../assets/library.jpg";
-import library2 from "../assets/library3.jpg";
-import l from "../assets/l.jpg";
-import library3 from "../assets/library3.jpg";
 import dic from "../assets/dic.jpg";
-import dic1 from "../assets/dic1.jpg";
-import dic2 from "../assets/dic2.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { Button } from "./Button";
 
 export const Study = () => {
   return (
@@ -49,31 +44,49 @@ export const Study = () => {
             <ul className="flex flex-col gap-4 md:gap-2 md:flex-row justify-around">
               <li className="border-2 text-[20px] mx-auto my-4 md:my-0 w-full md:w-[40%]">
                 <Link to="/dictionary">
-                <LazyLoadImage effect="blur" src={dic} alt="dictionary" className=" object-cover" />
+                  <LazyLoadImage
+                    effect="blur"
+                    src={dic}
+                    alt="dictionary"
+                    className=" object-cover"
+                  />
                 </Link>
                 <p className="text-[16px] md:text-[18px]">
                   Build Your Vocabulary Everyday with this amazing ddictionary{" "}
                 </p>
-                <Link
+                {/* <Link
                   className="text-white w-[8rem] mx-auto my-2 cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
                   to="/dictionary"
                 >
                   Dictionary
-                </Link>
+                </Link> */}
+                <Button
+                  value="Dictionary"
+                  cls_name=" mx-auto my-2 text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize"
+                />
               </li>
               <li className="border-2 text-[20px] mb-4 md:mb-0 mx-auto w-full md:w-[40%]">
                 <Link to="/books">
-                  <LazyLoadImage effect="blur" src={library4} alt="" className="object-cover" />
+                  <LazyLoadImage
+                    effect="blur"
+                    src={library4}
+                    alt=""
+                    className="object-cover"
+                  />
                 </Link>
                 <p className="text-[16px] md:text-[18px]">
                   read and Get Books Recommendation for All Courses!
                 </p>
-                <Link
+                <Button
+                  value="Read Books"
+                  cls_name=" mx-auto my-2 text-white bg-[#0F9D58] rounded-[4px] border-none hover:bg-[#0F9D58] border flex items-center font-medium text-[12px] md:text-sm px-4 md:px-5 py-2 text-center capitalize"
+                />
+                {/* <Link
                   className="text-white w-[8rem] mx-auto my-2 cursor bg-[#4285F4] start flex items-center font-medium text-sm px-5 py-2 text-center capitalize"
                   to="/books"
                 >
                   Read Books
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </h1>
