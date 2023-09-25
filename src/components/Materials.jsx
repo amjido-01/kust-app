@@ -55,12 +55,8 @@ export const Materials = (props) => {
       const filteredHandoutLists = data.filter(
         (item) => item.type === "Handout"
       );
-      // console.log(filteredHandoutLists, "hope to see y");
       setHandoutsLists(filteredHandoutLists);
       setPastQuestionLists(filteredPastQuestionList);
-      // console.log(pastQuestionLists, "checking");
-      // console.log(handoutsLists, "bye");
-      // console.log(pastQuestionLists, "kkk")
     };
 
     fetchData();
@@ -85,7 +81,6 @@ export const Materials = (props) => {
       item.title.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredItems(filtered);
-    // console.log(filteredItems, "goodbye");
   };
 
   return (
