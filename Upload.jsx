@@ -197,7 +197,7 @@ useEffect(() => {
       },
       (error) => {
         console.log(error);
-        handleUploadFile()
+        handleFileUpload()
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
@@ -245,6 +245,8 @@ useEffect(() => {
               <br />
               <input
                 type="password"
+                name="password"
+                autoComplete="on"
                 value={user.password}
                 onChange={handleUserPassword}
                 className="border-2 border-green-500"

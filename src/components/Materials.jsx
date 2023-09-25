@@ -98,8 +98,8 @@ export const Materials = (props) => {
       <Header />
 
       <div className="container w-[85%] md:p-0 md:w-[73%] md:mb-14 mx-auto mt-[3.8rem] md:mt-[7rem] flex-1">
-        <div className="look flex flex-col justify-center">
-          <div className="text-[#000000] mb-4 md:mb-7">
+        <div className="look flex flex-col justify-center border-2 border-red-500">
+          <div className="text-[#000000] mb-4 md:mb-7 border-2 border-red-500">
             <h1
               style={{ fontFamily: "poppins" }}
               className="uppercase font-semibold text-[20px] md:mt-2 mt-[2rem] md:text-[32px] leading-[31px] md:leading-[49px]"
@@ -117,15 +117,15 @@ export const Materials = (props) => {
             <h4 className="uppercase bg-[#0F9D58] text-center w-[10.5rem] text-[#FFFFFF] rounded border-2 border-[#000000] p-3">
               first semester
             </h4>
-            <div className="relative my-3" data-te-input-wrapper-init>
+            <div className="relative my-3 border-2 border-red-500" data-te-input-wrapper-init>
 
               <InputSearch value={searchQuery} onChange={handleSearch} />
             </div>
           </div>
 
-          <div className="container mx-auto">
-            <div className="container">
-              <div className="let">
+          <div className="container mx-auto border-2 border-yellow-500">
+            <div className="containe border-2 border-green-500">
+              <div className="let border-2 border-red-500">
                 <HandoutsList
                   filteredItems={filteredItems.filter(
                     (item) =>

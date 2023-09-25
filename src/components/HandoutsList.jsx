@@ -8,7 +8,7 @@ export const HandoutsList = (props) => {
     <div className="">
       <div
         style={{ backgroundColor: props.bg, marginBottom: props.mb }}
-        className={`rounded-xl border-2 pb-4 border-[#000000] px-5 w-full box`}
+        className="rounded-xl border-2 pb-4 border-[#000000] px-5 w-full box md:w-[100%]"
       >
         <h3
           style={{ fontStyle: "normal" }}

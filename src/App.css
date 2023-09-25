@@ -257,11 +257,11 @@ select option {
 .start:hover {
   background-color: #75a7f6;
 }
-.let {
+/* .let {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
+} */
 
 .deptborder {
   border-bottom: 3px solid black;
@@ -591,13 +591,13 @@ select option {
   .let {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: space-evenly;
+    /* gap: 10px; */
     margin-bottom: 0px;
   }
-  .box {
+  /* .box {
     width: 45.5%;
-  }
+  } */
 }
 
 @media screen and (min-width: 1100px) {
