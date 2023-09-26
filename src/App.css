@@ -19,6 +19,10 @@ body {
   border-top: 30px solid #fc9e1c;
 }
 
+.balance {
+  text-wrap: balance;
+}
+
 .under {
   display: inline-block;
   position: relative;
@@ -589,7 +593,7 @@ select option {
 
 @media screen and (min-width: 1000px) {
   .let {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     justify-content: space-evenly;
     /* gap: 10px; */
