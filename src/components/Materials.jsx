@@ -31,9 +31,6 @@ export const Materials = (props) => {
       let new_data = [];
       const querySnapShot = await getDocs(q);
       querySnapShot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        // console.log(doc.id, " => ", doc.data());
-        // new_data = [...new_data, doc.data()];
         new_data = [
           ...new_data,
           { ...doc.data(), fileRef: doc.data().handout },
@@ -43,15 +40,12 @@ export const Materials = (props) => {
         setMessage("no file yet");
       }
       setData(new_data);
-      // console.log(data);
       setFilteredItems(new_data);
-      // console.log(filteredItems.filter((item, index) => item.type === "Past question"), "from here")
       setMessage(new_data.length === 0 ? "no file yet" : "");
       setDataLoading(false);
       const filteredPastQuestionList = data.filter(
         (item) => item.type === "Past question"
       );
-      // console.log(filteredPastQuestionList, "dance");
       const filteredHandoutLists = data.filter(
         (item) => item.type === "Handout"
       );
