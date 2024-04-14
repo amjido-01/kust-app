@@ -47,7 +47,7 @@ export const Study = () => {
             Dictionary
           </h1>
           <p className=" md:w-[60%] ">
-          Our aim is to alleviate the challenges that students encounter when searching for reliable studying materials for their relevant courses. That’s why, we have developed this platform for your convenience.
+          Meet your dictionary copilot, your ultimate vocabulary source. Find definitions, pronunciation and more. Boost your language skills and learn new words. Visit it now and see what your dictionary copilot can do for you!
           </p>
           <div>
             <Button
@@ -80,10 +80,10 @@ export const Study = () => {
           className="text-[#D9D9D9] md:w-1/2 text-start  w-[95%] ml-12"
         >
           <h1 className="font-bold text-[16px] md:mt-1 leading-[32px] py-4 unbounded">
-            our struggle
+            Books
           </h1>
           <p className=" md:w-[60%] ">
-          Our aim is to alleviate the challenges that students encounter when searching for reliable studying materials for their relevant courses. That’s why, we have developed this platform for your convenience.
+          Welcome to your books co-pilot, a selection of books on various topics that will interest and educate you. Browse our amazing books section and find your next favorite read
           </p>
           <div>
             <Button
@@ -112,10 +112,10 @@ export const Study = () => {
           className="md:w-1/2 text-start  w-[95%] ml-12"
         >
           <h1 className="font-bold text-[16px] md:mt-1 leading-[32px] py-4 unbounded">
-            our struggle
+          talk to aI and help you discover  it
           </h1>
           <p className=" md:w-[60%] ">
-          Our aim is to alleviate the challenges that students encounter when searching for reliable studying materials for their relevant courses. That’s why, we have developed this platform for your convenience.
+          Use AI to study smarter. Get personalized recommendations and resources tailored to your needs. Save time and effort by getting the most relevant information for your studies. Start using AI today and see the difference it can make in your studies.
           </p>
           <div>
             <Button
