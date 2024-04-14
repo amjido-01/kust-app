@@ -13,6 +13,29 @@ export const Header = () => {
     restDelta: 0.001,
   });
 
+  const headerNavigations = [
+    {
+      id: 0,
+      children: "Home",
+      url: "/"
+    },
+    
+    {
+      id: 1,
+      children: "Documents",
+      url: "/documents"
+    },
+    {
+      id: 2,
+      children: "About",
+      url: "/about"
+    },
+    {
+      id: 0,
+      children: "Study",
+      url: "/study"
+    }
+  ]
   // active page indicator
   const navLinkStyle = ({ isActive }) => {
     return {
@@ -37,24 +60,22 @@ export const Header = () => {
         {/* desktop */}
         <div className="hidden lg:block items-center justify-between md:w-auto">
           <ul className="flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 font-[12px] md:text-[15px] md:font-medium">
-            <li
-              className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:bg-transparent md:p-0 font-medium"
-              aria-current="page"
-            >
-              <NavLink style={navLinkStyle} to="/">
-                Home
-              </NavLink>
-            </li>
-            <li className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:p-0 font-medium">
-              <NavLink style={navLinkStyle} to="/documents">
-                Documents
-              </NavLink>
-            </li>
-            <li className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:p-0 font-medium">
-              <NavLink style={navLinkStyle} to="/about">
-                about us
-              </NavLink>
-            </li>
+            
+          {headerNavigations.map((navItem) => (
+              <li
+                key={navItem.id}
+                className="block py-2 pl-3 pr-4 under text-white rounded capitalize md:bg-transparent md:p-0 font-medium"
+              >
+                <NavLink
+                  to={navItem.url}
+                  activeClassName="active"
+                  className="nav-link"
+                  style={navLinkStyle}
+                >
+                  {navItem.children}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
 
